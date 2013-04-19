@@ -1,0 +1,130 @@
+% pronomials
+/pP { 0 20 translate } def
+/pO { 0 40 translate } def
+/c0P {gsave pP c0 grestore } def
+/c1P {gsave pP c1 grestore } def
+/c2P {gsave pP c2 grestore } def
+/c3P {gsave pP c3 grestore } def
+/c4P {gsave pP c4 grestore } def
+/c5P {gsave pP c5 grestore } def
+/c6P {gsave pP c6 grestore } def
+/c7P {gsave pP c7 grestore } def
+/cSP {gsave pP cS grestore } def
+/c0O {gsave pO c0 grestore } def
+/c1O {gsave pO c1 grestore } def
+/c2O {gsave pO c2 grestore } def
+/c3O {gsave pO c3 grestore } def
+/c4O {gsave pO c4 grestore } def
+/c5O {gsave pO c5 grestore } def
+/c6O {gsave pO c6 grestore } def
+/c7O {gsave pO c7 grestore } def
+/cSO {gsave pO cS grestore } def
+% end of word definitions
+/spacing 130 def
+/nextword { 0 -1 spacing mul translate } def
+/nextline { spacing 0 translate initJArrays } def
+/rikital { 2 2 translate } def
+1 setlinewidth
+1 setlinecap
+1 setlinejoin
+initJArrays
+% end of presentation definitions
+/PageBegin {
+    0 72 11 mul translate
+    20 -20 translate
+    72 spacing div dup scale	% 1 inch per character
+    1 setlinewidth
+    1 setlinecap
+    1 setlinejoin
+    initJArrays
+} def
+% end of page setup
+/justify {
+    spacing 100 sub 2 div dup neg translate
+} def
+%rikshow and such
+/rikcomp {
+    /component exch def
+    /prefix exch def
+    /rikcompsentinel
+    component length 1 add string /glyph exch def
+    glyph 0 prefix putinterval
+    glyph 1 component putinterval
+    glyph cvn cvx exec
+    dup /rikcompsentinel ne {glyph rikcomperror} {pop} ifelse
+} def
+
+/rikchar {
+    /charstring exch def
+    /mcomp () def
+    /acomp () def
+    /rcomp () def
+    /ccomp () def
+    /rikcharsentinel
+    charstring 
+    (-) search
+    {
+	/mcomp exch def pop
+	(-) search {
+	    dup length 1 eq {
+		/acomp exch def
+	    } {
+		/rcomp exch def
+	    } ifelse
+	    pop
+	    (-) search {
+		dup length 1 eq {
+		    /acomp exch def
+		} {
+		    /rcomp exch def
+		} ifelse
+		pop
+		/ccomp exch def
+	    } {pop} ifelse
+	} {pop} ifelse
+    } {pop} ifelse
+    mcomp length 0 ne { (m) mcomp rikcomp } if
+    acomp length 0 ne { (a) acomp rikcomp } if
+    rcomp length 0 ne { (r) rcomp rikcomp } if
+    ccomp length 0 ne { (c) ccomp rikcomp } if
+    dup /rikcharsentinel ne {charstring rikcharerror} {pop} ifelse
+} def
+/rikshow {
+    /message exch def
+    666
+    message
+    {
+	( ) search 
+	    { rikchar nextword dup ( ) ne {rikshowsearcherror}{pop} ifelse }
+	    { rikchar nextword exit } 
+	ifelse
+    } loop
+    dup 666 ne {message rikshowerror} {pop} ifelse
+} def
+
+/rikshowh {
+    /lineheight exch def
+    /message exch def
+    /rikshowhsentinel
+    /iheight 0 def
+    gsave
+	message
+	{
+	    ( ) search 
+		{ 
+		    rikchar nextword 
+		    dup ( ) ne {rikshowsearcherror}{pop} ifelse 
+		    /iheight iheight 1 add def
+		    lineheight 0 gt {
+			iheight lineheight ge {
+			    grestore nextline gsave
+			    /iheight 0 def
+			} if
+		    } if
+		}
+		{ rikchar nextword exit } 
+	    ifelse
+	} loop
+    grestore
+    dup /rikshowhsentinel ne {message rikshowerror} {pop} ifelse
+} def

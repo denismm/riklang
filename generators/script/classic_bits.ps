@@ -1,0 +1,236 @@
+%!
+% ellipse library
+/ellipsedict 9 dict def	
+ellipsedict /mtrx matrix put
+/ell {
+        ellipsedict begin
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y translate
+	xrad yrad scale
+	0 0 1 startangle endangle arc
+	savematrix setmatrix
+        end
+} def
+/elln {
+        ellipsedict begin
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y translate
+	xrad yrad scale
+	0 0 1 startangle endangle arcn
+	savematrix setmatrix
+        end
+} def
+% bit library
+/bitdict 13 dict def
+/Line {
+    bitdict begin
+    /y2 exch def
+    /x2 exch def
+    /y exch def
+    /x exch def
+    x y moveto x2 y2 lineto stroke
+    end
+} def
+/Arc {
+    bitdict begin
+    /a2 exch def
+    /a1 exch def
+    /r1 exch def
+    /y exch def
+    /x exch def
+    x r1 a1 cos mul add y r1 a1 sin mul add moveto
+    x y r1 a1 a2 arc stroke
+    end
+} def
+/EllArc {
+    bitdict begin
+    /a2 exch def
+    /a1 exch def
+    /r2 exch def
+    /r1 exch def
+    /y exch def
+    /x exch def
+    x r1 a1 cos mul add y r2 a1 sin mul add moveto
+    x y r1 r2 a1 a2 ell stroke
+    end
+} def
+/Squiggle {
+    bitdict begin
+    /d exch def
+    /r1 exch def
+    /y2 exch def
+    /x2 exch def
+    /y exch def
+    /x exch def
+    /a1 y2 y sub x2 x sub atan def
+    /r2 x2 x sub dup mul y2 y sub dup mul add sqrt 4 div def
+    gsave
+	x y translate
+	a1 rotate
+	d 0 eq { 1 -1 scale } if
+	r1 r2 ge {
+	    0 0 moveto
+	    r2 0 r2 r1 180 0 elln
+	    r2 3 mul 0 r2 r1 180 360 ell
+	    stroke
+	} {
+	    /offset r2 dup mul r1 dup mul sub r1 2 mul div def
+	    /radius offset r1 add def
+	    /a2 r2 offset atan def
+	    0 0 moveto
+	    r2 offset -1 mul radius 90 a2 add 90 a2 sub arcn 
+	    r2 3 mul offset radius 270 a2 sub 270 a2 add arc 
+	    stroke
+	} ifelse
+    grestore
+    end
+} def
+/Circle {
+    bitdict begin
+    /r1 exch def
+    /y exch def
+    /x exch def
+    x y r1 add moveto
+    x y r1 90 450 arc stroke
+    end
+} def
+/Wicket {
+    bitdict begin
+    /a1 exch def
+    /leg exch def
+    /r1 exch def
+    /y exch def
+    /x exch def
+    gsave
+	x y translate
+	a1 rotate
+	leg r1 -1 mul moveto
+	0 0 r1 270 90 arcn
+	leg r1 lineto stroke
+    grestore
+    end
+} def
+/Hook {
+    bitdict begin
+    /d exch def
+    /a1 exch def
+    /leg exch def
+    /r1 exch def
+    /y exch def
+    /x exch def
+    gsave
+	x y translate
+	a1 rotate
+	d 0 ne {1 -1 scale} if
+	0 r1 -1 mul moveto
+	0 0 r1 270 90 arcn
+	leg r1 lineto stroke
+    grestore
+    end
+} def
+/HalfHook {
+    bitdict begin
+    /d exch def
+    /a1 exch def
+    /leg exch def
+    /r1 exch def
+    /y exch def
+    /x exch def
+    gsave
+	x y translate
+	a1 rotate
+	d 0 ne {1 -1 scale} if
+	r1 -1 mul 0 moveto
+	0 0 r1 180 90 arcn
+	leg r1 lineto stroke
+    grestore
+    end
+} def
+/LBend {
+    bitdict begin
+    /d exch def
+    /y2 exch def
+    /x2 exch def
+    /y exch def
+    /x exch def
+    x y moveto
+    d 0 eq { x y2 lineto} { x2 y lineto } ifelse
+    x2 y2 lineto stroke
+    end
+} def
+/ZigZag {
+    bitdict begin
+    /d exch def
+    /y2 exch def
+    /x2 exch def
+    /y exch def
+    /x exch def
+    x y moveto
+    d 0 eq {
+	x y y2 add 2 div lineto x2 x sub 0 rlineto
+    } {
+	x x2 add 2 div y lineto 0 y2 y sub rlineto
+    } ifelse
+    x2 y2 lineto stroke
+    end
+} def
+/Lobe {
+    bitdict begin
+    /d exch def
+    /a1 exch def
+    /r2 exch def
+    /r1 exch def
+    /y exch def
+    /x exch def
+    gsave
+	x y translate
+	a1 rotate
+	d 0 ne {1 -1 scale} if
+	0 r1 -1 mul moveto
+	0 0 r1 270 90 arcn
+	0 r1 -1 mul r2 r1 2 mul 90 0 elln
+	stroke
+    grestore
+    end
+} def
+/FishBend {
+    bitdict begin
+    /d exch def
+    /a1 exch def
+    /leg exch def
+    /r1 exch def
+    /y exch def
+    /x exch def
+    gsave
+	x y translate
+	a1 rotate
+	d 0 ne {1 -1 scale} if
+	leg r1 -1 mul moveto
+	0 r1 -1 mul lineto
+	0 0 r1 270 135 arcn
+	leg 2 sqrt div dup rlineto stroke
+
+    grestore
+} def
+/GreatArc {
+    bitdict begin
+    /a2 exch def
+    /a1 exch def
+    50 a1 cos 30 mul add -50 a1 sin 30 mul add moveto
+    50 -50 30 a1 a2 arc stroke
+    end
+} def 
+% end bits
+/bd {bind def} bind def

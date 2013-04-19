@@ -1,0 +1,35 @@
+%!
+(strokes.ps) run
+(bits.ps) run
+(prolog_end.txt) run
+
+setclassic
+
+PageBegin
+2 dup scale
+
+bitdict begin /shape_style /spline def end
+bitdict begin /shape_style /corners def end
+
+0 10 -10 40 -40 Line
+0 40 -40 20 -135 45 Arc
+0 40 -40 35 30 -90 60 EllArc
+0 180 360 GreatArc
+
+0 spacing neg translate
+
+0 10 -10 50 -10 10 0 Squiggle
+0 70 -10 10 Circle
+0 50 -30 10 10 -45 Wicket
+0 70 -50 10 40 180 0 Hook
+0 10 -60 10 40 0 0 HalfHook
+0 10 -70 40 -80 0 LBend
+
+spacing dup translate
+0 10 -10 30 -50 0 ZigZag
+0 60 -20 10 30 -90 0 Lobe
+0 20 -80 5 20 0 0 FishBend
+
+
+showpage
+

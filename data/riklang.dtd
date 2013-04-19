@@ -1,0 +1,158 @@
+<!ENTITY % tentacles "line|arc|ellarc|squiggle|circle|wicket|hook|halfhook|lbend|fishbend|zigzag|lobe|greatarc">
+
+<!ELEMENT language (morphemes, aspects, relations, collectors, symbols?)>
+<!ELEMENT morphemes (morpheme+, paradigms?)>
+<!ELEMENT morpheme (glyph, readings?, roles?, idioms?, compounds?)>
+<!ATTLIST morpheme
+          name ID #REQUIRED
+          paradigm IDREF #REQUIRED><!--name of paradigm-->
+<!ELEMENT aspects (aspect+)>
+<!ELEMENT aspect (glyph, translation+)>
+<!ATTLIST aspect name ID #REQUIRED>
+<!ELEMENT relations (relation+)>
+<!ELEMENT relation (glyph, translation+)>
+<!ATTLIST relation name ID #REQUIRED
+          reciprocal IDREF #REQUIRED><!--name of relation-->
+<!ELEMENT collectors (collector+)>
+<!ELEMENT collector (glyph, translation+)>
+<!ATTLIST collector name CDATA #REQUIRED>
+<!ELEMENT symbols (symbol+)>
+<!ELEMENT symbol (glyph, translation+)>
+<!ATTLIST symbol name ID #REQUIRED>
+<!ELEMENT paradigms (paradigm+)>
+<!ELEMENT paradigm (note*, readings?, roles?)>
+<!ATTLIST paradigm name ID #REQUIRED>
+<!ELEMENT glyph (note*, (%tentacles;)+)>
+<!ELEMENT readings (reading+)>
+<!ELEMENT reading (note*, translation+, examples?, gloss?)>
+<!ATTLIST reading aspect IDREF #REQUIRED><!--name of aspect-->
+<!ELEMENT roles (role+)>
+<!ELEMENT role (note*, translation+, examples?)>
+<!ATTLIST role relation IDREF #REQUIRED><!--name of relation--> 
+<!ELEMENT compounds (compound+)>
+<!ELEMENT compound (addition, readings, roles?, gloss?)>
+<!ELEMENT translation (text+)>
+<!ELEMENT note (utterance, translation?)>
+<!ATTLIST note type (etymology|expansion|comment) #REQUIRED>
+<!ELEMENT text (#PCDATA)>
+<!ATTLIST text xml:lang NMTOKEN "en">
+<!ELEMENT utterance (word+)><!--could contain ascii-form rikchik?-->
+<!ELEMENT idioms (idiom+)>
+<!ELEMENT idiom (utterance, note*, translation+, examples?)>
+<!ELEMENT examples (example+)>
+<!ELEMENT gloss (text+)>
+<!ELEMENT example (utterance, translation?)>
+<!ELEMENT addition (utterance)>
+<!ELEMENT word EMPTY>
+<!ATTLIST word
+          morpheme IDREF #REQUIRED
+          aspect IDREF #REQUIRED
+          relation IDREF #REQUIRED
+          collector CDATA #REQUIRED
+          pronomial (none|pronomial|option) "none">
+<!-- begin tentacle definitions -->
+<!ELEMENT line EMPTY>
+<!ATTLIST line
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          x2 CDATA "80"
+          y2 CDATA "-80">
+<!ELEMENT arc EMPTY>
+<!ATTLIST arc
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          r1 CDATA "10"
+          a1 CDATA "0"
+          a2 CDATA "90">
+<!ELEMENT ellarc EMPTY>
+<!ATTLIST ellarc
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          r1 CDATA "10"
+          r2 CDATA "10"
+          a1 CDATA "0"
+          a2 CDATA "90">
+<!ELEMENT squiggle EMPTY>
+<!ATTLIST squiggle
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          x2 CDATA "80"
+          y2 CDATA "-80"
+          r1 CDATA "10"
+          d CDATA "0">
+<!ELEMENT circle EMPTY>
+<!ATTLIST circle
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          r1 CDATA "10">
+<!ELEMENT wicket EMPTY>
+<!ATTLIST wicket
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          r1 CDATA "10"
+          leg CDATA "10"
+          a1 CDATA "0">
+<!ELEMENT hook EMPTY>
+<!ATTLIST hook
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          r1 CDATA "10"
+          leg CDATA "10"
+          a1 CDATA "0"
+          d CDATA "0">
+<!ELEMENT halfhook EMPTY>
+<!ATTLIST halfhook
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          r1 CDATA "10"
+          leg CDATA "10"
+          a1 CDATA "0"
+          d CDATA "0">
+<!ELEMENT lbend EMPTY>
+<!ATTLIST lbend
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          x2 CDATA "80"
+          y2 CDATA "-80"
+          d CDATA "0">
+<!ELEMENT fishbend EMPTY>
+<!ATTLIST fishbend
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          r1 CDATA "10"
+          leg CDATA "10"
+          a1 CDATA "0"
+          d CDATA "0">
+<!ELEMENT zigzag EMPTY>
+<!ATTLIST zigzag
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          x2 CDATA "80"
+          y2 CDATA "-80"
+          d CDATA "0">
+<!ELEMENT lobe EMPTY>
+<!ATTLIST lobe
+	  r CDATA "0"
+          x CDATA "50"
+          y CDATA "-50"
+          r1 CDATA "10"
+          r2 CDATA "10"
+          a1 CDATA "0"
+          d CDATA "0">
+<!ELEMENT greatarc EMPTY>
+<!ATTLIST greatarc
+	  r CDATA "0"
+          a1 CDATA "0"
+          a2 CDATA "90">
+<!-- end tentacle definitions -->

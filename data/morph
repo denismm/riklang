@@ -1,0 +1,54 @@
+#!/usr/bin/perl
+
+use strict;
+
+if (! @ARGV) {
+    print STDERR "Usage: morph Morpheme-A\n";
+    exit 1;
+}
+
+my $riklang = $ENV{RIKCHIK_SRC};
+
+ARGUMENT: foreach my $argument (@ARGV) {
+    my $morpheme;
+    my $filename;
+    my $filecontents;
+    if ($argument =~ /^([A-Z][A-Za-z]+)-([A-Z])$/) {
+	my $aspect;
+	($morpheme, $aspect) = ($1, $2);
+	$filename = "$riklang/data/language/morphemes/$morpheme/readings/$aspect.xml";
+	$filecontents = <<EOA;
+<reading aspect="$aspect">
+  <translation>
+    <text></text>
+  </translation>
+</reading>
+EOA
+    } elsif ($argument =~ /^([A-Z][A-Za-z]+)-([A-Z][A-Za-z]+)$/) {
+	my $relation;
+	($morpheme, $relation) = ($1, $2);
+	$filename = "$riklang/data/language/morphemes/$morpheme/roles/$relation.xml";
+	$filecontents = <<EOR;
+<role relation="$relation">
+  <translation>
+    <text></text>
+  </translation>
+</role>
+EOR
+    } else {
+	print STDERR "Bad argument $argument\n";
+	next ARGUMENT;
+    }
+    if (! -d "$riklang/data/language/morphemes/$morpheme") {
+	print STDERR "Bad morpheme: $argument\n";
+	next ARGUMENT;
+    }
+    if (! -e $filename) {
+	open (COMPONENT, ">$filename") || die "can't open $filename for writing: $!";
+	print COMPONENT $filecontents;
+	close COMPONENT;
+	system "cvs add $filename\n";
+    }
+    my $editor = $ENV{EDITOR} || 'vi';
+    system "$editor $filename\n";
+}

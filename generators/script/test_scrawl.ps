@@ -1,0 +1,26 @@
+%!
+72 dup scale
+6 72 div setlinewidth
+% LBend
+1 dup translate
+0 5 moveto 0 0 0 0 5 0 curveto stroke
+% arc?
+1 dup translate
+0 5 moveto 0 2.5 2.5 0 5 0 curveto stroke
+0 5 moveto 0 2.25 2.25 0 5 0 curveto stroke
+gsave
+    1 72 div setlinewidth
+    1 0 0 setrgbcolor
+    5 5 5 180 270 arc stroke
+grestore
+1 dup translate
+0 5 moveto 0 0 2.5 5 2.5 0 curveto stroke
+%circle?
+1 dup translate
+1 72 div setlinewidth
+2.5 dup translate
+0 0 2.5 0 360 arc stroke
+1 0 0 setrgbcolor
+0 2.5 moveto -2.5 0.75 div 2.5 -2.5 0.75 div -2.5 0 -2.5 curveto 
+2.5 0.75 div -2.5 2.5 0.75 div 2.5 0 2.5 curveto stroke
+showpage

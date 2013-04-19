@@ -1,0 +1,59 @@
+#!/usr/bin/perl
+
+use strict;
+
+if (! @ARGV) {
+    print STDERR "Usage: compound Morpheme:Gloss\n";
+    exit 1;
+}
+
+my $riklang = $ENV{RIKCHIK_SRC};
+
+ARGUMENT: foreach my $argument (@ARGV) {
+    my ($morpheme, $gloss) = split(':',  $argument, 2);
+    die "bad compound" unless $morpheme && $gloss;
+    my $filename;
+    my $filecontents;
+    $filename = "$riklang/data/language/morphemes/$morpheme/compounds/$gloss.xml";
+	$filecontents = <<EOC;
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Foo" relation="Bar"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="P">
+      <translation>
+	<text>
+	  $gloss
+	</text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      $gloss
+    </text>
+  </gloss>
+</compound>
+EOC
+    if (! -d "$riklang/data/language/morphemes/$morpheme") {
+	print STDERR "Bad morpheme: $argument\n";
+	next ARGUMENT;
+    }
+    my $dirname = "$riklang/data/language/morphemes/$morpheme/compounds/";
+    if (! -d $dirname) {
+        mkdir($dirname, 0777);
+	system "cvs add $dirname\n";
+    }
+    if (! -e $filename) {
+	open (COMPONENT, ">$filename") || die "can't open $filename for writing: $!";
+	print COMPONENT $filecontents;
+	close COMPONENT;
+	system "cvs add $filename\n";
+    }
+    my $editor = $ENV{EDITOR} || 'vi';
+    system "$editor $filename\n";
+}
