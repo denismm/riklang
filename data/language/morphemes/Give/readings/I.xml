@@ -1,0 +1,27 @@
+<reading aspect="I">
+  <translation>
+    <text>
+      Mathematical subtraction.
+    </text>
+  </translation>
+  <gloss>
+    <text>
+      Subtract
+    </text>
+  </gloss>
+  <examples>
+    <example>
+      <utterance>
+        <word aspect="I" collector="0" morpheme="Five" relation="Source"/>
+        <word aspect="I" collector="0" morpheme="Two" relation="Patient"/>
+        <word aspect="I" collector="2" morpheme="Give" relation="Includes"/>
+        <word aspect="I" collector="1" morpheme="Three" relation="End"/>
+      </utterance>
+      <translation>
+        <text>
+          Five minus two is three.
+        </text>
+      </translation>
+    </example>
+  </examples>
+</reading>

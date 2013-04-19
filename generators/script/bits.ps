@@ -1,0 +1,387 @@
+% bit library
+/bitdict 15 dict def
+bitdict begin
+    /shape_style /normal def
+    /arg {exch def} def
+    /shavedict 10 dict def
+    /shavepath {
+	shavedict begin
+	% important vars: oldx oldy startx starty
+	    [
+		{
+		    /y arg /x arg
+		    /startx x def /starty y def
+		    /oldx x def /oldy y def
+		    x y
+		    /moveto cvx
+		}
+		{
+		    /y arg /x arg
+		    oldx x sub dup mul oldy y sub dup mul add sqrt
+		    currentlinewidth 0.1 mul gt {
+			% line is not too short to ignore
+			/oldx x def /oldy y def
+			x y
+			/lineto cvx
+		    } if
+		}
+		{
+		    /y3 arg /x3 arg
+		    /y2 arg /x2 arg
+		    /y1 arg /x1 arg
+		    oldx x1 sub dup mul oldy y1 sub dup mul add sqrt
+		    x1 x2 sub dup mul y1 y2 sub dup mul add sqrt
+		    x2 x3 sub dup mul y2 y3 sub dup mul add sqrt
+		    add add
+		    currentlinewidth 0.1 mul gt {
+			% curve is not too short to ignore
+			/oldx x3 def /oldy y3 def
+			x1 y1 x2 y2 x3 y3
+			/curveto cvx
+		    } if
+		}
+		{
+		    oldx startx sub dup mul oldy starty sub dup mul add sqrt
+		    currentlinewidth 0.1 mul le {
+			% closepath is too short - might cause trouble
+			% change end of last segment to exactly start point
+			% top of stack is either x y curveto or x y lineto
+			3 1 roll
+			pop pop startx starty
+			3 -1 roll
+		    } if
+		    /oldx startx def /oldy starty def
+		    /closepath cvx
+		}
+		pathforall
+	    ]
+	    newpath
+	    cvx exec
+	end
+    } def
+end
+/Line {
+    bitdict begin
+    /y2 arg
+    /x2 arg
+    /y arg
+    /x arg
+    /r arg
+    x y moveto x2 y2 lineto 
+    r 1 eq {reversepath} if shavepath tentaclestroke
+    end
+} def
+/Arc {
+    bitdict begin
+    /a2 arg
+    /a1 arg
+    /r1 arg
+    /y arg
+    /x arg
+    /r arg
+    x r1 a1 cos mul add y r1 a1 sin mul add moveto
+    shape_style /corners eq {
+	/extent a2 a1 sub def
+	/extent extent 360 div floor neg 360 mul extent add def
+	/steps extent 180 gt { 4 } { 3 } ifelse def
+	1 1 steps {
+	    extent steps div mul a1 add /angle arg
+	    x r1 angle cos mul add y r1 angle sin mul add lineto
+	} for
+    } {
+	x y r1 a1 a2 arc 
+    } ifelse
+    r 1 eq {reversepath} if shavepath tentaclestroke
+    end
+} def
+/EllArc {
+    bitdict begin
+    /a2 arg
+    /a1 arg
+    /r2 arg
+    /r1 arg
+    /y arg
+    /x arg
+    /r arg
+    x r1 a1 cos mul add y r2 a1 sin mul add moveto
+    shape_style /corners eq {
+	/extent a2 a1 sub def
+	/extent extent 360 div floor neg 360 mul extent add def
+	/steps extent 180 gt { 4 } { 3 } ifelse def
+	1 1 steps {
+	    extent steps div mul a1 add /angle arg
+	    x r1 angle cos mul add y r2 angle sin mul add lineto
+	} for
+    } {
+	x y r1 r2 a1 a2 ell 
+    } ifelse
+    r 1 eq {reversepath} if shavepath tentaclestroke
+    end
+} def
+/Squiggle {
+    bitdict begin
+    /d arg
+    /r1 arg
+    /y2 arg
+    /x2 arg
+    /y arg
+    /x arg
+    /r arg
+    /a1 y2 y sub x2 x sub atan def
+    /r2 x2 x sub dup mul y2 y sub dup mul add sqrt 4 div def
+    gsave
+	x y translate
+	a1 rotate
+	d 0 eq { 1 -1 scale } if
+	shape_style /corners eq {
+	    0 0 moveto
+	    r2 r1 lineto
+	    r2 3 mul r1 neg lineto
+	    r2 4 mul 0 lineto
+	} {
+	    shape_style /spline eq {
+		0 0 moveto
+		r2 2 mul r1 2 3 sqrt mul mul
+		r2 2 mul r1 2 3 sqrt mul mul neg
+		r2 4 mul 0 curveto 
+	    } {
+		% normal shape_style
+		r1 r2 ge {
+		    0 0 moveto
+		    r2 0 r2 r1 180 0 elln
+		    r2 3 mul 0 r2 r1 180 360 ell
+		} {
+		    /offset r2 dup mul r1 dup mul sub r1 2 mul div def
+		    /radius offset r1 add def
+		    /a2 r2 offset atan def
+		    0 0 moveto
+		    r2 offset neg radius 90 a2 add 90 a2 sub arcn 
+		    r2 3 mul offset radius 270 a2 sub 270 a2 add arc 
+		} ifelse
+	    } ifelse
+	} ifelse
+	r 1 eq {reversepath} if shavepath tentaclestroke
+    grestore
+    end
+} def
+/Circle {
+    bitdict begin
+    /r1 arg
+    /y arg
+    /x arg
+    /r arg
+    gsave
+	x y translate
+	shape_style /corners eq {
+	    0 r1 moveto
+	    r1 neg 0 lineto
+	    0 r1 neg lineto
+	    r1 0 lineto
+	    0 r1 lineto
+	} {
+	    0 r1 moveto 
+	    shape_style /spline eq {
+		r1 -0.75 div r1 
+		r1 -0.75 div r1 neg
+		0 r1 neg curveto
+		r1 0.75 div r1 neg
+		r1 0.75 div r1 
+		0 r1 curveto
+	    } {
+		0 0 r1 90 450 arc 
+	    } ifelse
+	} ifelse
+	r 1 eq {reversepath} if shavepath tentaclestroke
+    grestore
+    end
+} def
+/Wicket {
+    bitdict begin
+    /a1 arg
+    /leg arg
+    /r1 arg
+    /y arg
+    /x arg
+    /r arg
+    gsave
+	x y translate
+	a1 rotate
+	shape_style /corners eq {
+	    leg r1 neg moveto
+	    0 r1 neg lineto
+	    r1 neg 0 lineto
+	    0 r1 lineto
+	    leg r1 lineto 
+	} {
+	    leg r1 neg moveto
+	    0 0 r1 270 90 arcn
+	    leg r1 lineto 
+	} ifelse
+	r 1 eq {reversepath} if shavepath tentaclestroke
+    grestore
+    end
+} def
+/Hook {
+    bitdict begin
+    /d arg
+    /a1 arg
+    /leg arg
+    /r1 arg
+    /y arg
+    /x arg
+    /r arg
+    gsave
+	x y translate
+	a1 rotate
+	d 0 ne {1 -1 scale} if
+	shape_style /corners eq {
+	    0 r1 neg moveto
+	    r1 neg 0 lineto
+	    0 r1 lineto
+	    leg r1 lineto 
+	} {
+	    0 r1 neg moveto
+	    0 0 r1 270 90 arcn
+	    leg r1 lineto 
+	} ifelse
+	r 1 eq {reversepath} if shavepath tentaclestroke
+    grestore
+    end
+} def
+/HalfHook {
+    bitdict begin
+    /d arg
+    /a1 arg
+    /leg arg
+    /r1 arg
+    /y arg
+    /x arg
+    /r arg
+    gsave
+	x y translate
+	a1 rotate
+	d 0 ne {1 -1 scale} if
+	shape_style /corners eq {
+	    r1 neg 0 moveto
+	    0 r1 lineto
+	    leg r1 lineto 
+	} {
+	    r1 neg 0 moveto
+	    0 0 r1 180 90 arcn
+	    leg r1 lineto 
+	} ifelse
+	r 1 eq {reversepath} if shavepath tentaclestroke
+    grestore
+    end
+} def
+/LBend {
+    bitdict begin
+    /d arg
+    /y2 arg
+    /x2 arg
+    /y arg
+    /x arg
+    /r arg
+    x y moveto
+    shape_style /spline eq {
+	d 0 eq { x y2 x y2} { x2 y x2 y } ifelse
+	x2 y2 curveto
+    } {
+	d 0 eq { x y2 lineto} { x2 y lineto } ifelse
+	x2 y2 lineto
+    } ifelse
+    r 1 eq {reversepath} if shavepath tentaclestroke
+    end
+} def
+/ZigZag {
+    bitdict begin
+    /d arg
+    /y2 arg
+    /x2 arg
+    /y arg
+    /x arg
+    /r arg
+    x y moveto
+    shape_style /spline eq {
+	d 0 eq {
+	    x y2 x2 y 
+	} {
+	    x2 y x y2
+	} ifelse
+	x2 y2 curveto
+    } {
+	d 0 eq {
+	    x y y2 add 2 div lineto x2 x sub 0 rlineto
+	} {
+	    x x2 add 2 div y lineto 0 y2 y sub rlineto
+	} ifelse
+	x2 y2 lineto 
+    } ifelse
+    r 1 eq {reversepath} if shavepath tentaclestroke
+    end
+} def
+/Lobe {
+    bitdict begin
+    /d arg
+    /a1 arg
+    /r2 arg
+    /r1 arg
+    /y arg
+    /x arg
+    /r arg
+    gsave
+	x y translate
+	a1 rotate
+	d 0 ne {1 -1 scale} if
+	shape_style /corners eq {
+	    0 r1 neg moveto
+	    r1 neg 0 lineto
+	    0 r1 lineto
+	    r2 r1 neg lineto
+	} {
+	    0 r1 neg moveto
+	    0 0 r1 270 90 arcn
+	    0 r1 neg r2 r1 2 mul 90 0 elln
+	} ifelse
+	r 1 eq {reversepath} if shavepath tentaclestroke
+    grestore
+    end
+} def
+/FishBend {
+    bitdict begin
+    /d arg
+    /a1 arg
+    /leg arg
+    /r1 arg
+    /y arg
+    /x arg
+    /r arg
+    gsave
+	x y translate
+	a1 rotate
+	d 0 ne {1 -1 scale} if
+	shape_style /corners eq {
+	    leg r1 neg moveto
+	    0 r1 neg lineto
+	    202.5 cos r1 mul 202.5 sin r1 mul lineto
+	    135 cos r1 mul 135 sin r1 mul lineto
+	    leg 2 sqrt div dup rlineto 
+	} {
+	    leg r1 neg moveto
+	    0 r1 neg lineto
+	    0 0 r1 270 135 arcn
+	    leg 2 sqrt div dup rlineto 
+	} ifelse
+	r 1 eq {reversepath} if shavepath tentaclestroke
+
+    grestore
+} def
+/GreatArc {
+    bitdict begin
+    /a2 arg
+    /a1 arg
+    /r arg
+    r 50 -50 30 a1 a2 Arc
+    end
+} def 
+% end bits

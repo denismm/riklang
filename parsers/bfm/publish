@@ -1,0 +1,4 @@
+cd update
+perl update_type.pl
+cd ..
+cp *.* ~/public_html/rikchik/bfm/

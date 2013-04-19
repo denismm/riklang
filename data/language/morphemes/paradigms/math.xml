@@ -1,0 +1,19 @@
+<paradigm name="math">
+  <note type="comment">
+    <utterance/>
+    <translation>
+      <text>
+        Used for numbers and other mathematical concepts.
+      </text>
+    </translation>
+  </note>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          The concept in the abstract.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+</paradigm>

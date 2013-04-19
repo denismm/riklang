@@ -1,0 +1,10 @@
+<collector name="3">
+  <glyph>
+    <lobe a1="90" d="1" r="1" r1="5" r2="15" x="95" y="-95"/>
+  </glyph>
+  <translation>
+    <text>
+      3
+    </text>
+  </translation>
+</collector>

@@ -1,0 +1,13 @@
+<idioms>
+  <idiom>
+    <utterance>
+      <word aspect="V" collector="0" morpheme="Talk" pronomial="pronomial" relation="Patient"/>
+      <word aspect="V" collector="1" morpheme="Talk" relation="End"/>
+    </utterance>
+    <translation>
+      <text>
+        Please say that again. (Literally, &quot;Speak the previous speak.&quot;)
+      </text>
+    </translation>
+  </idiom>
+</idioms>

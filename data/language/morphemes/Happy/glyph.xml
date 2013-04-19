@@ -1,0 +1,20 @@
+<glyph>
+  <note type="etymology">
+    <utterance>
+      <word aspect="I" collector="0" morpheme="Happy" relation="Source"/>
+      <word aspect="R" collector="0" morpheme="Rikchik" relation="Includes"/>
+      <word aspect="R" collector="1" morpheme="Eye" relation="Patient"/>
+      <word aspect="M" collector="0" morpheme="Big" relation="Destination"/>
+      <word aspect="V" collector="3" morpheme="Change" relation="End"/>
+    </utterance>
+    <translation>
+      <text>
+        A rikchik's eye widens in happiness.
+      </text>
+    </translation>
+  </note>
+  <ellarc a1="90" a2="270" r1="10" r2="30" x="50" y="-50"/>
+  <line x="20" x2="30" y="-50" y2="-50"/>
+  <line x="80" x2="70" y="-50" y2="-50"/>
+  <circle r1="5" x="55" y="-50"/>
+</glyph>

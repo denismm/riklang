@@ -1,0 +1,26 @@
+<paradigm name="animate">
+  <note type="comment">
+    <utterance/>
+    <translation>
+      <text>
+        Used for animals and other things with the power of motion.
+      </text>
+    </translation>
+  </note>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          A living creature.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="T">
+      <translation>
+        <text>
+          A dead creature.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+</paradigm>

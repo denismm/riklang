@@ -1,0 +1,29 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Circle" relation="Instrument"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          A unit of time equal to 64 or 65 years, or 80 Earth years.  	    One orbit of Friend Sun (Alpha Centauri B) around Sun 	    (Alpha Centauri A).
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="M">
+      <translation>
+        <text>
+          About as old as a cycle.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Cycle
+    </text>
+  </gloss>
+</compound>

@@ -1,0 +1,6 @@
+<glyph>
+  <circle r1="10" x="50" y="-30"/>
+  <greatarc a1="135" a2="225"/>
+  <greatarc a1="315" a2="45" r="1"/>
+  <squiggle d="1" r1="5" x="40" x2="60" y="-75" y2="-75"/>
+</glyph>

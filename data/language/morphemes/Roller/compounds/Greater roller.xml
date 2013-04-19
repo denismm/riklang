@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          A greater roller (sphaera major) is a mammoth-sized roller which eats trees and boulders in grasslands, forests, canyons, and foothills.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Greater roller
+    </text>
+  </gloss>
+</compound>

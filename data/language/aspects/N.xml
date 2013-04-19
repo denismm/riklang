@@ -1,0 +1,10 @@
+<aspect name="N">
+  <glyph>
+    <lobe a1="270" d="1" r1="5" r2="15" x="5" y="-85"/>
+  </glyph>
+  <translation>
+    <text>
+      Name: replaces the form in a descriptive name to mark it as a name.
+    </text>
+  </translation>
+</aspect>

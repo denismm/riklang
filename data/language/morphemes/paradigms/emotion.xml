@@ -1,0 +1,40 @@
+<paradigm name="emotion">
+  <note type="comment">
+    <utterance/>
+    <translation>
+      <text/>
+    </translation>
+  </note>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          The emotion in the abstract; the "vibes" of the emotion.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="V">
+      <translation>
+        <text>
+          To feel the emotion.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles>
+    <role relation="Agent">
+      <translation>
+        <text>
+          The entity feeling the emotion.
+        </text>
+      </translation>
+    </role>
+    <role relation="Patient">
+      <translation>
+        <text>
+          The target of the emotion.
+        </text>
+      </translation>
+    </role>
+  </roles>
+</paradigm>

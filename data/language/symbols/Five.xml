@@ -1,0 +1,11 @@
+<symbol name="Five">
+  <glyph>
+    <circle r1="30" x="50" y="-50"/>
+    <line x="50" x2="80" y="-50" y2="-80"/>
+  </glyph>
+  <translation>
+    <text>
+      5
+    </text>
+  </translation>
+</symbol>

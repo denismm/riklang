@@ -1,0 +1,12 @@
+<symbol name="Three">
+  <glyph>
+    <lbend d="0" x="20" x2="40" y="-20" y2="-80"/>
+    <halfhook a1="90" d="1" leg="20" r1="40" x="40" y="-40"/>
+    <line x="50" x2="50" y="-20" y2="-79"/>
+  </glyph>
+  <translation>
+    <text>
+      3
+    </text>
+  </translation>
+</symbol>

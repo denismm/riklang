@@ -1,0 +1,13 @@
+<symbol name="Subtract">
+  <glyph>
+    <arc a1="90" a2="270" r1="10" x="40" y="-50"/>
+    <arc a1="-90" a2="90" r1="10" x="60" y="-50"/>
+    <line x="30" x2="70" y="-50" y2="-50"/>
+    <circle r1="5" x="50" y="-50"/>
+  </glyph>
+  <translation>
+    <text>
+      Subtract
+    </text>
+  </translation>
+</symbol>

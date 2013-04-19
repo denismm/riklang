@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="SUBMOR" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="P">
+      <translation>
+	<text>
+	  SUBDIRern-DIR: the direction 1/3 of the way from DIR to SUBDIR.
+	</text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      SUBDIRern-DIR
+    </text>
+  </gloss>
+</compound>

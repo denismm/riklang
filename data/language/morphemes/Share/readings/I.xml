@@ -1,0 +1,27 @@
+<reading aspect="I">
+  <translation>
+    <text>
+      Mathematical division.
+    </text>
+  </translation>
+  <gloss>
+    <text>
+      Divide
+    </text>
+  </gloss>
+  <examples>
+    <example>
+      <utterance>
+        <word aspect="I" collector="0" morpheme="Six" relation="Patient"/>
+        <word aspect="I" collector="0" morpheme="Two" relation="Destination"/>
+        <word aspect="I" collector="2" morpheme="Share" relation="Includes"/>
+        <word aspect="I" collector="1" morpheme="Three" relation="End"/>
+      </utterance>
+      <translation>
+        <text>
+          Six divided by two is three.
+        </text>
+      </translation>
+    </example>
+  </examples>
+</reading>

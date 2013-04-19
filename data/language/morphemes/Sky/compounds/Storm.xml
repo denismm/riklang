@@ -1,0 +1,29 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Dragon" relation="Qualityrec"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          A storm.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="I">
+      <translation>
+        <text>
+          Stormy weather.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Storm
+    </text>
+  </gloss>
+</compound>

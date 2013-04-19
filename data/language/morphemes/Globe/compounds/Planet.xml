@@ -1,0 +1,30 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
+      <word aspect="N" collector="0" morpheme="Ground" relation="Instrument"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="P">
+      <translation>
+        <text>
+          A planet, as a location.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="R">
+      <translation>
+        <text>
+          A planet, as an object in the sky.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Planet
+    </text>
+  </gloss>
+</compound>

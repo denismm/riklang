@@ -1,0 +1,16 @@
+<symbol name="Religion">
+  <glyph>
+    <circle r1="10" x="50" y="-50"/>
+    <circle r1="10" x="50" y="-30"/>
+    <circle r1="10" x="50" y="-70"/>
+    <circle r1="10" x="67.32" y="-40"/>
+    <circle r1="10" x="67.32" y="-60"/>
+    <circle r1="10" x="32.68" y="-40"/>
+    <circle r1="10" x="32.68" y="-60"/>
+  </glyph>
+  <translation>
+    <text>
+      Religion
+    </text>
+  </translation>
+</symbol>

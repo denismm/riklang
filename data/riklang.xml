@@ -1,0 +1,6490 @@
+<language>
+  <morphemes>
+    <morpheme name="Home" paradigm="state">
+      <glyph>
+        <note type="etymology">
+          <utterance>
+            <word aspect="M" collector="0" morpheme="Four" relation="Quality"/>
+            <word aspect="R" collector="1" morpheme="Rikchik" relation="Agent"/>
+            <word aspect="I" collector="0" morpheme="Fear" relation="Source"/>
+            <word aspect="I" collector="0" morpheme="Happy" relation="Destination"/>
+            <word aspect="M" collector="0" morpheme="Long" relation="Quality"/>
+            <word aspect="V" collector="4" morpheme="Eye" relation="End"/>
+          </utterance>
+          <translation>
+            <text>
+              Four rikchiks keep safe by looking out for danger.
+            </text>
+          </translation>
+        </note>
+        <circle r1="10" x="50" y="-30"/>
+        <circle r1="10" x="30" y="-50"/>
+        <circle r1="10" x="70" y="-50"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A family or household. Specifically, its adult members.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A house, in the sense of an object.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To marry, either creating a new family or adding one or more members to an existing family.
+            </text>
+          </translation>
+          <gloss>
+            <text>
+              Marry
+            </text>
+          </gloss>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Comfortable.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              A house, in the sense of a place.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              The idea of home or marriage.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The rikchik or rikchiks determining that the rikchiks be married.
+            </text>
+          </translation>
+          <examples>
+            <example>
+              <utterance>
+                <word aspect="N" collector="0" morpheme="Long" relation="Quality"/>
+                <word aspect="N" collector="1" morpheme="Tree" relation="Quality"/>
+                <word aspect="N" collector="0" morpheme="Circle" relation="Patientrec"/>
+                <word aspect="R" collector="2" morpheme="Home" relation="Agent"/>
+                <word aspect="R" collector="1" morpheme="Leader" relation="Agent"/>
+                <word aspect="R" collector="0" morpheme="Leader" pronomial="pronomial" relation="Agent"/>
+                <word aspect="R" collector="1" morpheme="Child" relation="Patient"/>
+                <word aspect="N" collector="0" morpheme="Sun" relation="Instrument"/>
+                <word aspect="N" collector="1" morpheme="Insect" relation="Quality"/>
+                <word aspect="N" collector="0" morpheme="Circle" relation="Patientrec"/>
+                <word aspect="R" collector="2" morpheme="Home" relation="Agent"/>
+                <word aspect="R" collector="1" morpheme="Leader" relation="Patient"/>
+                <word aspect="V" collector="3" morpheme="Home" relation="End"/>
+              </utterance>
+              <translation>
+                <text>
+                  The leaders of Long-Tree marry their child to the leaders of Summer-Insect.
+                </text>
+              </translation>
+            </example>
+          </examples>
+        </role>
+        <role relation="Instrument">
+          <translation>
+            <text>
+              Any means used to enact the home.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The married rikchiks.
+            </text>
+          </translation>
+        </role>
+        <role relation="Includesrec">
+          <translation>
+            <text>
+              An individual member of the family.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Seven" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  A town.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Town
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Fight" relation="Agentrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  A military base.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Base
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Home" relation="Includesrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  A nation or country.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Nation
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Leader" paradigm="tool">
+      <glyph>
+        <circle r1="5" x="50" y="-25"/>
+        <circle r1="5" x="25" y="-25"/>
+        <circle r1="5" x="75" y="-25"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A leader.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To lead or be led.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Number" paradigm="tool">
+      <glyph>
+        <circle r1="12.5" x="32.5" y="-32.5"/>
+        <circle r1="12.5" x="32.5" y="-67.5"/>
+        <circle r1="12.5" x="67.5" y="-32.5"/>
+        <circle r1="12.5" x="67.5" y="-67.5"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Around" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  The ratio between a circle's perimeter and its diameter: approximately 3.1 or 30.663652.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Pi
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Sequence" paradigm="grammatical">
+      <glyph>
+        <circle r1="5" x="25" y="-25"/>
+        <circle r1="5" x="125/3" y="-125/3"/>
+        <circle r1="5" x="175/3" y="-175/3"/>
+        <circle r1="5" x="75" y="-75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              A sequence of events.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Source">
+          <translation>
+            <text>
+              An establishing phrase, describing an event taking place 	before the sequence (such as "once upon a time" or 	"last week at work").
+            </text>
+          </translation>
+        </role>
+        <role relation="Quality">
+          <translation>
+            <text>
+              A length of time between events.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              A closing phrase, describing an event that takes place after the	sequence (such as "they all lived happily ever after").
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              An event in the sequence.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Word" paradigm="tool">
+      <glyph>
+        <circle r1="5" x="50" y="-25"/>
+        <circle r1="5" x="25" y="-75"/>
+        <circle r1="5" x="75" y="-75"/>
+        <circle r1="10" x="50" y="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A printed or otherwise physical word.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              A word.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The meaning of the word.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Art" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Symbol
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Symbol
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Child" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <circle r1="10" x="30" y="-50"/>
+        <circle r1="10" x="70" y="-50"/>
+        <line x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A child.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To give birth; to begin to do something.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The parent; the entity beginning the action.
+            </text>
+          </translation>
+        </role>
+        <role relation="Instrument">
+          <translation>
+            <text>
+              A contributor; any assisting entity or object.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The child produced; the action begun.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Contributor" paradigm="object">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <circle r1="10" x="30" y="-70"/>
+        <circle r1="10" x="70" y="-70"/>
+        <line x="30" x2="70" y="-50" y2="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              One of the non-Parent sources of genetic material to a	child in rikchik-like reproduction.  (Rikchiks and other	animals in the rikchik biosphere reproduce by having some	number N (at least 1) of Contributors each provide 	1/2N of their genes to a child, while the Parent provides	the remaining half and gives birth to the child.)
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To take the Contributor role in rikchik-like reproduction;	more generally, to contribute something to a common pool.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Mathematical multiplication.
+            </text>
+          </translation>
+          <gloss>
+            <text>
+              Multiply
+            </text>
+          </gloss>
+          <examples>
+            <example>
+              <utterance>
+                <word aspect="I" collector="0" morpheme="Three" relation="Patient"/>
+                <word aspect="I" collector="0" morpheme="Two" relation="Quality"/>
+                <word aspect="I" collector="2" morpheme="Contributor" relation="Includes"/>
+                <word aspect="I" collector="1" morpheme="Six" relation="End"/>
+              </utterance>
+              <translation>
+                <text>
+                  Three times two is six.
+                </text>
+              </translation>
+            </example>
+          </examples>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Source">
+          <translation>
+            <text>
+              The contributing entity.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The entity contributed to.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The contributed entity.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Sun" paradigm="undecided">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <circle r1="10" x="30" y="-50"/>
+        <circle r1="10" x="70" y="-50"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A sun (usually Alpha Centauri A).
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Bright; White.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              East.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Warmth, heat.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Small" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  A star.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Star
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Dead" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Northern-East: the direction 1/3 of the way from East to North.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Northern-East
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="God" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Southern-East: the direction 1/3 of the way from East to South.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Southern-East
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Think" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-40"/>
+        <circle r1="5" x="25" y="-25"/>
+        <circle r1="5" x="75" y="-25"/>
+        <line x="50" x2="50" y="-60" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To think.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Thought.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The thinker.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The subject of thought.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The thoughts or beliefs being thought.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Displacement" paradigm="tool">
+      <glyph>
+        <squiggle d="1" r1="15" x="20" x2="80" y="-35" y2="-35"/>
+        <circle r1="5" x="25" y="-70"/>
+        <circle r1="5" x="75" y="-70"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Emotion" paradigm="emotion">
+      <glyph>
+        <circle r1="5" x="25" y="-25"/>
+        <circle r1="5" x="25" y="-45"/>
+        <circle r1="10" x="70" y="-70"/>
+        <squiggle d="1" r1="15" x="50" x2="50" y="-20" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Parent" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <circle r1="10" x="30" y="-70"/>
+        <circle r1="10" x="70" y="-70"/>
+        <ellarc a1="180" a2="360" r1="30" r2="20" x="50" y="-30"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Big" paradigm="relation">
+      <glyph>
+        <circle r1="15" x="50" y="-35"/>
+        <line x="35" x2="35" y="-50" y2="-80"/>
+        <line x="65" x2="65" y="-50" y2="-80"/>
+        <circle r1="5" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Fight" paradigm="tool">
+      <glyph>
+        <line x="20" x2="45" y="-45" y2="-20"/>
+        <circle r1="12.5" x="32.5" y="-67.5"/>
+        <line x="80" x2="55" y="-45" y2="-20"/>
+        <circle r1="12.5" x="67.5" y="-67.5"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Glass" paradigm="material">
+      <glyph>
+        <line x="45" x2="45" y="-20" y2="-80"/>
+        <circle r1="10" x="30" y="-50"/>
+        <circle r1="10" x="70" y="-50"/>
+        <line x="55" x2="55" y="-20" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Transparent.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Book" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  A reading-lens (a foot-wide lens used to read small print).
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Reading-Lens
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Change" relation="Patientrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  A lens.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Lens
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Span" paradigm="grammatical">
+      <glyph>
+        <circle r1="5" x="25" y="-25"/>
+        <line x="30" x2="65" y="-35" y2="-70"/>
+        <line x="35" x2="70" y="-30" y2="-65"/>
+        <circle r1="5" x="75" y="-75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Being as old as the span.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              A length of time.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Source">
+          <translation>
+            <text>
+              The event beginning the span.
+            </text>
+          </translation>
+        </role>
+        <role relation="Instrument">
+          <translation>
+            <text>
+              A means used to measure the span.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The event ending the span.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The events that took place during the span.  The span is defined	as being as long as these events were taking place.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Zero" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  New.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  No amount of time, an instant.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              New
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Grass" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Season (usually one of 3: Flower Season, Fire Season, or Sleep Season)
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Season
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Tentacle" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A named day of the week.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Weekday
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
+              <word aspect="N" collector="1" morpheme="Circle" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 7 cycles, 472 rikchik years, or 560 	    Earth years.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a great cycle.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Great Cycle
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Seven" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 7 rikchik days, or 6.5 Earth days.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a week.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Week
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Rock" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 2.4 Earth seconds.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a rock-span.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Rock-span
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Circle" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 64 or 65 years, or 80 Earth years.  	    One orbit of Friend Sun (Alpha Centauri B) around Sun 	    (Alpha Centauri A).
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a cycle.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Cycle
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 14 fire-spans, or 22.45 Earth hours.  One	    rikchik planetary day.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a day.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Day
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Number" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 23 rikchik days, or 21.5 Earth days.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a block.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Block
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Tree" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 21 blocks or 483 days (plus a leap day 	    every 19 years) or 1.24 Earth years.  One rikchik planetary year.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a year.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Year
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Fire" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 49 water-spans, or 96 Earth minutes.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a fire-span.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Fire-span
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 49 rock-spans, or 118 earth seconds.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a water-span.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Water-span
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Spot" paradigm="tool">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <line x="80" x2="80" y="-20" y2="-80"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Hail" paradigm="tool">
+      <glyph>
+        <circle r1="10" x="30" y="-30"/>
+        <line x="30" x2="30" y="-50" y2="-80"/>
+        <squiggle d="0" r1="5" x="40" x2="60" y="-50" y2="-50"/>
+        <circle r1="5" x="75" y="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A small rock, such as the ones thrown to get someone's attention.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To get the attention of someone facing another direction by throwing a small rock at them; more generally, to throw.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              A unit of length, nicknamed a 'throw', 21 'reaches' long.  About 40 yards or 35 meters.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Small" paradigm="relation">
+      <glyph>
+        <circle r1="10" x="40" y="-30"/>
+        <squiggle d="1" r1="10" x="40" x2="40" y="-50" y2="-80"/>
+        <circle r1="5" x="65" y="-55"/>
+        <line x="65" x2="65" y="-70" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Choice" paradigm="state">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-60"/>
+        <circle r1="5" x="35" y="-55"/>
+        <circle r1="5" x="65" y="-55"/>
+        <greatarc a1="180" a2="360"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              One of a selection of animate entities (often translated "Or").
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              One of a selection of inanimate entities (often translated "Or").
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              Make a choice.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The chosen entity.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The entities being chosen among.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Fruit" paradigm="state">
+      <glyph>
+        <hook a1="180" d="1" leg="50" r1="10" x="70" y="-30"/>
+        <circle r1="5" x="25" y="-35"/>
+        <circle r1="5" x="25" y="-55"/>
+        <line x="60" x2="60" y="-30" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Fruit or vegetables on the vine.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              Picked fruit or vegetable.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To create.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Magenta and other reddish purples.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Sad" paradigm="emotion">
+      <glyph>
+        <circle r1="5" x="50" y="-25"/>
+        <squiggle d="0" r1="5" x="20" x2="80" y="-40" y2="-40"/>
+        <squiggle d="0" r1="5" x="20" x2="80" y="-60" y2="-60"/>
+        <circle r1="5" x="50" y="-75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              The emotion of sadness.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Share" paradigm="state">
+      <glyph>
+        <circle r1="5" x="50" y="-55"/>
+        <squiggle d="1" r1="10" x="30" x2="30" y="-20" y2="-80"/>
+        <squiggle d="0" r1="10" x="70" x2="70" y="-20" y2="-80"/>
+        <circle r1="5" x="50" y="-75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              Share.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Equal
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Mathematical division.
+            </text>
+          </translation>
+          <gloss>
+            <text>
+              Divide
+            </text>
+          </gloss>
+          <examples>
+            <example>
+              <utterance>
+                <word aspect="I" collector="0" morpheme="Six" relation="Patient"/>
+                <word aspect="I" collector="0" morpheme="Two" relation="Destination"/>
+                <word aspect="I" collector="2" morpheme="Share" relation="Includes"/>
+                <word aspect="I" collector="1" morpheme="Three" relation="End"/>
+              </utterance>
+              <translation>
+                <text>
+                  Six divided by two is three.
+                </text>
+              </translation>
+            </example>
+          </examples>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The entities among which the Patient is shared.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The shared entity.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Tree" paradigm="animate">
+      <glyph>
+        <circle r1="10" x="30" y="-30"/>
+        <squiggle d="1" r1="10" x="30" x2="30" y="-50" y2="-80"/>
+        <circle r1="10" x="70" y="-30"/>
+        <squiggle d="0" r1="10" x="70" x2="70" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Seven" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Forest, grove.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Forest
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Want" paradigm="emotion">
+      <glyph>
+        <squiggle d="0" r1="10" x="50" x2="50" y="-30" y2="-70"/>
+        <circle r1="10" x="30" y="-70"/>
+        <circle r1="5" x="75" y="-25"/>
+        <ellarc a1="270" a2="360" r="1" r1="30" r2="40" x="50" y="-40"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To want something; to want to do something.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              The emotion of desire.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The wanting entity.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The wanted object/activity.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="After" paradigm="relation">
+      <glyph>
+        <circle r1="5" x="25" y="-25"/>
+        <arc a1="270" a2="0" r="1" r1="30" x="20" y="-20"/>
+        <arc a1="270" a2="0" r="1" r1="40" x="20" y="-20"/>
+        <circle r1="5" x="75" y="-75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Toddler" paradigm="animate">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <arc a1="90" a2="180" r1="10" x="30" y="-80"/>
+        <arc a1="0" a2="90" r="1" r1="10" x="70" y="-80"/>
+        <circle r1="10" x="50" y="-60"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A toddler is a small animal with a simple body supported by seven spindly legs, a front-mounted mouth, and an eye on a stalk.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  The water-toddler is a relative of the toddler.  It is a water creature with a bottom-mounted mouth.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Water-toddler
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Friend" paradigm="state">
+      <glyph>
+        <ellarc a1="180" a2="360" r1="30" r2="10" x="50" y="-20"/>
+        <circle r1="10" x="30" y="-50"/>
+        <circle r1="10" x="70" y="-50"/>
+        <ellarc a1="0" a2="180" r1="30" r2="10" x="50" y="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Sibling" paradigm="state">
+      <glyph>
+        <circle r1="10" x="30" y="-30"/>
+        <ellarc a1="-90" a2="0" r="1" r1="20" r2="30" x="20" y="-50"/>
+        <circle r1="10" x="70" y="-30"/>
+        <ellarc a1="180" a2="270" r1="20" r2="30" x="80" y="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Rock" paradigm="material">
+      <glyph>
+        <circle r1="10" x="50" y="-35"/>
+        <greatarc a1="112.5" a2="247.5"/>
+        <greatarc a1="292.5" a2="67.5" r="1"/>
+        <circle r1="10" x="50" y="-65"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sky" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  Cloud
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Cloud
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Roller" paradigm="animate">
+      <glyph>
+        <circle r1="10" x="50" y="-40"/>
+        <greatarc a1="101.25" a2="198.75"/>
+        <greatarc a1="340.25" a2="78.75" r="1"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Rollers (sphaera sphaera) are spherical creatures, with 98 small tentacles all over their body. The rikchik-sized rollers eat grass, bushes, and rocks in the grasslands.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Small" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  A lesser roller (sphaera minor) is a rodent-sized roller which eats grass and pebbles in grasslands and forests.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Lesser roller
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  A greater roller (sphaera major) is a mammoth-sized roller which eats trees and boulders in grasslands, forests, canyons, and foothills.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Greater roller
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Stroke" paradigm="tool">
+      <glyph>
+        <greatarc a1="45" a2="135"/>
+        <circle r1="10" x="30" y="-50"/>
+        <circle r1="10" x="70" y="-50"/>
+        <greatarc a1="225" a2="315"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Similar" paradigm="relation">
+      <glyph>
+        <hook a1="90" d="1" leg="50" r="1" r1="10" x="30" y="-70"/>
+        <circle r1="5" x="25" y="-55"/>
+        <circle r1="5" x="75" y="-55"/>
+        <hook a1="90" d="0" leg="50" r="1" r1="10" x="70" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To be similar to, to resemble in some way
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="Agent">
+          <translation>
+            <text>
+              Non-central similar things.
+            </text>
+          </translation>
+        </role>
+        <role relation="Instrument">
+          <translation>
+            <text>
+              The quality shared by the patients and agents.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The object that is similar to other objects in the Patient or Agent roles.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Gear" paradigm="tool">
+      <glyph>
+        <circle r1="15" x="55" y="-35"/>
+        <lbend d="0" x="35" x2="30" y="-25" y2="-45"/>
+        <lbend d="0" x="60" x2="65" y="-60" y2="-80"/>
+        <circle r="1" r1="10" x="45" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A gear in a machine.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A disconnected gear.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="Agent">
+          <translation>
+            <text>
+              Something that turns a gear.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              Something turned by the gear.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Ground" relation="Patient"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  (post-Contact) A wheel.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Wheel
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Change" paradigm="state">
+      <glyph>
+        <halfhook a1="180" d="0" leg="40" r="1" r1="10" x="60" y="-20"/>
+        <circle r1="5" x="25" y="-50"/>
+        <circle r1="10" x="70" y="-50"/>
+        <halfhook a1="180" d="1" leg="40" r="1" r1="10" x="60" y="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Exchange" paradigm="tool">
+      <glyph>
+        <circle r1="10" x="40" y="-30"/>
+        <halfhook a1="90" d="0" leg="40" r1="20" x="40" y="-60"/>
+        <halfhook a1="270" d="0" leg="40" r1="20" x="60" y="-40"/>
+        <circle r1="10" x="60" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              Currency.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              The act of exchanging objects with someone; buying; barter.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Source">
+          <translation>
+            <text>
+              The other entity in the transaction; the seller.
+            </text>
+          </translation>
+        </role>
+        <role relation="Instrument">
+          <translation>
+            <text>
+              The object given up; the currency used to buy.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The object exchanged for; the bought item.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The entity initiating the transaction; the buyer.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Box" paradigm="tool">
+      <glyph>
+        <circle r1="10" x="50" y="-55"/>
+        <line x="40" x2="20" y="-20" y2="-60"/>
+        <line x="60" x2="80" y="-20" y2="-60"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              In math, a polygon.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Four" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Rectangle
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Rectangle
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Chaos" paradigm="state">
+      <glyph>
+        <line r="1" x="50" x2="50" y="-50" y2="-20"/>
+        <line r="1" x="40" x2="40" y="-50" y2="-20"/>
+        <line r="1" x="60" x2="60" y="-50" y2="-20"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Dead" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <line r="1" x="20" x2="30" y="-30" y2="-30"/>
+        <line r="1" x="80" x2="70" y="-30" y2="-30"/>
+        <line x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To die; to kill; to stop doing.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              North.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The killing entity.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The dead entity; the stopped activity.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Eastern-North: the direction 1/3 of the way from North to East.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Eastern-North
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Eye" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Western-North: the direction 1/3 of the way from North to West.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Western-North
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="God" paradigm="animate">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <line x="40" x2="20" y="-50" y2="-80"/>
+        <line x="60" x2="80" y="-50" y2="-80"/>
+        <line x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A god; usually one of the Seven Gods.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              South.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Eye" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Western-South: the direction 1/3 of the way from South to West.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Western-South
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Eastern-South: the direction 1/3 of the way from South to East.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Eastern-South
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Human" paradigm="animate">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <line x="40" x2="40" y="-60" y2="-80"/>
+        <line x="60" x2="60" y="-60" y2="-80"/>
+        <line x="20" x2="80" y="-50" y2="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A human being (homo sapiens); occasionally the human being spoken     to (parallel to Rikchik-R).  In some contexts, any alien.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Human culture and terrestrial biology in general.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Me" paradigm="grammatical">
+      <glyph>
+        <circle r1="10" x="50" y="-60"/>
+        <line x="30" x2="30" y="-20" y2="-70"/>
+        <line x="70" x2="70" y="-20" y2="-70"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              The speaker or writer.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              Here.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Now.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Pain" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-45"/>
+        <line x="40" x2="20" y="-35" y2="-20"/>
+        <line x="60" x2="80" y="-35" y2="-20"/>
+        <line x="50" x2="50" y="-60" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Rikchik" paradigm="animate">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <line x="40" x2="40" y="-50" y2="-80"/>
+        <line x="60" x2="60" y="-50" y2="-80"/>
+        <line x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A rikchik (ilpes sapiens); generically, any thinking creature;     occasionally, the entity being spoken to or the entity reading the     text.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A dead rikchik.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Green.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Mainstream Rikchik culture, including the Rikchik language and	Heptatheism.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Talk" paradigm="tool">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <line x="40" x2="40" y="-50" y2="-80"/>
+        <squiggle d="0" r1="5" x="60" x2="80" y="-50" y2="-50"/>
+        <line x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To talk, to say.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The speaker.
+            </text>
+          </translation>
+        </role>
+        <role relation="Source">
+          <translation>
+            <text>
+              The reason for talking.  The subject being discussed or explained.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The videance (the entity being talked to).
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The words being said.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <idioms>
+        <idiom>
+          <utterance>
+            <word aspect="V" collector="0" morpheme="Talk" pronomial="pronomial" relation="Patient"/>
+            <word aspect="V" collector="1" morpheme="Talk" relation="End"/>
+          </utterance>
+          <translation>
+            <text>
+              Please say that again. (Literally, &quot;Speak the previous speak.&quot;)
+            </text>
+          </translation>
+        </idiom>
+      </idioms>
+    </morpheme>
+    <morpheme name="Learn" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-45"/>
+        <arc a1="90" a2="247.5" r1="25" x="50" y="-45"/>
+        <line x="60" x2="60" y="-65" y2="-80"/>
+        <line x="50" x2="50" y="-65" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To learn; to teach.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The teaching entity.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The learning entity.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The information or ability that is learned.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Paint" paradigm="tool">
+      <glyph>
+        <line x="30" x2="50" y="-50" y2="-50"/>
+        <arc a1="144" a2="216" r1="50" x="70" y="-50"/>
+        <circle r1="10" x="70" y="-50"/>
+        <line x="30" x2="50" y="-70" y2="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              Globe-paint (the primary rikchik form of adornment).
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The rikchik wearing the paint.  The object being painted on.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Happy" paradigm="emotion">
+      <glyph>
+        <note type="etymology">
+          <utterance>
+            <word aspect="I" collector="0" morpheme="Happy" relation="Source"/>
+            <word aspect="R" collector="0" morpheme="Rikchik" relation="Includes"/>
+            <word aspect="R" collector="1" morpheme="Eye" relation="Patient"/>
+            <word aspect="M" collector="0" morpheme="Big" relation="Destination"/>
+            <word aspect="V" collector="3" morpheme="Change" relation="End"/>
+          </utterance>
+          <translation>
+            <text>
+              A rikchik's eye widens in happiness.
+            </text>
+          </translation>
+        </note>
+        <ellarc a1="90" a2="270" r1="10" r2="30" x="50" y="-50"/>
+        <line x="20" x2="30" y="-50" y2="-50"/>
+        <line x="80" x2="70" y="-50" y2="-50"/>
+        <circle r1="5" x="55" y="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              Enjoying.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              The emotion of happiness.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Source"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Warmth, pleasant heat, temperature.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Warmth
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Mouth" paradigm="tool">
+      <glyph>
+        <ellarc a1="180" a2="360" r1="30" r2="10" x="50" y="-20"/>
+        <line x="30" x2="30" y="-40" y2="-80"/>
+        <line x="70" x2="70" y="-40" y2="-80"/>
+        <circle r1="5" x="50" y="-45"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Rock" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Cave
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Cave
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Fire" relation="Sourcerec"/>
+              <word aspect="N" collector="0" morpheme="Rock" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Volcano
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Volcano
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Night" paradigm="state">
+      <glyph>
+        <ellarc a1="0" a2="180" r1="30" r2="10" x="50" y="-60"/>
+        <line x="40" x2="40" y="-20" y2="-40"/>
+        <line x="60" x2="60" y="-20" y2="-40"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Dark; Black.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Night.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Chimp" paradigm="animate">
+      <glyph>
+        <wicket a1="270" leg="10" r1="20" x="50" y="-40"/>
+        <line x="40" x2="40" y="-60" y2="-80"/>
+        <line x="60" x2="60" y="-60" y2="-80"/>
+        <circle r1="10" x="50" y="-40"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A chimp (ilpes arborealis), a forest-dwelling creature that resembles a rikchik but has a non-shperical globe.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Crawler" paradigm="animate">
+      <glyph>
+        <circle r1="5" x="50" y="-25"/>
+        <squiggle d="1" r="1" r1="5" x="20" x2="40" y="-75" y2="-75"/>
+        <squiggle d="0" r1="5" x="60" x2="80" y="-75" y2="-75"/>
+        <line x="50" x2="50" y="-40" y2="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              The grass-crawler has a small body with a front-facing mouth, seven long, flat legs, and an eye on a very long stalk that allows it to see over the tall grasses that it lives in.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Give" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-60"/>
+        <squiggle d="1" r1="10" x="30" x2="30" y="-20" y2="-70"/>
+        <squiggle d="0" r1="10" x="70" x2="70" y="-20" y2="-70"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A given object; a gift.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To transfer something from one entity to another; to give; to take; to allow to do.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Mathematical subtraction.
+            </text>
+          </translation>
+          <gloss>
+            <text>
+              Subtract
+            </text>
+          </gloss>
+          <examples>
+            <example>
+              <utterance>
+                <word aspect="I" collector="0" morpheme="Five" relation="Source"/>
+                <word aspect="I" collector="0" morpheme="Two" relation="Patient"/>
+                <word aspect="I" collector="2" morpheme="Give" relation="Includes"/>
+                <word aspect="I" collector="1" morpheme="Three" relation="End"/>
+              </utterance>
+              <translation>
+                <text>
+                  Five minus two is three.
+                </text>
+              </translation>
+            </example>
+          </examples>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Source">
+          <translation>
+            <text>
+              The entity from which the Patient is taken.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The entity to which the Patient is given.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The object given; the allowed activity.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Short" paradigm="relation">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <squiggle d="1" r1="5" x="25" x2="25" y="-40" y2="-80"/>
+        <squiggle d="0" r1="5" x="75" x2="75" y="-40" y2="-80"/>
+        <line x="40" x2="60" y="-50" y2="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Sky" paradigm="undecided">
+      <glyph>
+        <line x="20" x2="80" y="-20" y2="-20"/>
+        <squiggle d="0" r1="10s2" x="40" x2="20" y="-30" y2="-50"/>
+        <squiggle d="1" r1="10s2" x="60" x2="80" y="-30" y2="-50"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              The sky.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Blue.  Also includes turquoise, cyan, and bluish purples.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              Up.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Dragon" relation="Qualityrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  A storm.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Stormy weather.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Storm
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Sleep" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <squiggle d="0" r1="10" x="30" x2="30" y="-40" y2="-80"/>
+        <squiggle d="1" r1="10" x="70" x2="70" y="-40" y2="-80"/>
+        <line x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To sleep.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              Nowhere, as a direction.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Patient"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="V">
+              <translation>
+                <text>
+                  Sunset, Dusk
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Sunset
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Fire" paradigm="tool">
+      <glyph>
+        <ellarc a1="180" a2="270" r1="30" r2="50" x="80" y="-20"/>
+        <squiggle d="0" r1="10" x="30" x2="30" y="-30" y2="-70"/>
+        <circle r1="10" x="70" y="-30"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Dragon" relation="Source"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  Lightning.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Lightning
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Repulsion" paradigm="tool">
+      <glyph>
+        <circle r1="10" x="50" y="-40"/>
+        <arc a1="90" a2="270" r1="20" x="40" y="-40"/>
+        <arc a1="-90" a2="90" r="1" r1="20" x="60" y="-40"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Dragon" paradigm="animate">
+      <glyph>
+        <line x="50" x2="50" y="-40" y2="-20"/>
+        <arc a1="180" a2="360" r1="10" x="50" y="-40"/>
+        <ellarc a1="0" a2="180" r1="30" r2="10" x="50" y="-70"/>
+        <circle r1="5" x="50" y="-75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A dragon, a mythical creature.  Dragons are said to be like     sky-fish, but colored like sunsets or storms instead of blue sky, and     with a large spike above their eye.  They are said to reside inside    storms and to send down lightning.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Disgust" paradigm="emotion">
+      <glyph>
+        <line x="40" x2="60" y="-30" y2="-30"/>
+        <ellarc a1="-90" a2="90" r="1" r1="10" r2="30" x="20" y="-50"/>
+        <ellarc a1="90" a2="-90" r="0" r1="10" r2="30" x="80" y="-50"/>
+        <circle r1="10" x="50" y="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              The emotion of disgust.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Machine" paradigm="tool">
+      <glyph>
+        <line x="20" x2="80" y="-20" y2="-20"/>
+        <ellarc a1="90" a2="180" r1="20" r2="50" x="40" y="-80"/>
+        <ellarc a1="0" a2="90" r="1" r1="20" r2="50" x="60" y="-80"/>
+        <circle r1="5" x="50" y="-35"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Surprise" paradigm="emotion">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <ellarc a1="0" a2="90" r="1" r1="20" r2="40" x="20" y="-80"/>
+        <ellarc a1="90" a2="180" r="0" r1="20" r2="40" x="80" y="-80"/>
+        <line x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              The emotion of surprise.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Eye" paradigm="tool">
+      <glyph>
+        <circle r1="10" x="50" y="-40"/>
+        <greatarc a1="101.25" a2="247.5"/>
+        <greatarc a1="292.5" a2="78.75" r="1"/>
+        <line x="50" x2="50" y="-60" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              An eye.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To see.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              West.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Dead" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Northern-West: the direction 1/3 of the way from West to North.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Northern-West
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="God" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Southern-West: the direction 1/3 of the way from West to South.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Southern-West
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Angry" paradigm="emotion">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-55"/>
+        <lbend d="1" x="20" x2="35" y="-70" y2="-80"/>
+        <lbend d="1" x="80" x2="65" y="-70" y2="-80"/>
+        <circle r1="5" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              The emotion of anger.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Art" paradigm="state">
+      <glyph>
+        <squiggle d="0" r1="10" x="20" x2="80" y="-30" y2="-30"/>
+        <squiggle d="0" r1="5" x="20" x2="50" y="-55" y2="-55"/>
+        <circle r1="5" x="65" y="-35"/>
+        <squiggle d="0" r1="10" x="20" x2="80" y="-70" y2="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              Tangible, immobile art.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              Artistic creation.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Intangible art.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Move" paradigm="tool">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <squiggle d="0" r1="5" x="35" x2="35" y="-50" y2="-80"/>
+        <squiggle d="0" r1="5" x="65" x2="65" y="-50" y2="-80"/>
+        <squiggle d="0" r1="5" x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A vehicle.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To move.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              A path or road.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              A unit of length, nicknamed a 'walk', 1372 'throws' long.  About 30 miles or 50 km.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              A non-moving entity causing the movement.
+            </text>
+          </translation>
+        </role>
+        <role relation="Instrument">
+          <translation>
+            <text>
+              A vehicle or path used for the movement.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The moving thing.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Patient"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  A stream or river.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              River
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Hat" paradigm="tool">
+      <glyph>
+        <arc a1="0" a2="180" r1="20" x="50" y="-40"/>
+        <squiggle d="0" r1="10" x="30" x2="30" y="-50" y2="-80"/>
+        <squiggle d="1" r1="10" x="70" x2="70" y="-50" y2="-80"/>
+        <circle r1="10" x="50" y="-40"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Magic" paradigm="undecided">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <ellarc a1="90" a2="270" r="1" r1="10" r2="15" x="30" y="-35"/>
+        <ellarc a1="270" a2="90" r1="10" r2="15" x="70" y="-35"/>
+        <squiggle d="0" r1="5" x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Dragon" relation="Source"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Electricity.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Electricity
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Crab" paradigm="animate">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <greatarc a1="135" a2="225"/>
+        <greatarc a1="315" a2="45" r="1"/>
+        <squiggle d="1" r1="5" x="40" x2="60" y="-75" y2="-75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Crabs are small water animals that have a top-mounted eye, a bottom-mounted mouth, and seven small, stubby legs surrounding the mouth.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Beast" paradigm="animate">
+      <glyph>
+        <arc a1="0" a2="180" r1="10" x="40" y="-30"/>
+        <arc a1="90" a2="270" r1="10" x="30" y="-70"/>
+        <arc a1="270" a2="90" r="1" r1="10" x="70" y="-70"/>
+        <circle r1="10" x="50" y="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A lumpy-beast (glaebifer vastitaticolus), a mountain/forest creature that resembles a lumpy globe with a tentacle coming out of each lump (98 tentacles total), with a single forward-facing eye and a rear-facing mouth.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Sound" paradigm="tool">
+      <glyph>
+        <note type="etymology">
+          <utterance>
+            <word aspect="I" collector="0" morpheme="Sound" relation="Patient"/>
+            <word aspect="R" collector="0" morpheme="Human" relation="Source"/>
+            <word aspect="M" collector="0" morpheme="Art" relation="Quality"/>
+            <word aspect="I" collector="3" morpheme="Word" relation="End"/>
+          </utterance>
+          <translation>
+            <text>
+              The human symbol for sound.
+            </text>
+          </translation>
+        </note>
+        <arc a1="324" a2="36" r="1" r1="30" x="30" y="-50"/>
+        <circle r1="10" x="30" y="-50"/>
+        <arc a1="324" a2="36" r="1" r1="50" x="30" y="-50"/>
+        <arc a1="324" a2="36" r="1" r1="40" x="30" y="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Pulser" paradigm="animate">
+      <glyph>
+        <arc a1="180" a2="360" r1="10" x="50" y="-20"/>
+        <greatarc a1="135" a2="225"/>
+        <greatarc a1="315" a2="45" r="1"/>
+        <circle r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Pulsers are small ocean animals with a mouth at one end, an eye at the other, and nothing much in between. They wriggle through water with a pulsing motion. They are commonly believed to be some of the most primitive animals on the planet.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Ninja" paradigm="animate">
+      <glyph>
+        <ellarc a1="0" a2="90" r1="10" r2="60" x="40" y="-80"/>
+        <ellarc a1="0" a2="90" r1="10" r2="60" x="20" y="-80"/>
+        <ellarc a1="0" a2="90" r1="10" r2="60" x="70" y="-80"/>
+        <circle r1="5" x="65" y="-60"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Have" paradigm="state">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <hook a1="90" d="0" leg="30" r="1" r1="10" x="30" y="-50"/>
+        <hook a1="90" d="1" leg="30" r="1" r1="10" x="70" y="-50"/>
+        <ellarc a1="180" a2="360" r1="30" r2="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To have; to be able to do
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The having entity.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The object or ability that is had
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Love" paradigm="emotion">
+      <glyph>
+        <circle r1="10" x="50" y="-30"/>
+        <lbend d="0" x="30" x2="20" y="-20" y2="-60"/>
+        <lbend d="0" x="70" x2="80" y="-20" y2="-60"/>
+        <ellarc a1="0" a2="180" r1="30" r2="10" x="50" y="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To love, to be attracted to.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Feelings of love; in scientific contexts, gravity.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The loving entity; the entity being attracted.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The loved entity; the attracting entity.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Metal" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Magnetism; magnetic attraction.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles>
+            <role relation="Patient">
+              <translation>
+                <text>
+                  The object being affected by magnetism.
+                </text>
+              </translation>
+            </role>
+            <role relation="Destination">
+              <translation>
+                <text>
+                  An attracting entity or force.
+                </text>
+              </translation>
+            </role>
+            <role relation="Source">
+              <translation>
+                <text>
+                  An repulsing entity or force.
+                </text>
+              </translation>
+            </role>
+          </roles>
+          <gloss>
+            <text>
+              Magnetism
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Around" paradigm="relation">
+      <glyph>
+        <halfhook a1="180" d="1" leg="25" r="1" r1="15" x="65" y="-45"/>
+        <ellarc a1="-90" a2="90" r1="15" r2="30" x="20" y="-50"/>
+        <circle r1="10" x="55" y="-50"/>
+        <halfhook a1="180" d="0" leg="25" r="1" r1="15" x="65" y="-55"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Globe" paradigm="math">
+      <glyph>
+        <greatarc a1="41.25" a2="138.75"/>
+        <greatarc a1="161.25" a2="258.75"/>
+        <greatarc a1="280.25" a2="18.75"/>
+        <circle r1="10" x="50" y="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              The globe of a rikchik body.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A dead globe; a spherical thing.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
+              <word aspect="N" collector="0" morpheme="Ground" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  A planet, as a location.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  A planet, as an object in the sky.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Planet
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Faerie" paradigm="animate">
+      <glyph>
+        <circle r1="10" x="50" y="-40"/>
+        <wicket a1="270" leg="5" r1="5" x="30" y="-75"/>
+        <wicket a1="270" leg="5" r="1" r1="5" x="70" y="-75"/>
+        <wicket a1="270" leg="5" r1="5" x="50" y="-75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Fear" paradigm="emotion">
+      <glyph>
+        <hook a1="0" d="0" leg="10" r="1" r1="10" x="30" y="-30"/>
+        <wicket a1="0" leg="10" r="1" r1="10" x="50" y="-50"/>
+        <circle r1="5" x="75" y="-50"/>
+        <hook a1="0" d="1" leg="10" r1="10" x="30" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              The emotion of fear.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="All" paradigm="math">
+      <glyph>
+        <line x="40" x2="40" y="-20" y2="-80"/>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <line x="80" x2="80" y="-20" y2="-80"/>
+        <line x="60" x2="60" y="-20" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Everyone.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              Everything.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              All, Every.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Infinity.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Ground" paradigm="material">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-50"/>
+        <line x="20" x2="80" y="-60" y2="-60"/>
+        <line x="20" x2="80" y="-70" y2="-70"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              Ground or earth.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Red.  Also includes orange.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              Land; down.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Mathematical area.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  An island.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Island
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  Hill
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Hill
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Fire" relation="Patientrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Desert
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Desert
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Includesrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Swamp, wetlands.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Swamp
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sky" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Mountain
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Mountain
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Junction" paradigm="state">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-40"/>
+        <line x="20" x2="40" y="-50" y2="-50"/>
+        <line x="60" x2="80" y="-50" y2="-50"/>
+        <line x="50" x2="50" y="-60" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Seven" paradigm="math">
+      <glyph>
+        <line x="20" x2="80" y="-20" y2="-20"/>
+        <line x="20" x2="80" y="-40" y2="-40"/>
+        <line x="20" x2="80" y="-60" y2="-60"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Metal" paradigm="material">
+      <glyph>
+        <line x="20" x2="40" y="-60" y2="-60"/>
+        <line x="20" x2="40" y="-70" y2="-70"/>
+        <line x="60" x2="80" y="-35" y2="-35"/>
+        <squiggle d="0" r1="15" x="50" x2="50" y="-20" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Reflective.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Three" paradigm="math">
+      <glyph>
+        <line x="40" x2="40" y="-20" y2="-70"/>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <arc a1="270" a2="360" r="1" r1="15" x="65" y="-65"/>
+        <line x="60" x2="60" y="-20" y2="-60"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Shield" paradigm="tool">
+      <glyph>
+        <line x="20" x2="50" y="-40" y2="-40"/>
+        <line x="60" x2="60" y="-30" y2="-70"/>
+        <ellarc a1="-90" a2="90" r="1" r1="10" r2="30" x="70" y="-50"/>
+        <line x="20" x2="50" y="-60" y2="-60"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To protect.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The protecting entity.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The entity being protected.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Tentacle" paradigm="tool">
+      <glyph>
+        <ellarc a1="180" a2="360" r1="30" r2="10" x="50" y="-20"/>
+        <line x="30" x2="30" y="-40" y2="-80"/>
+        <line x="70" x2="70" y="-40" y2="-80"/>
+        <line x="50" x2="50" y="-40" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A tentacle or other extremity of a living creature (such as an arm or tail).
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A dead tentacle or other extremity of an inanimate object 	(such as a leaf or an outcropping).
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To touch or point at something.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              A unit of length, nicknamed a 'reach', 7 'blades' long.  About 5.5 feet or 1.6 meters.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Gather" paradigm="state">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-60"/>
+        <line x="35" x2="35" y="-20" y2="-60"/>
+        <line x="65" x2="65" y="-20" y2="-60"/>
+        <greatarc a1="180" a2="360"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A collection of animate entities (often translated "And").
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A collection of things (often translated "And").
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To gather.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Mathematical addition.
+            </text>
+          </translation>
+          <gloss>
+            <text>
+              Add
+            </text>
+          </gloss>
+          <examples>
+            <example>
+              <utterance>
+                <word aspect="I" collector="0" morpheme="Three" relation="Patient"/>
+                <word aspect="I" collector="0" morpheme="Two" relation="Patient"/>
+                <word aspect="I" collector="2" morpheme="Gather" relation="Includes"/>
+                <word aspect="I" collector="1" morpheme="Five" relation="End"/>
+              </utterance>
+              <translation>
+                <text>
+                  Three plus two is five.
+                </text>
+              </translation>
+            </example>
+          </examples>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The gathered entity or entities.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Bouncer" paradigm="animate">
+      <glyph>
+        <wicket a1="0" leg="10" r="1" r1="10" x="70" y="-30"/>
+        <line x="30" x2="20" y="-60" y2="-80"/>
+        <line x="70" x2="60" y="-60" y2="-80"/>
+        <line x="20" x2="80" y="-50" y2="-50"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              A bouncer (prosaltor ferox) a carnivore which has a long body ending in a mouth, a eye on a finlike appendage above the body, six powerful straight jumping legs, and a flat tail it uses for guidance. It hunts in the grasslands and lower mountains.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To jump; to bounce.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Fast.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Book" paradigm="tool">
+      <glyph>
+        <line x="20" x2="80" y="-20" y2="-20"/>
+        <hook a1="90" d="1" leg="45" r="1" r1="5" x="25" y="-75"/>
+        <line x="70" x2="70" y="-30" y2="-80"/>
+        <line x="50" x2="50" y="-30" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Crystal" paradigm="material">
+      <glyph>
+        <line x="50" x2="80" y="-30" y2="-60"/>
+        <line x="40" x2="20" y="-20" y2="-80"/>
+        <line x="50" x2="80" y="-50" y2="-80"/>
+        <lbend d="0" x="40" x2="60" y="-70" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Tasting like crystal (analog to sweet).
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Above" paradigm="relation">
+      <glyph>
+        <line x="20" x2="80" y="-70" y2="-70"/>
+        <squiggle d="0" r1="10" x="30" x2="30" y="-20" y2="-60"/>
+        <squiggle d="1" r1="10" x="70" x2="70" y="-20" y2="-60"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Six" paradigm="math">
+      <glyph>
+        <squiggle d="0" r1="10" x="30" x2="80" y="-30" y2="-30"/>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <line x="30" x2="80" y="-50" y2="-50"/>
+        <squiggle d="1" r1="10" x="30" x2="80" y="-70" y2="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Water" paradigm="material">
+      <glyph>
+        <squiggle d="0" r1="10" x="20" x2="80" y="-30" y2="-30"/>
+        <line x="35" x2="35" y="-50" y2="-70"/>
+        <line x="65" x2="65" y="-30" y2="-50"/>
+        <squiggle d="0" r1="10" x="20" x2="80" y="-70" y2="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Liquid.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Crystal" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  Ice.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Ice
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sleep" relation="Patientrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  Snow.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Snow
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sky" relation="Source"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  Rain.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Rain
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Five" paradigm="math">
+      <glyph>
+        <line x="20" x2="40" y="-40" y2="-20"/>
+        <arc a1="180" a2="270" r1="20" x="40" y="-60"/>
+        <arc a1="0" a2="90" r="1" r1="20" x="60" y="-40"/>
+        <line x="60" x2="80" y="-60" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Across" paradigm="relation">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-45"/>
+        <greatarc a1="110" a2="250"/>
+        <greatarc a1="290" a2="70" r="1"/>
+        <line x="50" x2="50" y="-55" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To be across something, or to cross something.  In math, the square root operation.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Thing" paradigm="grammatical">
+      <glyph>
+        <greatarc a1="11.25" a2="168.75"/>
+        <line x="40" x2="40" y="-30" y2="-70"/>
+        <line x="60" x2="60" y="-30" y2="-70"/>
+        <greatarc a1="191.25" a2="348.75"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Someone.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              Something.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              Act in some way.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              Somewhere.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Insect" paradigm="animate">
+      <glyph>
+        <note type="etymology">
+          <utterance>
+            <word aspect="I" collector="0" morpheme="Spot" relation="Patient"/>
+            <word aspect="I" collector="1" morpheme="Word" relation="Patient"/>
+            <word aspect="I" collector="1" morpheme="Similar" relation="End"/>
+          </utterance>
+          <translation>
+            <text>
+              Similar to the morpheme for Spot.
+            </text>
+          </translation>
+        </note>
+        <wicket a1="270" leg="10" r1="10" x="50" y="-30"/>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <line x="80" x2="80" y="-20" y2="-80"/>
+        <wicket a1="270" leg="10" r1="10" x="50" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Miscellaneous small annoying animals. None have wings, though a few can glide on leaves or are naturally buoyant.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="One" paradigm="math">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-70"/>
+        <hook a1="180" d="0" leg="15" r1="5" x="35" y="-65"/>
+        <hook a1="0" d="1" leg="15" r1="5" x="65" y="-65"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="What" paradigm="grammatical">
+      <glyph>
+        <line x="50" x2="50" y="-30" y2="-50"/>
+        <hook a1="180" d="1" leg="15" r1="5" x="35" y="-55"/>
+        <hook a1="0" d="0" leg="15" r1="5" x="65" y="-55"/>
+        <line x="50" x2="50" y="-60" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Who.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              What.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <translation>
+            <text>
+              Where.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Zero" paradigm="math">
+      <glyph>
+        <hook a1="270" d="1" leg="30" r1="10" x="30" y="-30"/>
+        <line x="40" x2="20" y="-50" y2="-80"/>
+        <hook a1="270" d="0" leg="30" r1="10" x="70" y="-30"/>
+        <line x="60" x2="80" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To do nothing, to not do something.  Often used as part of the "please" construction.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Door" paradigm="tool">
+      <glyph>
+        <line x="40" x2="40" y="-40" y2="-70"/>
+        <halfhook a1="270" d="1" leg="40" r1="20" x="40" y="-40"/>
+        <halfhook a1="270" d="0" leg="40" r1="20" x="60" y="-40"/>
+        <line x="60" x2="60" y="-40" y2="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A door.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Open
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Patient"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="V">
+              <translation>
+                <text>
+                  Sunrise, Dawn.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Sunrise
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Four" paradigm="math">
+      <glyph>
+        <line x="30" x2="70" y="-40" y2="-40"/>
+        <halfhook a1="270" d="1" leg="40" r1="20" x="40" y="-40"/>
+        <halfhook a1="270" d="0" leg="40" r1="20" x="60" y="-40"/>
+        <line x="30" x2="70" y="-60" y2="-60"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Two" paradigm="math">
+      <glyph>
+        <line x="40" x2="40" y="-20" y2="-50"/>
+        <zigzag d="0" x="20" x2="40" y="-40" y2="-80"/>
+        <line x="60" x2="60" y="-20" y2="-50"/>
+        <zigzag d="0" x="80" x2="60" y="-40" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Fish" paradigm="animate">
+      <glyph>
+        <fishbend a1="0" d="0" leg="17.5" r="1" r1="7.5" x="27.5" y="-42.5"/>
+        <line x="30" x2="30" y="-60" y2="-80"/>
+        <fishbend a1="180" d="1" leg="17.5" r="1" r1="7.5" x="72.5" y="-42.5"/>
+        <line x="70" x2="70" y="-60" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Fish is a general term for a family of similar-looking sea and water creatures. They all have a flattish, conical head/body, which bears a forward-facing eye and a downward-facing mouth, which is surrounded by extremely strong dangling tentacles. Fish have control over their buoyancy, like a submarine. Fish eat sea plants, minerals, and small water animals. They are representatives of the most primitive animals on the rikchik homeworld to be able to eat minerals.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sky" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="R">
+              <translation>
+                <text>
+                  The sky-fish is a large animal that resembles a hot-air balloon. It floats in the sky, mostly living on insects, and occasionally drifting down to eat foliage and gnaw on mountain peaks.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Sky-fish
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Work" paradigm="tool">
+      <glyph>
+        <line x="20" x2="80" y="-20" y2="-20"/>
+        <squiggle d="1" r1="10" x="30" x2="30" y="-30" y2="-80"/>
+        <squiggle d="1" r1="10" x="70" x2="70" y="-30" y2="-80"/>
+        <squiggle d="1" r1="10" x="50" x2="50" y="-30" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Chaos" relation="Agentrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="V">
+              <translation>
+                <text>
+                  To play.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A game.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  The physical objects involved in a game.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Play
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Play" paradigm="state">
+      <glyph>
+        <ellarc a1="0" a2="180" r1="30" r2="10" x="50" y="-30"/>
+        <squiggle d="1" r1="10" x="30" x2="30" y="-40" y2="-80"/>
+        <squiggle d="0" r1="10" x="70" x2="70" y="-40" y2="-80"/>
+        <line x="50" x2="50" y="-30" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Shoe" paradigm="tool">
+      <glyph>
+        <arc a1="0" a2="180" r1="20" x="50" y="-40"/>
+        <wicket a1="90" leg="10" r="1" r1="10" x="30" y="-60"/>
+        <wicket a1="90" leg="10" r1="10" x="70" y="-60"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Rail" paradigm="tool">
+      <glyph>
+        <arc a1="37" a2="143" r1="25" x="50" y="-65"/>
+        <hook a1="45" d="0" leg="22r2" r1="10" x="30" y="-50"/>
+        <hook a1="135" d="1" leg="22r2" r1="10" x="70" y="-50"/>
+        <line x="50" x2="50" y="-50" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A rail line.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              To travel by rail.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The train or train driver.
+            </text>
+          </translation>
+        </role>
+        <role relation="Source">
+          <translation>
+            <text>
+              The location being traveled from.
+            </text>
+          </translation>
+        </role>
+        <role relation="Instrument">
+          <translation>
+            <text>
+              The rail line being used.
+            </text>
+          </translation>
+        </role>
+        <role relation="Destination">
+          <translation>
+            <text>
+              The location being traveled to.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The people or goods being transported.
+            </text>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Grass" paradigm="material">
+      <glyph>
+        <ellarc a1="0" a2="90" r="1" r1="20" r2="50" x="40" y="-70"/>
+        <ellarc a1="0" a2="90" r="1" r1="20" r2="50" x="20" y="-70"/>
+        <ellarc a1="0" a2="90" r="1" r1="20" r2="50" x="60" y="-70"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              Grass; a blade of grass.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Yellow.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              A unit of length, nicknamed a 'blade', about 9.5 inches or 24 centimeters.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Cloth" paradigm="material">
+      <glyph>
+        <arc a1="90" a2="270" r1="10" x="30" y="-30"/>
+        <squiggle d="1" r1="10" x="40" x2="40" y="-30" y2="-70"/>
+        <squiggle d="1" r1="10" x="60" x2="60" y="-30" y2="-70"/>
+        <arc a1="-90" a2="90" r="1" r1="10" x="70" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Wind" paradigm="undecided">
+      <glyph>
+        <squiggle d="0" r1="5" x="20" x2="80" y="-25" y2="-25"/>
+        <ellarc a1="180" a2="270" r1="10" r2="35" x="45" y="-45"/>
+        <ellarc a1="180" a2="270" r1="10" r2="35" x="70" y="-45"/>
+        <squiggle d="0" r1="5" x="20" x2="80" y="-35" y2="-35"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="R">
+          <translation>
+            <text>
+              Wind.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Front" paradigm="relation">
+      <glyph>
+        <arc a1="0" a2="180" r1="10" x="50" y="-50"/>
+        <greatarc a1="101.25" a2="247.5"/>
+        <greatarc a1="292.5" a2="78.75" r="1"/>
+        <squiggle d="0" r1="5" x="50" x2="50" y="-60" y2="-80"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Circle" paradigm="math">
+      <glyph>
+        <arc a1="90" a2="180" r1="20" x="40" y="-40"/>
+        <arc a1="180" a2="270" r1="20" x="40" y="-60"/>
+        <arc a1="0" a2="90" r="1" r1="20" x="60" y="-40"/>
+        <arc a1="270" a2="360" r="1" r1="20" x="60" y="-60"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="V">
+          <translation>
+            <text>
+              In math, multiplying a number by itself.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              In math, the argument of the circling operation.
+            </text>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Home" relation="Includesrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  A city.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              City
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Long" paradigm="relation">
+      <glyph>
+        <ellarc a1="180" a2="270" r1="60" r2="10" x="80" y="-20"/>
+        <ellarc a1="180" a2="270" r1="60" r2="10" x="80" y="-55"/>
+        <ellarc a1="270" a2="360" r="1" r1="60" r2="10" x="20" y="-35"/>
+        <ellarc a1="270" a2="360" r="1" r1="60" r2="10" x="20" y="-70"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="I">
+          <translation>
+            <text>
+              Length; in math, a 1-dimensional measurement.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Across" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Diameter
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Diameter
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Around" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Perimeter
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Perimeter
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <morpheme name="Beach" paradigm="material">
+      <glyph>
+        <wicket a1="270" leg="12.5" r1="12.5" x="32.5" y="-32.5"/>
+        <wicket a1="270" leg="12.5" r1="12.5" x="32.5" y="-67.5"/>
+        <wicket a1="90" leg="12.5" r1="12.5" x="67.5" y="-32.5"/>
+        <wicket a1="90" leg="12.5" r1="12.5" x="67.5" y="-67.5"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+    </morpheme>
+    <morpheme name="Flower" paradigm="state">
+      <glyph>
+        <wicket a1="135" leg="10r2" r1="5r2" x="35" y="-35"/>
+        <wicket a1="225" leg="10r2" r1="5r2" x="35" y="-65"/>
+        <wicket a1="45" leg="10r2" r="1" r1="5r2" x="65" y="-35"/>
+        <wicket a1="315" leg="10r2" r="1" r1="5r2" x="65" y="-65"/>
+      </glyph>
+      <readings>
+        <reading aspect="Q">
+          <translation>
+            <text/>
+          </translation>
+        </reading>
+        <reading aspect="T">
+          <translation>
+            <text>
+              A flower.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="M">
+          <translation>
+            <text>
+              Color, colorful.
+            </text>
+          </translation>
+        </reading>
+      </readings>
+      <roles>
+        <role relation="none">
+          <translation>
+            <text/>
+          </translation>
+        </role>
+      </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Front" relation="Qualityrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  An award or any recognition for excelling in a contest, such as a race.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Award
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
+    </morpheme>
+    <paradigms>
+      <paradigm name="relation">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text>
+              Used for morphemes expressing a relation between two or more other words. Takes the place of prepositions in many other languages.
+            </text>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="V">
+            <translation>
+              <text>
+                To be in the relation.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+        <roles>
+          <role relation="Agent">
+            <translation>
+              <text>
+                The entity to which the patient is in the relation.
+              </text>
+            </translation>
+          </role>
+          <role relation="Patient">
+            <translation>
+              <text>
+                The entity in the relation.
+              </text>
+            </translation>
+          </role>
+        </roles>
+      </paradigm>
+      <paradigm name="math">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text>
+              Used for numbers and other mathematical concepts.
+            </text>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="I">
+            <translation>
+              <text>
+                The concept in the abstract.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+      </paradigm>
+      <paradigm name="state">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text/>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="R">
+            <translation>
+              <text>
+                A creature in the state. Apposite to the patient role.
+              </text>
+            </translation>
+          </reading>
+          <reading aspect="T">
+            <translation>
+              <text>
+                A thing in the state. Apposite to the patient role.
+              </text>
+            </translation>
+          </reading>
+          <reading aspect="V">
+            <translation>
+              <text>
+                To enact the state.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+        <roles>
+          <role relation="Agent">
+            <translation>
+              <text>
+                The entity, if different from the patient, causing the state.
+              </text>
+            </translation>
+          </role>
+          <role relation="Patient">
+            <translation>
+              <text>
+                The entity in the state.
+              </text>
+            </translation>
+          </role>
+        </roles>
+      </paradigm>
+      <paradigm name="animate">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text>
+              Used for animals and other things with the power of motion.
+            </text>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="R">
+            <translation>
+              <text>
+                A living creature.
+              </text>
+            </translation>
+          </reading>
+          <reading aspect="T">
+            <translation>
+              <text>
+                A dead creature.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+      </paradigm>
+      <paradigm name="object">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text/>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="R">
+            <translation>
+              <text>
+                A creature taking the V action.  Apposite to the Agent role.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+        <roles>
+          <role relation="Agent">
+            <translation>
+              <text>
+                The entity taking the action.
+              </text>
+            </translation>
+          </role>
+          <role relation="Patient">
+            <translation>
+              <text>
+                The entity the action is taken on.
+              </text>
+            </translation>
+          </role>
+        </roles>
+      </paradigm>
+      <paradigm name="tool">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text/>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="T">
+            <translation>
+              <text>
+                The tool. Apposite to the instrument relation.
+              </text>
+            </translation>
+          </reading>
+          <reading aspect="V">
+            <translation>
+              <text>
+                To use the tool.
+              </text>
+            </translation>
+            <translation>
+              <text>
+                To take action similar to use of the tool.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+        <roles>
+          <role relation="Agent">
+            <translation>
+              <text>
+                The entity, if different from the patient, using the tool.
+              </text>
+            </translation>
+          </role>
+          <role relation="Patient">
+            <translation>
+              <text>
+                The entity being affected by the tool.
+              </text>
+            </translation>
+          </role>
+          <role relation="Instrument">
+            <translation>
+              <text>
+                The tool being used.
+              </text>
+            </translation>
+          </role>
+        </roles>
+      </paradigm>
+      <paradigm name="material">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text>
+              Used for substances of which other items are constructed.
+            </text>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="T">
+            <translation>
+              <text>
+                Any amount of the material.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+      </paradigm>
+      <paradigm name="emotion">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text/>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="I">
+            <translation>
+              <text>
+                The emotion in the abstract; the "vibes" of the emotion.
+              </text>
+            </translation>
+          </reading>
+          <reading aspect="V">
+            <translation>
+              <text>
+                To feel the emotion.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+        <roles>
+          <role relation="Agent">
+            <translation>
+              <text>
+                The entity feeling the emotion.
+              </text>
+            </translation>
+          </role>
+          <role relation="Patient">
+            <translation>
+              <text>
+                The target of the emotion.
+              </text>
+            </translation>
+          </role>
+        </roles>
+      </paradigm>
+      <paradigm name="grammatical">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text>
+              Used for morphemes that have a primarily grammatical function.
+            </text>
+          </translation>
+        </note>
+      </paradigm>
+    </paradigms>
+  </morphemes>
+  <aspects>
+    <aspect name="R">
+      <glyph>
+        <wicket a1="270" leg="5" r1="5" x="5" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          Animate Noun: used for living things and self-propelled machinery.
+        </text>
+      </translation>
+    </aspect>
+    <aspect name="T">
+      <glyph>
+        <circle r1="5" x="5" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          Inanimate Noun: used for non-living things, including dead things.
+        </text>
+      </translation>
+    </aspect>
+    <aspect name="V">
+      <glyph>
+        <squiggle d="1" r1="5" x="0" x2="20" y="-95" y2="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          Verb
+        </text>
+      </translation>
+    </aspect>
+    <aspect name="M">
+      <glyph>
+        <lbend d="1" x="10" x2="0" y="-80" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          Modifier: adjective or adverb.
+        </text>
+      </translation>
+    </aspect>
+    <aspect name="N">
+      <glyph>
+        <lobe a1="270" d="1" r1="5" r2="15" x="5" y="-85"/>
+      </glyph>
+      <translation>
+        <text>
+          Name: replaces the form in a descriptive name to mark it as a name.
+        </text>
+      </translation>
+    </aspect>
+    <aspect name="P">
+      <glyph>
+        <line x="5" x2="5" y="-90" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          Place
+        </text>
+      </translation>
+    </aspect>
+    <aspect name="I">
+      <glyph>
+        <squiggle d="0" r1="5" x="5" x2="5" y="-80" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          Idea: any non-tangible noun that is not a place.
+        </text>
+      </translation>
+    </aspect>
+  </aspects>
+  <relations>
+    <relation name="Agent" reciprocal="Agentrec">
+      <glyph>
+        <hook a1="0" d="1" leg="55" r1="5" x="25" y="-5"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Source" reciprocal="Sourcerec">
+      <glyph>
+        <hook a1="0" d="0" leg="55" r1="5" x="25" y="-5"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Instrument" reciprocal="Instrumentrec">
+      <glyph>
+        <line x="20" x2="80" y="0" y2="0"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Quality" reciprocal="Qualityrec">
+      <glyph>
+        <squiggle d="0" r1="5" x="60" x2="80" y="-5" y2="-5"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Destination" reciprocal="Destinationrec">
+      <glyph>
+        <lbend d="1" x="60" x2="80" y="0" y2="-10"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Patient" reciprocal="Patientrec">
+      <glyph>
+        <lbend d="0" x="80" x2="60" y="0" y2="-10"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Includes" reciprocal="Includesrec">
+      <glyph>
+        <ellarc a1="180" a2="360" r1="30" r2="10" x="50" y="0"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Agentrec" reciprocal="Agent">
+      <glyph>
+        <hook a1="180" d="0" leg="55" r1="5" x="75" y="-5"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Sourcerec" reciprocal="Source">
+      <glyph>
+        <hook a1="180" d="1" leg="55" r1="5" x="75" y="-5"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Instrumentrec" reciprocal="Instrument">
+      <glyph>
+        <line x="50" x2="50" y="0" y2="-10"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Qualityrec" reciprocal="Quality">
+      <glyph>
+        <squiggle d="1" r1="5" x="40" x2="20" y="-5" y2="-5"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Destinationrec" reciprocal="Destination">
+      <glyph>
+        <lbend d="1" x="40" x2="20" y="0" y2="-10"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Patientrec" reciprocal="Patient">
+      <glyph>
+        <lbend d="0" x="20" x2="40" y="0" y2="-10"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="Includesrec" reciprocal="Includes">
+      <glyph>
+        <ellarc a1="0" a2="180" r1="30" r2="10" x="50" y="-10"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+    <relation name="End" reciprocal="none">
+      <glyph>
+        <circle r1="5" x="50" y="-5"/>
+      </glyph>
+      <translation>
+        <text/>
+      </translation>
+    </relation>
+  </relations>
+  <collectors>
+    <collector name="0">
+      <glyph>
+        <circle r1="5" x="95" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          0 (this word stands alone)
+        </text>
+      </translation>
+    </collector>
+    <collector name="4">
+      <glyph>
+        <wicket a1="270" leg="5" r="1" r1="5" x="95" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          4
+        </text>
+      </translation>
+    </collector>
+    <collector name="3">
+      <glyph>
+        <lobe a1="90" d="1" r="1" r1="5" r2="15" x="95" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          3
+        </text>
+      </translation>
+    </collector>
+    <collector name="7">
+      <glyph>
+        <line x="90" x2="100" y="-100" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          7
+        </text>
+      </translation>
+    </collector>
+    <collector name="6">
+      <glyph>
+        <arc a1="270" a2="90" r="1" r1="10" x="90" y="-90"/>
+      </glyph>
+      <translation>
+        <text>
+          6
+        </text>
+      </translation>
+    </collector>
+    <collector name="1">
+      <glyph>
+        <lbend d="0" x="90" x2="100" y="-90" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          1
+        </text>
+      </translation>
+    </collector>
+    <collector name="S">
+      <glyph>
+        <arc a1="180" a2="360" r="1" r1="5" x="95" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          Scholastic (collect all immediately-preceding 0-collecting words)
+        </text>
+      </translation>
+    </collector>
+    <collector name="5">
+      <glyph>
+        <line x="90" x2="100" y="-90" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          5
+        </text>
+      </translation>
+    </collector>
+    <collector name="2">
+      <glyph>
+        <zigzag d="0" x="100" x2="90" y="-80" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          2
+        </text>
+      </translation>
+    </collector>
+  </collectors>
+  <symbols>
+    <symbol name="Add">
+      <glyph>
+        <line x="40" x2="40" y="-25" y2="-75"/>
+        <line x="50" x2="50" y="-25" y2="-75"/>
+        <line x="60" x2="60" y="-25" y2="-75"/>
+        <circle r1="20" x="50" y="-50"/>
+      </glyph>
+      <translation>
+        <text>
+          Add
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Multiply">
+      <glyph>
+        <circle r1="10" x="50" y="-35"/>
+        <circle r1="10" x="65" y="-65"/>
+        <circle r1="10" x="35" y="-65"/>
+        <line x="54.5" x2="60.5" y="-44" y2="-56"/>
+        <line x="45.5" x2="39.5" y="-44" y2="-56"/>
+      </glyph>
+      <translation>
+        <text>
+          Multiply
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Subtract">
+      <glyph>
+        <arc a1="90" a2="270" r1="10" x="40" y="-50"/>
+        <arc a1="-90" a2="90" r1="10" x="60" y="-50"/>
+        <line x="30" x2="70" y="-50" y2="-50"/>
+        <circle r1="5" x="50" y="-50"/>
+      </glyph>
+      <translation>
+        <text>
+          Subtract
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Long">
+      <glyph>
+        <line x="20" x2="80" y="-20" y2="-35"/>
+        <line x="80" x2="20" y="-35" y2="-50"/>
+        <line x="20" x2="80" y="-50" y2="-65"/>
+        <line x="80" x2="20" y="-65" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          Length
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Sector">
+      <glyph>
+        <arc a1="45" a2="135" r1="10r2" x="50" y="-78.75"/>
+        <arc a1="45" a2="135" r1="30r2" x="50" y="-78.75"/>
+        <line x="40" x2="20" y="-68.75" y2="-48.75"/>
+        <line x="60" x2="80" y="-68.75" y2="-48.75"/>
+      </glyph>
+      <translation>
+        <text>
+          Sector
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Divide">
+      <glyph>
+        <circle r1="5" x="50" y="-40"/>
+        <circle r1="5" x="50" y="-60"/>
+        <line x="50" x2="50" y="-45" y2="-55"/>
+      </glyph>
+      <translation>
+        <text>
+          Divide
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Seven">
+      <glyph>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+        <line x="80" x2="80" y="-80" y2="-20"/>
+        <line x="80" x2="20" y="-20" y2="-20"/>
+        <line x="20" x2="80" y="-40" y2="-40"/>
+        <line x="80" x2="20" y="-60" y2="-60"/>
+      </glyph>
+      <translation>
+        <text>
+          7
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Religion">
+      <glyph>
+        <circle r1="10" x="50" y="-50"/>
+        <circle r1="10" x="50" y="-30"/>
+        <circle r1="10" x="50" y="-70"/>
+        <circle r1="10" x="67.32" y="-40"/>
+        <circle r1="10" x="67.32" y="-60"/>
+        <circle r1="10" x="32.68" y="-40"/>
+        <circle r1="10" x="32.68" y="-60"/>
+      </glyph>
+      <translation>
+        <text>
+          Religion
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Cross">
+      <glyph>
+        <circle r1="30" x="50" y="-50"/>
+        <line x="50" x2="50" y="-20" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          Across or the crossing operation.
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Zero">
+      <glyph>
+        <greatarc a1="0" a2="180"/>
+        <line x="50" x2="80" y="-50" y2="-80"/>
+        <line x="50" x2="20" y="-50" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          0
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Four">
+      <glyph>
+        <wicket a1="270" leg="30" r1="30" x="50" y="-50"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          4
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Two">
+      <glyph>
+        <line x="20" x2="50" y="-20" y2="-80"/>
+        <line x="80" x2="50" y="-20" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          2
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Circle">
+      <glyph>
+        <circle r1="30" x="50" y="-50"/>
+      </glyph>
+      <translation>
+        <text>
+          A circle, or the circling operation.
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Three">
+      <glyph>
+        <lbend d="0" x="20" x2="40" y="-20" y2="-80"/>
+        <halfhook a1="90" d="1" leg="20" r1="40" x="40" y="-40"/>
+        <line x="50" x2="50" y="-20" y2="-79"/>
+      </glyph>
+      <translation>
+        <text>
+          3
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Six">
+      <glyph>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <line x="20" x2="80" y="-50" y2="-50"/>
+        <circle r1="25" x="55" y="-50"/>
+      </glyph>
+      <translation>
+        <text>
+          6
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Five">
+      <glyph>
+        <circle r1="30" x="50" y="-50"/>
+        <line x="50" x2="80" y="-50" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          5
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="One">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-80"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          1
+        </text>
+      </translation>
+    </symbol>
+  </symbols>
+</language>

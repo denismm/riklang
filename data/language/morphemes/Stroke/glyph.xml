@@ -1,0 +1,6 @@
+<glyph>
+  <greatarc a1="45" a2="135"/>
+  <circle r1="10" x="30" y="-50"/>
+  <circle r1="10" x="70" y="-50"/>
+  <greatarc a1="225" a2="315"/>
+</glyph>

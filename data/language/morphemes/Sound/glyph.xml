@@ -1,0 +1,19 @@
+<glyph>
+  <note type="etymology">
+    <utterance>
+      <word aspect="I" collector="0" morpheme="Sound" relation="Patient"/>
+      <word aspect="R" collector="0" morpheme="Human" relation="Source"/>
+      <word aspect="M" collector="0" morpheme="Art" relation="Quality"/>
+      <word aspect="I" collector="3" morpheme="Word" relation="End"/>
+    </utterance>
+    <translation>
+      <text>
+        The human symbol for sound.
+      </text>
+    </translation>
+  </note>
+  <arc a1="324" a2="36" r="1" r1="30" x="30" y="-50"/>
+  <circle r1="10" x="30" y="-50"/>
+  <arc a1="324" a2="36" r="1" r1="50" x="30" y="-50"/>
+  <arc a1="324" a2="36" r="1" r1="40" x="30" y="-50"/>
+</glyph>

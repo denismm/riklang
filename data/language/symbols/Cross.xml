@@ -1,0 +1,11 @@
+<symbol name="Cross">
+  <glyph>
+    <circle r1="30" x="50" y="-50"/>
+    <line x="50" x2="50" y="-20" y2="-80"/>
+  </glyph>
+  <translation>
+    <text>
+      Across or the crossing operation.
+    </text>
+  </translation>
+</symbol>

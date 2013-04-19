@@ -1,0 +1,7 @@
+<role relation="Patient">
+  <translation>
+    <text>
+      The entity initiating the transaction; the buyer.
+    </text>
+  </translation>
+</role>

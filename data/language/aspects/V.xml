@@ -1,0 +1,10 @@
+<aspect name="V">
+  <glyph>
+    <squiggle d="1" r1="5" x="0" x2="20" y="-95" y2="-95"/>
+  </glyph>
+  <translation>
+    <text>
+      Verb
+    </text>
+  </translation>
+</aspect>

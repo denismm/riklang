@@ -1,0 +1,10 @@
+<aspect name="R">
+  <glyph>
+    <wicket a1="270" leg="5" r1="5" x="5" y="-95"/>
+  </glyph>
+  <translation>
+    <text>
+      Animate Noun: used for living things and self-propelled machinery.
+    </text>
+  </translation>
+</aspect>

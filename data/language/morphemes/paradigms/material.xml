@@ -1,0 +1,19 @@
+<paradigm name="material">
+  <note type="comment">
+    <utterance/>
+    <translation>
+      <text>
+        Used for substances of which other items are constructed.
+      </text>
+    </translation>
+  </note>
+  <readings>
+    <reading aspect="T">
+      <translation>
+        <text>
+          Any amount of the material.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+</paradigm>

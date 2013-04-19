@@ -1,0 +1,334 @@
+%!
+% ellipse library
+/ellipsedict 9 dict def	
+ellipsedict /mtrx matrix put
+/ell {
+        ellipsedict begin
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y translate
+	xrad yrad scale
+	0 0 1 startangle endangle arc
+	savematrix setmatrix
+        end
+} def
+/elln {
+        ellipsedict begin
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y translate
+	xrad yrad scale
+	0 0 1 startangle endangle arcn
+	savematrix setmatrix
+        end
+} def
+% tentacle library
+/tentdict 12 dict def
+tentdict begin
+/asin {
+    dup dup mul 1 exch sub sqrt exch atan 
+} def
+end % tentdict
+/ctentaclestroke {
+    tentdict begin
+    stroke
+    end
+} def
+/btentaclestroke {
+    tentdict begin
+    flattenpath
+    gsave
+        /x 0 def /y 0 def /full 0 def
+        {
+            /y exch def /x exch def
+        }
+        {
+            /ny exch def /nx exch def
+            full y ny sub dup mul x nx sub dup mul add sqrt add /full exch def
+            /x nx def /y ny def
+        }
+        {} {}
+        pathforall
+    grestore
+    gsave
+        /x 0 def /y 0 def /width 0 def
+        /total 0 def
+        /setwidth {
+            total full div 
+            2 div 
+            1 exch sub 
+            currentlinewidth mul /nwidth exch def
+        } def
+        {
+            /y exch def /x exch def
+            setwidth
+            /width nwidth def
+        }
+        {
+            /ny exch def /nx exch def
+            y ny sub dup mul x nx sub dup mul add sqrt /dist exch def
+            total dist add /total exch def
+            setwidth
+            dist 0 ne {
+                /angle width nwidth sub dist div asin def
+                gsave
+                    newpath
+                    x y translate
+                    ny y sub nx x sub atan rotate
+                    width -1 mul 0 moveto
+                    0 0 width 180 angle arcn
+                    dist 0 nwidth angle angle -1 mul arcn
+                    0 0 width angle -1 mul 180 arcn
+                    closepath fill
+                grestore
+            } if
+            /x nx def /y ny def /width nwidth def
+        }
+        {} {}
+        pathforall
+    grestore
+    newpath
+    end
+} def
+/ptentaclestroke {
+    tentdict begin
+    flattenpath
+    gsave
+        /x 0 def /y 0 def /full 0 def
+        {
+            /y exch def /x exch def
+        }
+        {
+            /ny exch def /nx exch def
+            full y ny sub dup mul x nx sub dup mul add sqrt add /full exch def
+            /x nx def /y ny def
+        }
+        {} {}
+        pathforall
+    grestore
+    gsave
+        /x 0 def /y 0 def /width 0 def
+        /total 0 def
+        /setwidth {
+            total full div 
+            % 2 div 
+            1 exch sub 
+            currentlinewidth mul /nwidth exch def
+        } def
+        {
+            /y exch def /x exch def
+            setwidth
+            /width nwidth def
+        }
+        {
+            /ny exch def /nx exch def
+            y ny sub dup mul x nx sub dup mul add sqrt /dist exch def
+            total dist add /total exch def
+            setwidth
+            dist 0 ne {
+                /angle width nwidth sub dist div asin def
+                gsave
+                    newpath
+                    x y translate
+                    ny y sub nx x sub atan rotate
+                    width -1 mul 0 moveto
+                    0 0 width 180 angle arcn
+                    dist 0 nwidth angle angle -1 mul arcn
+                    0 0 width angle -1 mul 180 arcn
+                    closepath fill
+                grestore
+            } if
+            /x nx def /y ny def /width nwidth def
+        }
+        {} {}
+        pathforall
+    grestore
+    newpath
+    end
+} def
+/stentaclestroke{ %slanted
+    gsave
+      45 rotate
+      2 .5 scale
+      stroke
+    grestore
+    newpath
+} def
+%tentacle-specific code
+%array of code to be run for each tentacle
+/TColors_none [ {} {} {} {} {} {} {} {} ] def
+/TColors_learn [
+  {0 setgray} {0 setgray} {0 setgray} {0 setgray}
+  {0.5 0 0 setrgbcolor} {0 0 0.5 setrgbcolor} {0 0.5 0 setrgbcolor}
+  {0 setgray}
+] def
+/TColors_rainbow [
+  {0 setgray}
+  {0.5 0 0.5 setrgbcolor}
+  {0 0.5 0.5 setrgbcolor}
+  {0.5 0.5 0 setrgbcolor}
+  {0.5 0 0 setrgbcolor}
+  {0 0 0.5 setrgbcolor}
+  {0 0.5 0 setrgbcolor}
+  {0.5 setgray}
+] def
+
+/TColors TColors_none def
+
+%support for joined tentacle strokes
+%arrays to store points
+/initJArrays {
+ /jx 8 array def
+ /jy 8 array def
+ /jlx 8 array def
+ /jly 8 array def
+} def
+%tentacle identifiers
+/currentT 0 def
+/idTm {
+ /currentT exch def
+ TColors currentT get exec
+} def
+/idTa {
+ /currentT 4 def
+ TColors currentT get exec
+} def
+/idTr {
+ /currentT 5 def
+ TColors currentT get exec
+} def
+/idTc {
+ /currentT 6 def
+ TColors currentT get exec
+} def
+/idTs {
+ /currentT 7 def
+ TColors currentT get exec
+} def
+/jtentaclestroke{ %joined
+    tentdict begin
+    flattenpath
+    gsave
+        /x 0 def /y 0 def /full 0 def
+        {
+            /y exch def /x exch def
+        }
+        {
+            /ny exch def /nx exch def
+            full y ny sub dup mul x nx sub dup mul add sqrt add /full exch def
+            /x nx def /y ny def
+        }
+        {} {}
+        pathforall
+    grestore
+    gsave
+        /x 0 def /y 0 def /width 0 def
+        /total 0 def
+        /setwidth {
+            total full div 
+            2 div 
+            1 exch sub 
+            currentlinewidth mul /nwidth exch def
+        } def
+        { %move
+            /y exch def /x exch def
+	    /lx null def /ly null def 
+            setwidth
+            /width nwidth def
+        }
+        { %line
+            /ny exch def /nx exch def
+            y ny sub dup mul x nx sub dup mul add sqrt /dist exch def
+            total dist add /total exch def
+            setwidth
+            dist 0 ne {
+
+		lx null eq ly null eq and 
+		jx currentT get null ne jy currentT get null ne and
+		and{ %join to previous
+		    /distratio 1 2 div def
+		    /guidedist full distratio mul def
+		    jx currentT get jy currentT get
+		    itransform /tjy exch def /tjx exch def
+		    jlx currentT get jly currentT get
+		    itransform /tjly exch def /tjlx exch def
+		    /pair1mul tjx tjlx sub dup mul
+			tjy tjly sub dup mul add sqrt
+			guidedist div def
+		    /pair2mul x nx sub dup mul
+			y ny sub dup mul add sqrt
+			guidedist div def
+		
+		    gsave
+			currentlinewidth 2 div setlinewidth
+			%get x1,y1 from j
+			/x1 tjx tjlx tjx sub pair1mul div sub def 
+			/y1 tjy tjly tjy sub pair1mul div sub def
+			%get x2, y2
+			/x2 x nx x sub pair2mul div sub def
+			/y2 y ny y sub pair2mul div sub def
+			newpath
+			tjx tjy moveto
+			x1 y1 x2 y2 x y curveto
+			stroke
+			%guides
+			false {
+			1 0 0 setrgbcolor
+			newpath
+			tjx tjy moveto
+			x1 y1 lineto
+			x y moveto
+			x2 y2 lineto
+			stroke
+			} if
+			grestore
+		} if
+	    
+                /angle width nwidth sub dist div asin def
+                gsave
+                    newpath
+                    x y translate
+                    ny y sub nx x sub atan rotate
+                    width -1 mul 0 moveto
+                    0 0 width 180 angle arcn
+                    dist 0 nwidth angle angle -1 mul arcn
+                    0 0 width angle -1 mul 180 arcn
+                    closepath fill
+                grestore
+		/lx x def /ly y def %store last value
+		/x nx def /y ny def /width nwidth def
+	    } if
+        }
+        {}
+	{ %close
+	}
+        pathforall
+	x y transform	
+	jy currentT 3 -1 roll put
+	jx currentT 3 -1 roll put
+	lx ly transform
+	jly currentT 3 -1 roll put
+	jlx currentT 3 -1 roll put
+    grestore
+    newpath
+    end    
+} def
+
+
+/bd {bind def} bind def
+
+/setclassic { /tentaclestroke {ctentaclestroke} def } def
+/setpointy { /tentaclestroke {ptentaclestroke} def } def
+/setblunt { /tentaclestroke {btentaclestroke} def } def
+/setjoined { /tentaclestroke {jtentaclestroke} def } def
+

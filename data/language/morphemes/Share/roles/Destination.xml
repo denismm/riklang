@@ -1,0 +1,7 @@
+<role relation="Destination">
+  <translation>
+    <text>
+      The entities among which the Patient is shared.
+    </text>
+  </translation>
+</role>

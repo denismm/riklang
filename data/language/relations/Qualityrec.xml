@@ -1,0 +1,8 @@
+<relation name="Qualityrec" reciprocal="Quality">
+  <glyph>
+    <squiggle d="1" r1="5" x="40" x2="20" y="-5" y2="-5"/>
+  </glyph>
+  <translation>
+    <text/>
+  </translation>
+</relation>

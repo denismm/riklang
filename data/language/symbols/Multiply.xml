@@ -1,0 +1,14 @@
+<symbol name="Multiply">
+  <glyph>
+    <circle r1="10" x="50" y="-35"/>
+    <circle r1="10" x="65" y="-65"/>
+    <circle r1="10" x="35" y="-65"/>
+    <line x="54.5" x2="60.5" y="-44" y2="-56"/>
+    <line x="45.5" x2="39.5" y="-44" y2="-56"/>
+  </glyph>
+  <translation>
+    <text>
+      Multiply
+    </text>
+  </translation>
+</symbol>

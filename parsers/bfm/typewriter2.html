@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <title>Book Fruit Machine</title>
+    <script type="text/javascript" src="uyghuredit.js"></script >
+    <script type="text/javascript" src="type.js"></script >
+    <link type="text/css" rel="stylesheet" href="type.css"/> 
+  </head>
+  <body onLoad="init();">
+    <div id="entry">
+      <form id="entryform" onSubmit="return false;">
+	<table>
+	  <tr>
+	    <td rowspan="7">
+	      <select id="words" name="words" size="18" onChange="select_word();"></select>
+	    </td>
+	    <td>
+	      <img src="http://suberic.net/~dmm/cgi-bin/rikchik.cgi?size=1&style=blunt&lineheight=1&caption=0&Book-T-Patient-0.Fruit-V-Destinationrec-1.Machine-T-End-1"/>
+	    </td>
+	    <td rowspan="7">
+	      <table>
+		<tr>
+		  <td></td>
+		  <td id="clickRelations" align="center">
+		  </td>
+		  <td rowspan="2" valign="bottom" id="clickCollectors">
+		  </td>
+		  <td rowspan="2" valign="bottom" id="clickCollectorsP">
+		  </td>
+		  <td rowspan="2" valign="bottom" id="clickCollectorsO">
+		  </td>
+		</tr>
+		<tr>
+		  <td id="clickAspects">
+		  </td>
+		  <td id="clickMorphemes">
+		  </td>
+		</tr>
+		<tr>
+		  <td></td>
+		  <td align="center"><input type="button" onClick="return enter_word();"/></td>
+		</tr>
+	      </table>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <input type="button" value="Delete current word" onClick="delete_current_word();"/><br/>
+	      <input id="structure" type="checkbox"> 
+	      <a href="#" onClick="structure.click(); return false;" class="nonlink">Preserve structure</a>
+	    </td>
+	  </tr><tr>
+	    <td>
+	      <input type="button" value="Select none" onClick="select_none();"/><br/>
+	    </td>
+	  </tr><tr>
+	    <td>
+	      <input id="overwrite" type="checkbox"> 
+	      <a href="#" onClick="overwrite.click(); return false;" class="nonlink">Overwrite/edit current word</a>
+	    </td>
+	  </tr><tr>
+	    <td>
+	      <input type="text" name="text" id="text" autoComplete="off"/><br/>
+	      TAB or - completes to:
+	      <input type="text" name="completion" id="completion" readonly="readonly" style="border:0px;"/>
+	    </td>
+	  </tr><tr>
+	    <td>
+	    Full text: <input type="button" onClick="set_full_text();" value="Set"/><br/>
+	    <textarea id="fulltext"></textarea>
+	    </td>
+	  </tr><tr>
+	    <td>
+	      <a href="" id="statelink">Link to current state</a>
+	    </td>
+	  </tr>
+	</table>
+      </form>
+    </div>
+    <table>
+      <tr valign="top">
+	<td>
+	  <img class="output_image" id="written" src="clear.gif"\>
+	</td><td>
+	  <img class="output_image" id="parsed" src="clear.gif" \>
+	</td><td>
+	  <form onSubmit="update(); return false;">
+	    Written:<br/>
+	    <select onChange="update();" id="writtensize">
+	      <option value="1">Tiny</option>
+	      <option value="2">Small</option>
+	      <option value="3">Medium</option>
+	      <option value="5">Large</option>
+	    </select>
+	    <select onChange="update();" id="writtenstyle">
+	      <option value="classic">Classic</option>
+	      <option value="blunt">Blunt</option>
+	      <option value="pointy">Pointy</option>
+	    </select>
+	    <select onChange="update();" id="writtenlineheight">
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	      <option value="6">6</option>
+	      <option value="7">7</option>
+	      <option value="8">8</option>
+	      <option value="9">9</option>
+	      <option value="10">10</option>
+	      <option value="11">11</option>
+	      <option value="12">12</option>
+	      <option value="13">13</option>
+	      <option value="14">14</option>
+	      <option value="15">15</option>
+	      <option value="16">16</option>
+	      <option value="17">17</option>
+	      <option value="18">18</option>
+	      <option value="19">19</option>
+	      <option value="20">20</option>
+	      <option value="21">21</option>
+	    </select>
+	    <br/>
+	    Parsed:<br/>
+	    <select onChange="update();" id="parsedsize">
+	      <option value="1">Tiny</option>
+	      <option value="2">Small</option>
+	      <option value="3">Medium</option>
+	      <option value="5">Large</option>
+	    </select>
+	    <select onChange="update();" id="parsedstyle">
+	      <option value="classic">Classic</option>
+	      <option value="blunt">Blunt</option>
+	      <option value="pointy">Pointy</option>
+	    </select>
+	  </form>
+	</td><td>
+	  d c dc:
+	  <textarea id="dcdc"></textarea>
+	  <!-- div id="tree"></div -->
+	  <!-- 
+	  Done:
+	  <ul>
+	    <li>Enter Word</li>
+	    <li>Populate from Querystring
+	    <li>Delete Word</li>
+	    <li>Insert Word</li>
+	    <li>Edit Word</li>
+	    <li>Insert Word w/structure</li>
+	    <li>Delete Word w/structure</li>
+	    <li>Populate Options from Querystring</li>
+	    <li>Link To Current State</li>
+	    <li>Backspace In Relation</li>
+	    <li>Image-Based Text Entry</li>
+	    <li>Full-text Input/Output</li>
+	    <li>Set styles</li>
+	    <li>Rikchik Ordering</li>
+	    <li>End exception</li>
+	  </ul>
+	  To Do:
+	  <ul>
+	    <li>LJ form</li>
+	  </ul>
+	  Future:
+	  <ul>
+	    <li>Advanced Editing Capabilities</li>
+	    <li>Better Design</li>
+	    <li>Scholastic exception</li>
+	  </ul>
+	  -->
+	  </td>
+	</tr>
+      </table>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<collector name="2">
+  <glyph>
+    <zigzag d="0" x="100" x2="90" y="-80" y2="-100"/>
+  </glyph>
+  <translation>
+    <text>
+      2
+    </text>
+  </translation>
+</collector>

@@ -1,0 +1,8 @@
+<relation name="End" reciprocal="none">
+  <glyph>
+    <circle r1="5" x="50" y="-5"/>
+  </glyph>
+  <translation>
+    <text/>
+  </translation>
+</relation>
