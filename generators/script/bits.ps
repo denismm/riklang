@@ -160,7 +160,7 @@ end
 		} ifelse
 	    } ifelse
 	} ifelse
-	r 1 eq {reversepath} if shavepath tentaclestroke
+	r 1 eq {reversepath} if shavepath a1 neg rotate tentaclestroke
     grestore
     end
 } def
@@ -179,8 +179,8 @@ end
 	    r1 0 lineto
 	    0 r1 lineto
 	} {
-	    0 r1 moveto 
 	    shape_style /spline eq {
+                0 r1 moveto 
 		r1 -0.75 div r1 
 		r1 -0.75 div r1 neg
 		0 r1 neg curveto
@@ -188,7 +188,15 @@ end
 		r1 0.75 div r1 
 		0 r1 curveto
 	    } {
-		0 0 r1 90 450 arc 
+                wordaspect 1 eq {
+                    0 0 r1 90 450 arc 
+                } {
+                    wordaspect 1 lt {
+                        0 0 r1 wordaspect mul r1 90 450 ell
+                    } {
+                        0 0 r1 r1 wordaspect div 90 450 ell
+                    } ifelse
+                } ifelse
 	    } ifelse
 	} ifelse
 	r 1 eq {reversepath} if shavepath tentaclestroke
@@ -217,7 +225,7 @@ end
 	    0 0 r1 270 90 arcn
 	    leg r1 lineto 
 	} ifelse
-	r 1 eq {reversepath} if shavepath tentaclestroke
+	r 1 eq {reversepath} if shavepath a1 neg rotate tentaclestroke
     grestore
     end
 } def
@@ -244,7 +252,7 @@ end
 	    0 0 r1 270 90 arcn
 	    leg r1 lineto 
 	} ifelse
-	r 1 eq {reversepath} if shavepath tentaclestroke
+	r 1 eq {reversepath} if shavepath a1 neg rotate tentaclestroke
     grestore
     end
 } def
@@ -270,7 +278,7 @@ end
 	    0 0 r1 180 90 arcn
 	    leg r1 lineto 
 	} ifelse
-	r 1 eq {reversepath} if shavepath tentaclestroke
+	r 1 eq {reversepath} if shavepath a1 neg rotate tentaclestroke
     grestore
     end
 } def
@@ -343,7 +351,7 @@ end
 	    0 0 r1 270 90 arcn
 	    0 r1 neg r2 r1 2 mul 90 0 elln
 	} ifelse
-	r 1 eq {reversepath} if shavepath tentaclestroke
+	r 1 eq {reversepath} if shavepath a1 neg rotate tentaclestroke
     grestore
     end
 } def
@@ -372,7 +380,7 @@ end
 	    0 0 r1 270 135 arcn
 	    leg 2 sqrt div dup rlineto 
 	} ifelse
-	r 1 eq {reversepath} if shavepath tentaclestroke
+	r 1 eq {reversepath} if shavepath a1 neg rotate tentaclestroke
 
     grestore
 } def

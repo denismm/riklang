@@ -3,7 +3,6 @@ use strict;
 use XMLLite;
 
 my $rikhome = $ENV{'RIKCHIK_HOME'} || ".";
-my $style = shift || "classic";
 my $infile = "../../data/riklang.xml";
 my $outfile = $rikhome."/ps/rikchik.ps";
 my %names = ('line' => 'Line',
@@ -60,8 +59,6 @@ my $l;
 while ($l = <INSTROKES>) {
   print OUT $l;
 }
-print OUT "/tentaclestroke {".substr($style,0,1)."tentaclestroke} def\n\n";
-print OUT "%!\n";
 #write each dictionary.
 my @lists = @{$rootRef->get_element(qw(morphemes aspects relations collectors symbols))};
 my $listRef;

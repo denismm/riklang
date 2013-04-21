@@ -325,10 +325,43 @@ end % tentdict
 } def
 
 
-/bd {bind def} bind def
+/strokemode /classic def
+/setclassic { /strokemode /classic def } def
+/setpointy  { /strokemode /pointy  def } def
+/setblunt   { /strokemode /blunt   def } def
+/setjoined  { /strokemode /joined  def } def
 
-/setclassic { /tentaclestroke {ctentaclestroke} def } def
-/setpointy { /tentaclestroke {ptentaclestroke} def } def
-/setblunt { /tentaclestroke {btentaclestroke} def } def
-/setjoined { /tentaclestroke {jtentaclestroke} def } def
+/wordaspect 1 def
+
+/setwide {
+    /wordaspect 0.5 def
+    1 0.5 scale
+} def
+/settall {
+    /wordaspect 2 def
+    1 2 scale
+} def
+/setstandard {
+    /wordaspect 1 def
+} def
+
+/tentaclestroke {
+    gsave
+        wordaspect 1 ne {wordaspect 1 scale } if
+        strokemode /pointy eq {
+            ptentaclestroke
+        } {
+            strokemode /blunt eq {
+                btentaclestroke
+            } {
+                strokemode /joined eq {
+                    jtentaclestroke
+                } {
+                    ctentaclestroke
+                } ifelse
+            } ifelse
+        } ifelse
+    grestore
+    newpath
+} def
 
