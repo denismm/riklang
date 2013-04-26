@@ -333,16 +333,20 @@ end % tentdict
 
 /wordaspect 1 def
 
+/setwordaspect {
+    /wordaspect exch def
+} def
+
 /setwide {
-    /wordaspect 0.5 def
+    0.5 setwordaspect
     1 0.5 scale
 } def
 /settall {
-    /wordaspect 2 def
+    2 setwordaspect
     1 2 scale
 } def
 /setstandard {
-    /wordaspect 1 def
+    1 setwordaspect
 } def
 
 /tentaclestroke {
