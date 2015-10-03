@@ -121,7 +121,7 @@ function cursorPosition(content){
          var esp = findSpecialString ( tmp )  ;
          content.caretPos.text = esp ;
          cursor_position = content.value.indexOf ( esp );
-      } else if ( isGecko ) { // Mozilla gives range variables
+      } else { // Mozilla gives range variables
          cursor_position = content.selectionStart ;
       }
       return cursor_position;
