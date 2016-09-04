@@ -151,28 +151,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Fight" relation="Agentrec"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  A military base.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Base
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Home" relation="Includesrec"/>
             </utterance>
           </addition>
@@ -189,6 +167,28 @@
           <gloss>
             <text>
               Nation
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Fight" relation="Agentrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  A military base.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Base
             </text>
           </gloss>
         </compound>
@@ -584,6 +584,28 @@
         <compound>
           <addition>
             <utterance>
+              <word aspect="N" collector="0" morpheme="God" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Southern-East: the direction 1/3 of the way from East to South.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Southern-East
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
               <word aspect="N" collector="0" morpheme="Small" relation="Quality"/>
             </utterance>
           </addition>
@@ -622,28 +644,6 @@
           <gloss>
             <text>
               Northern-East
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="God" relation="Quality"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  Southern-East: the direction 1/3 of the way from East to South.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Southern-East
             </text>
           </gloss>
         </compound>
@@ -848,28 +848,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Book" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="T">
-              <translation>
-                <text>
-                  A reading-lens (a foot-wide lens used to read small print).
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Reading-Lens
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Change" relation="Patientrec"/>
             </utterance>
           </addition>
@@ -886,6 +864,28 @@
           <gloss>
             <text>
               Lens
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Book" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  A reading-lens (a foot-wide lens used to read small print).
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Reading-Lens
             </text>
           </gloss>
         </compound>
@@ -958,6 +958,93 @@
         <compound>
           <addition>
             <utterance>
+              <word aspect="N" collector="0" morpheme="Fire" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 49 water-spans, or 96 Earth minutes.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a fire-span.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Fire-span
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Number" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 23 rikchik days, or 21.5 Earth days.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a block.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Block
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Circle" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 64 or 65 years, or 80 Earth years.  	    One orbit of Friend Sun (Alpha Centauri B) around Sun 	    (Alpha Centauri A).
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a cycle.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Cycle
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
               <word aspect="N" collector="0" morpheme="Zero" relation="Quality"/>
             </utterance>
           </addition>
@@ -987,14 +1074,21 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Grass" relation="Instrument"/>
+              <word aspect="N" collector="0" morpheme="Tree" relation="Instrument"/>
             </utterance>
           </addition>
           <readings>
             <reading aspect="I">
               <translation>
                 <text>
-                  Season (usually one of 3: Flower Season, Fire Season, or Sleep Season)
+                  A unit of time equal to 21 blocks or 483 days (plus a leap day 	    every 19 years) or 1.24 Earth years.  One rikchik planetary year.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a year.
                 </text>
               </translation>
             </reading>
@@ -1002,7 +1096,7 @@
           <roles/>
           <gloss>
             <text>
-              Season
+              Year
             </text>
           </gloss>
         </compound>
@@ -1025,6 +1119,28 @@
           <gloss>
             <text>
               Weekday
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Grass" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Season (usually one of 3: Flower Season, Fire Season, or Sleep Season)
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Season
             </text>
           </gloss>
         </compound>
@@ -1055,6 +1171,64 @@
           <gloss>
             <text>
               Great Cycle
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 14 fire-spans, or 22.45 Earth hours.  One	    rikchik planetary day.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a day.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Day
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 49 rock-spans, or 118 earth seconds.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a water-span.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Water-span
             </text>
           </gloss>
         </compound>
@@ -1113,180 +1287,6 @@
           <gloss>
             <text>
               Rock-span
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Circle" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 64 or 65 years, or 80 Earth years.  	    One orbit of Friend Sun (Alpha Centauri B) around Sun 	    (Alpha Centauri A).
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a cycle.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Cycle
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Sun" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 14 fire-spans, or 22.45 Earth hours.  One	    rikchik planetary day.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a day.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Day
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Number" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 23 rikchik days, or 21.5 Earth days.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a block.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Block
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Tree" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 21 blocks or 483 days (plus a leap day 	    every 19 years) or 1.24 Earth years.  One rikchik planetary year.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a year.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Year
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Fire" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 49 water-spans, or 96 Earth minutes.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a fire-span.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Fire-span
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Water" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 49 rock-spans, or 118 earth seconds.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a water-span.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Water-span
             </text>
           </gloss>
         </compound>
@@ -2794,28 +2794,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Rock" relation="Includes"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  Cave
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Cave
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Fire" relation="Sourcerec"/>
               <word aspect="N" collector="0" morpheme="Rock" relation="Includes"/>
             </utterance>
@@ -2833,6 +2811,28 @@
           <gloss>
             <text>
               Volcano
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Rock" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Cave
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Cave
             </text>
           </gloss>
         </compound>
@@ -3395,28 +3395,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Dead" relation="Quality"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  Northern-West: the direction 1/3 of the way from West to North.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Northern-West
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="God" relation="Quality"/>
             </utterance>
           </addition>
@@ -3433,6 +3411,28 @@
           <gloss>
             <text>
               Southern-West
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Dead" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Northern-West: the direction 1/3 of the way from West to North.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Northern-West
             </text>
           </gloss>
         </compound>
@@ -4200,28 +4200,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Water" relation="Includes"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  An island.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Island
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
             </utterance>
           </addition>
@@ -4238,28 +4216,6 @@
           <gloss>
             <text>
               Hill
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Fire" relation="Patientrec"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  Desert
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Desert
             </text>
           </gloss>
         </compound>
@@ -4307,6 +4263,50 @@
             </text>
           </gloss>
         </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  An island.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Island
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Fire" relation="Patientrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Desert
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Desert
+            </text>
+          </gloss>
+        </compound>
       </compounds>
     </morpheme>
     <morpheme name="Junction" paradigm="state">
@@ -4333,9 +4333,9 @@
     </morpheme>
     <morpheme name="Seven" paradigm="math">
       <glyph>
-        <line x="20" x2="80" y="-20" y2="-20"/>
+        <line x="80" x2="20" y="-20" y2="-20"/>
         <line x="20" x2="80" y="-40" y2="-40"/>
-        <line x="20" x2="80" y="-60" y2="-60"/>
+        <line x="80" x2="20" y="-60" y2="-60"/>
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
       <readings>
@@ -4761,28 +4761,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Sleep" relation="Patientrec"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="T">
-              <translation>
-                <text>
-                  Snow.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Snow
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Sky" relation="Source"/>
             </utterance>
           </addition>
@@ -4799,6 +4777,28 @@
           <gloss>
             <text>
               Rain
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sleep" relation="Patientrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  Snow.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Snow
             </text>
           </gloss>
         </compound>
@@ -5706,60 +5706,6 @@
       </compounds>
     </morpheme>
     <paradigms>
-      <paradigm name="relation">
-        <note type="comment">
-          <utterance/>
-          <translation>
-            <text>
-              Used for morphemes expressing a relation between two or more other words. Takes the place of prepositions in many other languages.
-            </text>
-          </translation>
-        </note>
-        <readings>
-          <reading aspect="V">
-            <translation>
-              <text>
-                To be in the relation.
-              </text>
-            </translation>
-          </reading>
-        </readings>
-        <roles>
-          <role relation="Agent">
-            <translation>
-              <text>
-                The entity to which the patient is in the relation.
-              </text>
-            </translation>
-          </role>
-          <role relation="Patient">
-            <translation>
-              <text>
-                The entity in the relation.
-              </text>
-            </translation>
-          </role>
-        </roles>
-      </paradigm>
-      <paradigm name="math">
-        <note type="comment">
-          <utterance/>
-          <translation>
-            <text>
-              Used for numbers and other mathematical concepts.
-            </text>
-          </translation>
-        </note>
-        <readings>
-          <reading aspect="I">
-            <translation>
-              <text>
-                The concept in the abstract.
-              </text>
-            </translation>
-          </reading>
-        </readings>
-      </paradigm>
       <paradigm name="state">
         <note type="comment">
           <utterance/>
@@ -5807,6 +5753,60 @@
           </role>
         </roles>
       </paradigm>
+      <paradigm name="math">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text>
+              Used for numbers and other mathematical concepts.
+            </text>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="I">
+            <translation>
+              <text>
+                The concept in the abstract.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+      </paradigm>
+      <paradigm name="relation">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text>
+              Used for morphemes expressing a relation between two or more other words. Takes the place of prepositions in many other languages.
+            </text>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="V">
+            <translation>
+              <text>
+                To be in the relation.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+        <roles>
+          <role relation="Agent">
+            <translation>
+              <text>
+                The entity to which the patient is in the relation.
+              </text>
+            </translation>
+          </role>
+          <role relation="Patient">
+            <translation>
+              <text>
+                The entity in the relation.
+              </text>
+            </translation>
+          </role>
+        </roles>
+      </paradigm>
       <paradigm name="animate">
         <note type="comment">
           <utterance/>
@@ -5828,6 +5828,25 @@
             <translation>
               <text>
                 A dead creature.
+              </text>
+            </translation>
+          </reading>
+        </readings>
+      </paradigm>
+      <paradigm name="material">
+        <note type="comment">
+          <utterance/>
+          <translation>
+            <text>
+              Used for substances of which other items are constructed.
+            </text>
+          </translation>
+        </note>
+        <readings>
+          <reading aspect="T">
+            <translation>
+              <text>
+                Any amount of the material.
               </text>
             </translation>
           </reading>
@@ -5917,25 +5936,6 @@
             </translation>
           </role>
         </roles>
-      </paradigm>
-      <paradigm name="material">
-        <note type="comment">
-          <utterance/>
-          <translation>
-            <text>
-              Used for substances of which other items are constructed.
-            </text>
-          </translation>
-        </note>
-        <readings>
-          <reading aspect="T">
-            <translation>
-              <text>
-                Any amount of the material.
-              </text>
-            </translation>
-          </reading>
-        </readings>
       </paradigm>
       <paradigm name="emotion">
         <note type="comment">
@@ -6184,76 +6184,6 @@
     </relation>
   </relations>
   <collectors>
-    <collector name="0">
-      <glyph>
-        <circle r1="5" x="95" y="-95"/>
-      </glyph>
-      <translation>
-        <text>
-          0 (this word stands alone)
-        </text>
-      </translation>
-    </collector>
-    <collector name="4">
-      <glyph>
-        <wicket a1="270" leg="5" r="1" r1="5" x="95" y="-95"/>
-      </glyph>
-      <translation>
-        <text>
-          4
-        </text>
-      </translation>
-    </collector>
-    <collector name="3">
-      <glyph>
-        <lobe a1="90" d="1" r="1" r1="5" r2="15" x="95" y="-95"/>
-      </glyph>
-      <translation>
-        <text>
-          3
-        </text>
-      </translation>
-    </collector>
-    <collector name="7">
-      <glyph>
-        <line x="90" x2="100" y="-100" y2="-100"/>
-      </glyph>
-      <translation>
-        <text>
-          7
-        </text>
-      </translation>
-    </collector>
-    <collector name="6">
-      <glyph>
-        <arc a1="270" a2="90" r="1" r1="10" x="90" y="-90"/>
-      </glyph>
-      <translation>
-        <text>
-          6
-        </text>
-      </translation>
-    </collector>
-    <collector name="1">
-      <glyph>
-        <lbend d="0" x="90" x2="100" y="-90" y2="-100"/>
-      </glyph>
-      <translation>
-        <text>
-          1
-        </text>
-      </translation>
-    </collector>
-    <collector name="S">
-      <glyph>
-        <arc a1="180" a2="360" r="1" r1="5" x="95" y="-95"/>
-      </glyph>
-      <translation>
-        <text>
-          Scholastic (collect all immediately-preceding 0-collecting words)
-        </text>
-      </translation>
-    </collector>
     <collector name="5">
       <glyph>
         <line x="90" x2="100" y="-90" y2="-100"/>
@@ -6274,8 +6204,90 @@
         </text>
       </translation>
     </collector>
+    <collector name="6">
+      <glyph>
+        <arc a1="270" a2="90" r="1" r1="10" x="90" y="-90"/>
+      </glyph>
+      <translation>
+        <text>
+          6
+        </text>
+      </translation>
+    </collector>
+    <collector name="3">
+      <glyph>
+        <lobe a1="90" d="1" r="1" r1="5" r2="15" x="95" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          3
+        </text>
+      </translation>
+    </collector>
+    <collector name="S">
+      <glyph>
+        <arc a1="180" a2="360" r="1" r1="5" x="95" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          Scholastic (collect all immediately-preceding 0-collecting words)
+        </text>
+      </translation>
+    </collector>
+    <collector name="0">
+      <glyph>
+        <circle r1="5" x="95" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          0 (this word stands alone)
+        </text>
+      </translation>
+    </collector>
+    <collector name="7">
+      <glyph>
+        <line x="90" x2="100" y="-100" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          7
+        </text>
+      </translation>
+    </collector>
+    <collector name="1">
+      <glyph>
+        <lbend d="0" x="90" x2="100" y="-90" y2="-100"/>
+      </glyph>
+      <translation>
+        <text>
+          1
+        </text>
+      </translation>
+    </collector>
+    <collector name="4">
+      <glyph>
+        <wicket a1="270" leg="5" r="1" r1="5" x="95" y="-95"/>
+      </glyph>
+      <translation>
+        <text>
+          4
+        </text>
+      </translation>
+    </collector>
   </collectors>
   <symbols>
+    <symbol name="Six">
+      <glyph>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <line x="20" x2="80" y="-50" y2="-50"/>
+        <circle r1="25" x="55" y="-50"/>
+      </glyph>
+      <translation>
+        <text>
+          6
+        </text>
+      </translation>
+    </symbol>
     <symbol name="Add">
       <glyph>
         <line x="40" x2="40" y="-25" y2="-75"/>
@@ -6300,6 +6312,138 @@
       <translation>
         <text>
           Multiply
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Seven">
+      <glyph>
+        <line x="20" x2="20" y="-20" y2="-80"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+        <line x="80" x2="80" y="-80" y2="-20"/>
+        <line x="80" x2="20" y="-20" y2="-20"/>
+        <line x="20" x2="80" y="-40" y2="-40"/>
+        <line x="80" x2="20" y="-60" y2="-60"/>
+      </glyph>
+      <translation>
+        <text>
+          7
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="One">
+      <glyph>
+        <line x="50" x2="50" y="-20" y2="-80"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          1
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Three">
+      <glyph>
+        <lbend d="0" x="20" x2="40" y="-20" y2="-80"/>
+        <halfhook a1="90" d="1" leg="20" r1="40" x="40" y="-40"/>
+        <line x="50" x2="50" y="-20" y2="-79"/>
+      </glyph>
+      <translation>
+        <text>
+          3
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Four">
+      <glyph>
+        <wicket a1="270" leg="30" r1="30" x="50" y="-50"/>
+        <line x="20" x2="80" y="-80" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          4
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Five">
+      <glyph>
+        <circle r1="30" x="50" y="-50"/>
+        <line x="50" x2="80" y="-50" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          5
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Two">
+      <glyph>
+        <line x="20" x2="50" y="-20" y2="-80"/>
+        <line x="80" x2="50" y="-20" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          2
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Zero">
+      <glyph>
+        <greatarc a1="0" a2="180"/>
+        <line x="50" x2="80" y="-50" y2="-80"/>
+        <line x="50" x2="20" y="-50" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          0
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Religion">
+      <glyph>
+        <circle r1="10" x="50" y="-50"/>
+        <circle r1="10" x="50" y="-30"/>
+        <circle r1="10" x="50" y="-70"/>
+        <circle r1="10" x="67.32" y="-40"/>
+        <circle r1="10" x="67.32" y="-60"/>
+        <circle r1="10" x="32.68" y="-40"/>
+        <circle r1="10" x="32.68" y="-60"/>
+      </glyph>
+      <translation>
+        <text>
+          Religion
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Cross">
+      <glyph>
+        <circle r1="30" x="50" y="-50"/>
+        <line x="50" x2="50" y="-20" y2="-80"/>
+      </glyph>
+      <translation>
+        <text>
+          Across or the crossing operation.
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Circle">
+      <glyph>
+        <circle r1="30" x="50" y="-50"/>
+      </glyph>
+      <translation>
+        <text>
+          A circle, or the circling operation.
+        </text>
+      </translation>
+    </symbol>
+    <symbol name="Divide">
+      <glyph>
+        <circle r1="5" x="50" y="-40"/>
+        <circle r1="5" x="50" y="-60"/>
+        <line x="50" x2="50" y="-45" y2="-55"/>
+      </glyph>
+      <translation>
+        <text>
+          Divide
         </text>
       </translation>
     </symbol>
@@ -6339,150 +6483,6 @@
       <translation>
         <text>
           Sector
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Divide">
-      <glyph>
-        <circle r1="5" x="50" y="-40"/>
-        <circle r1="5" x="50" y="-60"/>
-        <line x="50" x2="50" y="-45" y2="-55"/>
-      </glyph>
-      <translation>
-        <text>
-          Divide
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Seven">
-      <glyph>
-        <line x="20" x2="20" y="-20" y2="-80"/>
-        <line x="20" x2="80" y="-80" y2="-80"/>
-        <line x="80" x2="80" y="-80" y2="-20"/>
-        <line x="80" x2="20" y="-20" y2="-20"/>
-        <line x="20" x2="80" y="-40" y2="-40"/>
-        <line x="80" x2="20" y="-60" y2="-60"/>
-      </glyph>
-      <translation>
-        <text>
-          7
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Religion">
-      <glyph>
-        <circle r1="10" x="50" y="-50"/>
-        <circle r1="10" x="50" y="-30"/>
-        <circle r1="10" x="50" y="-70"/>
-        <circle r1="10" x="67.32" y="-40"/>
-        <circle r1="10" x="67.32" y="-60"/>
-        <circle r1="10" x="32.68" y="-40"/>
-        <circle r1="10" x="32.68" y="-60"/>
-      </glyph>
-      <translation>
-        <text>
-          Religion
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Cross">
-      <glyph>
-        <circle r1="30" x="50" y="-50"/>
-        <line x="50" x2="50" y="-20" y2="-80"/>
-      </glyph>
-      <translation>
-        <text>
-          Across or the crossing operation.
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Zero">
-      <glyph>
-        <greatarc a1="0" a2="180"/>
-        <line x="50" x2="80" y="-50" y2="-80"/>
-        <line x="50" x2="20" y="-50" y2="-80"/>
-      </glyph>
-      <translation>
-        <text>
-          0
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Four">
-      <glyph>
-        <wicket a1="270" leg="30" r1="30" x="50" y="-50"/>
-        <line x="20" x2="80" y="-80" y2="-80"/>
-      </glyph>
-      <translation>
-        <text>
-          4
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Two">
-      <glyph>
-        <line x="20" x2="50" y="-20" y2="-80"/>
-        <line x="80" x2="50" y="-20" y2="-80"/>
-      </glyph>
-      <translation>
-        <text>
-          2
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Circle">
-      <glyph>
-        <circle r1="30" x="50" y="-50"/>
-      </glyph>
-      <translation>
-        <text>
-          A circle, or the circling operation.
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Three">
-      <glyph>
-        <lbend d="0" x="20" x2="40" y="-20" y2="-80"/>
-        <halfhook a1="90" d="1" leg="20" r1="40" x="40" y="-40"/>
-        <line x="50" x2="50" y="-20" y2="-79"/>
-      </glyph>
-      <translation>
-        <text>
-          3
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Six">
-      <glyph>
-        <line x="20" x2="20" y="-20" y2="-80"/>
-        <line x="20" x2="80" y="-50" y2="-50"/>
-        <circle r1="25" x="55" y="-50"/>
-      </glyph>
-      <translation>
-        <text>
-          6
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="Five">
-      <glyph>
-        <circle r1="30" x="50" y="-50"/>
-        <line x="50" x2="80" y="-50" y2="-80"/>
-      </glyph>
-      <translation>
-        <text>
-          5
-        </text>
-      </translation>
-    </symbol>
-    <symbol name="One">
-      <glyph>
-        <line x="50" x2="50" y="-20" y2="-80"/>
-        <line x="20" x2="80" y="-80" y2="-80"/>
-      </glyph>
-      <translation>
-        <text>
-          1
         </text>
       </translation>
     </symbol>
