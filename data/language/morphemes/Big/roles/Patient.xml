@@ -1,0 +1,7 @@
+<role relation="Patient">
+  <translation>
+    <text>
+        The entity that is more large (or more Quality) than the Patient.
+    </text>
+  </translation>
+</role>

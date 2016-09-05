@@ -792,6 +792,27 @@
             <text/>
           </translation>
         </role>
+        <role relation="Agent">
+          <translation>
+            <text>
+              The entity that is less large (or less Quality) than the Patient.
+            </text>
+          </translation>
+        </role>
+        <role relation="Quality">
+          <translation>
+            <text>
+              The quality in which the Patient is more than the Agent.
+            </text>
+          </translation>
+        </role>
+        <role relation="Patient">
+          <translation>
+            <text>
+              The entity that is more large (or more Quality) than the Patient.
+            </text>
+          </translation>
+        </role>
       </roles>
     </morpheme>
     <morpheme name="Fight" paradigm="tool">
