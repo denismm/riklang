@@ -8,14 +8,14 @@
  <xsl:output method="html"/>
 
  <xsl:template match="/">
-  <xsl:document href="todo.html" method="html" encoding="iso-8859-1">
+  <xsl:result-document href="todo.html" method="html" encoding="iso-8859-1">
    <xsl:apply-templates select="language" mode="todopage"/>
-  </xsl:document>
+  </xsl:result-document>
   <xsl:apply-templates select="//paradigms" mode="paradigmpages"/>
   <xsl:apply-templates select="//morphemes" mode="morphemepages"/>
-  <xsl:document href="dictionary.html" method="html" encoding="iso-8859-1">
+  <xsl:result-document href="dictionary.html" method="html" encoding="iso-8859-1">
    <xsl:apply-templates select="language" mode="indexpage"/>
-  </xsl:document>
+  </xsl:result-document>
  </xsl:template>
 
 </xsl:stylesheet>

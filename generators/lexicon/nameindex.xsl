@@ -101,7 +101,7 @@
 
  <xsl:template match="morphemes" mode="morphemequicklist">
   <xsl:message>writing quick list</xsl:message>
-  <xsl:document href="quicklist.html" method="html" encoding="iso-8859-1">
+  <xsl:result-document href="quicklist.html" method="html" encoding="iso-8859-1">
    <html><head>
     <title>Morpheme Dictionary</title>
    </head><body bgcolor="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#003300">
@@ -112,7 +112,7 @@
      </a>
     </xsl:for-each>
    </body></html>
-  </xsl:document>
+  </xsl:result-document>
  </xsl:template>
 
  <!-- /indexes -->

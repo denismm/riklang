@@ -16,7 +16,7 @@
  </xsl:template>
 
  <xsl:template match="morpheme" mode="morphemepage">
-  <xsl:document href="dictionary/{@name}.html" method="html" encoding="iso-8859-1">
+  <xsl:result-document href="dictionary/{@name}.html" method="html" encoding="iso-8859-1">
   <xsl:message>Writing file for <xsl:value-of select="@name"/></xsl:message>
   <html><head>
    <title><xsl:value-of select="@name"/></title>
@@ -29,7 +29,7 @@
    <hr/>
    <xsl:apply-templates select=".//note" mode="morphemepage" />
   </body></html>
-  </xsl:document>
+  </xsl:result-document>
  </xsl:template>
  
  <xsl:template match="readings" mode="morphemepage">
@@ -169,7 +169,7 @@
   <xsl:variable name="morpheme" select="../../@name"/>
   <xsl:variable name="compoundcollector" select="count(addition/utterance/word) - sum(addition/utterance/word/@collector)"/>
   <xsl:variable name="fullasciiform" select="concat($asciiform,'_',$morpheme,'-I-End-',$compoundcollector)"/>
-  <xsl:document href="dictionary/{$fullasciiform}.html" method="html" encoding="iso-8859-1">
+  <xsl:result-document href="dictionary/{$fullasciiform}.html" method="html" encoding="iso-8859-1">
   <xsl:message>Writing file for <xsl:value-of select="$fullasciiform"/></xsl:message>
   <html><head>
    <title><xsl:value-of select="translate($fullasciiform,'_',' ')"/></title>
@@ -182,7 +182,7 @@
    <hr/>
    <xsl:apply-templates select=".//note" mode="morphemepage" />
   </body></html>
-  </xsl:document>
+  </xsl:result-document>
  </xsl:template>
 
  <xsl:template match="idiom" mode="morphemepage">
@@ -267,7 +267,7 @@
  
  <xsl:template match="paradigm" mode="paradigmpage">
   <xsl:variable name="titlecasename"><xsl:value-of select="translate(substring(@name,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/><xsl:value-of select="substring(@name,2)"/></xsl:variable>
-  <xsl:document href="paradigms/{@name}.html" method="html" encoding="iso-8859-1">
+  <xsl:result-document href="paradigms/{@name}.html" method="html" encoding="iso-8859-1">
    <xsl:message>Writing file for <xsl:value-of select="@name"/></xsl:message>
    <html><head>
     <title><xsl:value-of select="$titlecasename"/> Paradigm</title>
@@ -279,7 +279,7 @@
     <xsl:apply-templates select="." mode="paradigmreport"/>
    </body></html>
    
-  </xsl:document>
+  </xsl:result-document>
  </xsl:template>
  <xsl:template mode="paradigmreport" match="paradigm">
   <xsl:variable name="paradigm" select="."/>
