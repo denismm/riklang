@@ -1,0 +1,29 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Sun" relation="Instrument"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          A unit of time equal to 14 fire-spans, or 22.45 Earth hours.  One	    rikchik planetary day.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="M">
+      <translation>
+        <text>
+          About as old as a day.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Day
+    </text>
+  </gloss>
+</compound>

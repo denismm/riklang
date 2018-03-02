@@ -1,0 +1,35 @@
+<paradigm name="relation">
+  <note type="comment">
+    <utterance/>
+    <translation>
+      <text>
+        Used for morphemes expressing a relation between two or more other words. Takes the place of prepositions in many other languages.
+      </text>
+    </translation>
+  </note>
+  <readings>
+    <reading aspect="V">
+      <translation>
+        <text>
+          To be in the relation.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles>
+    <role relation="Agent">
+      <translation>
+        <text>
+          The entity to which the patient is in the relation.
+        </text>
+      </translation>
+    </role>
+    <role relation="Patient">
+      <translation>
+        <text>
+          The entity in the relation.
+        </text>
+      </translation>
+    </role>
+  </roles>
+</paradigm>

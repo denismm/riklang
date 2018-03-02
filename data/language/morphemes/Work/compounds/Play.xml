@@ -1,0 +1,36 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Chaos" relation="Agentrec"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="V">
+      <translation>
+        <text>
+          To play.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="I">
+      <translation>
+        <text>
+          A game.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="T">
+      <translation>
+        <text>
+          The physical objects involved in a game.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Play
+    </text>
+  </gloss>
+</compound>

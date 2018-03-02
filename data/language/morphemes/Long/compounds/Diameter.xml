@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Across" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          Diameter
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Diameter
+    </text>
+  </gloss>
+</compound>

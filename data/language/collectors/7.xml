@@ -1,0 +1,10 @@
+<collector name="7">
+  <glyph>
+    <line x="90" x2="100" y="-100" y2="-100"/>
+  </glyph>
+  <translation>
+    <text>
+      7
+    </text>
+  </translation>
+</collector>

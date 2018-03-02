@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Sun" relation="Patient"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="V">
+      <translation>
+        <text>
+          Sunset, Dusk
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Sunset
+    </text>
+  </gloss>
+</compound>

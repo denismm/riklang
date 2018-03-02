@@ -1,0 +1,8 @@
+<relation name="Instrumentrec" reciprocal="Instrument">
+  <glyph>
+    <line x="50" x2="50" y="0" y2="-10"/>
+  </glyph>
+  <translation>
+    <text/>
+  </translation>
+</relation>

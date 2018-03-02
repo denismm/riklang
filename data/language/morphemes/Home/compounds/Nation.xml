@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Home" relation="Includesrec"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          A nation or country.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Nation
+    </text>
+  </gloss>
+</compound>

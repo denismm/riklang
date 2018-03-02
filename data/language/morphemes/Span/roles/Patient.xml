@@ -1,0 +1,7 @@
+<role relation="Patient">
+  <translation>
+    <text>
+      The events that took place during the span.  The span is defined	as being as long as these events were taking place.
+    </text>
+  </translation>
+</role>

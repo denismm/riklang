@@ -1,0 +1,8 @@
+<relation name="Agentrec" reciprocal="Agent">
+  <glyph>
+    <hook a1="180" d="0" leg="55" r1="5" x="75" y="-5"/>
+  </glyph>
+  <translation>
+    <text/>
+  </translation>
+</relation>

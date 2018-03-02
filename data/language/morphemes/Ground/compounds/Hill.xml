@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="T">
+      <translation>
+        <text>
+          Hill
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Hill
+    </text>
+  </gloss>
+</compound>

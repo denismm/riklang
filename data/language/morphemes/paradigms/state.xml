@@ -1,0 +1,47 @@
+<paradigm name="state">
+  <note type="comment">
+    <utterance/>
+    <translation>
+      <text/>
+    </translation>
+  </note>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          A creature in the state. Apposite to the patient role.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="T">
+      <translation>
+        <text>
+          A thing in the state. Apposite to the patient role.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="V">
+      <translation>
+        <text>
+          To enact the state.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles>
+    <role relation="Agent">
+      <translation>
+        <text>
+          The entity, if different from the patient, causing the state.
+        </text>
+      </translation>
+    </role>
+    <role relation="Patient">
+      <translation>
+        <text>
+          The entity in the state.
+        </text>
+      </translation>
+    </role>
+  </roles>
+</paradigm>

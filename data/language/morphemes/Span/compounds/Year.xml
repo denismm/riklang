@@ -1,0 +1,29 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Tree" relation="Instrument"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          A unit of time equal to 21 blocks or 483 days (plus a leap day 	    every 19 years) or 1.24 Earth years.  One rikchik planetary year.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="M">
+      <translation>
+        <text>
+          About as old as a year.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Year
+    </text>
+  </gloss>
+</compound>

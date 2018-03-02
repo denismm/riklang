@@ -1,0 +1,15 @@
+<symbol name="Seven">
+  <glyph>
+    <line x="20" x2="20" y="-20" y2="-80"/>
+    <line x="20" x2="80" y="-80" y2="-80"/>
+    <line x="80" x2="80" y="-80" y2="-20"/>
+    <line x="80" x2="20" y="-20" y2="-20"/>
+    <line x="20" x2="80" y="-40" y2="-40"/>
+    <line x="80" x2="20" y="-60" y2="-60"/>
+  </glyph>
+  <translation>
+    <text>
+      7
+    </text>
+  </translation>
+</symbol>

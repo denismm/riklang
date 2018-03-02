@@ -1,0 +1,10 @@
+<collector name="6">
+  <glyph>
+    <arc a1="270" a2="90" r="1" r1="10" x="90" y="-90"/>
+  </glyph>
+  <translation>
+    <text>
+      6
+    </text>
+  </translation>
+</collector>

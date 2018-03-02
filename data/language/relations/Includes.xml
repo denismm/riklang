@@ -1,0 +1,8 @@
+<relation name="Includes" reciprocal="Includesrec">
+  <glyph>
+    <ellarc a1="180" a2="360" r1="30" r2="10" x="50" y="0"/>
+  </glyph>
+  <translation>
+    <text/>
+  </translation>
+</relation>

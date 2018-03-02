@@ -1,0 +1,13 @@
+<symbol name="Add">
+  <glyph>
+    <line x="40" x2="40" y="-25" y2="-75"/>
+    <line x="50" x2="50" y="-25" y2="-75"/>
+    <line x="60" x2="60" y="-25" y2="-75"/>
+    <circle r1="20" x="50" y="-50"/>
+  </glyph>
+  <translation>
+    <text>
+      Add
+    </text>
+  </translation>
+</symbol>

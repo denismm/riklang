@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Change" relation="Patientrec"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="T">
+      <translation>
+        <text>
+          A lens.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Lens
+    </text>
+  </gloss>
+</compound>

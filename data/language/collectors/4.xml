@@ -1,0 +1,10 @@
+<collector name="4">
+  <glyph>
+    <wicket a1="270" leg="5" r="1" r1="5" x="95" y="-95"/>
+  </glyph>
+  <translation>
+    <text>
+      4
+    </text>
+  </translation>
+</collector>

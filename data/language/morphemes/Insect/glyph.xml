@@ -1,0 +1,18 @@
+<glyph>
+  <note type="etymology">
+    <utterance>
+      <word aspect="I" collector="0" morpheme="Spot" relation="Patient"/>
+      <word aspect="I" collector="1" morpheme="Word" relation="Patient"/>
+      <word aspect="I" collector="1" morpheme="Similar" relation="End"/>
+    </utterance>
+    <translation>
+      <text>
+        Similar to the morpheme for Spot.
+      </text>
+    </translation>
+  </note>
+  <wicket a1="270" leg="10" r1="10" x="50" y="-30"/>
+  <line x="20" x2="20" y="-20" y2="-80"/>
+  <line x="80" x2="80" y="-20" y2="-80"/>
+  <wicket a1="270" leg="10" r1="10" x="50" y="-70"/>
+</glyph>

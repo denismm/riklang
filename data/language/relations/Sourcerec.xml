@@ -1,0 +1,8 @@
+<relation name="Sourcerec" reciprocal="Source">
+  <glyph>
+    <hook a1="180" d="1" leg="55" r1="5" x="75" y="-5"/>
+  </glyph>
+  <translation>
+    <text/>
+  </translation>
+</relation>

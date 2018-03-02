@@ -1,0 +1,6 @@
+<glyph>
+  <halfhook a1="180" d="0" leg="40" r="1" r1="10" x="60" y="-20"/>
+  <circle r1="5" x="25" y="-50"/>
+  <circle r1="10" x="70" y="-50"/>
+  <halfhook a1="180" d="1" leg="40" r="1" r1="10" x="60" y="-80"/>
+</glyph>

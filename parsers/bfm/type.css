@@ -1,0 +1,19 @@
+body {
+     font-family: sans-serif;
+}
+
+div {
+    border: 2px solid #030;
+}
+img.output_image {
+    border: 2px solid #030;
+}
+
+img.click_image {
+    border: 1px solid #fff;
+}
+
+a.nonlink {
+    color: #000; 
+    text-decoration: none;
+}

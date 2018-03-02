@@ -1,0 +1,33 @@
+<paradigm name="object">
+  <note type="comment">
+    <utterance/>
+    <translation>
+      <text/>
+    </translation>
+  </note>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          A creature taking the V action.  Apposite to the Agent role.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles>
+    <role relation="Agent">
+      <translation>
+        <text>
+          The entity taking the action.
+        </text>
+      </translation>
+    </role>
+    <role relation="Patient">
+      <translation>
+        <text>
+          The entity the action is taken on.
+        </text>
+      </translation>
+    </role>
+  </roles>
+</paradigm>

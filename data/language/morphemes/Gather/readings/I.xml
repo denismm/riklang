@@ -1,0 +1,27 @@
+<reading aspect="I">
+  <translation>
+    <text>
+      Mathematical addition.
+    </text>
+  </translation>
+  <gloss>
+    <text>
+      Add
+    </text>
+  </gloss>
+  <examples>
+    <example>
+      <utterance>
+        <word aspect="I" collector="0" morpheme="Three" relation="Patient"/>
+        <word aspect="I" collector="0" morpheme="Two" relation="Patient"/>
+        <word aspect="I" collector="2" morpheme="Gather" relation="Includes"/>
+        <word aspect="I" collector="1" morpheme="Five" relation="End"/>
+      </utterance>
+      <translation>
+        <text>
+          Three plus two is five.
+        </text>
+      </translation>
+    </example>
+  </examples>
+</reading>

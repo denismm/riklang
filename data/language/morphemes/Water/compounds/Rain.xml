@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Sky" relation="Source"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="T">
+      <translation>
+        <text>
+          Rain.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Rain
+    </text>
+  </gloss>
+</compound>

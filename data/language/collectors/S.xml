@@ -1,0 +1,10 @@
+<collector name="S">
+  <glyph>
+    <arc a1="180" a2="360" r="1" r1="5" x="95" y="-95"/>
+  </glyph>
+  <translation>
+    <text>
+      Scholastic (collect all immediately-preceding 0-collecting words)
+    </text>
+  </translation>
+</collector>

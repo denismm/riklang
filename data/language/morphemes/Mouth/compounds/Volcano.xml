@@ -1,0 +1,23 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Fire" relation="Sourcerec"/>
+      <word aspect="N" collector="0" morpheme="Rock" relation="Includes"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="P">
+      <translation>
+        <text>
+          Volcano
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Volcano
+    </text>
+  </gloss>
+</compound>

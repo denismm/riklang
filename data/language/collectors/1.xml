@@ -1,0 +1,10 @@
+<collector name="1">
+  <glyph>
+    <lbend d="0" x="90" x2="100" y="-90" y2="-100"/>
+  </glyph>
+  <translation>
+    <text>
+      1
+    </text>
+  </translation>
+</collector>

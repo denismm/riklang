@@ -1,0 +1,29 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Number" relation="Instrument"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          A unit of time equal to 23 rikchik days, or 21.5 Earth days.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="M">
+      <translation>
+        <text>
+          About as old as a block.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Block
+    </text>
+  </gloss>
+</compound>

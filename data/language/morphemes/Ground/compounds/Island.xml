@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Water" relation="Includes"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="P">
+      <translation>
+        <text>
+          An island.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Island
+    </text>
+  </gloss>
+</compound>

@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Rock" relation="Includes"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="P">
+      <translation>
+        <text>
+          Cave
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Cave
+    </text>
+  </gloss>
+</compound>

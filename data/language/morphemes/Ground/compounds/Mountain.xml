@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Sky" relation="Includes"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="P">
+      <translation>
+        <text>
+          Mountain
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Mountain
+    </text>
+  </gloss>
+</compound>

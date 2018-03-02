@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Sky" relation="Instrument"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          The sky-fish is a large animal that resembles a hot-air balloon. It floats in the sky, mostly living on insects, and occasionally drifting down to eat foliage and gnaw on mountain peaks.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Sky-fish
+    </text>
+  </gloss>
+</compound>

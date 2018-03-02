@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Front" relation="Qualityrec"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="T">
+      <translation>
+        <text>
+          An award or any recognition for excelling in a contest, such as a race.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Award
+    </text>
+  </gloss>
+</compound>

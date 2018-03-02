@@ -1,0 +1,10 @@
+<collector name="0">
+  <glyph>
+    <circle r1="5" x="95" y="-95"/>
+  </glyph>
+  <translation>
+    <text>
+      0 (this word stands alone)
+    </text>
+  </translation>
+</collector>

@@ -1,0 +1,10 @@
+<aspect name="T">
+  <glyph>
+    <circle r1="5" x="5" y="-95"/>
+  </glyph>
+  <translation>
+    <text>
+      Inanimate Noun: used for non-living things, including dead things.
+    </text>
+  </translation>
+</aspect>

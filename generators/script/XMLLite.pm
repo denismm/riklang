@@ -68,6 +68,8 @@ sub parse_xml{
 	if (($isClose, $tagText, $isEmpty)=($line =~ /<(\/?)([^>]*[^>\/])(\/?)>/)){ # Pre-parse tag.
 	    my $CDataText = $`;
 	    if ($CDataText =~ /\S/){ # text preceding tag, place into element structure.
+		$CDataText =~ s/^\s*//;
+		$CDataText =~ s/\s*$//;
 		push @{$index[-1]{elements}}, bless(\$CDataText, $class);
 	    }
 	    ($tagType, $attribList) = split(/ +/,$tagText,2); #Parse out type and attributes.

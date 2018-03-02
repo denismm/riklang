@@ -1,0 +1,52 @@
+<paradigm name="tool">
+  <note type="comment">
+    <utterance/>
+    <translation>
+      <text/>
+    </translation>
+  </note>
+  <readings>
+    <reading aspect="T">
+      <translation>
+        <text>
+          The tool. Apposite to the instrument relation.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="V">
+      <translation>
+        <text>
+          To use the tool.
+        </text>
+      </translation>
+      <translation>
+        <text>
+          To take action similar to use of the tool.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles>
+    <role relation="Agent">
+      <translation>
+        <text>
+          The entity, if different from the patient, using the tool.
+        </text>
+      </translation>
+    </role>
+    <role relation="Patient">
+      <translation>
+        <text>
+          The entity being affected by the tool.
+        </text>
+      </translation>
+    </role>
+    <role relation="Instrument">
+      <translation>
+        <text>
+          The tool being used.
+        </text>
+      </translation>
+    </role>
+  </roles>
+</paradigm>

@@ -1,0 +1,10 @@
+<aspect name="I">
+  <glyph>
+    <squiggle d="0" r1="5" x="5" x2="5" y="-80" y2="-100"/>
+  </glyph>
+  <translation>
+    <text>
+      Idea: any non-tangible noun that is not a place.
+    </text>
+  </translation>
+</aspect>

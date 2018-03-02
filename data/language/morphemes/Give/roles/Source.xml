@@ -1,0 +1,7 @@
+<role relation="Source">
+  <translation>
+    <text>
+      The entity from which the Patient is taken.
+    </text>
+  </translation>
+</role>

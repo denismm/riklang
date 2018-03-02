@@ -1,0 +1,44 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Metal" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          Magnetism; magnetic attraction.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles>
+    <role relation="Patient">
+      <translation>
+        <text>
+          The object being affected by magnetism.
+        </text>
+      </translation>
+    </role>
+    <role relation="Destination">
+      <translation>
+        <text>
+          An attracting entity or force.
+        </text>
+      </translation>
+    </role>
+    <role relation="Source">
+      <translation>
+        <text>
+          An repulsing entity or force.
+        </text>
+      </translation>
+    </role>
+  </roles>
+  <gloss>
+    <text>
+      Magnetism
+    </text>
+  </gloss>
+</compound>

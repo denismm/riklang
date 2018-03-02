@@ -1,0 +1,7 @@
+<role relation="Patient">
+  <translation>
+    <text>
+      The wanted object/activity.
+    </text>
+  </translation>
+</role>

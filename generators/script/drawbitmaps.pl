@@ -18,7 +18,12 @@ my ($header, $definition, $name, $stage, $nextstage, $laststage);
 #     ( "classic" => "classic_bits.ps",
 #       "pointy" => "pointy_bits.ps",
 #       "blunt" => "blunt_bits.ps");
+
 my @styles = qw(classic pointy blunt);
+my @sizes = (1, 2, 3, 5, 7);
+# @styles = ('classic');
+# @sizes = (7);
+
 my (%stageinfo);
 %stageinfo = (
     "header" => {
@@ -113,7 +118,8 @@ foreach $style (@styles){
 	      }
 	      #write definition to file
 	      my ($size, $color_p);
-	      foreach $size (5,3,2,1) {
+	      SIZE: foreach $size (@sizes) {
+		next SIZE unless -d "$rikhome/images/$style/$size/";
 		COLOR: foreach $color_p (0,1) {
 		    my ($t_name) = $name;
 		    if ($color_p) {

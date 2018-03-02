@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Dead" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="P">
+      <translation>
+        <text>
+          Northern-West: the direction 1/3 of the way from West to North.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Northern-West
+    </text>
+  </gloss>
+</compound>

@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Small" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="T">
+      <translation>
+        <text>
+          A star.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Star
+    </text>
+  </gloss>
+</compound>

@@ -1,0 +1,13 @@
+<symbol name="Sector">
+  <glyph>
+    <arc a1="45" a2="135" r1="10r2" x="50" y="-78.75"/>
+    <arc a1="45" a2="135" r1="30r2" x="50" y="-78.75"/>
+    <line x="40" x2="20" y="-68.75" y2="-48.75"/>
+    <line x="60" x2="80" y="-68.75" y2="-48.75"/>
+  </glyph>
+  <translation>
+    <text>
+      Sector
+    </text>
+  </translation>
+</symbol>

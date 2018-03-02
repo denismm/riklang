@@ -1,0 +1,12 @@
+<symbol name="Zero">
+  <glyph>
+    <greatarc a1="0" a2="180"/>
+    <line x="50" x2="80" y="-50" y2="-80"/>
+    <line x="50" x2="20" y="-50" y2="-80"/>
+  </glyph>
+  <translation>
+    <text>
+      0
+    </text>
+  </translation>
+</symbol>

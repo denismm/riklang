@@ -1,0 +1,29 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Zero" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="M">
+      <translation>
+        <text>
+          New.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="I">
+      <translation>
+        <text>
+          No amount of time, an instant.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      New
+    </text>
+  </gloss>
+</compound>

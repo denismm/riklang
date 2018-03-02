@@ -1,0 +1,21 @@
+<glyph>
+  <note type="etymology">
+    <utterance>
+      <word aspect="M" collector="0" morpheme="Four" relation="Quality"/>
+      <word aspect="R" collector="1" morpheme="Rikchik" relation="Agent"/>
+      <word aspect="I" collector="0" morpheme="Fear" relation="Source"/>
+      <word aspect="I" collector="0" morpheme="Happy" relation="Destination"/>
+      <word aspect="M" collector="0" morpheme="Long" relation="Quality"/>
+      <word aspect="V" collector="4" morpheme="Eye" relation="End"/>
+    </utterance>
+    <translation>
+      <text>
+        Four rikchiks keep safe by looking out for danger.
+      </text>
+    </translation>
+  </note>
+  <circle r1="10" x="50" y="-30"/>
+  <circle r1="10" x="30" y="-50"/>
+  <circle r1="10" x="70" y="-50"/>
+  <circle r1="10" x="50" y="-70"/>
+</glyph>

@@ -1,0 +1,27 @@
+<reading aspect="I">
+  <translation>
+    <text>
+      Mathematical multiplication.
+    </text>
+  </translation>
+  <gloss>
+    <text>
+      Multiply
+    </text>
+  </gloss>
+  <examples>
+    <example>
+      <utterance>
+        <word aspect="I" collector="0" morpheme="Three" relation="Patient"/>
+        <word aspect="I" collector="0" morpheme="Two" relation="Quality"/>
+        <word aspect="I" collector="2" morpheme="Contributor" relation="Includes"/>
+        <word aspect="I" collector="1" morpheme="Six" relation="End"/>
+      </utterance>
+      <translation>
+        <text>
+          Three times two is six.
+        </text>
+      </translation>
+    </example>
+  </examples>
+</reading>

@@ -1,0 +1,7 @@
+<role relation="Agent">
+  <translation>
+    <text>
+      The parent; the entity beginning the action.
+    </text>
+  </translation>
+</role>

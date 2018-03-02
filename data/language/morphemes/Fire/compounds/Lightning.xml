@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Dragon" relation="Source"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          Lightning.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Lightning
+    </text>
+  </gloss>
+</compound>

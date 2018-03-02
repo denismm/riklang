@@ -188,7 +188,7 @@ sub write_stroke{
 	# print "has $arg.\n";
 	$retStr .= &convert_arg($ref->get_attrib($arg));
       } else {
-	print STDERR "$type lacks $arg. using $defaults{$arg}.\n";
+	# print STDERR "$type lacks $arg. using $defaults{$arg}.\n";
 	$retStr .= $defaults{$arg};
       }
       $retStr .= " ";

@@ -1,0 +1,31 @@
+<role relation="Agent">
+  <translation>
+    <text>
+      The rikchik or rikchiks determining that the rikchiks be married.
+    </text>
+  </translation>
+  <examples>
+    <example>
+      <utterance>
+        <word aspect="N" collector="0" morpheme="Long" relation="Quality"/>
+        <word aspect="N" collector="1" morpheme="Tree" relation="Quality"/>
+        <word aspect="N" collector="0" morpheme="Circle" relation="Patientrec"/>
+        <word aspect="R" collector="2" morpheme="Home" relation="Agent"/>
+        <word aspect="R" collector="1" morpheme="Leader" relation="Agent"/>
+        <word aspect="R" collector="0" morpheme="Leader" pronomial="pronomial" relation="Agent"/>
+        <word aspect="R" collector="1" morpheme="Child" relation="Patient"/>
+        <word aspect="N" collector="0" morpheme="Sun" relation="Instrument"/>
+        <word aspect="N" collector="1" morpheme="Insect" relation="Quality"/>
+        <word aspect="N" collector="0" morpheme="Circle" relation="Patientrec"/>
+        <word aspect="R" collector="2" morpheme="Home" relation="Agent"/>
+        <word aspect="R" collector="1" morpheme="Leader" relation="Patient"/>
+        <word aspect="V" collector="3" morpheme="Home" relation="End"/>
+      </utterance>
+      <translation>
+        <text>
+          The leaders of Long-Tree marry their child to the leaders of Summer-Insect.
+        </text>
+      </translation>
+    </example>
+  </examples>
+</role>

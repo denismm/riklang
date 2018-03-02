@@ -1,0 +1,7 @@
+<role relation="Patient">
+  <translation>
+    <text>
+      The object given; the allowed activity.
+    </text>
+  </translation>
+</role>

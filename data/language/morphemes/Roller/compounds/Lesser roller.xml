@@ -1,0 +1,22 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Small" relation="Quality"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="R">
+      <translation>
+        <text>
+          A lesser roller (sphaera minor) is a rodent-sized roller which eats grass and pebbles in grasslands and forests.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Lesser roller
+    </text>
+  </gloss>
+</compound>

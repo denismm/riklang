@@ -1,0 +1,29 @@
+<compound>
+  <addition>
+    <utterance>
+      <word aspect="N" collector="0" morpheme="Water" relation="Instrument"/>
+    </utterance>
+  </addition>
+  <readings>
+    <reading aspect="I">
+      <translation>
+        <text>
+          A unit of time equal to 49 rock-spans, or 118 earth seconds.
+        </text>
+      </translation>
+    </reading>
+    <reading aspect="M">
+      <translation>
+        <text>
+          About as old as a water-span.
+        </text>
+      </translation>
+    </reading>
+  </readings>
+  <roles/>
+  <gloss>
+    <text>
+      Water-span
+    </text>
+  </gloss>
+</compound>

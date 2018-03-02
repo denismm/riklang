@@ -1,0 +1,11 @@
+<symbol name="Two">
+  <glyph>
+    <line x="20" x2="50" y="-20" y2="-80"/>
+    <line x="80" x2="50" y="-20" y2="-80"/>
+  </glyph>
+  <translation>
+    <text>
+      2
+    </text>
+  </translation>
+</symbol>
