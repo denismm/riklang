@@ -234,6 +234,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Number
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -690,6 +695,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Displacement
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -712,6 +722,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Emotion
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -734,6 +749,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Parent
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -756,6 +776,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Big
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -799,6 +824,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Fight
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -1287,6 +1317,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Spot
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -1347,6 +1382,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Small
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -1562,6 +1602,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Tree
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -1653,6 +1698,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              After
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -1723,6 +1773,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Friend
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -1745,6 +1800,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Sibling
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -1767,6 +1827,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Rock
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -1883,6 +1948,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Stroke
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -2009,6 +2079,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Change
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -2138,6 +2213,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Chaos
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -2397,6 +2477,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Pain
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -2674,6 +2759,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Mouth
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -2901,6 +2991,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Short
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3047,6 +3142,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Fire
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3093,6 +3193,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Repulsion
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3163,6 +3268,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Machine
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3445,6 +3555,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Hat
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3467,6 +3582,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Magic
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3574,6 +3694,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Sound
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3620,6 +3745,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Ninja
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3771,6 +3901,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Around
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -3856,6 +3991,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Faerie
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4104,6 +4244,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Junction
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4126,6 +4271,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Seven
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4172,6 +4322,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Three
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4387,6 +4542,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Book
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4433,6 +4593,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Above
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4455,6 +4620,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Six
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4703,6 +4873,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              One
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4842,6 +5017,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Four
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4864,6 +5044,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Two
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -4996,6 +5181,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Play
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -5018,6 +5208,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Shoe
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -5144,6 +5339,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Cloth
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -5190,6 +5390,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Front
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
@@ -5337,6 +5542,11 @@
       </glyph>
       <readings>
         <reading aspect="Q">
+          <gloss>
+            <text>
+              Beach
+            </text>
+          </gloss>
           <translation>
             <text/>
           </translation>
