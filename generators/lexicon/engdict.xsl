@@ -22,8 +22,17 @@
     <xsl:template match="gloss[not(text//text())]" mode="engdict" priority="3"/>
     <xsl:template match="translation[../gloss]" mode="engdict" priority="2"/>
     <xsl:template match="reading/translation[../../../gloss and count(../../reading) = 1]" mode="engdict" priority="2"/>
-    <xsl:template match="translation|gloss" mode="engdict">
+    <xsl:template match="gloss" mode="engdict">
       <xsl:message><xsl:value-of select="normalize-space(text)"/></xsl:message>
+    </xsl:template>
+    <xsl:template match="translation" mode="engdict">
+      <xsl:message>Need gloss in <xsl:value-of select="node-name(..)"/>
+	<xsl:text> in </xsl:text>
+	<xsl:value-of select="ancestor::morpheme/@name"/>
+	<xsl:text> &quot;</xsl:text>
+	<xsl:value-of select="normalize-space(text)"/>
+	<xsl:text>&quot;.</xsl:text>
+      </xsl:message>
     </xsl:template>
 
 </xsl:stylesheet>
