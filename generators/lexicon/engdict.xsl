@@ -18,7 +18,7 @@
     <xsl:template match="example/translation" mode="engdict" priority="2"/>
     <xsl:template match="note/translation" mode="engdict" priority="2"/>
     <xsl:template match="translation[not(ancestor::morpheme)]" mode="engdict" priority="4"/>
-    <xsl:template match="translation[not(text//text())]" mode="engdict" priority="3"/>
+    <!--xsl:template match="translation[not(text//text())]" mode="engdict" priority="3"/-->
     <xsl:template match="gloss[not(text//text())]" mode="engdict" priority="3"/>
     <xsl:template match="translation[../gloss]" mode="engdict" priority="2"/>
     <xsl:template match="reading/translation[../../../gloss and count(../../reading) = 1]" mode="engdict" priority="2"/>
