@@ -4568,9 +4568,16 @@
         <line x="60" x2="80" y="-60" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
+          <gloss>
+            <text>
+              Five
+            </text>
+          </gloss>
           <translation>
-            <text/>
+            <text>
+              The number Five.
+            </text>
           </translation>
         </reading>
       </readings>
