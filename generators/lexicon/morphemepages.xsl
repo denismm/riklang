@@ -153,12 +153,7 @@
  </xsl:template>
 
  <xsl:template match="compound" mode="morphemepage">
-  <xsl:variable name="asciiform"
-   ><xsl:apply-templates select="addition/utterance" mode="asciiform"
-  /></xsl:variable>
-  <xsl:variable name="compoundcollector" select="count(addition/utterance/word) - sum(addition/utterance/word/@collector)"/>
-  <xsl:variable name="morpheme" select="../../@name"/>
-  <a href="{concat($asciiform,'_',$morpheme)}-I-End-{$compoundcollector}.html"><xsl:apply-templates select="addition/utterance" mode="morphemepage"/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a>
+  <xsl:apply-templates select="." mode="innerlinkentry"/>
   <xsl:apply-templates select="." mode="compoundpage"/>
  </xsl:template>
 
