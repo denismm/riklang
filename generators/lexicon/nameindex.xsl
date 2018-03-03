@@ -74,12 +74,6 @@
   </td>
  </xsl:template>
 
- <!--xsl:template match="morpheme" mode="basiclinkentry">
-  <xsl:variable name="href" select="concat('dictionary/',@name,'.html')"/> 
-   <a href="{$href}"><img src="http://www.suberic.net/~dmm/rikchik/images/classic/3/m{@name}.png" alt="{@name}" border="0" width="42" height="42"/></a><br/>
-   <a href="{$href}"><xsl:value-of select="@name"/></a>&#xA0;<br/><br/>
- </xsl:template-->
-
  <xsl:template match="morpheme" mode="nameindexentry">
  </xsl:template>
 
