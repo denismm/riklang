@@ -181,8 +181,13 @@
  </xsl:template>
 
  <xsl:template match="idiom" mode="morphemepage">
+  <xsl:variable name="asciiform">
+    <xsl:apply-templates select="utterance" mode="asciiform"/>
+  </xsl:variable>
+  <a name="{$asciiform}">
   <xsl:apply-templates select="utterance" mode="morphemepage"/><br/>
   <xsl:apply-templates select="translation" mode="morphemepage"/><br/>
+  </a>
  </xsl:template>
 
  <xsl:template match="example" mode="morphemepage">

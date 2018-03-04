@@ -114,6 +114,14 @@
    <a href="{$href}"><xsl:value-of select="../../@name"/>-<xsl:value-of select="@aspect"/>-End-0</a>&#xA0;<br/><br/>
  </xsl:template>
 
- 
+ <xsl:template match="idiom" mode="basiclinkentry">
+  <xsl:variable name="asciiform">
+    <xsl:apply-templates select="utterance" mode="asciiform"/>
+  </xsl:variable>
+  <a href="dictionary/{ancestor::morpheme/@name}.html#{$asciiform}">
+    <xsl:apply-templates select="utterance" mode="morphemepage"/><br/>
+    <xsl:value-of select="translate($asciiform,'_',' ')"/>
+  </a>
+ </xsl:template>
 
 </xsl:stylesheet>
