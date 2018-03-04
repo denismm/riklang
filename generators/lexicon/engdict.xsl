@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:r="http://www.suberic.net/~dmm/rikchik"
                 version="2.0">
 
     <xsl:import href="rikbasics.xsl"/>
@@ -7,13 +8,31 @@
 
     <xsl:output method="html" encoding="iso-8859-1"/>
 
+    <xsl:function name="r:sort-form">
+      <xsl:param name="text"/>
+      <xsl:sequence select="replace(lower-case(normalize-space($text)), '^a |^an |^the |^to ', '')"/>
+    </xsl:function>
 
     <xsl:template match="/" mode="engdict">
-      <dl>
-        <xsl:apply-templates select="//translation|//gloss" mode="engdict">
-	        <xsl:sort select="replace(lower-case(normalize-space(text)), '^a |^an |^the |^to ', '')"/><!-- not text() -->
-        </xsl:apply-templates>
-      </dl>
+      <xsl:variable name="doc" select="."/>
+      <html><head>
+        <title>English-Rikchik Dictionary</title>
+      </head><body>
+      <h1>English-Rikchik Dictionary</h1>
+      <p>An index by English gloss to readings, compounds, and idioms.</p>
+      <xsl:for-each select="tokenize('a b c d e f g h i j k l m n o p q r s t u v w x y z',' ')">
+        <a href="#{.}"><xsl:value-of select="upper-case(.)"/></a><xsl:text> </xsl:text>
+      </xsl:for-each>
+      <xsl:for-each select="tokenize('a b c d e f g h i j k l m n o p q r s t u v w x y z',' ')">
+        <dl>
+          <xsl:variable name="letter" select="."/>
+          <h2 id="{$letter}"><xsl:value-of select="upper-case($letter)"/></h2>
+          <xsl:apply-templates select="$doc//translation[starts-with(r:sort-form(text), $letter)]|$doc//gloss[starts-with(r:sort-form(text), $letter)]" mode="engdict">
+            <xsl:sort select="r:sort-form(./text)"/>
+          </xsl:apply-templates>
+        </dl>
+      </xsl:for-each>
+      </body></html>
     </xsl:template>
 
     <!-- skips -->
