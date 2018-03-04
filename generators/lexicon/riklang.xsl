@@ -4,6 +4,7 @@
  <xsl:import href="morphemepages.xsl"/>
  <xsl:import href="nameindex.xsl"/>
  <xsl:import href="todo.xsl"/>
+ <xsl:import href="engdict.xsl"/>
 
  <xsl:output method="html"/>
 
@@ -15,6 +16,9 @@
   <xsl:apply-templates select="//morphemes" mode="morphemepages"/>
   <xsl:result-document href="dictionary.html" method="html" encoding="iso-8859-1">
    <xsl:apply-templates select="language" mode="indexpage"/>
+  </xsl:result-document>
+  <xsl:result-document href="engdict.html" method="html" encoding="iso-8859-1">
+   <xsl:apply-templates select="/" mode="engdict"/>
   </xsl:result-document>
  </xsl:template>
 

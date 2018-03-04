@@ -66,7 +66,7 @@
 
  <xsl:template match="reading" mode="morphemepage">
   <tr><td valign="top" align="center">
-   <img src="http://www.suberic.net/~dmm/rikchik/images/classic/5/a{@aspect}.png" alt="{@aspect}" width="30" height="30"/><br/><strong><xsl:value-of select="@aspect"/></strong>
+   <img src="http://www.suberic.net/~dmm/rikchik/images/classic/5/a{@aspect}.png" alt="{@aspect}" title="{@aspect}" id="reading-{@aspect}" width="30" height="30"/><br/><strong><xsl:value-of select="@aspect"/></strong>
   </td><td valign="top" align="left">&#xA0;<br/>
    <xsl:apply-templates select="translation" mode="morphemepage"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if><br/>
    <xsl:apply-templates select="examples" mode="morphemepage"/>
@@ -77,7 +77,7 @@
 
  <xsl:template match="paradigm/readings/reading" mode="morphemepage">
   <tr><td valign="top" align="center">
-   <img src="http://www.suberic.net/~dmm/rikchik/images/classic/5/colora{@aspect}.png" alt="{@aspect}" width="30" height="30"/><br/><strong><xsl:value-of select="@aspect"/></strong>
+   <img src="http://www.suberic.net/~dmm/rikchik/images/classic/5/colora{@aspect}.png" alt="{@aspect}" title="{@aspect}" id="reading-{@aspect}" width="30" height="30"/><br/><strong><xsl:value-of select="@aspect"/></strong>
   </td><td valign="top" align="left">&#xA0;<br/>
    (From paradigm) <xsl:apply-templates select="translation"/><br/>
    <xsl:apply-templates select="examples" mode="morphemepage"/>
@@ -153,12 +153,7 @@
  </xsl:template>
 
  <xsl:template match="compound" mode="morphemepage">
-  <xsl:variable name="asciiform"
-   ><xsl:apply-templates select="addition/utterance" mode="asciiform"
-  /></xsl:variable>
-  <xsl:variable name="compoundcollector" select="count(addition/utterance/word) - sum(addition/utterance/word/@collector)"/>
-  <xsl:variable name="morpheme" select="../../@name"/>
-  <a href="{concat($asciiform,'_',$morpheme)}-I-End-{$compoundcollector}.html"><xsl:apply-templates select="addition/utterance" mode="morphemepage"/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a>
+  <xsl:apply-templates select="." mode="innerlinkentry"/>
   <xsl:apply-templates select="." mode="compoundpage"/>
  </xsl:template>
 
@@ -186,8 +181,13 @@
  </xsl:template>
 
  <xsl:template match="idiom" mode="morphemepage">
+  <xsl:variable name="asciiform">
+    <xsl:apply-templates select="utterance" mode="asciiform"/>
+  </xsl:variable>
+  <a name="{$asciiform}">
   <xsl:apply-templates select="utterance" mode="morphemepage"/><br/>
   <xsl:apply-templates select="translation" mode="morphemepage"/><br/>
+  </a>
  </xsl:template>
 
  <xsl:template match="example" mode="morphemepage">
