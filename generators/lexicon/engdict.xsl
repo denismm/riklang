@@ -30,7 +30,9 @@
     <xsl:template match="gloss" mode="engdict">
       <xsl:message><xsl:value-of select="normalize-space(text)"/></xsl:message>
       <dt><xsl:value-of select="normalize-space(text)"/></dt>
-      <dd><xsl:apply-templates select=".." mode="basiclinkentry"/></dd>
+      <dd>
+	<xsl:apply-templates select=".." mode="basiclinkentry"/>
+      </dd>
     </xsl:template>
 
     <xsl:template match="translation" mode="engdict">
@@ -43,7 +45,9 @@
       </xsl:message>
       
       <dt><xsl:value-of select="normalize-space(text)"/></dt>
-      <dd><xsl:apply-templates select=".." mode="basiclinkentry"/></dd>
+      <dd>
+	<xsl:apply-templates select=".." mode="basiclinkentry"/>
+      </dd>
     </xsl:template>
 
 </xsl:stylesheet>

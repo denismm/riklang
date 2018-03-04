@@ -52,16 +52,24 @@
 
  <xsl:template match="compound" mode="linkentry">
   <xsl:param name="inner"/>
-  <xsl:variable name="asciiform"
-   ><xsl:apply-templates select="addition/utterance" mode="asciiform"
-  /></xsl:variable>
   <xsl:variable name="compoundcollector" select="count(addition/utterance/word) - sum(addition/utterance/word/@collector)"/>
+  <xsl:variable name="utterance">
+    <utterance>
+      <xsl:copy-of select="addition/utterance/word"/>
+      <xsl:if test="not($inner)">
+	<word morpheme="{../../@name}" aspect="I" relation="End" collector="{$compoundcollector}"/>
+      </xsl:if>
+    </utterance>
+  </xsl:variable>
+  <xsl:variable name="asciiform"
+   ><xsl:apply-templates select="$utterance" mode="asciiform"
+  /></xsl:variable>
   <xsl:variable name="href">
     <xsl:apply-templates select="." mode="url">
       <xsl:with-param name="inner" select="$inner"/>
     </xsl:apply-templates>
   </xsl:variable>
-  <a href="{$href}"><xsl:apply-templates select="addition/utterance" mode="morphemepage"/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a>
+  <a href="{$href}"><xsl:apply-templates select="$utterance" mode="morphemepage"/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a>
  </xsl:template>
 
  <xsl:template match="compound/readings/reading" mode="basiclinkentry">
@@ -103,7 +111,7 @@
    </xsl:variable>
    <xsl:variable name="morpheme" select="../../@name"/>
    <a href="{$href}"><img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&amp;{$morpheme}-{@aspect}-End-0" alt="{$morpheme}-{@aspect}-End-0" border="0" width="49" height="49"/></a><br/>
-   <a href="{$href}"><xsl:value-of select="@name"/></a>&#xA0;<br/><br/>
+   <a href="{$href}"><xsl:value-of select="../../@name"/>-<xsl:value-of select="@aspect"/>-End-0</a>&#xA0;<br/><br/>
  </xsl:template>
 
  
