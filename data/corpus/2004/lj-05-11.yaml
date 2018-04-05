@@ -1,0 +1,73 @@
+date: 2004-05-11
+source: LJ post: https://rikchik.livejournal.com/4859.html
+author: Denis Moskowitz
+color: Blue
+utterance:
+    -
+        text: Me-R-Agent-0 Chaos-M-Instrument-0 Me-R-Includes-0P All-M-Quality-0 Sound-N-Instrument-0 Art-I-Source-3 Two-I-Source-0 Zero-I-Quality-1 Sound-N-Instrument-0 Art-I-Patient-2 Choice-V-Patient-4 Sequence-I-End-1 Me-R-Agent-0P Book-V-Task-0 Rikchik-R-Destination-1 Art-I-Source-0P Seven-M-Quality-0 Word-I-Patient-2 Give-V-Patient-3 Me-I-Patient-0 Sequence-I-End-2P Rikchik-R-Agent-0P What-N-Quality-0 Art-I-Patient-1P Talk-V-Patient-2 Sequence-I-End-1P
+        loose: I randomly chose 14 songs from my music collection and give a few words from each for you to identify the songs.
+        literal: I chaotically out of my collection of sound art choose 20(7) songs, then I give to the reader many words from those songs, then the reader says what songs they are.
+    -
+        text: Glass-T-Example-0 Spot-M-End-1 Sleep-N-Includes-0 Grass-T-Example-1 Mouth-N-Instrument-0 Pain-M-End-2 Me-P-Includes-0 Zero-M-Quality-0 Rikchik-V-Element-0 Thing-P-End-3
+        literal: Glass is spotty. Sleep-grass is bad-tasting. This place includes no place to rikchik.
+        loose: The mirror's dirty, the mattress stinks. This ain't no place to be a man. (Hell Hole, by Spinal Tap)
+    -
+        text: Seven-I-Quality-0 Seven-I-Quality-1 Hail-N-Instrument-0 Long-P-Includes-2 Me-P-Destination-0 Move-V-Actor-1 Rikchik-R-Agent-2 Me-R-Patient-0 Emotion-V-End-2 Zero-I-Source-0 Talk-V-End-1 Zero-I-Patient-0 Talk-V-End-1 Sound-N-Instrument-0 Art-N-Task-1 Home-R-Agent-1 Art-V-Patient-0P Child-V-End-2
+        literal: Someone far away who's coming here causes me emotion. Talk from nothing. Nothing said. The band begins to play.
+        loose: I could feel her coming from a mile away. There was no use talking - there was nothing to say. And the band began to play. (And We Danced, by the Hooters)
+    -
+        text: Shield-N-Task-0 Rikchik-R-Agent-1 Me-R-Patient-0 Box-P-Destination-0 Give-V-End-3 Me-R-Source-0P Seven-I-Quality-0 Sound-N-Instrument-0 Art-N-Task-1 Circle-T-Destination-3 Exchange-V-Source-1 Give-V-End-1P Me-R-Quality-0P Sibling-R-Patient-1 Talk-V-Source-1 Exchange-V-End-1P
+        literal: A guard gave me to a box. Gave for many music circles from me. The trade is one my sibling spoke.
+        loose: Now they got me in a cell 'cause my records, they sell 'Cause a brother like me said, 'Well...' (Bring The Noise, by Public Enemy)
+    -
+        text: Zero-M-Quality-0 Dead-M-Quality-1 All-N-Quality-0 Span-I-Quality-1 Sleep-V-Actor-1 Thing-R-End-2 Chaos-M-Quality-0 Long-N-Quality-0 Long-N-Quality-1 Span-I-Includes-2 Dead-N-Result-0 God-R-Agent-1 Dead-V-Patient-0 Have-V-End-3 Learn-M-Actor-0 Word-I-Includes-1 Thing-R-Patient-0P Zero-M-Quality-0 Tentacle-V-End-3
+        literal: Something not dead that sleeps forever. The death god can kill [or die] in a chaotic long time. Don't touch it in the learned word.
+        loose: Not dead which eternal lie, With strange eons death may die. These are words of wisdom — let it be. (The Thing That Should Not Let It Be, by Beatallica)
+    -
+        text: Dead-M-Patient-0 Zero-M-Quality-0 Dead-M-Patient-1 Choice-M-Quality-2 Rikchik-R-Patient-1P Me-P-Destination-0 Move-V-End-2 God-R-End-0 God-R-End-0 Dead-M-Patient-0 Zero-M-Quality-0 Dead-M-Patient-1 Choice-M-Quality-2 Rikchik-R-Patient-1P Me-P-Destination-0 Move-V-End-2
+        loose: Bring him dead or alive, Lawd, Lawd. Bring him dead or alive. (Po Lazarus, by James Carter & the Prisoners)
+        literal: Dead or alive he/she comes. God! God! Dead or alive he/she comes.
+    -
+        text: Me-R-Source-0 Fish-T-Patient-0 Give-V-End-2 Me-R-Source-0P Crystal-T-Patient-0 Give-V-End-2 Me-R-Source-0P Me-R-Includes-0 Tentacle-R-Includes-1 All-T-Patient-1 Give-V-End-2
+        literal: I give fish. I give crystals.[candy?] I give everything in my tentacles.
+        loose: I'll give you fish, I'll give you candy, I'll give you everything I have in my hand. (Give Me Back My Man, by the B-52's)
+    -
+        text: Five-I-Source-0 Four-I-Quality-1 Tree-N-Patient-0 Span-I-Source-2 Sequence-I-End-1 Seven-M-Quality-0 Move-V-Patient-0 Want-V-Task-1 Rikchik-R-Patient-2 Me-P-Includes-0 Gather-V-Patient-2 Sequence-I-End-1P Zero-M-Quality-0 Seven-M-Quality-1 Ground-P-Element-1 Sun-N-Agent-0 Span-I-Includes-2 Gather-V-End-1P
+        literal: 39 years pass. All the people who want to move are here. At the same time, not much ground is in the days.
+        loose: In the year of thirty-nine Assembled here the volunteers In the days when lands were few. ('39, by Queen)
+    -
+        text: Rikchik-R-Agent-0 Happy-M-Result-0 Magic-M-Quality-1 Home-P-Patient-1P Zero-M-Quality-0 Think-V-Patient-2 Zero-M-Quality-0 Have-V-End-3 Zero-I-Quality-0 Rikchik-R-Patient-1 Home-P-Destination-0P Move-V-End-2 Zero-I-Quality-0 Rikchik-R-Patient-1 Home-P-Source-0P Move-V-End-2
+        literal: Someone cannot not think it is a happy magic place. No-one enters. No-one exits.
+        loose: A wondrous place it is, there can be no doubt. But no one ever goes in, and no one ever goes out. (The Edison Museum, by They Might Be Giants)
+    -
+        text: Parent-R-Agent-0 Me-R-Destination-0 Me-R-Destination-0P Me-R-Destination-0P Talk-V-Means-0 Rikchik-R-Quality-1 Rikchik-R-Agent-1 Hail-V-Patient-2 Talk-V-End-4 Parent-R-Agent-0P Me-R-Destination-0P Zero-M-Quality-0 Rikchik-R-Patient-0P Stroke-V-Patient-2 Zero-M-Quality-0 Globe-R-Instrument-0 Pain-M-Patient-1 Learn-V-Patient-2 Talk-V-End-4
+        literal: My parent said to me, to me, that I greet rikchiks like the one I address. It also said to me "Do not stroke them. Do not learn the pain with your body."
+        loose: Mother told me, yes she told me, I'd meet girls like you. She also told me, stay away, You never know what you'll catch. (Surrender, by Cheap Trick)
+    -
+        text: Rikchik-R-Agent-0 Me-R-Destination-0 What-P-Includes-0 Me-P-Patient-1 Short-M-Quality-0 Me-P-Source-0P Move-V-Patient-2 Talk-V-Patient-4 Zero-V-Patient-0 Choice-V-End-2 Rikchik-R-Source-0P Emotion-I-Source-1 Me-R-Destination-0 Rikchik-R-Source-0P Zero-M-Quality-0 Learn-V-Patient-2 Learn-V-End-3
+        literal: Someone please tell me what I am and my little motion. Due to your feelings, I learn that you don't teach.
+        loose: 'Could you tell us where we are and the best way out of here?' They could tell from his expression he had absolutely no idea. (They Got Lost, by They Might Be Giants)
+    -
+        text: Me-R-Agent-0 Wind-R-Agent-0 Small-M-Quality-0 Talk-V-Patient-2 Eye-V-End-2 Water-M-Quality-0 Magic-I-Patient-1 Me-P-Destination-0 Move-V-End-2
+        literal: I hear a little voice in the wind. Water magic is coming.
+        loose: I heard the wind a whisp'rin', strong magic comin' on! (Light Up The Sky, by Van Halen)
+    -
+        text: Ground-T-Patient-0 Friend-R-Quality-0 Rikchik-R-Patient-1 Gather-R-Patient-2 Love-V-End-1 Zero-M-Quality-0 Fight-V-Patient-1 Have-V-Destination-1 Me-R-Agent-0 Work-V-End-2
+        literal: Love earth and friends. I work toward having peace.
+        loose: Love the land and fellow man. Peace is what we strive to have. (Indians, by Anthrax)
+    -
+        text: Happy-M-End-0 Rikchik-V-Agent-0 Thing-V-Patient-1 Eye-V-Patient-1 Zero-V-Patient-0 Choice-V-End-2 Thing-V-Includes-0P Me-R-Destination-0 Sun-R-Patient-0 Eye-V-Patient-1 Give-V-End-3
+        literal: Happy! Please see what someone does. They give me the sight of the sun.
+        loose: Hey! Look what you have done - Showing me the sun. (It's Nice To Be With You, by the Monkees)
+    -
+        text: Me-R-Agent-0 All-M-Quality-0 Fire-N-Instrument-0 Span-I-Includes-2 Talk-N-Instrument-0 Machine-V-End-3 Me-R-Agent-0P Rikchik-R-Agent-0 Home-I-Includes-0 Zero-M-Quality-0 Me-R-Patient-2 Rikchik-R-Destination-0 Talk-V-Patient-2 Zero-V-Patient-0 Choice-V-Patient-2 Talk-V-Patient-2 Eye-V-End-2
+        literal: I'm on the phone every minute. I hear someone say "Please tell them I'm not home".
+        loose: I've been phoning night and morning. I heard you say tell him I’m not home. (If This Is It, by Huey Lewis and the News)
+---
+date: 2004-07-05
+source: LJ post: https://rikchik.livejournal.com/5286.html
+author: Denis Moskowitz
+color: Blue
+text: Me-R-Agent-0 Book-V-Task-0 Rikchik-R-Destination-1 What-N-Quality-0 Sound-N-Instrument-0 Art-I-Patient-2 Talk-V-End-3
+literal: I tell you song named what
+loose: I tell you what the names of the songs are.
