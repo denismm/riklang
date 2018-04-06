@@ -1,5 +1,5 @@
 date: 2004-05-11
-source: LJ post: https://rikchik.livejournal.com/4859.html
+source: "LJ post: https://rikchik.livejournal.com/4859.html"
 author: Denis Moskowitz
 color: Blue
 utterance:
@@ -46,7 +46,7 @@ utterance:
     -
         text: Rikchik-R-Agent-0 Me-R-Destination-0 What-P-Includes-0 Me-P-Patient-1 Short-M-Quality-0 Me-P-Source-0P Move-V-Patient-2 Talk-V-Patient-4 Zero-V-Patient-0 Choice-V-End-2 Rikchik-R-Source-0P Emotion-I-Source-1 Me-R-Destination-0 Rikchik-R-Source-0P Zero-M-Quality-0 Learn-V-Patient-2 Learn-V-End-3
         literal: Someone please tell me what I am and my little motion. Due to your feelings, I learn that you don't teach.
-        loose: 'Could you tell us where we are and the best way out of here?' They could tell from his expression he had absolutely no idea. (They Got Lost, by They Might Be Giants)
+        loose: "'Could you tell us where we are and the best way out of here?' They could tell from his expression he had absolutely no idea. (They Got Lost, by They Might Be Giants)"
     -
         text: Me-R-Agent-0 Wind-R-Agent-0 Small-M-Quality-0 Talk-V-Patient-2 Eye-V-End-2 Water-M-Quality-0 Magic-I-Patient-1 Me-P-Destination-0 Move-V-End-2
         literal: I hear a little voice in the wind. Water magic is coming.
@@ -65,7 +65,7 @@ utterance:
         loose: I've been phoning night and morning. I heard you say tell him I’m not home. (If This Is It, by Huey Lewis and the News)
 ---
 date: 2004-07-05
-source: LJ post: https://rikchik.livejournal.com/5286.html
+source: "LJ post: https://rikchik.livejournal.com/5286.html"
 author: Denis Moskowitz
 color: Blue
 text: Me-R-Agent-0 Book-V-Task-0 Rikchik-R-Destination-1 What-N-Quality-0 Sound-N-Instrument-0 Art-I-Patient-2 Talk-V-End-3
