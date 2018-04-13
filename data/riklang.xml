@@ -233,7 +233,7 @@
         <circle r1="12.5" x="67.5" y="-67.5"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Number
@@ -694,7 +694,7 @@
         <circle r1="10" x="50" y="-70"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Displacement
@@ -721,7 +721,7 @@
         <squiggle d="1" r1="15" x="50" x2="50" y="-20" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Emotion
@@ -748,7 +748,7 @@
         <ellarc a1="180" a2="360" r1="30" r2="20" x="50" y="-30"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Parent
@@ -775,7 +775,7 @@
         <circle r1="5" x="50" y="-70"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="M">
           <gloss>
             <text>
               Big
@@ -823,7 +823,7 @@
         <circle r1="12.5" x="67.5" y="-67.5"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Fight
@@ -1316,7 +1316,7 @@
         <circle r1="10" x="50" y="-70"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="T">
           <gloss>
             <text>
               Spot
@@ -1381,7 +1381,7 @@
         <line x="65" x2="65" y="-70" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Small
@@ -1601,7 +1601,7 @@
         <squiggle d="0" r1="10" x="70" x2="70" y="-50" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Tree
@@ -1697,7 +1697,7 @@
         <circle r1="5" x="75" y="-75"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               After
@@ -1772,7 +1772,7 @@
         <ellarc a1="0" a2="180" r1="30" r2="10" x="50" y="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Friend
@@ -1799,7 +1799,7 @@
         <ellarc a1="180" a2="270" r1="20" r2="30" x="80" y="-50"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Sibling
@@ -1826,7 +1826,7 @@
         <circle r1="10" x="50" y="-65"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="T">
           <gloss>
             <text>
               Rock
@@ -1947,7 +1947,7 @@
         <greatarc a1="225" a2="315"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Stroke
@@ -2078,7 +2078,7 @@
         <halfhook a1="180" d="1" leg="40" r="1" r1="10" x="60" y="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Change
@@ -2212,7 +2212,7 @@
         <circle r1="10" x="50" y="-70"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Chaos
@@ -2476,7 +2476,7 @@
         <line x="50" x2="50" y="-60" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Pain
@@ -2758,7 +2758,7 @@
         <circle r1="5" x="50" y="-45"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Mouth
@@ -2990,7 +2990,7 @@
         <line x="40" x2="60" y="-50" y2="-50"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Short
@@ -3141,7 +3141,7 @@
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Fire
@@ -3192,7 +3192,7 @@
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="T">
           <gloss>
             <text>
               Repulsion
@@ -3267,7 +3267,7 @@
         <circle r1="5" x="50" y="-35"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Machine
@@ -3554,7 +3554,7 @@
         <circle r1="10" x="50" y="-40"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="T">
           <gloss>
             <text>
               Hat
@@ -3581,7 +3581,7 @@
         <squiggle d="0" r1="5" x="50" x2="50" y="-50" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Magic
@@ -3693,7 +3693,7 @@
         <arc a1="324" a2="36" r="1" r1="40" x="30" y="-50"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Sound
@@ -3744,7 +3744,7 @@
         <circle r1="5" x="65" y="-60"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Ninja
@@ -3900,7 +3900,7 @@
         <halfhook a1="180" d="0" leg="25" r="1" r1="15" x="65" y="-55"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Around
@@ -3990,7 +3990,7 @@
         <wicket a1="270" leg="5" r1="5" x="50" y="-75"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="R">
           <gloss>
             <text>
               Faerie
@@ -4243,7 +4243,7 @@
         <line x="50" x2="50" y="-60" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="T">
           <gloss>
             <text>
               Junction
@@ -4270,7 +4270,7 @@
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Seven
@@ -4321,7 +4321,7 @@
         <line x="60" x2="60" y="-20" y2="-60"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Three
@@ -4541,7 +4541,7 @@
         <line x="50" x2="50" y="-30" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="T">
           <gloss>
             <text>
               Book
@@ -4592,7 +4592,7 @@
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Above
@@ -4619,7 +4619,7 @@
         <squiggle d="1" r1="10" x="30" x2="80" y="-70" y2="-70"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Six
@@ -4872,7 +4872,7 @@
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               One
@@ -5016,7 +5016,7 @@
         <line x="30" x2="70" y="-60" y2="-60"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Four
@@ -5043,7 +5043,7 @@
         <zigzag d="0" x="80" x2="60" y="-40" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="I">
           <gloss>
             <text>
               Two
@@ -5180,7 +5180,7 @@
         <line x="50" x2="50" y="-30" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Play
@@ -5207,7 +5207,7 @@
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="T">
           <gloss>
             <text>
               Shoe
@@ -5338,7 +5338,7 @@
         <arc a1="-90" a2="90" r="1" r1="10" x="70" y="-70"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="T">
           <gloss>
             <text>
               Cloth
@@ -5389,7 +5389,7 @@
         <squiggle d="0" r1="5" x="50" x2="50" y="-60" y2="-80"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="V">
           <gloss>
             <text>
               Front
@@ -5541,7 +5541,7 @@
         <wicket a1="90" leg="12.5" r1="12.5" x="67.5" y="-67.5"/>
       </glyph>
       <readings>
-        <reading aspect="Q">
+        <reading aspect="P">
           <gloss>
             <text>
               Beach
