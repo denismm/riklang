@@ -219,25 +219,16 @@
  /></xsl:template>
 
  <xsl:template match="utterance" mode="morphemepage">
-  <table cellpadding="0" cellspacing="0" border="0"><tr>
-   <xsl:apply-templates select="word" mode="morphemepage"/>
-  </tr></table>
+  <xsl:param name="lineheight">4</xsl:param>
+  <xsl:variable name="asciiform">
+    <xsl:apply-templates select="word[1]" mode="asciiform"/>
+    <xsl:for-each select="word[1]/following-sibling::word">
+      <xsl:text>_</xsl:text>
+      <xsl:apply-templates select="." mode="asciiform"/>
+    </xsl:for-each>
+  </xsl:variable>
+  <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?lineheight={$lineheight}&amp;size=2&amp;{$asciiform}"/>
  </xsl:template>
-
- <xsl:template match="word[position() mod 4 = 1]" mode="morphemepage">
-  <xsl:variable name="number" select="count( . | following-sibling::word[position() &lt; 4] )"/>
-  <xsl:variable name="asciiform"
-   ><xsl:apply-templates select="." mode="asciiform"
-   /><xsl:for-each select="following-sibling::word[position() &lt; 4]"
-    >_<xsl:apply-templates select="." mode="asciiform"
-   /></xsl:for-each
-  ></xsl:variable>
-  <td valign="top">
-   <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&amp;{$asciiform}" width="49" height="{49*$number + 8*($number - 1)}"/>
-  </td>
- </xsl:template>
-
- <xsl:template match="word" mode="morphemepage"/>
 
  <xsl:template match="utterance" mode="asciiform"
   ><xsl:for-each select="word"

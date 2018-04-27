@@ -69,7 +69,12 @@
       <xsl:with-param name="inner" select="$inner"/>
     </xsl:apply-templates>
   </xsl:variable>
-  <a href="{$href}"><xsl:apply-templates select="$utterance" mode="morphemepage"/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a>
+  <p>
+  <a href="{$href}">
+    <xsl:apply-templates select="$utterance" mode="morphemepage">
+      <xsl:with-param name="lineheight">1</xsl:with-param>
+    </xsl:apply-templates><br/>
+    <xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a></p>
  </xsl:template>
 
  <xsl:template match="compound/readings/reading" mode="basiclinkentry">
@@ -94,7 +99,10 @@
       <xsl:with-param name="inner" select="$inner"/>
     </xsl:apply-templates>
   </xsl:variable>
-  <a href="{$href}"><xsl:apply-templates select="$utterance" mode="morphemepage"/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a>
+  <p>
+  <a href="{$href}"><xsl:apply-templates select="$utterance" mode="morphemepage">
+      <xsl:with-param name="lineheight">1</xsl:with-param>
+  </xsl:apply-templates><br/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a></p>
  </xsl:template>
 
  <xsl:template match="morpheme" mode="basiclinkentry">
@@ -110,7 +118,7 @@
      <xsl:apply-templates select="." mode="url"/>
    </xsl:variable>
    <xsl:variable name="morpheme" select="../../@name"/>
-   <a href="{$href}"><img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&amp;{$morpheme}-{@aspect}-End-0" alt="{$morpheme}-{@aspect}-End-0" border="0" width="49" height="49"/></a><br/>
+   <a href="{$href}"><img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?height=1&amp;size=2&amp;{$morpheme}-{@aspect}-End-0" alt="{$morpheme}-{@aspect}-End-0" border="0" width="49" height="49"/></a><br/>
    <a href="{$href}"><xsl:value-of select="../../@name"/>-<xsl:value-of select="@aspect"/>-End-0</a>&#xA0;<br/><br/>
  </xsl:template>
 
