@@ -27,8 +27,8 @@
         <dl>
           <xsl:variable name="letter" select="."/>
           <h2 id="{$letter}"><xsl:value-of select="upper-case($letter)"/></h2>
-          <xsl:apply-templates select="$doc//gloss[starts-with(r:sort-form(text), $letter)]" mode="engdict">
-            <xsl:sort select="r:sort-form(./text)"/>
+          <xsl:apply-templates select="$doc//compound/gloss[starts-with(r:sort-form(text), $letter)]|$doc//morpheme[starts-with(r:sort-form(@name), $letter)]" mode="engdict">
+            <xsl:sort select="r:sort-form(./text|./@name)"/>
           </xsl:apply-templates>
         </dl>
       </xsl:for-each>
@@ -56,10 +56,19 @@
       </dd>
     </xsl:template>
 
-    <xsl:template match="reading[translation]" mode="text">
+    <xsl:template match="morpheme" mode="engdict">
+      <xsl:message>Morpheme: <xsl:value-of select="normalize-space(@name)"/></xsl:message>
+      <dt><xsl:value-of select="normalize-space(@name)"/></dt>
+      <dd>
+	<xsl:apply-templates select="." mode="basiclinkentry"/>
+	<xsl:apply-templates select="readings/reading[translation|gloss]" mode="text"/>
+      </dd>
+    </xsl:template>
+
+    <xsl:template match="reading[translation|gloss]" mode="text" priority="2">
       <xsl:value-of select="@aspect"/>
       <xsl:text>: </xsl:text>
-      <xsl:apply-templates select="translation" mode="text"/>
+      <xsl:apply-templates select="translation|gloss" mode="text"/>
       <br/>
     </xsl:template>
 
