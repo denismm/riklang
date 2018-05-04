@@ -27,7 +27,7 @@
         <dl>
           <xsl:variable name="letter" select="."/>
           <h2 id="{$letter}"><xsl:value-of select="upper-case($letter)"/></h2>
-          <xsl:apply-templates select="$doc//translation[starts-with(r:sort-form(text), $letter)]|$doc//gloss[starts-with(r:sort-form(text), $letter)]" mode="engdict">
+          <xsl:apply-templates select="$doc//gloss[starts-with(r:sort-form(text), $letter)]" mode="engdict">
             <xsl:sort select="r:sort-form(./text)"/>
           </xsl:apply-templates>
         </dl>
@@ -51,7 +51,16 @@
       <dt><xsl:value-of select="normalize-space(text)"/></dt>
       <dd>
 	<xsl:apply-templates select=".." mode="basiclinkentry"/>
+	<xsl:apply-templates select="../translation" mode="text"/>
+	<xsl:apply-templates select="../readings/reading[translation]" mode="text"/>
       </dd>
+    </xsl:template>
+
+    <xsl:template match="reading[translation]" mode="text">
+      <xsl:value-of select="@aspect"/>
+      <xsl:text>: </xsl:text>
+      <xsl:apply-templates select="translation" mode="text"/>
+      <br/>
     </xsl:template>
 
     <xsl:template match="translation" mode="engdict">
