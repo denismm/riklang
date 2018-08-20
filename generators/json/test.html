@@ -3,8 +3,48 @@
 <title>Hey</title>
 <script src="tentacles.js"></script>
 <script language="javascript">
-document.write(riklang['morphemes']['Home']['glyph'][0]['type']);
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var u = getParameterByName("u");
+parts = u.split("-"); 
+//document.write(parts);
+var tents = [];
+m = parts[0];
+m_t = riklang['morphemes'][m]['glyph'];
+for (let t in m_t){
+  tents.push(m_t[t]);
+} 
+a = parts[1];
+a_t = riklang['aspects'][a]['glyph'];
+tents.push(a_t[0]);
+r = parts[2];
+r_t = riklang['relations'][r]['glyph'];
+tents.push(r_t[0]);
+c = parts[3];
+c_t = riklang['collectors'][c]['glyph'];
+tents.push(c_t[0]);
+document.write(JSON.stringify(tents));
+//document.write(riklang['morphemes']['Home']['glyph'][0]['type']);
 </script>
 </head>
-<body></body>
+<body>
+<canvas id="rik_win" width="300" height="300" style="border:5px solid #009900;"/>
+
+<script language="javascript">
+var c = document.getElementById("rik_win");
+var ctx = c.getContext("2d");
+
+ctx.beginPath();
+ctx.arc(150, 150, 50, 0, 2*Math.PI, true);
+ctx.stroke();
+</script>
+</body>
 </html>
