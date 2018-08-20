@@ -32,6 +32,8 @@ c = parts[3];
 c_t = riklang['collectors'][c]['glyph'];
 tents.push(c_t[0]);
 document.write(JSON.stringify(tents));
+//create splines 
+//draw
 //document.write(riklang['morphemes']['Home']['glyph'][0]['type']);
 </script>
 </head>
@@ -41,9 +43,10 @@ document.write(JSON.stringify(tents));
 <script language="javascript">
 var c = document.getElementById("rik_win");
 var ctx = c.getContext("2d");
+ctx.translate(150, 150);
 
 ctx.beginPath();
-ctx.arc(150, 150, 50, 0, 2*Math.PI, true);
+ctx.arc(0, 0, 75, 0, 2*Math.PI, true);
 ctx.stroke();
 </script>
 </body>
