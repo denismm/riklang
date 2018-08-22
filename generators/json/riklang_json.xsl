@@ -33,6 +33,22 @@
   </xsl:template>
 
 
+  <xsl:template match="@*[matches(.,'^-?\d+(\.\d+)?s2$')]">
+    <xsl:text>&quot;</xsl:text>
+    <xsl:value-of select="node-name(.)"/>
+    <xsl:text>&quot;: </xsl:text>
+    <xsl:value-of select="substring-before(.,'s2')"/>
+    <xsl:text> * Math.sqrt(2),</xsl:text>
+  </xsl:template>
+
+  <xsl:template match="@*[matches(.,'^-?\d+(\.\d+)?$')]">
+    <xsl:text>&quot;</xsl:text>
+    <xsl:value-of select="node-name(.)"/>
+    <xsl:text>&quot;: </xsl:text>
+    <xsl:value-of select="."/>
+    <xsl:text>,</xsl:text>
+  </xsl:template>
+
   <xsl:template match="@*">
     <xsl:text>&quot;</xsl:text>
     <xsl:value-of select="node-name(.)"/>
