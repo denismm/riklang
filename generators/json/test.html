@@ -13,28 +13,58 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+function getPointsForLine(line){
+    x = line.x;
+    y = line.y;
+    x2 = line.x2;
+    y2 = line.y2;
+    var points = [];
+    dx = (x2 - x) / 9;
+    dy = (y2 - y) / 9;
+    for (i = 0; i <= 9; i++){
+        points.push([x + dx * i, y + dy * i]);
+    }
+    return points;
+}
+
+
+function getPointsForTentacle(tentacle){
+    if (tentacle.type == 'line'){
+        return getPointsForLine(tentacle);
+    } else {
+        document.write(JSON.stringify(tentacle));
+        return [];
+    }
+}
+
 var u = getParameterByName("u");
 parts = u.split("-"); 
 //document.write(parts);
 var tents = [];
 m = parts[0];
-m_t = riklang['morphemes'][m]['glyph'];
+m_t = riklang.morphemes[m].glyph;
 for (let t in m_t){
   tents.push(m_t[t]);
 } 
 a = parts[1];
-a_t = riklang['aspects'][a]['glyph'];
+a_t = riklang.aspects[a].glyph;
 tents.push(a_t[0]);
 r = parts[2];
-r_t = riklang['relations'][r]['glyph'];
+r_t = riklang.relations[r].glyph;
 tents.push(r_t[0]);
 c = parts[3];
-c_t = riklang['collectors'][c]['glyph'];
+c_t = riklang.collectors[c].glyph;
 tents.push(c_t[0]);
 document.write(JSON.stringify(tents));
 //create splines 
+var splines = [];
+for (let t in tents){
+    points = getPointsForTentacle(tents[t]);
+    splines.push(points);
+}
+document.write(JSON.stringify(splines));
 //draw
-//document.write(riklang['morphemes']['Home']['glyph'][0]['type']);
+//document.write(riklang.morphemes.Home.glyph[0].type);
 </script>
 </head>
 <body>
