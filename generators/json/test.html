@@ -32,52 +32,99 @@ function getPointsForTentacle(tentacle){
     if (tentacle.type == 'line'){
         return getPointsForLine(tentacle);
     } else {
-        document.write(JSON.stringify(tentacle));
+        log(JSON.stringify(tentacle));
         return [];
     }
 }
 
-var u = getParameterByName("u");
-parts = u.split("-"); 
-//document.write(parts);
-var tents = [];
-m = parts[0];
-m_t = riklang.morphemes[m].glyph;
-for (let t in m_t){
-  tents.push(m_t[t]);
-} 
-a = parts[1];
-a_t = riklang.aspects[a].glyph;
-tents.push(a_t[0]);
-r = parts[2];
-r_t = riklang.relations[r].glyph;
-tents.push(r_t[0]);
-c = parts[3];
-c_t = riklang.collectors[c].glyph;
-tents.push(c_t[0]);
-document.write(JSON.stringify(tents));
-//create splines 
-var splines = [];
-for (let t in tents){
-    points = getPointsForTentacle(tents[t]);
-    splines.push(points);
+function log(message){
+    var logArea = document.getElementById('log');
+    var value = logArea.value;
+    logArea.value = value + "\n" + message ;
 }
-document.write(JSON.stringify(splines));
-//draw
-//document.write(riklang.morphemes.Home.glyph[0].type);
+
+function asString(object){
+    log(JSON.stringify(object));
+}
+</script>
+<script language="javascript">
+window.onload = function(){
+    var riklang = getLang();
+    var u = getParameterByName("u");
+    parts = u.split("-"); 
+    //log(parts);
+    var tents = [];
+    m = parts[0];
+    m_t = riklang.morphemes[m].glyph;
+    for (let t in m_t){
+	tents.push(m_t[t]);
+    } 
+    a = parts[1];
+    a_t = riklang.aspects[a].glyph;
+    tents.push(a_t[0]);
+    r = parts[2];
+    r_t = riklang.relations[r].glyph;
+    tents.push(r_t[0]);
+    c = parts[3];
+    c_t = riklang.collectors[c].glyph;
+    tents.push(c_t[0]);
+    //asString(tents);
+    //create splines 
+    var splines = [];
+    for (let t in tents){
+	points = getPointsForTentacle(tents[t]);
+	splines.push(points);
+    }
+    //draw
+    var c = document.getElementById("rik_win");
+    var ctx = c.getContext("2d");
+    ctx.translate(100, 100);
+    ctx.scale(1,-1);
+    
+    for (let s in splines){
+	points = splines[s];
+
+	for (var i = 0; i < 9; i+=3){
+	    
+	    p0 = points[i];
+	    p1 = points[i+1];
+	    p2 = points[i+2];
+	    p3 = points[i+3];
+	    x0 = p0[0];
+	    y0 = p0[1];
+	    x1 = p1[0];
+	    y1 = p1[1];
+	    x2 = p2[0];
+	    y2 = p2[1];
+	    x3 = p3[0];
+	    y3 = p3[1];
+	    ctx.beginPath();
+	    ctx.moveTo(x0,y0);
+	    ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3);
+	    ctx.stroke();
+	    asString(p0);
+	    asString(points);
+	}
+	
+    }
+    //log(riklang.morphemes.Home.glyph[0].type);
+    
+}
 </script>
 </head>
 <body>
-<canvas id="rik_win" width="300" height="300" style="border:5px solid #009900;"/>
+<canvas id="rik_win" width="300" height="300" style="border:5px solid #009900;">
+</canvas>
+<br/>
+<form>
+  <textarea id="log" rows="40" cols="80">
+  </textarea>
+</form>
 
 <script language="javascript">
-var c = document.getElementById("rik_win");
-var ctx = c.getContext("2d");
-ctx.translate(150, 150);
 
-ctx.beginPath();
-ctx.arc(0, 0, 75, 0, 2*Math.PI, true);
-ctx.stroke();
+
+
 </script>
 </body>
 </html>

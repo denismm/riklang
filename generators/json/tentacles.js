@@ -1,4 +1,5 @@
-var riklang=
+function getLang() {
+return (
 
 {"type": "language",
 "morphemes": {
@@ -891,4 +892,4 @@ var riklang=
 "glyph": [
 {"type": "greatarc", "a1": 0,"a2": 180,"h":""},
 {"type": "line", "x": 50,"x2": 80,"y": -50,"y2": -80,"h":""},
-{"type": "line", "x": 50,"x2": 20,"y": -50,"y2": -80,"h":""}]}}};
+{"type": "line", "x": 50,"x2": 20,"y": -50,"y2": -80,"h":""}]}}}); }
