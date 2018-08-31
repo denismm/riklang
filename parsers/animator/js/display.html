@@ -6,12 +6,11 @@
 <script src="animate.js"></script>
 <script language="javascript">
 window.onload = function(){
-    var riklang = getLang();
     var u = getParameterByName("u");
-    var splines = parseWord(u, riklang);
+    var words = parseUtterance(u);
 
-    //draw
-    draw(splines);
+    //draw first word
+    draw(words[0]);
 
     //figure out animation
     

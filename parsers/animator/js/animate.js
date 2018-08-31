@@ -77,6 +77,18 @@ function parseWord(word,riklang){
     
 }
 
+// Given an utterance divided by '.', parses the words in the utterance and returns a list of lists of splines
+function parseUtterance(utterance){
+    var riklang = getLang();
+    var u_words = utterance.split('.');
+    var words = [];
+    for (let w in u_words){
+        u_word = u_words[w];
+        words.push(parseWord(u_word, riklang));
+    }
+    return words;
+}
+
 function log(message){
     var logArea = document.getElementById('log');
     var value = logArea.value;
