@@ -46,6 +46,37 @@ function draw(splines){
     }
 }
 
+// Given a word and the riklang data, returns a list of splines
+function parseWord(word,riklang){
+    parts = word.split("-"); 
+    //log(parts);
+    var tents = [];
+    m = parts[0];
+    m_t = riklang.morphemes[m].glyph;
+    for (let t in m_t){
+	      tents.push(m_t[t]);
+    } 
+    a = parts[1];
+    a_t = riklang.aspects[a].glyph;
+    tents.push(a_t[0]);
+    r = parts[2];
+    r_t = riklang.relations[r].glyph;
+    tents.push(r_t[0]);
+    c = parts[3];
+    c_t = riklang.collectors[c].glyph;
+    tents.push(c_t[0]);
+    //asString(tents);
+
+    //create splines 
+    var splines = [];
+    for (let t in tents){
+	      var points = getPointsForTentacle(tents[t]);
+	      splines.push(points);
+    }
+    return splines;
+    
+}
+
 function log(message){
     var logArea = document.getElementById('log');
     var value = logArea.value;

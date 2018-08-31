@@ -8,30 +8,8 @@
 window.onload = function(){
     var riklang = getLang();
     var u = getParameterByName("u");
-    parts = u.split("-"); 
-    //log(parts);
-    var tents = [];
-    m = parts[0];
-    m_t = riklang.morphemes[m].glyph;
-    for (let t in m_t){
-	tents.push(m_t[t]);
-    } 
-    a = parts[1];
-    a_t = riklang.aspects[a].glyph;
-    tents.push(a_t[0]);
-    r = parts[2];
-    r_t = riklang.relations[r].glyph;
-    tents.push(r_t[0]);
-    c = parts[3];
-    c_t = riklang.collectors[c].glyph;
-    tents.push(c_t[0]);
-    //asString(tents);
-    //create splines 
-    var splines = [];
-    for (let t in tents){
-	points = getPointsForTentacle(tents[t]);
-	splines.push(points);
-    }
+    var splines = parseWord(u, riklang);
+
     //draw
     draw(splines);
 
