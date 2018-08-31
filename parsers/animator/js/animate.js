@@ -12,31 +12,6 @@ function getDivisions(){
     return 4;
 }
 
-function getPointsForLine(line){
-    x = line.x;
-    y = line.y;
-    x2 = line.x2;
-    y2 = line.y2;
-    var points = [];
-    var divs = getDivisions();
-    dx = (x2 - x) / (divs * 3);
-    dy = (y2 - y) / (divs * 3);
-    for (i = 0; i <= divs * 3; i++){
-        points.push([x + dx * i, y + dy * i]);
-    }
-    return points;
-}
-
-
-function getPointsForTentacle(tentacle){
-    if (tentacle.type == 'line'){
-        return getPointsForLine(tentacle);
-    } else {
-        log(JSON.stringify(tentacle));
-        return [];
-    }
-}
-
 function draw(splines){
     var c = document.getElementById("rik_win");
     var ctx = c.getContext("2d");
@@ -64,8 +39,8 @@ function draw(splines){
 	    ctx.moveTo(x0,y0);
 	    ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3);
 	    ctx.stroke();
-	    asString(p0);
-	    asString(points);
+	    //asString(p0);
+	    //asString(points);
 	}
 	
     }
