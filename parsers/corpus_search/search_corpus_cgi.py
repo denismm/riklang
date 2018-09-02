@@ -1,12 +1,19 @@
-#!/usr/bin/env python
-import pprint
+#!/usr/local/bin/python
+import jinja2
+# import pprint
+import math
 import yaml
 import re
 import os
 import sys
 import copy
-import json
+
+env = jinja2.Environment(
+    loader=jinja2.FileSystemLoader('./templates'),
+    autoescape=jinja2.select_autoescape(['html']),
+)
 corpus_source = "../../data/corpus"
+img_url_cgi = "http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi"
 corpus_walk = os.walk(corpus_source)
 corpus_files = []
 for location in corpus_walk:
@@ -26,7 +33,6 @@ def insert_entry(id, entry):
         id = id[1:]
     entry['id'] = id
     corpus[id] = entry
-    print "%s ok" % id
 
 for filename in corpus_files:
     with open(filename, 'r') as f:
@@ -59,4 +65,13 @@ def check_utterance(utterance):
                 return
 for (key, utterance) in corpus.iteritems():
     check_utterance(utterance)
-pprint.pprint(results)
+
+for entry in results:
+    text_words = entry['text'].split()
+    lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
+    typesize = 2
+    cgi_text = entry['text'].replace(' ', '_')
+    entry['img_url'] = "%s?lineheight=%d&size=%d&%s" % (img_url_cgi, lineheight, typesize, cgi_text)
+template = env.get_template('corpus_output.html')
+print template.render(results=results)
+# pprint.pprint(results)

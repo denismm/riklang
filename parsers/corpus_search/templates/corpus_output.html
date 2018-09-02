@@ -1,0 +1,22 @@
+<html><body>
+    {% for item in results %}
+        <container name="entry" style="display:flex; flex-direction:row">
+            <item name="infobox">
+                <container name="infobox" style="display:flex; flex-direction:column">
+                    <item>'author': {{ item['author'] }}</item>
+                    <item>'color': {{ item['color'] }}</item>
+                    <item>'date': {{ item['date'] }}</item>
+                    <item>'id': {{ item['id'] }}</item>
+                    <item>'literal': {{ item['literal'] }}</item>
+                    <item>'loose': {{ item['loose'] }}</item>
+                    <item>'source': {{ item['source'] }}</item>
+                    <item>'text': {{ item['text'] }}</item>
+              </container>
+          </item>
+          <item name="text">
+              <img src="{{ item['img_url'] }}"/><br/>
+          </item>
+         </container>
+         <hr/>
+    {% endfor %}
+</body><html>
