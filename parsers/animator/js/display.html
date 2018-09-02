@@ -8,12 +8,25 @@
 window.onload = function(){
     var u = getParameterByName("u");
     var words = parseUtterance(u);
+    var raf;
+    var start = Date.now();
 
+   // asString(words[0][0]);
     //draw first word
     draw(words[0]);
 
-    //figure out animation
+    //animate
+    function animate(){
+        elapsed = Date.now() - start;
+        rsecs = elapsed / 2405;
+        frame(rsecs, words);
+        if (rsecs <= words.length - .75){
+            raf = window.requestAnimationFrame(animate);
+	}
+    }
     
+    animate();
+
 }
 </script>
 </head>
@@ -22,7 +35,7 @@ window.onload = function(){
   </canvas>
   <br/>
   <form>
-    <textarea id="log" rows="40" cols="80">
+    <textarea id="log" rows="20" cols="160">
     </textarea>
   </form>
 </body>
