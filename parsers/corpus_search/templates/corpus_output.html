@@ -14,28 +14,28 @@
         <container name="entry" style="display:flex; flex-direction:row">
             <item name="infobox">
                 <container name="infobox" style="display:flex; flex-direction:column">
-                    <item>{{ item['text'] }}</item>
-                    <item class="translation">loose: {{ item['loose'] }}</item>
-                    <item class="translation">literal: {{ item['literal'] }}</item>
-                    <item class="author">By {{ item['author'] }} on {{ item['date'] }}</item>
-                    <item class="source">Source: {{ item['source'] }}</item>
+                    <item>{{ item['text'] |e }}</item>
+                    <item class="translation">loose: {{ item['loose'] |e }}</item>
+                    <item class="translation">literal: {{ item['literal'] |e }}</item>
+                    <item class="author">By {{ item['author'] |e }} on {{ item['date'] |e }}</item>
+                    <item class="source">Source: {{ item['source'] |e }}</item>
                     <item class="color">
-                        <span class="{{ item['color'] }}">
+                        <span class="{{ item['color'] |lower }}">
                             Canonicity:
-                            {% if item['color'] == 'Blue' %}
+                            {% if item['color'].lower() == 'blue' %}
                                 Earth Life
-                            {% elif item['color'] == 'Green' %}
+                            {% elif item['color'].lower() == 'green' %}
                                 Rikchik
                             {% else %}
                                 Unknown
                             {% endif %}
                         </span>
                     </item>
-                    <item class="id">{{ item['id'] }}</item>
+                    <item class="id">{{ item['id'] |e }}</item>
               </container>
           </item>
           <item name="text">
-              <img src="{{ item['img_url'] }}"/><br/>
+              <img src="{{ item['img_url'] |safe }}"/><br/>
           </item>
          </container>
     {% endfor %}

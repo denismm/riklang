@@ -81,4 +81,3 @@ for entry in results:
     entry['img_url'] = "%s?lineheight=%d;size=%d;%s" % (img_url_cgi, lineheight, typesize, cgi_text)
 template = env.get_template('corpus_output.html')
 print template.render(results=results)
-# pprint.pprint(results)
