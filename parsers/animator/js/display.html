@@ -2,39 +2,31 @@
 <head>
 <title>Hey</title>
 <script src="tentacles.js"></script>
+<script src="shapes.js"></script>
 <script src="animate.js"></script>
 <script language="javascript">
 window.onload = function(){
-    var riklang = getLang();
     var u = getParameterByName("u");
-    parts = u.split("-"); 
-    //log(parts);
-    var tents = [];
-    m = parts[0];
-    m_t = riklang.morphemes[m].glyph;
-    for (let t in m_t){
-	tents.push(m_t[t]);
-    } 
-    a = parts[1];
-    a_t = riklang.aspects[a].glyph;
-    tents.push(a_t[0]);
-    r = parts[2];
-    r_t = riklang.relations[r].glyph;
-    tents.push(r_t[0]);
-    c = parts[3];
-    c_t = riklang.collectors[c].glyph;
-    tents.push(c_t[0]);
-    //asString(tents);
-    //create splines 
-    var splines = [];
-    for (let t in tents){
-	points = getPointsForTentacle(tents[t]);
-	splines.push(points);
+    var words = parseUtterance(u);
+    var raf;
+    var start = Date.now();
+
+   // asString(words[0][0]);
+    //draw first word
+    draw(words[0]);
+
+    //animate
+    function animate(){
+        elapsed = Date.now() - start;
+        rsecs = elapsed / 2405;
+        frame(rsecs, words);
+        if (rsecs <= words.length - .75){
+            raf = window.requestAnimationFrame(animate);
+	}
     }
-    //draw
-    draw(splines);
-    //log(riklang.morphemes.Home.glyph[0].type);
     
+    animate();
+
 }
 </script>
 </head>
@@ -43,7 +35,7 @@ window.onload = function(){
   </canvas>
   <br/>
   <form>
-    <textarea id="log" rows="40" cols="80">
+    <textarea id="log" rows="20" cols="160">
     </textarea>
   </form>
 </body>
