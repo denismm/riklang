@@ -7,12 +7,14 @@ import re
 import os
 import sys
 import copy
+import cgitb
 
+using_cgi = False
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader('./templates'),
     autoescape=jinja2.select_autoescape(['html']),
 )
-corpus_source = "../../data/corpus"
+corpus_source = "./corpus"
 img_url_cgi = "http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi"
 corpus_walk = os.walk(corpus_source)
 corpus_files = []
@@ -22,7 +24,12 @@ for location in corpus_walk:
             corpus_files.append(location[0] + '/' + filename)
 
 # change this to get it from cgi
-search = sys.argv[1]
+if len(sys.argv) == 0:
+    cgitb.enable()
+    using_cgi = True
+    search = cgi.FieldStorage()['search']
+else:
+    search = sys.argv[1]
 
 corpus = {} # ?
 
@@ -71,7 +78,7 @@ for entry in results:
     lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
     typesize = 2
     cgi_text = entry['text'].replace(' ', '_')
-    entry['img_url'] = "%s?lineheight=%d&size=%d&%s" % (img_url_cgi, lineheight, typesize, cgi_text)
+    entry['img_url'] = "%s?lineheight=%d;size=%d;%s" % (img_url_cgi, lineheight, typesize, cgi_text)
 template = env.get_template('corpus_output.html')
 print template.render(results=results)
 # pprint.pprint(results)

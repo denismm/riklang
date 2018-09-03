@@ -4,7 +4,13 @@
     <link rel="stylesheet" href="corpus.css"/>
 </head>
 <body>
+    <h1>Rikchik corpus search</h1>
+    <form action="corpus_search.cgi">
+        Search the corpus of Rikchik utterances.<br/>
+        <input type="text" name="search"/><br>
+    </form>
     {% for item in results %}
+        <hr/>
         <container name="entry" style="display:flex; flex-direction:row">
             <item name="infobox">
                 <container name="infobox" style="display:flex; flex-direction:column">
@@ -32,6 +38,7 @@
               <img src="{{ item['img_url'] }}"/><br/>
           </item>
          </container>
-         <hr/>
     {% endfor %}
+    <hr>
+    Rikchik language and culture created by Denis Moskowitz.
 </body><html>
