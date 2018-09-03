@@ -1,16 +1,31 @@
-<html><body>
+<html>
+<head>
+    <title>Corpus search</title>
+    <link rel="stylesheet" href="corpus.css"/>
+</head>
+<body>
     {% for item in results %}
         <container name="entry" style="display:flex; flex-direction:row">
             <item name="infobox">
                 <container name="infobox" style="display:flex; flex-direction:column">
-                    <item>'author': {{ item['author'] }}</item>
-                    <item>'color': {{ item['color'] }}</item>
-                    <item>'date': {{ item['date'] }}</item>
-                    <item>'id': {{ item['id'] }}</item>
-                    <item>'literal': {{ item['literal'] }}</item>
-                    <item>'loose': {{ item['loose'] }}</item>
-                    <item>'source': {{ item['source'] }}</item>
-                    <item>'text': {{ item['text'] }}</item>
+                    <item>{{ item['text'] }}</item>
+                    <item class="translation">loose: {{ item['loose'] }}</item>
+                    <item class="translation">literal: {{ item['literal'] }}</item>
+                    <item class="author">By {{ item['author'] }} on {{ item['date'] }}</item>
+                    <item class="source">Source: {{ item['source'] }}</item>
+                    <item class="color">
+                        <span class="{{ item['color'] }}">
+                            Canonicity:
+                            {% if item['color'] == 'Blue' %}
+                                Earth Life
+                            {% elif item['color'] == 'Green' %}
+                                Rikchik
+                            {% else %}
+                                Unknown
+                            {% endif %}
+                        </span>
+                    </item>
+                    <item class="id">{{ item['id'] }}</item>
               </container>
           </item>
           <item name="text">
