@@ -1,7 +1,14 @@
 date: 2002-09-17
 source: "LJ post: https://rikchik.livejournal.com/547.html"
-author: Denis Moskowitz
 color: Blue
-text: Me-I-Includesrec-0 Sun-N-Sourcerec-0 Span-I-Includes-2 Leader-N-Patient-0 Choice-V-Patient-2 Zero-V-Patient-0 Choice-V-End-2
-loose: Please vote this year
-literal: In the year including now, leader-choose or don't.
+utterance:
+    -
+        author: Denis Moskowitz
+        text: Me-I-Includesrec-0 Sun-N-Sourcerec-0 Span-I-Includes-2 Leader-N-Patient-0 Choice-V-Patient-2 Zero-V-Patient-0 Choice-V-End-2
+        loose: Please vote this year
+        literal: In the year including now, leader-choose or don't.
+    -
+        author: Marc Moskowitz
+        text: Pain-M-Quality-0 Door-T-Agent-0 Me-R-Includes-0 Tentacle-T-Patient-1 Have-V-End-3
+        loose: Ow! My hair's caught in the door!
+        literal: The door painfully has my non-living tentacles.

@@ -1,0 +1,14 @@
+date: 2002-10-12
+source: "LJ post: https://rikchik.livejournal.com/792.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: I go to work and I talk to seven friends who are qualities of fast rollers.
+        loose: I'm going to work and I talk to many rabbit friends, which makes me happy.
+        text: Me-R-Patient-0 Work-P-Dest-0 Move-V-Patient-2 Bouncer-N-Task-0 Roller-R-Example-1 Seven-M-Quality-0 Friend-R-Patient-2 Me-R-Patient-0P Talk-V-Patient-2 Gather-V-Source-2 Me-R-Example-0P Happy-M-End-2
+    -
+        author: Marc Moskowitz
+        text: Human-N-Quality-0 Tentacle-N-Includesrec-0 Fish-R-Patient-2 Happy-M-Quality-0 Big-I-Patientrec-1 Tentacle-T-Destination-1 Rikchik-R-Agent-0 Mouth-V-Patient-3 Fruit-T-Agent-0 Eye-R-Patient-1 Dead-V-Patient-1 Choice-V-End-2
+        loose: eat cuttle fish for better hair or your nose will fall off
+        literal: Eat human-style fish with tentacles to make your hair happier or your fruit-eye will die.
