@@ -1,0 +1,14 @@
+date: 2002-12-30
+source: "LJ post: https://rikchik.livejournal.com/1115.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: I want all reading rikchiks to enjoy a happy, sun-happy, homey 5561(7)st human-tree-span.
+        loose: I wish all of you a happy, bright, and comfortable 2003.
+        text: Me-R-Agent-0 All-M-Quality-0 Book-V-Task-0 Rikchik-R-Agent-2 Happy-M-Quality-0 Sun-N-Source-0 Happy-I-Quality-1 Home-M-Quality-0 Five-N-Source-0 Five-N-Source-1 Six-N-Source-1 One-I-Actor-1 Human-N-Quality-0 Tree-N-Patient-1 Span-I-Patient-5 Happy-V-Patient-2 Want-V-End-2
+    -
+        author: Marc Moskowitz
+        text: Book-V-Agentrec-0 Human-R-Agent-1 Happy-V-Patient-1 What-V-Patient-0 Choice-V-End-2
+        loose: Should your human readers also enjoy such a year?
+        literal: Reading human enjoys, or what?
