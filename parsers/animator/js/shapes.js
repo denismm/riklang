@@ -82,10 +82,10 @@ function getPointsForLbend(lbend){
     slope = w/h;
     points = [];
     legs = [];
-    if (slope < .5){
-	legs = [3, 1];
-    } else if (slope > 2){
+    if (slope <= .5){
 	legs = [1, 3];
+    } else if (slope >= 2){
+	legs = [3, 1];
     } else {
 	legs = [2, 2];
     }
