@@ -7,12 +7,11 @@ function getPointsForLine(line){
     var divs = getDivisions();
     dx = (x2 - x) / (divs * 3);
     dy = (y2 - y) / (divs * 3);
-    for (i = 0; i <= divs * 3; i++){
-        points.push([x + dx * i, y + dy * i]);
+    for (i = 0; i <= 1; i+= 1 / (divs * 3)){
+        points.push(ctween([x,y],[x2,y2],i));
     }
     return points;
 }
-
 
 function getPointsForArc(arc){
     x = arc.x;
@@ -78,6 +77,37 @@ function getPointsForLbend(lbend){
     x2 = lbend.x2;
     y2 = lbend.y2;
     d = lbend.d;
+    w = Math.abs(x - x2);
+    h = Math.abs(y - y2);
+    slope = w/h;
+    points = [];
+    legs = [];
+    if (slope < .5){
+	legs = [3, 1];
+    } else if (slope > 2){
+	legs = [1, 3];
+    } else {
+	legs = [2, 2];
+    }
+    hdiv = 1 / (legs[0] * 3);
+    vdiv = 1 / (legs[1] * 3);
+    if (d != 0){
+	for (i = 0; i < 1; i += hdiv){
+	    points.push(ctween([x,y],[x2,y],i))
+	}
+	for (i = 0; i < 1; i += vdiv){
+	    points.push(ctween([x2,y],[x2,y2],i))
+	}
+    } else {
+	for (i = 0; i < 1; i += vdiv){
+	    points.push(ctween([x,y],[x,y2],i))
+	}
+	for (i = 0; i < 1; i += hdiv){
+	    points.push(ctween([x,y2],[x2,y2],i))
+	}
+    }
+    points.push([x2, y2]);
+    return points;
 }
 
 function getPointsForFishbend(fishbend){
@@ -129,8 +159,10 @@ function getPointsForTentacle(tentacle){
         return getPointsForHook(tentacle);
     } else if (tentacle.type == 'halfhook'){
         return getPointsForHalfhook(tentacle);
+*/
     } else if (tentacle.type == 'lbend'){
         return getPointsForLbend(tentacle);
+/*
     } else if (tentacle.type == 'fishbend'){
         return getPointsForFishbend(tentacle);
     } else if (tentacle.type == 'zigzag'){
