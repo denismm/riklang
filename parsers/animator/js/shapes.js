@@ -19,6 +19,8 @@ function getPointsForArc(arc){
     r1 = arc.r1;
     a1 = arc.a1;
     a2 = arc.a2;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForEllarc(ellarc){
@@ -28,6 +30,8 @@ function getPointsForEllarc(ellarc){
     r2 = ellarc.r2;
     a1 = ellarc.a1;
     a2 = ellarc.a2;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForSquiggle(squiggle){
@@ -37,12 +41,16 @@ function getPointsForSquiggle(squiggle){
     y2 = squiggle.y2;
     r1 = squiggle.r1;
     d = squiggle.d;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForCircle(circle){
     x = circle.x;
     y = circle.y;
     r1 = circle.r1;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForWicket(wicket){
@@ -51,6 +59,8 @@ function getPointsForWicket(wicket){
     r1 = wicket.r1;
     leg = wicket.leg;
     a1 = wicket.a1;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForHook(hook){
@@ -60,6 +70,8 @@ function getPointsForHook(hook){
     leg = hook.leg;
     a1 = hook.a1;
     d = hook.d;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForHalfhook(halfhook){
@@ -69,6 +81,8 @@ function getPointsForHalfhook(halfhook){
     leg = halfhook.leg;
     a1 = halfhook.a1;
     d = halfhook.d;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForLbend(lbend){
@@ -117,6 +131,8 @@ function getPointsForFishbend(fishbend){
     leg = fishbend.leg;
     a1 = fishbend.a1;
     d = fishbend.d;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForZigzag(zigzag){
@@ -125,6 +141,8 @@ function getPointsForZigzag(zigzag){
     x2 = zigzag.x2;
     y2 = zigzag.y2;
     d = zigzag.d;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForLobe(lobe){
@@ -134,6 +152,8 @@ function getPointsForLobe(lobe){
     r2 = lobe.r2;
     a1 = lobe.a1;
     d = lobe.d;
+    var points = [];
+    var divs = getDivisions();
 }
 
 function getPointsForGreatarc(greatarc){
