@@ -121,8 +121,8 @@ function draw(splines){
     ctx.clearRect(0, 0, 300, 300);
 
     ctx.save();
-    ctx.translate(100, 100);
-    ctx.scale(1,-1);
+    ctx.translate(50, 50);
+    ctx.scale(2,-2);
     
     for (let s in splines){
 	points = splines[s];
