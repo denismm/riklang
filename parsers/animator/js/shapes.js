@@ -49,8 +49,22 @@ function getPointsForCircle(circle){
     x = circle.x;
     y = circle.y;
     r1 = circle.r1;
+    offset = r1 * 0.55;
     var points = [];
-    var divs = getDivisions();
+    points.push(x, y + r1);
+    points.push(x + offset, y + r1);
+    points.push(x + r1, y + offset);
+    points.push(x + r1, y);
+    points.push(x + r1, y - offset);
+    points.push(x + offset, y - r1);
+    points.push(x, y - r1);
+    points.push(x - offset, y - r1);
+    points.push(x - r1, y - offset);
+    points.push(x - r1, y);
+    points.push(x - r1, y + offset);
+    points.push(x - offset, y + r1);
+    points.push(x, y + r1);
+    return points;
 }
 
 function getPointsForWicket(wicket){
