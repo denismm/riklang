@@ -117,21 +117,21 @@ function getPointsForLbend(lbend){
     } else {
 	legs = [2, 2];
     }
-    hdiv = 1 / (legs[0] * 3);
-    vdiv = 1 / (legs[1] * 3);
+    hsteps = legs[0] * 3;
+    vsteps = legs[1] * 3;
     if (d != 0){
-	for (i = 0; i < 1; i += hdiv){
-	    points.push(ctween([x,y],[x2,y],i))
+	for (i = 0; i < hsteps; i++){
+	    points.push(ctween([x,y],[x2,y],i/hsteps))
 	}
-	for (i = 0; i < 1; i += vdiv){
-	    points.push(ctween([x2,y],[x2,y2],i))
+	for (i = 0; i < vsteps; i++){
+	    points.push(ctween([x2,y],[x2,y2],i/vsteps))
 	}
     } else {
-	for (i = 0; i < 1; i += vdiv){
-	    points.push(ctween([x,y],[x,y2],i))
+	for (i = 0; i < vsteps; i++){
+	    points.push(ctween([x,y],[x,y2],i/vsteps))
 	}
-	for (i = 0; i < 1; i += hdiv){
-	    points.push(ctween([x,y2],[x2,y2],i))
+	for (i = 0; i < hsteps; i++){
+	    points.push(ctween([x,y2],[x2,y2],i/hsteps))
 	}
     }
     points.push([x2, y2]);
