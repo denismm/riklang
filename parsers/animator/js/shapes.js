@@ -51,19 +51,19 @@ function getPointsForCircle(circle){
     r1 = circle.r1;
     offset = r1 * 0.55;
     var points = [];
-    points.push(x, y + r1);
-    points.push(x + offset, y + r1);
-    points.push(x + r1, y + offset);
-    points.push(x + r1, y);
-    points.push(x + r1, y - offset);
-    points.push(x + offset, y - r1);
-    points.push(x, y - r1);
-    points.push(x - offset, y - r1);
-    points.push(x - r1, y - offset);
-    points.push(x - r1, y);
-    points.push(x - r1, y + offset);
-    points.push(x - offset, y + r1);
-    points.push(x, y + r1);
+    points.push([x, y + r1]);
+    points.push([x + offset, y + r1]);
+    points.push([x + r1, y + offset]);
+    points.push([x + r1, y]);
+    points.push([x + r1, y - offset]);
+    points.push([x + offset, y - r1]);
+    points.push([x, y - r1]);
+    points.push([x - offset, y - r1]);
+    points.push([x - r1, y - offset]);
+    points.push([x - r1, y]);
+    points.push([x - r1, y + offset]);
+    points.push([x - offset, y + r1]);
+    points.push([x, y + r1]);
     return points;
 }
 
@@ -185,8 +185,10 @@ function getPointsForTentacle(tentacle){
         return getPointsForEllarc(tentacle);
     } else if (tentacle.type == 'squiggle'){
         return getPointsForSquiggle(tentacle);
+        */
     } else if (tentacle.type == 'circle'){
         return getPointsForCircle(tentacle);
+        /*
     } else if (tentacle.type == 'wicket'){
         return getPointsForWicket(tentacle);
     } else if (tentacle.type == 'hook'){
