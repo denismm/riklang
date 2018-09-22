@@ -5,7 +5,7 @@ function getPointsForLine(line){
     y2 = line.y2;
     var points = [];
     var divs = getDivisions();
-    addPointsForLineSegment(points, x, y, x2, y2, divs * 3);
+    addPointsForLineSegment(points, [x, y], [x2, y2], divs * 3);
     points.push([x2, y2]);
     return points;
 }
@@ -14,11 +14,9 @@ function getPointsForLine(line){
   Modifies points by adding the points from the beginning toward the end of
   the segment from x,y to x2, y2.
 */
-function addPointsForLineSegment(points, x, y, x2, y2, steps){
-    dx = (x2 - x) / steps;
-    dy = (y2 - y) / steps;
+function addPointsForLineSegment(points, p, p2, steps){
     for (i = 0; i < steps; i++){
-        points.push(ctween([x,y],[x2,y2],i/steps));
+        points.push(ctween(p, p2,i/steps));
     }
 }
 
@@ -130,11 +128,11 @@ function getPointsForLbend(lbend){
     hsteps = legs[0] * 3;
     vsteps = legs[1] * 3;
     if (d != 0){
-	addPointsForLineSegment(points, x, y, x2, y, hsteps);
-	addPointsForLineSegment(points, x2, y, x2, y2, vsteps);
+	addPointsForLineSegment(points, [x, y], [x2, y], hsteps);
+	addPointsForLineSegment(points, [x2, y], [x2, y2], vsteps);
     } else {
-	addPointsForLineSegment(points, x, y, x, y2, vsteps);
-	addPointsForLineSegment(points, x, y2, x2, y2, hsteps);
+	addPointsForLineSegment(points, [x, y], [x, y2], vsteps);
+	addPointsForLineSegment(points, [x, y2], [x2, y2], hsteps);
     }
     points.push([x2, y2]);
     return points;
