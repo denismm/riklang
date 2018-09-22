@@ -5,12 +5,21 @@ function getPointsForLine(line){
     y2 = line.y2;
     var points = [];
     var divs = getDivisions();
-    dx = (x2 - x) / (divs * 3);
-    dy = (y2 - y) / (divs * 3);
-    for (i = 0; i <= 1; i+= 1 / (divs * 3)){
-        points.push(ctween([x,y],[x2,y2],i));
-    }
+    addPointsForLineSegment(points, x, y, x2, y2, divs * 3);
+    points.push([x2, y2]);
     return points;
+}
+
+/*
+  Modifies points by adding the points from the beginning toward the end of
+  the segment from x,y to x2, y2.
+*/
+function addPointsForLineSegment(points, x, y, x2, y2, steps){
+    dx = (x2 - x) / steps;
+    dy = (y2 - y) / steps;
+    for (i = 0; i < steps; i++){
+        points.push(ctween([x,y],[x2,y2],i/steps));
+    }
 }
 
 function getPointsForArc(arc){
@@ -32,6 +41,7 @@ function getPointsForEllarc(ellarc){
     a2 = ellarc.a2;
     var points = [];
     var divs = getDivisions();
+    
 }
 
 function getPointsForSquiggle(squiggle){
@@ -120,19 +130,11 @@ function getPointsForLbend(lbend){
     hsteps = legs[0] * 3;
     vsteps = legs[1] * 3;
     if (d != 0){
-	for (i = 0; i < hsteps; i++){
-	    points.push(ctween([x,y],[x2,y],i/hsteps))
-	}
-	for (i = 0; i < vsteps; i++){
-	    points.push(ctween([x2,y],[x2,y2],i/vsteps))
-	}
+	addPointsForLineSegment(points, x, y, x2, y, hsteps);
+	addPointsForLineSegment(points, x2, y, x2, y2, vsteps);
     } else {
-	for (i = 0; i < vsteps; i++){
-	    points.push(ctween([x,y],[x,y2],i/vsteps))
-	}
-	for (i = 0; i < hsteps; i++){
-	    points.push(ctween([x,y2],[x2,y2],i/hsteps))
-	}
+	addPointsForLineSegment(points, x, y, x, y2, vsteps);
+	addPointsForLineSegment(points, x, y2, x2, y2, hsteps);
     }
     points.push([x2, y2]);
     return points;
