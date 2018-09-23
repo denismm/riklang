@@ -7,6 +7,10 @@
 <script language="javascript">
 window.onload = function(){
     var u = getParameterByName("u");
+    var input = document.getElementById("u");
+    if (input){
+      input.value = u;
+    }
     var words = parseUtterance(u);
     var raf;
     var start = Date.now();
@@ -39,6 +43,10 @@ window.onload = function(){
   <canvas id="rik_win" width="300" height="300" style="border:5px solid #009900;">
   </canvas>
   <br/>
+  <form method="get">
+    <input type="text" id="u" name="u" size="100"/>
+    <input type="submit"/>
+  </form>
   <form>
     <textarea id="log" rows="20" cols="160">
     </textarea>
