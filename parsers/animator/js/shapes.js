@@ -25,15 +25,15 @@ function rotPoints(points, center, angle){
     var sn = Math.sin(a);
     var cs = Math.cos(a);
     var newPoints = [];
-    asString(points);
     for (i = 0; i < points.length; i++){
 	p = points[i];
 	dx = p[0] - center[0];
 	dy = p[1] - center[1];
 	x = dx * cs - dy * sn;
-	y = dx * sn - dy * cs;
+	y = dx * sn + dy * cs;
 	newPoints.push ([x + center[0], y + center[1]]);
     }
+    return newPoints;
 }
 
 function getPointsForArc(arc){
