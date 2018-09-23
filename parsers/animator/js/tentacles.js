@@ -24,8 +24,8 @@ return (
 "Sequence" : {"type": "morpheme",
 "glyph": [
 {"type": "circle", "r1": 5,"x": 25,"y": -25,"h":""},
-{"type": "circle", "r1": 5,"x": "125/3","y": "-125/3","h":""},
-{"type": "circle", "r1": 5,"x": "175/3","y": "-175/3","h":""},
+{"type": "circle", "r1": 5,"x": (125) / (3),"y": (-125) / (3),"h":""},
+{"type": "circle", "r1": 5,"x": (175) / (3),"y": (-175) / (3),"h":""},
 {"type": "circle", "r1": 5,"x": 75,"y": -75,"h":""}]},
 "Word" : {"type": "morpheme",
 "glyph": [
@@ -330,8 +330,8 @@ return (
 "Sky" : {"type": "morpheme",
 "glyph": [
 {"type": "line", "x": 20,"x2": 80,"y": -20,"y2": -20,"h":""},
-{"type": "squiggle", "d": 0,"r1": 10 * Math.sqrt(2),"x": 40,"x2": 20,"y": -30,"y2": -50,"h":""},
-{"type": "squiggle", "d": 1,"r1": 10 * Math.sqrt(2),"x": 60,"x2": 80,"y": -30,"y2": -50,"h":""},
+{"type": "squiggle", "d": 0,"r1": (10) * ((2) - Math.sqrt(2)) / 2,"x": 40,"x2": 20,"y": -30,"y2": -50,"h":""},
+{"type": "squiggle", "d": 1,"r1": (10) * ((2) - Math.sqrt(2)) / 2,"x": 60,"x2": 80,"y": -30,"y2": -50,"h":""},
 {"type": "circle", "r1": 10,"x": 50,"y": -70,"h":""}]},
 "Sleep" : {"type": "morpheme",
 "glyph": [
@@ -654,8 +654,8 @@ return (
 "Rail" : {"type": "morpheme",
 "glyph": [
 {"type": "arc", "a1": 37,"a2": 143,"r1": 25,"x": 50,"y": -65,"h":""},
-{"type": "hook", "a1": 45,"d": 0,"leg": "22r2","r1": 10,"x": 30,"y": -50,"h":""},
-{"type": "hook", "a1": 135,"d": 1,"leg": "22r2","r1": 10,"x": 70,"y": -50,"h":""},
+{"type": "hook", "a1": 45,"d": 0,"leg": (22) * Math.sqrt(2),"r1": 10,"x": 30,"y": -50,"h":""},
+{"type": "hook", "a1": 135,"d": 1,"leg": (22) * Math.sqrt(2),"r1": 10,"x": 70,"y": -50,"h":""},
 {"type": "line", "x": 50,"x2": 50,"y": -50,"y2": -80,"h":""}]},
 "Grass" : {"type": "morpheme",
 "glyph": [
@@ -701,10 +701,10 @@ return (
 {"type": "wicket", "a1": 90,"leg": 12.5,"r1": 12.5,"x": 67.5,"y": -67.5,"h":""}]},
 "Flower" : {"type": "morpheme",
 "glyph": [
-{"type": "wicket", "a1": 135,"leg": "10r2","r1": "5r2","x": 35,"y": -35,"h":""},
-{"type": "wicket", "a1": 225,"leg": "10r2","r1": "5r2","x": 35,"y": -65,"h":""},
-{"type": "wicket", "a1": 45,"leg": "10r2","r": 1,"r1": "5r2","x": 65,"y": -35,"h":""},
-{"type": "wicket", "a1": 315,"leg": "10r2","r": 1,"r1": "5r2","x": 65,"y": -65,"h":""}]}},
+{"type": "wicket", "a1": 135,"leg": (10) * Math.sqrt(2),"r1": (5) * Math.sqrt(2),"x": 35,"y": -35,"h":""},
+{"type": "wicket", "a1": 225,"leg": (10) * Math.sqrt(2),"r1": (5) * Math.sqrt(2),"x": 35,"y": -65,"h":""},
+{"type": "wicket", "a1": 45,"leg": (10) * Math.sqrt(2),"r": 1,"r1": (5) * Math.sqrt(2),"x": 65,"y": -35,"h":""},
+{"type": "wicket", "a1": 315,"leg": (10) * Math.sqrt(2),"r": 1,"r1": (5) * Math.sqrt(2),"x": 65,"y": -65,"h":""}]}},
 "aspects": {
 "R" : {"type": "aspect",
 "glyph": [
@@ -856,8 +856,8 @@ return (
 {"type": "circle", "r1": 10,"x": 32.68,"y": -60,"h":""}]},
 "Sector" : {"type": "symbol",
 "glyph": [
-{"type": "arc", "a1": 45,"a2": 135,"r1": "10r2","x": 50,"y": -78.75,"h":""},
-{"type": "arc", "a1": 45,"a2": 135,"r1": "30r2","x": 50,"y": -78.75,"h":""},
+{"type": "arc", "a1": 45,"a2": 135,"r1": (10) * Math.sqrt(2),"x": 50,"y": -78.75,"h":""},
+{"type": "arc", "a1": 45,"a2": 135,"r1": (30) * Math.sqrt(2),"x": 50,"y": -78.75,"h":""},
 {"type": "line", "x": 40,"x2": 20,"y": -68.75,"y2": -48.75,"h":""},
 {"type": "line", "x": 60,"x2": 80,"y": -68.75,"y2": -48.75,"h":""}]},
 "Seven" : {"type": "symbol",

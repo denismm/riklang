@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-                version="1.0">
+		xmlns:r="http://www.suberic.net/~dmm/rikchik"
+                version="2.0">
 
   <xsl:output method="text"/>
 
@@ -32,20 +33,48 @@
     </xsl:if>
   </xsl:template>
 
+  <!--
+      converts simple arithmetic to JavaScript.
+      / = x/y
+      r = x * Math.sqrt(y)
+      s = x * (y - Math.sqrt(2))/2
+      -->
+  <xsl:function name="r:parseNum">
+    <xsl:param name="text"/>
+    <xsl:choose>
+      <xsl:when test="contains($text, '/')">
+	<xsl:text>(</xsl:text>
+	<xsl:value-of select="r:parseNum(substring-before($text, '/'))"/>
+	<xsl:text>) / (</xsl:text>
+	<xsl:value-of select="r:parseNum(substring-after($text, '/'))"/>
+	<xsl:text>)</xsl:text>
+      </xsl:when>
+      <xsl:when test="contains($text, 'r')">
+	<xsl:text>(</xsl:text>
+	<xsl:value-of select="r:parseNum(substring-before($text, 'r'))"/>
+	<xsl:text>) * Math.sqrt(</xsl:text>
+	<xsl:value-of select="r:parseNum(substring-after($text, 'r'))"/>
+	<xsl:text>)</xsl:text>
+      </xsl:when>
+      <xsl:when test="contains($text, 's')">
+	<xsl:text>(</xsl:text>
+	<xsl:value-of select="r:parseNum(substring-before($text, 's'))"/>
+	<xsl:text>) * ((</xsl:text>
+	<xsl:value-of select="r:parseNum(substring-after($text, 's'))"/>
+	<xsl:text>) - Math.sqrt(2)) / 2</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:value-of select="$text"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+  
 
-  <xsl:template match="@*[matches(.,'^-?\d+(\.\d+)?s2$')]">
+  <xsl:template match="@*[matches(.,'^-?[0-9sr/\.]*$')]">
     <xsl:text>&quot;</xsl:text>
     <xsl:value-of select="node-name(.)"/>
     <xsl:text>&quot;: </xsl:text>
-    <xsl:value-of select="substring-before(.,'s2')"/>
-    <xsl:text> * Math.sqrt(2),</xsl:text>
-  </xsl:template>
-
-  <xsl:template match="@*[matches(.,'^-?\d+(\.\d+)?$')]">
-    <xsl:text>&quot;</xsl:text>
-    <xsl:value-of select="node-name(.)"/>
-    <xsl:text>&quot;: </xsl:text>
-    <xsl:value-of select="."/>
+    <xsl:value-of select="r:parseNum(string(.))"/>
     <xsl:text>,</xsl:text>
   </xsl:template>
 
@@ -57,7 +86,7 @@
     <xsl:text>&quot;,</xsl:text>
   </xsl:template>
 
-  <xsl:template match="*[ends-with(node-name(.), 's')]">
+  <xsl:template match="*[ends-with(string(node-name(.)), 's')]">
     <xsl:apply-templates select="." mode="list"/>
   </xsl:template>
 
