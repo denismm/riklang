@@ -20,6 +20,22 @@ function addPointsForLineSegment(points, p, p2, steps){
     }
 }
 
+function rotPoints(points, center, angle){
+    var a = angle * (Math.PI / 180);
+    var sn = Math.sin(a);
+    var cs = Math.cos(a);
+    var newPoints = [];
+    asString(points);
+    for (i = 0; i < points.length; i++){
+	p = points[i];
+	dx = p[0] - center[0];
+	dy = p[1] - center[1];
+	x = dx * cs - dy * sn;
+	y = dx * sn - dy * cs;
+	newPoints.push ([x + center[0], y + center[1]]);
+    }
+}
+
 function getPointsForArc(arc){
     x = arc.x;
     y = arc.y;
@@ -82,7 +98,20 @@ function getPointsForWicket(wicket){
     leg = wicket.leg;
     a1 = wicket.a1;
     var points = [];
-    var divs = getDivisions();
+    center = [x,y];
+    offset = r1 * 0.55;
+    var points = [];
+    addPointsForLineSegment(points, [x + leg, y - r1], [x, y - r1], 3);
+    points.push([x, y - r1]);
+    points.push([x - offset, y - r1]);
+    points.push([x - r1, y - offset]);
+    points.push([x - r1, y]);
+    points.push([x - r1, y + offset]);
+    points.push([x - offset, y + r1]);
+    addPointsForLineSegment(points, [x, y + r1], [x + leg, y + r1], 3);
+    points.push([x + leg, y + r1]);
+    var newPoints = rotPoints(points, [x,y], a1);
+    return newPoints;
 }
 
 function getPointsForHook(hook){
@@ -176,40 +205,46 @@ function getPointsForGreatarc(greatarc){
 }
 
 function getPointsForTentacle(tentacle){
+    var points;
     if (tentacle.type == 'line'){
-        return getPointsForLine(tentacle);
+        points = getPointsForLine(tentacle);
 	/*
     } else if (tentacle.type == 'arc'){
-        return getPointsForArc(tentacle);
+        points = getPointsForArc(tentacle);
     } else if (tentacle.type == 'ellarc'){
-        return getPointsForEllarc(tentacle);
+        points = getPointsForEllarc(tentacle);
     } else if (tentacle.type == 'squiggle'){
-        return getPointsForSquiggle(tentacle);
+        points = getPointsForSquiggle(tentacle);
         */
     } else if (tentacle.type == 'circle'){
-        return getPointsForCircle(tentacle);
-        /*
+        points = getPointsForCircle(tentacle);
     } else if (tentacle.type == 'wicket'){
-        return getPointsForWicket(tentacle);
+        points = getPointsForWicket(tentacle);
+        /*
     } else if (tentacle.type == 'hook'){
-        return getPointsForHook(tentacle);
+        points = getPointsForHook(tentacle);
     } else if (tentacle.type == 'halfhook'){
-        return getPointsForHalfhook(tentacle);
+        points = getPointsForHalfhook(tentacle);
 */
     } else if (tentacle.type == 'lbend'){
-        return getPointsForLbend(tentacle);
+        points = getPointsForLbend(tentacle);
 /*
     } else if (tentacle.type == 'fishbend'){
-        return getPointsForFishbend(tentacle);
+        points = getPointsForFishbend(tentacle);
     } else if (tentacle.type == 'zigzag'){
-        return getPointsForZigzag(tentacle);
+        points = getPointsForZigzag(tentacle);
     } else if (tentacle.type == 'lobe'){
-        return getPointsForLobe(tentacle);
+        points = getPointsForLobe(tentacle);
     } else if (tentacle.type == 'greatarc'){
-        return getPointsForGreatarc(tentacle);
+        points = getPointsForGreatarc(tentacle);
 */
     } else {
         log(JSON.stringify(tentacle));
-        return [];
+        points = [];
     }
+    if (tentacle.r1 == 1){
+	points.reverse();
+    }
+    return points;
+
 }
