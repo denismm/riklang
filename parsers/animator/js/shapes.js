@@ -37,13 +37,8 @@ function rotPoints(points, center, angle){
 }
 
 function getPointsForArc(arc){
-    x = arc.x;
-    y = arc.y;
-    r1 = arc.r1;
-    a1 = arc.a1;
-    a2 = arc.a2;
-    var points = [];
-    var divs = getDivisions();
+    arc.r2 = arc.r1;
+    return getPointsForEllarc(arc);
 }
 
 function getPointsForEllarc(ellarc){
@@ -200,8 +195,10 @@ function getPointsForLobe(lobe){
 }
 
 function getPointsForGreatarc(greatarc){
-    a1 = greatarc.a1;
-    a2 = greatarc.a2;
+    greatarc.x = 50;
+    greatarc.y = -50;
+    greatarc.r1 = 30;
+    return getPointsForArc(greatarc);
 }
 
 function getPointsForTentacle(tentacle){
