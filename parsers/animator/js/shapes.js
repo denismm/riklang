@@ -95,7 +95,6 @@ function getPointsForWicket(wicket){
     var points = [];
     center = [x,y];
     offset = r1 * 0.55;
-    var points = [];
     addPointsForLineSegment(points, [x + leg, y - r1], [x, y - r1], 3);
     points.push([x, y - r1]);
     points.push([x - offset, y - r1]);
@@ -117,7 +116,29 @@ function getPointsForHook(hook){
     a1 = hook.a1;
     d = hook.d;
     var points = [];
-    var divs = getDivisions();
+    center = [x,y];
+    offset = r1 * 0.55;
+    if (d == 1){
+	points.push([x, y + r1]);
+	points.push([x - offset, y + r1]);
+	points.push([x - r1, y + offset]);
+	points.push([x - r1, y]);
+	points.push([x - r1, y - offset]);
+	points.push([x - offset, y - r1]);
+	addPointsForLineSegment(points, [x, y - r1], [x + leg, y - r1], 6);
+	points.push([x + leg, y - r1]);
+    } else {
+	points.push([x, y - r1]);
+	points.push([x - offset, y - r1]);
+	points.push([x - r1, y - offset]);
+	points.push([x - r1, y]);
+	points.push([x - r1, y + offset]);
+	points.push([x - offset, y + r1]);
+	addPointsForLineSegment(points, [x, y + r1], [x + leg, y + r1], 6);
+	points.push([x + leg, y + r1]);
+    }
+    var newPoints = rotPoints(points, [x,y], a1);
+    return newPoints;
 }
 
 function getPointsForHalfhook(halfhook){
@@ -128,7 +149,23 @@ function getPointsForHalfhook(halfhook){
     a1 = halfhook.a1;
     d = halfhook.d;
     var points = [];
-    var divs = getDivisions();
+    center = [x,y];
+    offset = r1 * 0.55;
+    if (d == 1){
+	points.push([x - r1, y]);
+	points.push([x - r1, y - offset]);
+	points.push([x - offset, y - r1]);
+	addPointsForLineSegment(points, [x, y - r1], [x + leg, y - r1], 9);
+	points.push([x + leg, y - r1]);
+    } else {
+	points.push([x - r1, y]);
+	points.push([x - r1, y + offset]);
+	points.push([x - offset, y + r1]);
+	addPointsForLineSegment(points, [x, y + r1], [x + leg, y + r1], 9);
+	points.push([x + leg, y + r1]);
+    }
+    var newPoints = rotPoints(points, [x,y], a1);
+    return newPoints;
 }
 
 function getPointsForLbend(lbend){
@@ -217,12 +254,10 @@ function getPointsForTentacle(tentacle){
         points = getPointsForCircle(tentacle);
     } else if (tentacle.type == 'wicket'){
         points = getPointsForWicket(tentacle);
-        /*
     } else if (tentacle.type == 'hook'){
         points = getPointsForHook(tentacle);
     } else if (tentacle.type == 'halfhook'){
         points = getPointsForHalfhook(tentacle);
-*/
     } else if (tentacle.type == 'lbend'){
         points = getPointsForLbend(tentacle);
 /*
