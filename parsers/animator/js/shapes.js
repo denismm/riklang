@@ -217,7 +217,17 @@ function getPointsForZigzag(zigzag){
     y2 = zigzag.y2;
     d = zigzag.d;
     var points = [];
-    var divs = getDivisions();
+    if (d == 0){
+	addPointsForLineSegment(points, [x,y], [x, (y + y2) / 2], 3);
+	addPointsForLineSegment(points, [x, (y + y2) / 2], [x2, (y + y2) / 2], 6);
+	addPointsForLineSegment(points, [x2, (y + y2) / 2], [x2, y2], 3);
+    } else {
+	addPointsForLineSegment(points, [x,y], [(x + x2) / 2, y], 3);
+	addPointsForLineSegment(points, [(x + x2) / 2, y], [(x + x2) / 2, y2], 6);
+	addPointsForLineSegment(points, [(x + x2) / 2, y2], [x2, y2], 3);
+    }
+    points.push([x2,y2]);
+    return points;
 }
 
 function getPointsForLobe(lobe){
@@ -263,8 +273,10 @@ function getPointsForTentacle(tentacle){
 /*
     } else if (tentacle.type == 'fishbend'){
         points = getPointsForFishbend(tentacle);
+*/
     } else if (tentacle.type == 'zigzag'){
         points = getPointsForZigzag(tentacle);
+/*
     } else if (tentacle.type == 'lobe'){
         points = getPointsForLobe(tentacle);
     } else if (tentacle.type == 'greatarc'){
