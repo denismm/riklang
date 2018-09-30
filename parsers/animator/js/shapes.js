@@ -1,22 +1,52 @@
-function getPointsForLine(line){
-    x = line.x;
-    y = line.y;
-    x2 = line.x2;
-    y2 = line.y2;
-    var points = [];
-    var divs = getDivisions();
-    addPointsForLineSegment(points, [x, y], [x2, y2], divs * 3);
-    points.push([x2, y2]);
-    return points;
-}
-
 /*
   Modifies points by adding the points from the beginning toward the end of
   the segment from x,y to x2, y2.
 */
 function addPointsForLineSegment(points, p, p2, steps){
-    for (i = 0; i < steps; i++){
+    for (var i = 0; i < steps; i++){
         points.push(ctween(p, p2,i/steps));
+    }
+}
+
+function normalizeDegAngles(a1, a2, dir){
+    if (dir != 0){
+	var angles = normalizeDegAngles(a2, a1, 0);
+	angles.reverse();
+	return angles;
+    } else {
+	while (a2 < a1) {
+	    a2 += 360;
+	}
+	while (a2 - a1 > 360){
+	    a2 -= 360;
+	} 
+	return [a1, a2];
+    }
+}
+
+function addPointsForArcSegment(points, center, angle1, angle2, r, dir){
+    var a1 = rad(angle1);
+    var a2 = rad(angle2);
+    if (dir == 1){
+	var temp = a1;
+	a1 = a2;
+	a2 = temp;
+    }
+    var p1 = plr(center, a1, r);
+    var p2 = plr(center, a2, r);
+    var dth = a2 - a1;
+    var offset = (4/3) * Math.tan(dth/4);
+    var o1 = plr(p1, a1 + (Math.PI / 2), offset * r);
+    var o2 = plr(p2, a2 - (Math.PI / 2), offset * r);
+    if (dir == 1){
+	points.push(p2);
+	points.push(o2);
+	points.push(o1);
+    } else {
+	points.push(p1);
+	points.push(o1);
+	points.push(o2);
+	
     }
 }
 
@@ -36,9 +66,34 @@ function rotPoints(points, center, angle){
     return newPoints;
 }
 
+function getPointsForLine(line){
+    x = line.x;
+    y = line.y;
+    x2 = line.x2;
+    y2 = line.y2;
+    var points = [];
+    var divs = getDivisions();
+    addPointsForLineSegment(points, [x, y], [x2, y2], divs * 3);
+    points.push([x2, y2]);
+    return points;
+}
+
 function getPointsForArc(arc){
-    arc.r2 = arc.r1;
-    return getPointsForEllarc(arc);
+    //temp - to be moved to EllArc?
+    var angles = normalizeDegAngles(arc.a1, arc.a2, 0);
+    var points = [];
+    var a1 = angles[0];
+    var a2 = angles[1];
+    var center = [arc.x, arc.y];
+    var dth = (a2 - a1) / 4;
+    for (var i = 0; i < 4; i++){
+	addPointsForArcSegment(points, center, a1 + dth * i, a1 + dth * (i+1), arc.r1, 0);
+    }
+    points.push(plr(center, rad(a2), arc.r1));
+    return points;
+    //end temp
+    //arc.r2 = arc.r1;
+    //return getPointsForEllarc(arc);
 }
 
 function getPointsForEllarc(ellarc){
@@ -96,12 +151,8 @@ function getPointsForWicket(wicket){
     center = [x,y];
     offset = r1 * 0.55;
     addPointsForLineSegment(points, [x + leg, y - r1], [x, y - r1], 3);
-    points.push([x, y - r1]);
-    points.push([x - offset, y - r1]);
-    points.push([x - r1, y - offset]);
-    points.push([x - r1, y]);
-    points.push([x - r1, y + offset]);
-    points.push([x - offset, y + r1]);
+    addPointsForArcSegment(points, center, 270, 180, r1, 0);
+    addPointsForArcSegment(points, center, 180, 90, r1, 0);
     addPointsForLineSegment(points, [x, y + r1], [x + leg, y + r1], 3);
     points.push([x + leg, y + r1]);
     var newPoints = rotPoints(points, [x,y], a1);
@@ -119,21 +170,13 @@ function getPointsForHook(hook){
     center = [x,y];
     offset = r1 * 0.55;
     if (d == 1){
-	points.push([x, y + r1]);
-	points.push([x - offset, y + r1]);
-	points.push([x - r1, y + offset]);
-	points.push([x - r1, y]);
-	points.push([x - r1, y - offset]);
-	points.push([x - offset, y - r1]);
+	addPointsForArcSegment(points, center, 90, 180, r1, d);
+	addPointsForArcSegment(points, center, 180, 270, r1, d);
 	addPointsForLineSegment(points, [x, y - r1], [x + leg, y - r1], 6);
 	points.push([x + leg, y - r1]);
     } else {
-	points.push([x, y - r1]);
-	points.push([x - offset, y - r1]);
-	points.push([x - r1, y - offset]);
-	points.push([x - r1, y]);
-	points.push([x - r1, y + offset]);
-	points.push([x - offset, y + r1]);
+	addPointsForArcSegment(points, center, 270, 180, r1, d);
+	addPointsForArcSegment(points, center, 180, 90, r1, d);
 	addPointsForLineSegment(points, [x, y + r1], [x + leg, y + r1], 6);
 	points.push([x + leg, y + r1]);
     }
@@ -152,19 +195,17 @@ function getPointsForHalfhook(halfhook){
     center = [x,y];
     offset = r1 * 0.55;
     if (d == 1){
-	points.push([x - r1, y]);
-	points.push([x - r1, y - offset]);
-	points.push([x - offset, y - r1]);
+	addPointsForArcSegment(points, center, 180, 270, r1, d);
 	addPointsForLineSegment(points, [x, y - r1], [x + leg, y - r1], 9);
 	points.push([x + leg, y - r1]);
     } else {
-	points.push([x - r1, y]);
-	points.push([x - r1, y + offset]);
-	points.push([x - offset, y + r1]);
+	addPointsForArcSegment(points, center, 180, 90, r1, d);
 	addPointsForLineSegment(points, [x, y + r1], [x + leg, y + r1], 9);
 	points.push([x + leg, y + r1]);
     }
     var newPoints = rotPoints(points, [x,y], a1);
+    //log(newPoints.length);
+    //asString(newPoints);
     return newPoints;
 }
 
@@ -207,7 +248,7 @@ function getPointsForFishbend(fishbend){
     a1 = fishbend.a1;
     d = fishbend.d;
     var points = [];
-    var divs = getDivisions();
+    
 }
 
 function getPointsForZigzag(zigzag){
@@ -252,9 +293,9 @@ function getPointsForTentacle(tentacle){
     var points;
     if (tentacle.type == 'line'){
         points = getPointsForLine(tentacle);
-	/*
     } else if (tentacle.type == 'arc'){
         points = getPointsForArc(tentacle);
+	/*
     } else if (tentacle.type == 'ellarc'){
         points = getPointsForEllarc(tentacle);
     } else if (tentacle.type == 'squiggle'){
@@ -279,9 +320,9 @@ function getPointsForTentacle(tentacle){
 /*
     } else if (tentacle.type == 'lobe'){
         points = getPointsForLobe(tentacle);
+*/
     } else if (tentacle.type == 'greatarc'){
         points = getPointsForGreatarc(tentacle);
-*/
     } else {
         log(JSON.stringify(tentacle));
         points = [];

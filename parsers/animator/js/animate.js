@@ -12,7 +12,25 @@ function getDivisions(){
     return 4;
 }
 
-//given an elapsed number of rockspans, a set of words, and a context, draw the correct fram in that context.
+function deg(angle){
+    return angle / (Math.PI / 180)
+}
+
+function rad(angle){
+    return angle * (Math.PI / 180)
+}
+
+function isDebugLines(){
+    return true;
+}
+
+//given a point, an angle, and a distance, returns the point dist away along angle. Uses radians.
+function plr(point, angle, dist){
+    //asString(['plr', point, deg(angle), dist, [point[0] + Math.cos(angle) * dist, point[1] + Math.sin(angle) * dist]]);
+    return [point[0] + Math.cos(angle) * dist, point[1] + Math.sin(angle) * dist];
+}
+
+//Given an elapsed number of rockspans, a set of words, and a context, draw the correct fram in that context.
 function frame(rsecs, words){
     var whole = Math.floor(rsecs);
     var remainder = rsecs - whole;
@@ -59,10 +77,7 @@ function interpolate(words, position){
 	    var py = lastpoint[1];
 	    var rr = polar[0];
 	    var rth = polar[1];
-	    point = [
-		px + Math.cos(rth) * rr,
-		py + Math.sin(rth) * rr
-	    ];
+	    point = plr(lastpoint, rth, rr);
 	    points.push(point);
 	}
 
@@ -124,7 +139,7 @@ function draw(splines){
     ctx.translate(50, 50);
     ctx.scale(2,-2);
     
-    for (let s in splines){
+    for (var s = 0; s < splines.length; s++){
 	points = splines[s];
 
 	for (var i = 0; i < getDivisions() * 3; i+=3){
@@ -145,6 +160,18 @@ function draw(splines){
 	    ctx.moveTo(x0,y0);
 	    ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3);
 	    ctx.stroke();
+	    if (isDebugLines()){
+		ctx.save();
+		ctx.setLineDash([s,1]);
+		ctx.strokeStyle = "green";
+		ctx.beginPath();
+		ctx.moveTo(x0,y0);
+		ctx.lineTo(x1,y1);
+		ctx.lineTo(x2,y2);
+		ctx.lineTo(x3,y3);
+		ctx.stroke();
+		ctx.restore();
+	    }
 	    //asString(p0);
 	}
 	//asString(points);
