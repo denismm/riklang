@@ -26,8 +26,12 @@ function isDebugLines(){
 
 //given a point, an angle, and a distance, returns the point dist away along angle. Uses radians.
 function plr(point, angle, dist){
-    //asString(['plr', point, deg(angle), dist, [point[0] + Math.cos(angle) * dist, point[1] + Math.sin(angle) * dist]]);
-    return [point[0] + Math.cos(angle) * dist, point[1] + Math.sin(angle) * dist];
+    return eplr(point, angle, dist, dist);
+}
+
+//elliptical form of plr.
+function eplr(point, angle, hdist, vdist){
+    return [point[0] + Math.cos(angle) * hdist, point[1] + Math.sin(angle) * vdist];
 }
 
 //Given an elapsed number of rockspans, a set of words, and a context, draw the correct fram in that context.

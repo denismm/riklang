@@ -25,6 +25,10 @@ function normalizeDegAngles(a1, a2, dir){
 }
 
 function addPointsForArcSegment(points, center, angle1, angle2, r, dir){
+    addPointsForEArcSegment(points, center, angle1, angle2, r, r, dir);
+}
+
+function addPointsForEArcSegment(points, center, angle1, angle2, r1, r2, dir){
     var a1 = rad(angle1);
     var a2 = rad(angle2);
     if (dir == 1){
@@ -32,12 +36,12 @@ function addPointsForArcSegment(points, center, angle1, angle2, r, dir){
 	a1 = a2;
 	a2 = temp;
     }
-    var p1 = plr(center, a1, r);
-    var p2 = plr(center, a2, r);
+    var p1 = eplr(center, a1, r1, r2);
+    var p2 = eplr(center, a2, r1, r2);
     var dth = a2 - a1;
     var offset = (4/3) * Math.tan(dth/4);
-    var o1 = plr(p1, a1 + (Math.PI / 2), offset * r);
-    var o2 = plr(p2, a2 - (Math.PI / 2), offset * r);
+    var o1 = eplr(p1, a1 + (Math.PI / 2), offset * r1, offset * r2);
+    var o2 = eplr(p2, a2 - (Math.PI / 2), offset * r1, offset * r2);
     if (dir == 1){
 	points.push(p2);
 	points.push(o2);
@@ -79,21 +83,8 @@ function getPointsForLine(line){
 }
 
 function getPointsForArc(arc){
-    //temp - to be moved to EllArc?
-    var angles = normalizeDegAngles(arc.a1, arc.a2, 0);
-    var points = [];
-    var a1 = angles[0];
-    var a2 = angles[1];
-    var center = [arc.x, arc.y];
-    var dth = (a2 - a1) / 4;
-    for (var i = 0; i < 4; i++){
-	addPointsForArcSegment(points, center, a1 + dth * i, a1 + dth * (i+1), arc.r1, 0);
-    }
-    points.push(plr(center, rad(a2), arc.r1));
-    return points;
-    //end temp
-    //arc.r2 = arc.r1;
-    //return getPointsForEllarc(arc);
+    arc.r2 = arc.r1;
+    return getPointsForEllarc(arc);
 }
 
 function getPointsForEllarc(ellarc){
@@ -103,8 +94,17 @@ function getPointsForEllarc(ellarc){
     r2 = ellarc.r2;
     a1 = ellarc.a1;
     a2 = ellarc.a2;
+    var angles = normalizeDegAngles(ellarc.a1, ellarc.a2, 0);
     var points = [];
-    var divs = getDivisions();
+    var a1 = angles[0];
+    var a2 = angles[1];
+    var center = [ellarc.x, ellarc.y];
+    var dth = (a2 - a1) / 4;
+    for (var i = 0; i < 4; i++){
+	addPointsForEArcSegment(points, center, a1 + dth * i, a1 + dth * (i+1), ellarc.r1, ellarc.r2, 0);
+    }
+    points.push(eplr(center, rad(a2), ellarc.r1, ellarc.r2));
+    return points;
     
 }
 
@@ -241,14 +241,35 @@ function getPointsForLbend(lbend){
 }
 
 function getPointsForFishbend(fishbend){
-    x = fishbend.x;
-    y = fishbend.y;
-    r1 = fishbend.r1;
-    leg = fishbend.leg;
-    a1 = fishbend.a1;
-    d = fishbend.d;
+    var x = fishbend.x;
+    var y = fishbend.y;
+    var r1 = fishbend.r1;
+    var leg = fishbend.leg;
+    var a1 = fishbend.a1;
+    var d = fishbend.d;
     var points = [];
-    
+    var center = [x,y];
+    var p1 = plr(center, rad(a1 + 270), r1);
+    if (d == 1){
+	var p0 = plr(p1, rad(a1), leg);
+	addPointsForLineSegment(points, p0, p1, 3);
+	addPointsForArcSegment(points, center, a1 + 270, a1 + 202.5, r1, d); 
+	addPointsForArcSegment(points, center, a1 + 202.5, a1 + 135, r1, d);
+	var p2 = plr(center, rad(a1 + 135), r1);
+	var p3 = plr(p2, rad(a1 + 45), r1);
+	addPointsForArcSegment(points,p2, p3, 3);
+	points.push(p3);
+    } else {
+	var p0 = plr(p1, rad(a1 + 180), leg);
+	addPointsForLineSegment(points, p0, p1, 3);
+	addPointsForArcSegment(points, center, a1 + 270, a1 + 337.5, r1, d); 
+	addPointsForArcSegment(points, center, a1 + 202.5, a1 + 45, r1, d);
+	var p2 = plr(center, rad(a1 + 45), r1);
+	var p3 = plr(p2, rad(a1 + 135), r1);
+	addPointsForArcSegment(points,p2, p3, 3);
+	points.push(p3);
+    }
+    return points;
 }
 
 function getPointsForZigzag(zigzag){
@@ -295,9 +316,9 @@ function getPointsForTentacle(tentacle){
         points = getPointsForLine(tentacle);
     } else if (tentacle.type == 'arc'){
         points = getPointsForArc(tentacle);
-	/*
     } else if (tentacle.type == 'ellarc'){
         points = getPointsForEllarc(tentacle);
+	/*
     } else if (tentacle.type == 'squiggle'){
         points = getPointsForSquiggle(tentacle);
         */
@@ -311,7 +332,7 @@ function getPointsForTentacle(tentacle){
         points = getPointsForHalfhook(tentacle);
     } else if (tentacle.type == 'lbend'){
         points = getPointsForLbend(tentacle);
-/*
+	/*
     } else if (tentacle.type == 'fishbend'){
         points = getPointsForFishbend(tentacle);
 */
