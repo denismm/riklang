@@ -249,25 +249,26 @@ function getPointsForFishbend(fishbend){
     var d = fishbend.d;
     var points = [];
     var center = [x,y];
-    var p1 = plr(center, rad(a1 + 270), r1);
     if (d == 1){
-	var p0 = plr(p1, rad(a1), leg);
-	addPointsForLineSegment(points, p0, p1, 3);
-	addPointsForArcSegment(points, center, a1 + 270, a1 + 202.5, r1, d); 
-	addPointsForArcSegment(points, center, a1 + 202.5, a1 + 135, r1, d);
-	var p2 = plr(center, rad(a1 + 135), r1);
-	var p3 = plr(p2, rad(a1 + 45), r1);
-	addPointsForArcSegment(points,p2, p3, 3);
-	points.push(p3);
+        var p1 = plr(center, rad(a1 + 90), r1);
+	      var p0 = plr(p1, rad(a1), leg);
+	      addPointsForLineSegment(points, p0, p1, 3);
+	      addPointsForArcSegment(points, center, a1 + 90, a1 + 157.5, r1, d); 
+	      addPointsForArcSegment(points, center, a1 + 157.5, a1 + 225, r1, d); 
+	      var p2 = plr(center, rad(a1 + 225), r1);
+	      var p3 = plr(p2, rad(a1 - 45), leg);
+	      addPointsForLineSegment(points,p2, p3, 3);
+	      points.push(p3);
     } else {
-	var p0 = plr(p1, rad(a1 + 180), leg);
-	addPointsForLineSegment(points, p0, p1, 3);
-	addPointsForArcSegment(points, center, a1 + 270, a1 + 337.5, r1, d); 
-	addPointsForArcSegment(points, center, a1 + 202.5, a1 + 45, r1, d);
-	var p2 = plr(center, rad(a1 + 45), r1);
-	var p3 = plr(p2, rad(a1 + 135), r1);
-	addPointsForArcSegment(points,p2, p3, 3);
-	points.push(p3);
+        var p1 = plr(center, rad(a1 - 90), r1);
+	      var p0 = plr(p1, rad(a1), leg);
+	      addPointsForLineSegment(points, p0, p1, 3);
+	      addPointsForArcSegment(points, center, a1 + 270, a1 + 202.5, r1, d); 
+	      addPointsForArcSegment(points, center, a1 + 202.5, a1 + 135, r1, d);
+	      var p2 = plr(center, rad(a1 + 135), r1);
+	      var p3 = plr(p2, rad(a1 + 45), leg);
+	      addPointsForLineSegment(points,p2, p3, 3);
+	      points.push(p3);
     }
     return points;
 }
@@ -332,10 +333,8 @@ function getPointsForTentacle(tentacle){
         points = getPointsForHalfhook(tentacle);
     } else if (tentacle.type == 'lbend'){
         points = getPointsForLbend(tentacle);
-	/*
     } else if (tentacle.type == 'fishbend'){
         points = getPointsForFishbend(tentacle);
-*/
     } else if (tentacle.type == 'zigzag'){
         points = getPointsForZigzag(tentacle);
 /*
