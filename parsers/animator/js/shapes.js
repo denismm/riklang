@@ -294,14 +294,28 @@ function getPointsForZigzag(zigzag){
 }
 
 function getPointsForLobe(lobe){
-    x = lobe.x;
-    y = lobe.y;
-    r1 = lobe.r1;
-    r2 = lobe.r2;
-    a1 = lobe.a1;
-    d = lobe.d;
+    var x = lobe.x;
+    var y = lobe.y;
+    var center = [x,y];
+    var r1 = lobe.r1;
+    var r2 = lobe.r2;
+    var a1 = lobe.a1;
+    var d = lobe.d;
     var points = [];
-    var divs = getDivisions();
+    if (d == 1){
+        addPointsForArcSegment(points, center, 90, 180, r1, d);
+        addPointsForArcSegment(points, center, 180, 270, r1, d);
+        addPointsForEArcSegment(points, center, 270, 315, r2, r1, d);
+        addPointsForEArcSegment(points, center, 315, 360, r2, r1, d);
+    } else {
+        addPointsForArcSegment(points, center, 270, 180, r1, d);
+        addPointsForArcSegment(points, center, 180, 90, r1, d);
+        addPointsForEArcSegment(points, center, 90, 45, r2, r1, d);
+        addPointsForEArcSegment(points, center, 45, 0, r2, r1, d);
+    }
+    points.push([x + r2, y]);
+    var newPoints = rotPoints(points, center, a1);
+    return newPoints;
 }
 
 function getPointsForGreatarc(greatarc){
@@ -337,10 +351,8 @@ function getPointsForTentacle(tentacle){
         points = getPointsForFishbend(tentacle);
     } else if (tentacle.type == 'zigzag'){
         points = getPointsForZigzag(tentacle);
-/*
     } else if (tentacle.type == 'lobe'){
         points = getPointsForLobe(tentacle);
-*/
     } else if (tentacle.type == 'greatarc'){
         points = getPointsForGreatarc(tentacle);
     } else {
