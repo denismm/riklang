@@ -210,12 +210,10 @@ function parseWord(word,riklang){
     }
     var c_t0 = Object.assign({}, riklang.collectors[c].glyph[0]);
     if (p == 'P'){
-        log("up");
         c_t0.y += 20;
         c_t0.y2 += 20;
     }
     if (p == 'O'){
-        log("uo");
         c_t0.y += 40;
         c_t0.y2 += 40;
     }
