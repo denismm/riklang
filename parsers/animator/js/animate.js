@@ -21,7 +21,7 @@ function rad(angle){
 }
 
 function isDebugLines(){
-    return true;
+    return false;
 }
 
 //given a point, an angle, and a distance, returns the point dist away along angle. Uses radians.
@@ -36,6 +36,7 @@ function eplr(point, angle, hdist, vdist){
 
 //Given an elapsed number of rockspans, a set of words, and a context, draw the correct fram in that context.
 function frame(rsecs, words){
+    rsecs *= 3;
     var whole = Math.floor(rsecs);
     var remainder = rsecs - whole;
     var index;
@@ -190,21 +191,37 @@ function parseWord(word,riklang){
     parts = word.split("-"); 
     //log(parts);
     var tents = [];
-    m = parts[0];
-    m_t = riklang.morphemes[m].glyph;
+    var m = parts[0];
+    var m_t = riklang.morphemes[m].glyph;
     for (let t in m_t){
 	      tents.push(m_t[t]);
     } 
-    a = parts[1];
-    a_t = riklang.aspects[a].glyph;
+    var a = parts[1];
+    var a_t = riklang.aspects[a].glyph;
     tents.push(a_t[0]);
-    r = parts[2];
-    r_t = riklang.relations[r].glyph;
+    var r = parts[2];
+    var r_t = riklang.relations[r].glyph;
     tents.push(r_t[0]);
-    c = parts[3];
-    c_t = riklang.collectors[c].glyph;
-    tents.push(c_t[0]);
-    //asString(tents);
+    var c = parts[3];
+    var p = '';
+    if (c.length == 2){
+        p = c.charAt(1);
+        c = c.charAt(0);
+    }
+    var c_t0 = Object.assign({}, riklang.collectors[c].glyph[0]);
+    if (p == 'P'){
+        log("up");
+        c_t0.y += 20;
+        c_t0.y2 += 20;
+    }
+    if (p == 'O'){
+        log("uo");
+        c_t0.y += 40;
+        c_t0.y2 += 40;
+    }
+    asString(c_t0);
+
+    tents.push(c_t0);
 
     //create splines 
     var splines = [];
