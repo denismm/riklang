@@ -219,8 +219,6 @@ function parseWord(word,riklang){
         c_t0.y += 40;
         c_t0.y2 += 40;
     }
-    asString(c_t0);
-
     tents.push(c_t0);
 
     //create splines 
