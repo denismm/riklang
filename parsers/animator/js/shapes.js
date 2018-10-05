@@ -108,15 +108,80 @@ function getPointsForEllarc(ellarc){
     
 }
 
+//determines the coordinate for a point t of the way from 0 to 1 on the given 1-dimensional bezier.
+function bezFunc(lbez, t){
+    var A = lbez[0];
+    var B = lbez[1];
+    var C = lbez[2];
+    var D = lbez[3];
+    return (
+        (A) 
+        + (3*B - 3*A) * t 
+        + (3*C - 6*B + 3*A) * t*t 
+        + (D - 3*C + 3*B - A) * t*t*t
+    );
+}
+
+//determines the derivative at a point t of the way from 0 to 1 on the given 1-dimensional bezier.
+function bezPrime(lbez, t){
+    var A = lbez[0];
+    var B = lbez[1];
+    var C = lbez[2];
+    var D = lbez[3];
+    return (
+        (3*B - 3*A)
+        + (6*C - 12*B + 6*A) * t
+        + (3*D - 9*C + 9*B - 3*A) * t*t
+        );
+}
+
+//adds p0, p1, and p2 for a section of the given four-point bezier curve from p to q.
+function addPointsForSplitSpline(points, bezier, p, q){
+    var A = bezier[0];
+    var B = bezier[1];
+    var C = bezier[2];
+    var D = bezier[3];
+    var bezX = [A[0], B[0], C[0], D[0]];
+    var bezY = [A[1], B[1], C[1], D[1]];
+    var coeff = (q - p) / 3;
+    var Ex = bezFunc(bezX, p);
+    var Ey = bezFunc(bezY, p);
+    var Hx = bezFunc(bezX, q);
+    var Hy = bezFunc(bezY, q);
+    var Fx = Ex + bezPrime(bezX, p) * coeff;
+    var Fy = Ey + bezPrime(bezY, p) * coeff;
+    var Gx = Hx - bezPrime(bezX, q) * coeff;
+    var Gy = Hy - bezPrime(bezY, q) * coeff;
+    points.push([Ex, Ey]);
+    points.push([Fx, Fy]);
+    points.push([Gx, Gy]);
+}
+
 function getPointsForSquiggle(squiggle){
-    x = squiggle.x;
-    y = squiggle.y;
-    x2 = squiggle.x2;
-    y2 = squiggle.y2;
-    r1 = squiggle.r1;
-    d = squiggle.d;
+    var x = squiggle.x;
+    var y = squiggle.y;
+    var x2 = squiggle.x2;
+    var y2 = squiggle.y2;
+    var r1 = squiggle.r1;
+    var d = squiggle.d;
+    var dir = Math.pow(-1, d);
+    var angle = Math.atan(y2-y, x2-x); //in rads
+    var r2 = Math.sqrt(Math.pow(x2-x, 2) + Math.pow(y2-y, 2)) / 4;
     var points = [];
     var divs = getDivisions();
+    //the control points for the single-bezier version of the squiggle
+    var bezier = [
+        [x,y],
+        [x + (r2 * 2), y - (r1 * 2 * Math.sqrt(3) * dir)],
+        [x + (r2 * 2), y + (r1 * 2 * Math.sqrt(3) * dir)],
+        [x + (r2 * 4), y]
+    ];
+    for (var i = 0; i < divs; i++){
+        addPointsForSplitSpline(points, bezier, i / divs, (i + 1) / divs);
+    }
+    points.push([x + (r2 * 4), y])
+    var newPoints = rotPoints(points, [x,y], deg(angle));
+    return newPoints;    
 }
 
 function getPointsForCircle(circle){
@@ -333,10 +398,8 @@ function getPointsForTentacle(tentacle){
         points = getPointsForArc(tentacle);
     } else if (tentacle.type == 'ellarc'){
         points = getPointsForEllarc(tentacle);
-	/*
     } else if (tentacle.type == 'squiggle'){
         points = getPointsForSquiggle(tentacle);
-        */
     } else if (tentacle.type == 'circle'){
         points = getPointsForCircle(tentacle);
     } else if (tentacle.type == 'wicket'){
