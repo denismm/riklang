@@ -20,7 +20,13 @@ function rad(angle){
     return angle * (Math.PI / 180)
 }
 
+//TODO make param
 function isDebugLines(){
+    return false;
+}
+
+//TODO make param
+function isRelativeAngles(){
     return false;
 }
 
@@ -34,9 +40,61 @@ function eplr(point, angle, hdist, vdist){
     return [point[0] + Math.cos(angle) * hdist, point[1] + Math.sin(angle) * vdist];
 }
 
-//Given an elapsed number of rockspans, a set of words, and a context, draw the correct fram in that context.
+//given two points, return r and theta from one to the other. Uses radians.
+function rT(p0, p1){
+    var x0 = p0[0];
+    var y0 = p0[1];
+    var x1 = p1[0];
+    var y1 = p1[1];
+    var dx = x1 - x0;
+    var dy = y1 - y0;
+    
+    return ([
+        Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2)),
+        Math.atan2(dy, dx)
+    ]);
+}
+
+//Given a list of points, convert it into a base location and a list of polar coordinates from the previous point. First polar is base on 0, others are based on previous.
+function splineToTentacle(spline){
+    //start tentacle
+    var t = [spline[0]];
+    var prev = 0;
+    for (var i = 0; i < spline.length - 1; i++){
+        var rth = rT(spline[i], spline[i+1]);
+        var next = rth[1];
+        rth[1] -= prev;
+        if (rth[1] > Math.PI){
+            rth[1] -= Math.PI * 2; 
+        }
+        if (rth[1] < - Math.PI){
+            rth[1] += Math.PI * 2;
+        }
+        prev = next;
+        t.push(rth);
+    }
+    
+    return t;
+}
+
+function tentacleToSpline(t){
+    var s = [t[0]];
+    var prev = 0;
+    for (var i = 1; i < t.length; i++){
+        var point = plr(s[s.length-1], t[i][1] + prev, t[i][0]);
+        s.push(point);
+        prev += t[i][1];
+    }
+    return s;
+}
+
+//Given an elapsed number of rockspans, a set of words, and a context, draw the correct frame in that context.
 function frame(rsecs, words){
-    rsecs *= 3;
+    //TODO make param
+    var accel = 3;
+
+    rsecs *= accel;
+
     var whole = Math.floor(rsecs);
     var remainder = rsecs - whole;
     var index;
@@ -76,23 +134,40 @@ function interpolate(words, position){
 	
 	//do remaining points polar
 	for (var j = 0; j < ftent.length - 1; j++){
-	    var polar = ptween(ftent[j], ftent[j+1], ttent[j], ttent[j+1], tween)
-	    var lastpoint = points.slice(-1)[0];
-	    var px = lastpoint[0];
-	    var py = lastpoint[1];
-	    var rr = polar[0];
-	    var rth = polar[1];
-	    point = plr(lastpoint, rth, rr);
-	    points.push(point);
+      if (isRelativeAngles()){
+          asString([ftent[i+1], ttent[i+1], tween, ctween(ftent[i+1], ttent[i+1], tween)])
+          points.push(ctween(ftent[i+1], ttent[i+1], tween))
+      } else {
+	        var polar = ptween(ftent[j], ftent[j+1], ttent[j], ttent[j+1], tween)
+	        var lastpoint = points.slice(-1)[0];
+	        var px = lastpoint[0];
+	        var py = lastpoint[1];
+	        var rr = polar[0];
+	        var rth = polar[1];
+	        var point = plr(lastpoint, rth, rr);
+	        points.push(point);
+      }
 	}
 
 	//2q1wwwwujjjjhy``````tgrrrrrrrrrrrrrrrrrqN BBBBBB
-	splines.push(points);
+	      splines.push(points);
     }
-    //asString(splines[0]);
+    //asString(['r',splines[0]]);
     return splines;
 }
 
+function asSp(splines){
+    if (isRelativeAngles()){
+        var newSplines = [];
+        for (var i = 0; i < splines.length; i++){
+            newSplines.push(tentacleToSpline(splines[i]));
+        }
+        return newSplines;
+    } else {
+        return splines;
+    }
+}
+ 
 function ctween(fp, tp, d){
     return [
 	fp[0] + (tp[0] - fp[0]) * d,
@@ -136,6 +211,8 @@ function ptween(fp0, fp1, tp0, tp1, d){
 }
 
 function draw(splines){
+    //asString(['draw', splines[0]])
+    splines = asSp(splines);
     var c = document.getElementById("rik_win");
     var ctx = c.getContext("2d");
     ctx.clearRect(0, 0, 300, 300);
@@ -223,7 +300,11 @@ function parseWord(word,riklang){
     var splines = [];
     for (let t in tents){
 	      var points = getPointsForTentacle(tents[t]);
-	      splines.push(points);
+        if (isRelativeAngles()){
+            splines.push(splineToTentacle(points));
+        } else {
+	          splines.push(points);
+        }
     }
     return splines;
     
