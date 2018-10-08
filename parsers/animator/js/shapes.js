@@ -165,7 +165,7 @@ function getPointsForSquiggle(squiggle){
     var r1 = squiggle.r1;
     var d = squiggle.d;
     var dir = Math.pow(-1, d);
-    var angle = Math.atan(y2-y, x2-x); //in rads
+    var angle = Math.atan2(y2-y, x2-x); //in rads
     var r2 = Math.sqrt(Math.pow(x2-x, 2) + Math.pow(y2-y, 2)) / 4;
     var points = [];
     var divs = getDivisions();
