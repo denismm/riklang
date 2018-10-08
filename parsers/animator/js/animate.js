@@ -30,6 +30,11 @@ function isRelativeAngles(){
     return true;
 }
 
+//TODO make param
+function isPointyScript(){
+    return false;
+}
+
 //given a point, an angle, and a distance, returns the point dist away along angle. Uses radians.
 function plr(point, angle, dist){
     return eplr(point, angle, dist, dist);
@@ -220,6 +225,7 @@ function draw(splines){
     ctx.save();
     ctx.translate(50, 50);
     ctx.scale(2,-2);
+    ctx.lineCap = 'round';
     
     for (var s = 0; s < splines.length; s++){
 	points = splines[s];
@@ -239,6 +245,9 @@ function draw(splines){
 	    x3 = p3[0];
 	    y3 = p3[1];
 	    ctx.beginPath();
+	    if (isPointyScript()){
+		ctx.lineWidth = (getDivisions() - (i / 3))/3;
+	    }
 	    ctx.moveTo(x0,y0);
 	    ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3);
 	    ctx.stroke();
