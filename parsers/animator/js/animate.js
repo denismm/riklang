@@ -1,6 +1,6 @@
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, '\\$&');
+    var name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
         results = regex.exec(url);
     if (!results) return null;
@@ -27,7 +27,7 @@ function isDebugLines(){
 
 //TODO make param
 function isRelativeAngles(){
-    return false;
+    return true;
 }
 
 //given a point, an angle, and a distance, returns the point dist away along angle. Uses radians.
@@ -121,10 +121,10 @@ function interpolate(words, position){
     if (position == position.toFixed(0) ) {
 	return words[position];
     }
-    splines = [];
-    from = words[Math.floor(position)];
-    to = words[Math.ceil(position)];
-    tween = position - Math.floor(position);
+    var splines = [];
+    var from = words[Math.floor(position)];
+    var to = words[Math.ceil(position)];
+    var tween = position - Math.floor(position);
     for (var i = 0; i < from.length; i++){
 	var ftent = from[i];
 	var ttent = to[i];
@@ -134,10 +134,10 @@ function interpolate(words, position){
 	
 	//do remaining points polar
 	for (var j = 0; j < ftent.length - 1; j++){
-      if (isRelativeAngles()){
-          asString([ftent[i+1], ttent[i+1], tween, ctween(ftent[i+1], ttent[i+1], tween)])
-          points.push(ctween(ftent[i+1], ttent[i+1], tween))
-      } else {
+	    if (isRelativeAngles()){
+		//asString([ftent[i+1], ttent[i+1], tween, ctween(ftent[i+1], ttent[i+1], tween)])
+		points.push(ctween(ftent[j+1], ttent[j+1], tween))
+	    } else {
 	        var polar = ptween(ftent[j], ftent[j+1], ttent[j], ttent[j+1], tween)
 	        var lastpoint = points.slice(-1)[0];
 	        var px = lastpoint[0];
@@ -211,7 +211,7 @@ function ptween(fp0, fp1, tp0, tp1, d){
 }
 
 function draw(splines){
-    //asString(['draw', splines[0]])
+    //asString(['draw', splines[4]])
     splines = asSp(splines);
     var c = document.getElementById("rik_win");
     var ctx = c.getContext("2d");
