@@ -20,19 +20,31 @@ function rad(angle){
     return angle * (Math.PI / 180)
 }
 
-//TODO make param
+//TODO make param?
 function isDebugLines(){
     return false;
 }
 
-//TODO make param
+//TODO make param?
 function isRelativeAngles(){
     return true;
 }
 
-//TODO make param
 function isPointyScript(){
-    return false;
+    return getParameterByName('style') == 'pointy';
+}
+
+function isBluntScript(){
+    return getParameterByName('style') == 'blunt';
+}
+
+function getAccel(){
+    var accelParam = getParameterByName('accel');
+    if (!isNaN(accelParam) && +accelParam > 0){
+	return +accelParam;
+    } else {
+	return 3;
+    }
 }
 
 //given a point, an angle, and a distance, returns the point dist away along angle. Uses radians.
@@ -95,8 +107,7 @@ function tentacleToSpline(t){
 
 //Given an elapsed number of rockspans, a set of words, and a context, draw the correct frame in that context.
 function frame(rsecs, words){
-    //TODO make param
-    var accel = 3;
+    var accel = getAccel();
 
     rsecs *= accel;
 
@@ -247,6 +258,9 @@ function draw(splines){
 	    ctx.beginPath();
 	    if (isPointyScript()){
 		ctx.lineWidth = (getDivisions() - (i / 3))/3;
+	    }
+	    if (isBluntScript()){
+		ctx.lineWidth = (getDivisions() - (i / 3) + 1)/3;
 	    }
 	    ctx.moveTo(x0,y0);
 	    ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3);
