@@ -1,12 +1,13 @@
 <html>
 <head>
-<title>Hey</title>
+<title>Animation</title>
 <script src="tentacles.js"></script>
 <script src="shapes.js"></script>
 <script src="animate.js"></script>
 <script language="javascript">
 window.onload = function(){
     var u = getParameterByName("u");
+    document.title = "Signing " + u;
     var input = document.getElementById("u");
     if (input){
       input.value = u;
@@ -42,6 +43,7 @@ window.onload = function(){
 <body>
   <canvas id="rik_win" width="300" height="300" style="border:5px solid #009900;">
   </canvas>
+  <!--
   <br/>
   <form method="get">
     <input type="text" id="u" name="u" size="100"/>
@@ -51,5 +53,6 @@ window.onload = function(){
     <textarea id="log" rows="20" cols="160">
     </textarea>
   </form>
+  -->
 </body>
 </html>

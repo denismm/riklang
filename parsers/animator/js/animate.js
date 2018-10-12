@@ -347,8 +347,10 @@ function parseUtterance(utterance){
 
 function log(message){
     var logArea = document.getElementById('log');
-    var value = logArea.value;
-    logArea.value = value + "\n" + message ;
+    if (logArea){
+	var value = logArea.value;
+	logArea.value = value + "\n" + message ;
+    }
 }
 
 function asString(object){
