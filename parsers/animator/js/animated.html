@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Animation</title>
+<script src="tentacles.js"></script>
+<script src="shapes.js"></script>
+<script src="animate.js"></script>
+<script language="javascript">
+window.onload = function(){
+    var u = getParameterByName("u");
+    if (u){
+        document.title = "Animating " + u;
+        var input = document.getElementById("u");
+        if (input){
+            input.value = u.split(/[. ]+/).join(' ');
+        }
+        var style = getParameterByName("style");
+        if (style == "blunt"){
+            document.getElementById("style").selectedIndex = 1;
+        }
+        if (style == "pointy"){
+            document.getElementById("style").selectedIndex = 2;
+        }
+        var accel = getParameterByName("accel");
+        if (accel == "1"){
+            document.getElementById("accel").selectedIndex = 0;
+        }
+        if (accel == "2"){
+            document.getElementById("accel").selectedIndex = 1;
+        }
+       input.form.submit();
+    }
+}
+</script>
+</head>
+<body>
+  <form method="get" action="display.html" target="display">
+    <textarea id="u" name="u" rows="20" cols="60" onblur="this.form.submit();">
+    </textarea>
+    <br/>
+    <select onchange="this.form.submit();" id="style" name="style">
+      <option value="classic">Classic</option>
+      <option value="blunt">Blunt</option>
+      <option value="pointy">Pointy</option>
+    </select>
+    <select onchange="this.form.submit();" id="accel" name="accel">
+      <option value="1">Slow</option>
+      <option value="2">Educational</option>
+      <option value="3" selected="selected">Deliberate</option>
+    </select>
+    <input type="submit"/>
+  </form>
+  <iframe name="display" width="350" height="350" src="" border="0">
+  </iframe>
+</body>
+</html>

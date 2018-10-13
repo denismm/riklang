@@ -6,7 +6,7 @@
 <script src="animate.js"></script>
 <script language="javascript">
 window.onload = function(){
-    var u = getParameterByName("u");
+    var u = getParameterByName("u").trim();
     document.title = "Signing " + u;
     var input = document.getElementById("u");
     if (input){
