@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Animation</title>
+<title>Rikchik text animation</title>
 <script src="tentacles.js"></script>
 <script src="shapes.js"></script>
 <script src="animate.js"></script>
@@ -33,23 +33,55 @@ window.onload = function(){
 </script>
 </head>
 <body>
-  <form method="get" action="display.html" target="display">
-    <textarea id="u" name="u" rows="20" cols="60" onblur="this.form.submit();">
-    </textarea>
-    <br/>
-    <select onchange="this.form.submit();" id="style" name="style">
-      <option value="classic">Classic</option>
-      <option value="blunt">Blunt</option>
-      <option value="pointy">Pointy</option>
-    </select>
-    <select onchange="this.form.submit();" id="accel" name="accel">
-      <option value="1">Slow</option>
-      <option value="2">Educational</option>
-      <option value="3" selected="selected">Deliberate</option>
-    </select>
-    <input type="submit"/>
-  </form>
-  <iframe name="display" width="350" height="350" src="" border="0">
-  </iframe>
+  <h1>Rikchik text, animated</h1>
+  <div style="float:right;">
+    <iframe name="display" width="350" height="350" src="" border="0">
+    </iframe>
+  </div>
+  <div>
+    <form method="get" action="display.html" target="display">
+      <textarea id="u" name="u" rows="20" cols="60" onblur="this.form.submit();"></textarea>
+      <br/>
+      <select onchange="this.form.submit();" id="style" name="style">
+        <option value="classic">Classic</option>
+        <option value="blunt">Blunt</option>
+        <option value="pointy">Pointy</option>
+      </select>
+      <select onchange="this.form.submit();" id="accel" name="accel">
+        <option value="1">Slow</option>
+        <option value="2">Educational</option>
+        <option value="3" selected="selected">Deliberate</option>
+      </select>
+      <input type="submit"/>
+    </form>
+  </div>
+  <div>
+    <p>
+      Enter Rikchik text in ascii form and press Submit to see it animated.
+      Click on image to replay.
+    </p>
+    <p>Sample texts:
+      <ul>
+        <li><a href="animated.html?u=Rikchik-N-Quality-0.Rikchik-R-Includesrec-1.Emotion-V-Patient-0.Think-V-Patient-0.Have-V-Agentrec-2.Rikchik-N-Source-0.Sun-R-Patient-1.Love-V-Agentrec-1.One-I-Source-0.Globe-P-Source-2.All-R-Includes-1.Thing-R-End-3">Rikchiks are a race of intelligent creatures from the 2nd planet of Alpha Centauri A (12 words)</a></li>
+        <li><a href="animated.html?u=All-I-Quality-0 Rikchik-R-Patient-1 Child-V-Source-0 Zero-R-Agent-0 Leader-V-Patient-1 Rikchik-R-Patient-0p Happy-V-Patient-0 Have-V-Instrument-1 Thing-V-Patient-0 Give-V-Instrument-1 Similar-V-Patient-3 Gather-V-End-4 Rikchik-R-Agent-0p Think-V-Patient-0 Happy-I-Patient-0 Sad-I-Patient-0 Choice-V-Patient-2 Gather-V-Patient-2 Have-V-End-2 Rikchik-R-Agent-2p All-M-Quality-0 Rikchik-R-Patient-1 Sibling-M-Quality-0 Thing-V-Patient-3 Zero-V-Patient-0 Choice-V-End-2">A rikchik version of the Universal Declaration of Human Rights(26 words)</a></li>
+        <li><a href="animated.html?u=Me-I-Source-0.Sequence-I-End-1.Me-R-Agent-0.Book-V-Agentrec-0.Rikchik-R-Patient-1.Sky-P-Destination-0.Zero-M-Quality-0.Give-V-Patient-4.Me-R-Agent-0P.Rikchik-R-Patient-0P.Ground-P-Destination-0.Zero-M-Quality-0.Give-V-Patient-4.Me-R-Patient-0P.Circle-M-Quality-0.Move-V-Patient-2.Me-R-Patient-0P.Rikchik-R-Source-0P.Move-V-Patient-2.Zero-M-Quality-0.Gather-V-Patient-3.Gather-I-Patient-3.Sequence-I-End-1.All-I-Agent-0.After-I-Destination-1.Sequence-I-End-1">the chorus from "Never Gonna Give You Up" (26 words)</a></li>
+      </ul>
+    </p>
+    <p>
+      This page simulates how Rikchik text looks when actually signed by a
+      rikchik.  Each word is rested on briefly and then the tentacles
+      transition to the next word.
+    </p>
+    <p>
+      Rikchiks have pointed "talking" tentacles that shade from white at the
+      tips to a medium green at the base.  These form a contrast with the
+      consistently thick "walking" tentacles behind them.  
+    </p>
+    <hr/>
+    <address>
+      Animation code by Marc Moskowitz.  Rikchik culture and language 
+      created by Denis Moskowitz.  This page last updated 2018-10-04.
+    </address>
+  </div>
 </body>
 </html>
