@@ -1,0 +1,21 @@
+date: 2016-11-17
+source: "Omniglot sample text: https://www.omniglot.com/conscripts/rikchik.htm"
+color: Green
+author: Denis Moskowitz
+utterance:
+    -
+        loose: I make a book.
+        literal: I make a book.
+        text: Me-R-Agent-0 Book-T-Patient-0 Fruit-V-End-2
+    -
+        loose: My family enjoys art.
+        literal: My family enjoys art.
+        text: Me-R-Includesrec-0 Home-R-Agent-1 Art-T-Patient-0 Happy-V-End-2
+    -
+        loose: Someone happily looks at trees and eats fruit.
+        literal: Someone happily looks at trees and eats fruit.
+        text: Rikchik-R-Agent-0 Happy-M-Quality-0 Tree-T-Patient-0 Eye-V-Patient-1 Fruit-T-Patient-0 Mouth-V-Patient-1 Gather-V-End-4
+    -
+        loose: All rikchiks are, from birth, without a leader and equal in gifts of doing and potential happiness. They can think and can choose between happiness and sadness. Let them act upon each other in a siblingly manner. (A Rikchik version of article 1 of the Universal Declaration of Human Rights)
+        literal: All rikchiks are, from birth, without a leader and equal in gifts of doing and potential happiness. They can think and can choose between happiness and sadness. Let them act upon each other in a siblingly manner.
+        text: All-I-Quality-0 Rikchik-R-Patient-1 Child-V-Source-0 Zero-R-Agent-0 Leader-V-Patient-1 Rikchik-R-Patient-0p Happy-V-Patient-0 Have-V-Instrument-1 Thing-V-Patient-0 Give-V-Instrument-1 Similar-V-Patient-3 Gather-V-End-4 Rikchik-R-Agent-0p Think-V-Patient-0 Happy-I-Patient-0 Sad-I-Patient-0 Choice-V-Patient-2 Gather-V-Patient-2 Have-V-End-2 Rikchik-R-Agent-2p All-M-Quality-0 Rikchik-R-Patient-1 Sibling-M-Quality-0 Thing-V-Patient-3 Zero-V-Patient-0 Choice-V-End-2 
