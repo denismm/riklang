@@ -422,7 +422,7 @@ function getPointsForTentacle(tentacle){
         log(JSON.stringify(tentacle));
         points = [];
     }
-    if (tentacle.r1 == 1){
+    if (tentacle.r == 1){
 	points.reverse();
     }
     return points;
