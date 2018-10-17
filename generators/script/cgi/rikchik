@@ -1,0 +1,50 @@
+#!/usr/bin/perl
+# This code written by Denis Moskowitz.  All Rights Reversed (K) Doowutchyalike.
+
+use GD;
+use POSIX;
+use Rikchik qw(get_parameters initialize_image paint_word 
+		$tight $size $color @phrase $lineheight $caption);
+use strict;
+
+
+get_parameters();
+my $border = 2 * $size;
+my $wordwidth = 20 * $size + 1;
+my $wordheight = 20 * $size + 1;
+my $wordspacing = $tight ? 4 * $size : 8 * $size;
+my $stepwidth = $wordwidth + $wordspacing;
+my $stepheight = $wordheight + $wordspacing;
+
+if ($lineheight eq 's') {
+    $lineheight = ceil(sqrt(scalar(@phrase)));
+}
+if ($lineheight <= 0) {
+    $lineheight = scalar(@phrase);
+}
+my $phrasewidth = int((scalar(@phrase) + $lineheight - 1) / $lineheight);
+my $im = new GD::Image(
+    $stepwidth * $phrasewidth - $wordspacing + 2 * $border,
+    $stepheight * $lineheight - $wordspacing + 2 * $border
+	+ ($caption ? $border : 0)
+);
+
+initialize_image($im);
+
+my $x = 0;
+my $y = 0;
+my $word;
+foreach $word (@phrase) 
+{
+    paint_word ($word, 
+	$border + $stepwidth * $x, $border + $stepwidth * $y, $im);
+    $y++;
+    if ($y == $lineheight) {
+	$x++;
+	$y = 0;
+    }
+
+}
+print "Content-type: image/png\n\n";
+
+print $im->png;

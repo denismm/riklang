@@ -1,0 +1,243 @@
+#! /usr/bin/perl
+use GD;
+use Rikchik;
+use strict;
+
+get_parameters;
+my $border = 2 * $size;
+my $wordwidth = 20 * $size + 1;
+my $wordheight = 20 * $size + 1;
+my $wordspacing = $tight ?  4 * $size : 8 * $size;
+
+my %pronom = ();
+my @unresolved = ();
+my @ended = ();
+
+my ($im, $gray, $lgray, $white);
+
+WORD: for (my $i = 0; $i < @phrase; $i++) {
+  my $word = $phrase[$i];
+  if ($word->{c} =~ /([PO])/i) {
+    $word->{p} = uc $1;
+  }
+  $pronom{$word->{m}} = $word;
+  if ($word->{c} =~ /^s/i)
+  {
+    $word->{scholastic} = 1;
+    my $j = $#unresolved;
+    until ($unresolved[$j]{kids})
+    {
+      $j--;
+    }
+    $word->{c} = $#unresolved - $j;
+  }
+  if ($word->{c} > @unresolved)
+  {
+    # print "stack underflow: $inword\n";
+    last WORD;
+  }
+  my(@kids);
+  @kids = splice @unresolved, @unresolved - $word->{c};
+  $word->{kids} = \@kids;
+  # word is parsed: find antecedent
+  if ($word->{p} eq 'P') {
+    ANTECEDENT: for (my $j = $i - 1; $j >= 0; $j--) {
+	if (match_antecedent ($word, $phrase[$j])) {
+	    $word->{antecedent} = $phrase[$j];
+	    last ANTECEDENT;
+	}
+    }
+  }
+  if ($word->{r} =~ /^End$/i)
+  {
+    push @ended, $word;
+  }
+  else
+  {
+    push @unresolved, $word;
+  }
+}
+# depth-first traversal
+# print "Ended:\n";
+my $wid = 0;
+my $len = 0;
+push @ended, @unresolved;	# print unresolved phrases at end
+my $ended;
+foreach $ended (@ended) {
+  my ($w,$l) = get_size($ended, $wid);
+  $wid += $w;
+  $len = $l if $l > $len;
+}
+foreach $ended (@ended) {
+  set_position($ended, $len-1);
+}
+my $wordsize = $wordwidth + 2 * $wordspacing;
+
+if ($output_type eq 'page') {
+    if ($0 =~ /cgi/) {
+	print "Content-type: text/html\n\n";
+    }
+    print "<html><body>\n";
+    my $img_url = $ENV{REQUEST_URI};
+    $img_url =~ s/page=[^&]/page=0/;
+    my $map_url = $ENV{REQUEST_URI};
+    $map_url =~ s/page=[^&]/map=1/;
+    print "<img border=\"0\" src=\"$img_url\" usemap=\"#map\"/>\n";
+    print "<map name=\"map\">\n";
+    foreach $ended (@ended) {
+	report ($ended);
+    }
+    print "</map>\n";
+    print "</body></html>\n";
+}
+elsif ($output_type eq 'map') {
+    if ($0 =~ /cgi/) {
+	print "Content-type: text/html\n\n";
+    }
+    print "<map name=\"map\">\n";
+    foreach $ended (@ended) {
+	report ($ended);
+    }
+    print "</map>\n";
+}
+else {
+    $im = new GD::Image($wid * $wordsize, $len * $wordsize);
+
+    initialize_image($im);
+    # allocate gray
+    $gray = $im->colorResolve(64, 64, 64);
+    # allocate lgray
+    $lgray = $im->colorResolve(192, 192, 192);
+    # allocate white
+    $white = $im->colorResolve(255, 255, 255);
+
+    foreach $ended (@ended) {
+      draw ($ended);
+    }
+    if ($0 =~ /cgi/) {
+      print "Content-type: image/png\n\n";
+    }
+    print $im->png;
+}
+sub match_antecedent {
+    my ($pron, $ante) = @_;
+    # if different morpheme, not a match.
+    return 0 if ($pron->{m} ne $ante->{m});
+    my @pron_list = reverse grep {$_->{p} eq 'O'} @{$pron->{kids}};
+    # if no o-pronomials, a match.
+    return 1 if  ! @pron_list;
+    my @ante_list = reverse @{$ante->{kids}};
+    TEST: while (@pron_list) {
+	# if not enough kids for the o-pronomials, not a match.
+	return 0 if @ante_list < @pron_list;
+	my $ante_test = shift @ante_list;
+	if (match_antecedent($pron_list[0], $ante_test)){
+	    shift @pron_list;
+	}
+    }
+    # if we got here, we matched every o-pronomial and so we match!
+    return 1;
+}
+
+sub get_size
+{
+  my($ptr, $scan) = @_;
+  my($width, $depth, $kid) = (0, 0, 0);
+  my($kscan) = $scan;
+  foreach $kid (@{$ptr->{kids}})
+  {
+    my ($kwidth, $kdepth) = get_size($kid, $kscan);
+    $width += $kwidth;
+    $kscan += $kwidth;
+    $depth = $kdepth if $kdepth > $depth;
+  }
+  if (!$width) {$width = 1;}
+  $ptr->{width} = $width;
+  $ptr->{x} = $scan + ($width / 2) - 0.5;
+  # $ptr->{x} += .01 * (rand(9) - 4);
+  $ptr->{depth} = $depth;
+  return ($width, $depth+1);
+}
+
+sub set_position{
+  my ($ptr, $y) = @_;
+  $ptr->{y} = $y;
+  # $ptr->{y} += .01 * (rand(9) - 4);
+  my($kid);
+  foreach $kid (@{$ptr->{kids}})
+  {
+    set_position($kid, $y-1);
+  }
+}
+
+sub draw {
+  my($ptr) = @_;
+  my($kid);
+  foreach $kid (@{$ptr->{kids}})
+  {
+    drawline($ptr, $kid);
+    draw ($kid);
+  }
+  # $page[$ptr->{x}*2][$ptr->{y}] = substr($ptr->{glyph},0,1);
+  drawchar($ptr);
+  if ($ptr->{antecedent})
+  {
+    drawline($ptr, $ptr->{antecedent}, 'pron');
+  }
+}
+
+sub report {
+  my($ptr) = @_;
+  my($kid);
+  foreach $kid (@{$ptr->{kids}})
+  {
+    report ($kid);
+  }
+  reportchar($ptr);
+}
+
+sub drawline
+{
+  my ($a, $b, $type)= @_;
+  my $xa = ($a->{x}+0.5) * $wordsize;
+  my $ya = ($a->{y}+0.5) * $wordsize;
+  my $xb = ($b->{x}+0.5) * $wordsize;
+  my $yb = ($b->{y}+0.5) * $wordsize;
+  if ($type eq 'dotted')
+  {
+    $im->dashedLine($xa, $ya, $xb, $yb, $lgray);
+  }
+  elsif ($type eq 'pron')
+  {
+    $im->setStyle(($lgray) x 4, (gdTransparent) x 4);
+    $im->line($xa - $size, $ya + 2 * $size, $xb + $size, $yb - 2 * $size, gdStyled);
+  }
+  else
+  {
+    $im->line($xa, $ya, $xb, $yb, $gray);
+  }
+}
+
+sub drawchar {
+  my ($ptr)= @_;
+  my($x) = $ptr->{x} * $wordsize + $wordspacing;
+  my($y) = $ptr->{y} * $wordsize + $wordspacing;
+  $im->filledRectangle($x , $y, $x+$wordwidth, $y+$wordwidth, $white);
+  paint_word($ptr, $x, $y, $im);
+}
+
+sub reportchar {
+  my ($ptr)= @_;
+  my %word = %$ptr;
+  my($l) = $word{x} * $wordsize + $wordspacing;
+  my($t) = $word{y} * $wordsize + $wordspacing;
+  my($r) = $l + $wordwidth;
+  my($b) = $t + $wordheight;
+  my $morpheme = ucfirst lc $word{'m'};
+  my $aspect = uc substr $word{'a'}, 0, 1;
+  my $relation = ucfirst lc $word{'r'};
+  my $collector = uc $word{'c'};
+  my $fullname = "$morpheme-$aspect-$relation-$collector";
+  my $href = "http://suberic.net/~dmm/rikchik/language/dictionary/$morpheme.html";
+  print "<area href=\"$href\" alt=\"$fullname\" title=\"$fullname\" coords=\"$l,$t,$r,$b\"/>\n";
+}
