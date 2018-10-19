@@ -21,11 +21,8 @@ window.onload = function(){
             document.getElementById("style").selectedIndex = 2;
         }
         var accel = getParameterByName("accel");
-        if (accel == "1"){
-            document.getElementById("accel").selectedIndex = 0;
-        }
-        if (accel == "2"){
-            document.getElementById("accel").selectedIndex = 1;
+        if (+accel > 0) {
+            document.getElementById("accel").selectedIndex = +accel - 1;
         }
        input.form.submit();
     }
@@ -51,6 +48,8 @@ window.onload = function(){
         <option value="1">Slow</option>
         <option value="2">Educational</option>
         <option value="3" selected="selected">Deliberate</option>
+        <option value="4">Formal</option>
+        <option value="5">Conversational</option>
       </select>
       <input type="submit"/>
     </form>
