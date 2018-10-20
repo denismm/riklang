@@ -152,7 +152,7 @@ function interpolate(words, position){
 	for (var j = 0; j < ftent.length - 1; j++){
 	    if (isRelativeAngles()){
 		//asString([ftent[i+1], ttent[i+1], tween, ctween(ftent[i+1], ttent[i+1], tween)])
-		points.push(ctween(ftent[j+1], ttent[j+1], tween))
+		points.push(ctween(ftent[j+1], ttent[j+1], tween, j==0))
 	    } else {
 	        var polar = ptween(ftent[j], ftent[j+1], ttent[j], ttent[j+1], tween)
 	        var lastpoint = points.slice(-1)[0];
@@ -184,7 +184,15 @@ function asSp(splines){
     }
 }
  
-function ctween(fp, tp, d){
+function ctween(fp, tp, d, isPolar = false){
+    if (isPolar){
+	while (fp[1] - tp[1] < -Math.PI){
+	    tp[1] -= 2*Math.PI;
+	} 
+	while (fp[1] - tp[1] > Math.PI){
+	    tp[1] += 2*Math.PI;
+	}
+    }
     return [
 	fp[0] + (tp[0] - fp[0]) * d,
 	fp[1] + (tp[1] - fp[1]) * d
