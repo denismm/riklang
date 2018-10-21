@@ -1,0 +1,25 @@
+date: YYYY-MM-DD
+source: Rikchik Language Institute post, https://rikchiktalkhome.livejournal.com/2058.html
+color: green
+utterance:
+    -
+        author: Parker Glynn-Adey
+        literal: The beast makes the bouncer fight...
+        loose: The beast fights the bouncer
+        text: Beast-R-Agent-0 Bouncer-R-Patient-0 Fight-V-Task-2
+    -
+        author: Parker Glynn-Adey
+        text: Long-M-Quality-0 Grass-T-Patient-1 Wind-R-Agent-0 Move-V-Task-2
+        loose: The Wind moves the long grass
+        literal: The living wind moves the long grass...
+	note: "Here, I chose the animate noun infix -R- to poetically consider the wind a living thing." -P "Wind is actually usually animate" -D
+    -
+        author: Denis Moskowitz
+        literal: The beast that fights the bouncer
+        loose: The beast that fights the bouncer
+        text: Bouncer-R-Patient-0 Fight-V-Task-1 Beast-R-End-1
+    -
+        author: Denis Moskowitz
+        text: Beast-R-Agent-0 Bouncer-R-Patient-0 Fight-V-Task-2 Rikchik-R-End-1
+        loose: The rikchik that fights the bouncer with the beast
+        literal: The rikchik that does the fight the Beast does against the bouncer

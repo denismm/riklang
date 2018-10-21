@@ -1,0 +1,15 @@
+date: 2009-02-09
+source: Rikchik Language Institute post, https://rikchiktalkhome.livejournal.com/2877.html
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: I say to the human named "child of a contributor" that I do that thing for a long time before now.  
+        loose: I have been doing this for a long time, Mr. Anderson.
+        text: Long-M-Quality-0 After-M-Agentrec-0 Me-I-Includes-0 Span-I-Quality-3 Me-R-Agent-0 Thing-V-Patient-2P Me-R-Agent-0P Contributor-N-Agent-0 Child-N-Includes-1 Human-R-Destination-1 Talk-V-End-3
+    -
+        author: David Greenebaum
+        text: Book-T-Patient-0 Similar-V-Patientrec-1 Friend-V-Quality-0 Human-R-End-2
+        loose: Bookish fellow
+        literal: Human who is befriendish and resembles a book
+	note: bookishfellow is Greenebaum's LiveJournal username and this is his Rikchik icon.
