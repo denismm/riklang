@@ -745,7 +745,7 @@ return (
 {"type": "lbend", "d": 1,"x": 60,"x2": 80,"y": 0,"y2": -10,"h":""}]},
 "Patient" : {"type": "relation",
 "glyph": [
-{"type": "lbend", "d": 0,"x": 80,"x2": 60,"y": 0,"y2": -10,"h":""}]},
+{"type": "lbend", "d": 0,"x": 80,"x2": 60,"y": 0,"y2": -10,"h":"", "r": 1}]},
 "Includes" : {"type": "relation",
 "glyph": [
 {"type": "ellarc", "a1": 180,"a2": 360,"r1": 30,"r2": 10,"x": 50,"y": 0,"h":""}]},
@@ -766,7 +766,7 @@ return (
 {"type": "lbend", "d": 1,"x": 40,"x2": 20,"y": 0,"y2": -10,"h":""}]},
 "Patientrec" : {"type": "relation",
 "glyph": [
-{"type": "lbend", "d": 0,"x": 20,"x2": 40,"y": 0,"y2": -10,"h":""}]},
+{"type": "lbend", "d": 0,"x": 20,"x2": 40,"y": 0,"y2": -10,"h":"","r": 1}]},
 "Includesrec" : {"type": "relation",
 "glyph": [
 {"type": "ellarc", "a1": 0,"a2": 180,"r1": 30,"r2": 10,"x": 50,"y": -10,"h":""}]},

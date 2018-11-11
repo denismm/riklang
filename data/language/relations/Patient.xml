@@ -1,6 +1,6 @@
 <relation name="Patient" reciprocal="Patientrec">
   <glyph>
-    <lbend d="0" x="80" x2="60" y="0" y2="-10"/>
+    <lbend d="0" x="80" x2="60" y="0" y2="-10" r="1"/>
   </glyph>
   <translation>
     <text/>
