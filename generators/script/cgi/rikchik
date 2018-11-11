@@ -17,7 +17,8 @@ my $stepwidth = $wordwidth + $wordspacing;
 my $stepheight = $wordheight + $wordspacing;
 
 if ($lineheight eq 's') {
-    $lineheight = ceil(sqrt(scalar(@phrase)));
+    $lineheight = ceil(sqrt(scalar(@phrase)) - 0.5);
+    $lineheight = 7 if $lineheight > 7;
 }
 if ($lineheight <= 0) {
     $lineheight = scalar(@phrase);
