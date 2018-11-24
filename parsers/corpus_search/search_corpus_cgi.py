@@ -30,7 +30,6 @@ if len(sys.argv) <= 1:
     search = cgi.FieldStorage()['search'].value
 else:
     search = sys.argv[1]
-print "search is %s" % (search,)
 
 corpus = {} 
 
@@ -81,5 +80,5 @@ for entry in results:
     cgi_text = entry['text'].replace(' ', '_')
     entry['img_url'] = "%s?lineheight=s;size=%d;%s" % (img_url_cgi, typesize, cgi_text)
 template = env.get_template('corpus_output.html')
-render = template.render(results=results)
+render = template.render(results=results, search=search)
 print render.encode('ascii', errors='ignore')
