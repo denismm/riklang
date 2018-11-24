@@ -1,5 +1,6 @@
 #! /usr/bin/perl
 use GD;
+use lib '/home/dmm/public_html/cgi-bin';
 use Rikchik;
 use strict;
 

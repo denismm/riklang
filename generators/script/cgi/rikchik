@@ -3,6 +3,7 @@
 
 use GD;
 use POSIX;
+use lib '/home/dmm/public_html/cgi-bin';
 use Rikchik qw(get_parameters initialize_image paint_word 
 		$tight $size $color @phrase $lineheight $caption);
 use strict;
