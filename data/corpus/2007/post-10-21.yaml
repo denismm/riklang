@@ -12,7 +12,7 @@ utterance:
         text: Long-M-Quality-0 Grass-T-Patient-1 Wind-R-Agent-0 Move-V-Task-2
         loose: The Wind moves the long grass
         literal: The living wind moves the long grass...
-        note: 'Here, I chose the animate noun infix -R- to poetically consider the wind a living thing.' -P 'Wind is actually usually animate' -D
+        note: "'Here, I chose the animate noun infix -R- to poetically consider the wind a living thing.' -P 'Wind is actually usually animate' -D"
     -
         author: Denis Moskowitz
         literal: The beast that fights the bouncer
