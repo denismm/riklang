@@ -1,14 +1,16 @@
-#!/usr/local/bin/python
-import jinja2
-# import pprint
+#!/usr/bin/env python
 import math
+import sys
+sys.path.append("/home/dmm/public_html/cgi-bin/rikbin/rikbin/lib/python2.7/site-packages")
 import yaml
+import jinja2
 import re
 import os
-import sys
 import copy
+import cgi
 import cgitb
 
+print "Content-type: text/html\n\n"
 using_cgi = False
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader('./templates'),
@@ -22,16 +24,15 @@ for location in corpus_walk:
     for filename in location[2]:
         if filename.endswith('.yaml'):
             corpus_files.append(location[0] + '/' + filename)
-
-# change this to get it from cgi
-if len(sys.argv) == 0:
+if len(sys.argv) <= 1:
     cgitb.enable()
     using_cgi = True
-    search = cgi.FieldStorage()['search']
+    search = cgi.FieldStorage()['search'].value
 else:
     search = sys.argv[1]
+print "search is %s" % (search,)
 
-corpus = {} # ?
+corpus = {} 
 
 def insert_entry(id, entry):
     if id.startswith(corpus_source):
@@ -75,9 +76,10 @@ for (key, utterance) in corpus.iteritems():
 
 for entry in results:
     text_words = entry['text'].split()
-    lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
+    # lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
     typesize = 2
     cgi_text = entry['text'].replace(' ', '_')
-    entry['img_url'] = "%s?lineheight=%d;size=%d;%s" % (img_url_cgi, lineheight, typesize, cgi_text)
+    entry['img_url'] = "%s?lineheight=s;size=%d;%s" % (img_url_cgi, typesize, cgi_text)
 template = env.get_template('corpus_output.html')
-print template.render(results=results)
+render = template.render(results=results)
+print render.encode('ascii', errors='ignore')
