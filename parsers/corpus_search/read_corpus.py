@@ -19,9 +19,9 @@ def insert_entry(id, entry):
     if id.startswith('/'):
         id = id[1:]
     corpus[id] = entry
-    print "%s ok" % id
 
 for filename in corpus_files:
+    print filename,
     with open(filename, 'r') as f:
         data = f.read()
     doc_i = 0
@@ -41,3 +41,4 @@ for filename in corpus_files:
         else:
             insert_entry("%s:%d:%d" % (filename, doc_i, 0), defaults)
         doc_i += 1
+    print "ok"
