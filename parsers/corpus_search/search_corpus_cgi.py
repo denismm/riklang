@@ -10,6 +10,14 @@ import copy
 import cgi
 import cgitb
 
+relation_map = {
+    'Task': 'Agentrec',
+    'Result': 'Sourcerec',
+    'Example': 'Qualityrec',
+    'Means': 'Destinationrec',
+    'Actor': 'Patientrec',
+}
+
 print "Content-type: text/html\n\n"
 using_cgi = False
 env = jinja2.Environment(
@@ -39,6 +47,17 @@ def insert_entry(id, entry):
     if id.startswith('/'):
         id = id[1:]
     entry['id'] = id
+    # change old relations to modern names
+    text = entry[text].split(' ')
+    for i in range(len(text)):
+        word = text[i]
+        components = word.split('-')
+        relation = components[2]
+        if relation in relation_map:
+            components[2] = relation_map[relation]
+            word = '-'.join(components)
+            text[i] = word
+    entry['text'] = ' '.join(text)
     corpus[id] = entry
 
 for filename in corpus_files:
