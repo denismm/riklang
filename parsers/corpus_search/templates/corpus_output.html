@@ -14,6 +14,7 @@
         <container name="entry" style="display:flex; flex-direction:row">
             <item name="text">
                 <img src="{{ item['img_url'] |safe }}"/><br/>
+                <span class="id">{{ item['id'] |e }}</span>
             </item>
             <item name="infobox">
                 <container name="infobox" style="display:flex; flex-direction:column">
@@ -34,7 +35,6 @@
                             {% endif %}
                         </span>
                     </item>
-                    <item class="id">{{ item['id'] |e }}</item>
                 </container>
             </item>
        </container>
