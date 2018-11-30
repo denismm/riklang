@@ -77,7 +77,7 @@ for entry in results:
     text_words = entry['text'].split()
     # lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
     typesize = 2
-    cgi_text = entry['text'].replace(' ', '_')
+    cgi_text = entry['text'].replace(' ', '.')
     entry['cgi_text'] = cgi_text
     entry['img_url'] = "%s?lineheight=s;size=%d;%s" % (img_url_cgi, typesize, cgi_text)
 template = env.get_template('corpus_output.html')
