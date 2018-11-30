@@ -48,7 +48,7 @@ def insert_entry(id, entry):
         id = id[1:]
     entry['id'] = id
     # change old relations to modern names
-    text = entry[text].split(' ')
+    text = entry['text'].split(' ')
     for i in range(len(text)):
         word = text[i]
         components = word.split('-')
