@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Corpus search</title>
-    <link rel="stylesheet" href="corpus.css"/>
+    <link rel="stylesheet" href="/~dmm/rikchik/corpus.css"/>
 </head>
 <body>
     <h1>Rikchik corpus search</h1>
@@ -12,6 +12,9 @@
     {% for item in results %}
         <hr/>
         <container name="entry" style="display:flex; flex-direction:row">
+            <item name="text">
+                <img src="{{ item['img_url'] |safe }}"/><br/>
+            </item>
             <item name="infobox">
                 <container name="infobox" style="display:flex; flex-direction:column">
                     <item>{{ item['text'] |e }}</item>
@@ -32,12 +35,9 @@
                         </span>
                     </item>
                     <item class="id">{{ item['id'] |e }}</item>
-              </container>
-          </item>
-          <item name="text">
-              <img src="{{ item['img_url'] |safe }}"/><br/>
-          </item>
-         </container>
+                </container>
+            </item>
+       </container>
     {% endfor %}
     <hr>
     Rikchik language and culture created by Denis Moskowitz.
