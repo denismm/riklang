@@ -29,6 +29,8 @@ img_url_cgi = "http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi"
 corpus_walk = os.walk(corpus_source)
 corpus_files = []
 for location in corpus_walk:
+    if location == corpus_source:
+        continue
     for filename in location[2]:
         if filename.endswith('.yaml'):
             corpus_files.append(location[0] + '/' + filename)
