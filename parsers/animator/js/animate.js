@@ -344,7 +344,7 @@ function parseWord(word,riklang){
 // Given an utterance divided by '.' or ' ', parses the words in the utterance and returns a list of lists of splines
 function parseUtterance(utterance){
     var riklang = getLang();
-    var u_words = utterance.split(/[.\s]+/);
+    var u_words = utterance.split(/[._\s]+/);
     var words = [];
     for (let w in u_words){
         u_word = u_words[w];
