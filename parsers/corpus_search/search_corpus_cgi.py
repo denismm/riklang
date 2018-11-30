@@ -45,7 +45,12 @@ for filename in corpus_files:
     with open(filename, 'r') as f:
         data = f.read()
     doc_i = 0
-    for structure in yaml.load_all(data):
+    try:
+        yaml_data = yaml.load_all(data)
+    except Exception as e:
+        # bad data, report this somewhere?
+        yaml_data = []
+    for structure in yaml_data:
         # denormalize
         defaults = {
             k: v for (k, v) in structure.iteritems() if not isinstance(v, list)
