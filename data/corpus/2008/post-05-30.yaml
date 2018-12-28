@@ -1,0 +1,34 @@
+date: 2008-05-30
+source: "Rikchik Language Institute post, https://rikchiktalkhome.livejournal.com/4717.html"
+color: Green
+utterance:
+    -
+        author: Parker Glynn-Adey
+        literal: I apply paint to a living rikchik.
+        loose: I paint a rikchik.
+        text: Me-R-Agent-0 Rikchik-R-Patient-0 Paint-V-End-2
+    -
+        author: Parker Glynn-Adey
+        text: Me-R-Agent-0 Rikchik-T-Patient-0 Paint-V-End-2
+        loose: I paint a rikchik.
+        literal: "I apply paint to a non-living rikchik's body"
+    -
+        author: Parker Glynn-Adey
+        text: Me-R-Agent-0 Rikchik-M-Quality-0 Beast-R-Patient-1 Paint-V-End-2
+        loose: I paint a green beast.
+        literal: I apply paint to a living beast that is green.
+    -
+        author: Parker Glynn-Adey
+        text: Home-T-Instrument-0 Me-R-Quality-1
+        loose: ???
+        literal: Related to me, who in some way is a tool of a house
+    -
+        author: Marc Moskowitz
+        text: Me-R-Agent-0 Rikchik-M-Quality-0 Beast-R-Patient-0 Paint-V-End-3
+        loose: I paint a beast green.
+        literal: I apply paint to a living beast in a green (or Rikchik-ish) way.
+    -
+        author: Denis Moskowitz
+        text: Me-R-Agent-0 Beast-R-Patient-0 Rikchik-M-Destination-0 Paint-V-End-3 
+        loose: I paint a beast green.
+        literal: I apply paint to a living beast toward green-ness.
