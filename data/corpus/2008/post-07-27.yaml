@@ -1,0 +1,15 @@
+date: 2008-07-21
+source: "Rikchik Language Institute post, https://rikchiktalkhome.livejournal.com/5479.html"
+color: Green
+utterance:
+    -
+        author: Parker Glynn-Adey
+        literal: The many us, your every home, have.
+        loose: All your base belong to us.
+        text: Seven-Quality-M-0 Me-Agent-R-1 Talk-Means-V-0 Rikchik-Element-R-1 All-Quality-M-0 Home-Patient-P-2 Have-End-V-2
+    -
+        author: Parker Glynn-Adey
+        text: All-Quality-M-0 Talk-Means-V-0 Rikchik-Element-R-1 Home-Patient-P-2 Seven-Quality-M-0 Me-Agent-R-1 Have-End-V-2
+        loose: All your base belong to us.
+        literal: All your home, we have.
+note: There is a deleted comment on this post that may have contained another utterance.
