@@ -1,0 +1,57 @@
+date: 2011-01-03
+source: Rikchik Language Institute post, https://rikchiktalkhome.livejournal.com/8304.html
+color: Blue
+note: As this post is a discussion of translations, all of it may be non-standard.
+utterance:
+    -
+        literal: Big-tentacle-of-water counted-land
+        loose: Massachusetts
+        author: Denis Moskowitz
+        text: Big-N-Quality-0 Tentacle-N-Quality-0 Water-N-Quality-2 Number-N-Agent-0 Ground-P-End-2
+    -
+        literal: yellow-metal counted-land
+        loose: California
+        author: Denis Moskowitz
+        text: Grass-N-Quality-0 Metal-N-Quality-1 Number-N-Agent-0 Ground-P-End-2 
+    -
+        literal: green-in-every-span counted-land
+        loose: Washington (State)
+        author: Denis Moskowitz
+        text: All-N-Quality-0 Span-N-Quality-1 Rikchik-N-Quality-1 Number-N-Agent-0 Ground-P-End-2
+    -
+        literal: many-nation counted-land
+        loose: New York (State)
+        author: Denis Moskowitz
+        text: Seven-N-Quality-0 Home-N-Includesrec-0 Home-N-Quality-2 Number-N-Agent-0 Ground-P-End-2
+    -
+        literal: stone-fruit counted-land
+        loose: Georgia
+        author: Denis Moskowitz
+        text: Rock-N-Includesrec-0 Fruit-N-Quality-1 Number-N-Agent-0 Ground-P-End-2
+    -
+        literal: large-learning city
+        loose: Cambridge, MA
+        author: Denis Moskowitz
+        text: Big-N-Quality-1 Learn-N-Quality-1 Seven-N-Quality-0 Home-P-End-2
+    -
+        literal: fast-moving-water city
+        loose: Arlington, MA
+        note: "based on the etymology of Arlington's original name of Menotomy"
+        author: Denis Moskowitz
+        text: Bouncer-N-Quality-0 Move-N-Quality-0 Water-N-Quality-2 Seven-N-Quality-1 Home-P-End-2
+    -
+        literal: human-who-causes-flowering city
+        loose: Gardner, MA
+        author: Denis Moskowitz
+        text: Flower-N-Agentrec-0 Human-N-Quality-1 Seven-N-Quality-1 Home-P-End-2
+    -
+        literal: big-big-city
+        loose: New York City
+        author: Denis Moskowitz
+        text: Big-N-Quality-0 Big-N-Quality-1 Seven-N-Quality-1 Home-P-End-2
+    -
+        literal: fuzzy stone-fruit
+        loose: peach
+        author: Marc Moskowitz
+        note: "incorrectly 'Roller-N-Includes-0 Rock-N-Includesrec-1 Fruit-T-End-0' in original comment."
+        text: Roller-N-Quality-0 Rock-N-Includesrec-0 Fruit-T-End-2
