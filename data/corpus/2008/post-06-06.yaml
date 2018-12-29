@@ -1,0 +1,63 @@
+date: 2008-06-06
+source: "DW post, https://cnoocy.dreamwidth.org/72447.html"
+color: Blue
+note: "These are the individual sentences in a sonnet about Becca Moskowitz ('Beast' in Rikchik)"
+author: Marc Moskowitz
+utterance:
+    -
+        literal: It makes me happy to write the arty words that I share about the loved human who shares all of our spans with me.
+        loose: I share a poem about the beloved human who shares all time with me, because I enjoy writing it.
+        text: All-M-Quality-0 Span-I-Patient-1 Me-R-Destination-0 Share-V-Destinationrec-2 Love-V-Patientrec-0 Human-R-Instrument-2 Art-M-Quality-0 Word-I-Patient-2 Me-R-Agent-0P Share-V-Sourcerec-2 Word-I-Patient-0P Fruit-V-Patient-1 Me-R-Agent-0P Happy-V-End-3 
+    -
+        literal: The sound that happy she makes because of reading those words is the purpose for that sharing.
+        loose: I do this for the happy sound she makes reading it.
+        text: Word-I-Instrument-0P Book-V-Patientrec-1 Happy-M-Quality-0 Human-R-Agent-2P Share-V-Destinationrec-0P Sound-V-End-2 
+    -
+        literal: She is similar to a great tree by her loving earth, flowering due to the sun, and enjoying water.
+        loose: In loving earth, flowering in the sun, and happiness in water, she is like a great tree.
+        text: Ground-R-Patient-0 Love-V-Instrument-1 Sun-R-Agent-0 Flower-V-Instrument-1 Water-R-Patient-0 Happy-V-Instrument-1 Human-R-Patient-0P Similar-V-Patientrec-4 Big-M-Quality-0 Tree-R-End-2 
+    -
+        literal: That similiarity is increased by her being like a wild lumpybeast in her fiery thinking and seeing of emotion. 
+        loose: More than that, in fiery thinking and seeing emotion she is like a wild beast.
+        text: Similar-V-Agent-0P Big-V-Patientrec-1 Fire-M-Quality-0 Think-V-Instrument-1 Emotion-I-Patient-0 Eye-V-Instrument-1 Human-R-Patient-0P Similar-V-Patientrec-4 Chaos-M-Quality-0 Beast-R-End-2
+    -
+        literal: With the sun not above in the sky, she paints herself in a wanting-sleep way with cloth for working.
+        loose: Before the sun rises, she sleepily dresses in work clothes.
+        text: Sky-P-Includes-0 Sun-R-Patient-1 Zero-M-Quality-0 Above-V-Agentrec-2 Sleep-V-Patient-0 Want-V-Quality-1 Work-V-Destination-0 Cloth-T-Instrument-1 Human-R-Patient-0P Paint-V-End-4
+    -
+        literal: There are seven sevens of learning children who she goes to by underground mechanical rail.
+        loose: By subway she goes to many learning children.
+        text: Ground-T-Patient-0 Above-V-Agentrec-1 Machine-M-Quality-0 Rail-T-Instrument-2 Human-R-Patient-0P Move-R-Destinationrec-2 Seven-M-Quality-0 Seven-M-Quality-1 Learn-V-Destinationrec-0 Child-R-End-3
+    -
+        literal: She teaches those learning children the art-writing and speech of Angle-speak.
+        loose: She teaches them English literature and language.
+        text: Junction-N-Quality-0 Talk-V-Quality-1 Art-M-Quality-0 Book-I-Patient-1 Talk-I-Patient-0 Gather-I-Patient-3 Learn-V-Destinationrec-0O Child-R-Destination-1P Human-R-Agent-0P Learn-V-End-3
+    -
+        literal: In her room (box) in the learning-home, childen think non-childish thoughts about words.
+        loose: In her schoolroom, children think unchildish thoughts.
+        text: Learn-N-Destination-0 Home-P-Includes-1 Human-R-Agent-0P Box-P-Includes-2 Zero-M-Quality-0 Child-R-Quality-1 Word-I-Destination-0 Think-I-Patient-2 Child-R-Agent-0 Think-V-End-3
+    -
+        literal: Having come home from the teaching-home in the night-span, sleepy she is pleased in my direction.
+        loose: In the night, having come home from school, she is sleepily happy at me.
+        text: Night-I-Quality-0 Span-I-Includes-1 Learn-N-Destination-0O Home-P-Source-1P Home-P-Destination-0 Move-V-Patientrec-3 Sleep-V-Destination-0 Human-R-Agent-2P Me-R-Destination-0P Happy-V-End-2
+    -
+        literal: Happy she and I lie grassily under every idle sky.
+        loose: Happy she and I are like grass under every idle sky.
+        text: Happy-M-Quality-0 Human-R-Patient-1P Me-R-Patient-0P Gather-R-Agent-2 Grass-T-Qualityrec-0 Above-V-Patientrec-2 Zero-M-Quality-0 Work-V-Patientrec-1 All-M-Quality-0 Sky-T-End-3
+    -
+        literal: We eat food, either from purchase, from bringing by hail, or from home, that causes enjoyment.
+        loose: We eat tasty food, whether bought, delivered, or home-made.
+        text: Exchange-N-Source-0 Give-V-Destination-1 Hail-N-Instrument-0 Move-V-Patient-1 Home-P-Patient-0P Choice-M-Source-3 Happy-M-Patientrec-0 Fruit-T-Patient-2 Gather-R-Agent-0P Mouth-V-End-2
+    -
+        literal: With our arms all-surronding, we, together, and a crystal-like bouncer happily sleep.
+        loose: With our arms all around, together we and a sweet cat sleep happily.
+        text: Gather-R-Includes-0P Tentacle-R-Patient-1 All-M-Quality-0 Around-V-Agentrec-2 Junction-M-Quality-0 Gather-R-Patient-2P Crystal-M-Quality-0 Bouncer-R-Patient-1 Happy-M-Quality-0 Sleep-V-End-3
+    -
+        literal: Small words include the words that are read about what she does. 
+        loose: These are just small words about her actions.
+        text: Human-R-Agent-0P Thing-V-Patient-1 Book-V-Instrumentrec-0 Word-I-Includesrec-2 Small-M-Quality-0 Word-I-End-2
+    -
+        literal: From love of her, of happy me the big emotion no box artily made of flowery words can hold.
+        loose: The way I feel about loving her no box of flowery words can hold.
+        text: Human-R-Patient-0P Love-V-Source-1 Happy-M-Quality-0 Me-R-Patient-1P Big-M-Quality-0 Emotion-I-Patient-3 Around-M-Quality-0 Have-V-Agentrec-2 Flower-M-Quality-0 Word-I-Instrument-1 Art-M-Quality-0 Fruit-V-Patientrec-2 Zero-M-Quality-0 Box-I-End-3
+
