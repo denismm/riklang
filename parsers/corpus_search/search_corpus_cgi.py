@@ -29,7 +29,7 @@ def web_main():
     search = cgi.FieldStorage().getfirst('search', None)
 
     corpus = read_corpus()
-    results = search_corpus(corpus)
+    results = search_corpus(corpus, search)
     for entry in results:
         text_words = entry['text'].split()
         # lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
@@ -99,7 +99,7 @@ def read_corpus():
 
     return corpus
 
-def search_corpus(corpus):
+def search_corpus(corpus, search):
     results = []
     search_regex = re.compile(search)
     def check_utterance(utterance):
