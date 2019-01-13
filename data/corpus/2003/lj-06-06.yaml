@@ -1,0 +1,15 @@
+date: 2003-06-06
+source: "LJ post: https://rikchik.livejournal.com/2097.html"
+color: Blue
+note: Denis later decided that Rikchik ordinals start at 0.
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: In the friend-family of fighting, the #1 thing from the leader is zero speaking by you of the friend-family of fighting.
+        loose: The first rule of Fight Club is you do not talk about Fight Club.
+        text: Fight-N-Task-0 Friend-N-Element-0 Home-R-Includes-2 One-M-Quality-0 Leader-N-Agent-0 Word-I-Includes-3 Fight-N-Task-0 Friend-N-Element-0 Home-R-Patient-2 Rikchik-R-Agent-0 Zero-V-Quality-0 Talk-V-End-4
+    -
+        author: Marc Moskowitz
+        literal: In the friend-family of fighting, the #2 thing from the leader is zero speaking by you of the friend-family of fighting.
+        loose: The second rule of Fight Club is you do not talk about Fight Club.
+        text: Fight-N-Task-0 Friend-N-Element-0 Home-R-Includes-2 Two-M-Quality-0 Leader-N-Agent-0 Word-I-Includes-3 Fight-N-Task-0 Friend-N-Element-0 Home-R-Patient-2 Rikchik-R-Agent-0 Zero-V-Quality-0 Talk-V-End-4

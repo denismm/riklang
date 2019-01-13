@@ -1,0 +1,14 @@
+date: 2003-03-21
+source: "LJ post: https://rikchik.livejournal.com/2012.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: Because the sky is sunny, I want to not work.
+        loose: It's sunny outside so I don't want to work.
+        text: Sun-R-Quality-0 Sky-T-Source-1 Me-R-Agent-0 Zero-M-Quality-0 Work-V-Patient-1 Want-V-End-3
+    -
+        author: Marc Moskowitz
+        text: Sun-R-Quality-0 Sky-T-Source-1 Me-R-Agent-0 Zero-M-Quality-0 Work-V-Patient-0 Want-V-Patient-2 Want-V-End-3
+        loose: The sky is so sunny, I want to not want to work
+        literal: Because the sky is sunny, I want to not want to work.
