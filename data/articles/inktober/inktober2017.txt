@@ -6,158 +6,178 @@ I decided to stick with rikchik-world images for the whole month.  I missed a fe
 
 Click any image for a larger version.
 
-<h2>1. Swift</h2>
 <rikchik?size=2&lineheight=s Bouncer-R-Patient-0 Grass-P-Agent-0 Across-V-Patientrec-1 Bouncer-V-End-2 align="right" />
+<h2>1. Swift</h2>
 <table rows>
 <thumb 2017/Inktober1><br>A bouncer jumps across some grass.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s Water-N-Patient-0 Move-I-Agent-1 Home-N-Includesrec-0 Circle-I-Patient-1 Across-V-End-2 align="right" />
 <h2>2. Divided</h2>
 <table rows>
-<rikchik?size=2&lineheight=s Water-N-Patient-0 Move-I-Agent-1 Home-N-Includesrec-0 Circle-I-Patient-1 Across-V-End-2 align="right" />
 <thumb 2017/Inktober2><br>A city spans a river.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s Dead-V-Agentrec-0 Fruit-T-Includesrec-1 Tree-T-Agent-1 Fear-N-Source-0 Circle-T-Patient-1 Dead-V-Patient-0 Talk-V-Agentrec-1 Shield-T-Patient-1 Around-T-End-3 align="right" />
 <h2>3. Poison</h2>
 <table rows>
-<rikchik?size=2&lineheight=s align="right />
 <thumb 2017/Inktober3><br>A tree with poisonous fruit is fenced off, with signs reading "Death".
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s Fish-R-Patient-0 Pulser-R-Agent-0 Big-M-Quality-0 Water-P-Patient-0 Above-P-Agentrec-2 Gather-V-End-3 align="right" />
 <h2>4. Underwater</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober4><br>Fish and pulsers meet deep underwater.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s Move-N-Patientrec-0 Rikchik-R-Patient-1 Crawler-R-Patient-0 Move-P-Includes-0 Gather-V-End-3 align="right" />
 <h2>5. Long</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober5><br>A traveler meets a grass-crawler along a road.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" Two-I-Quality-0 Fight-N-Instrumentrec-0 Tentacle-T-Instrument-2 Have-V-Agentrec-1 Rikchik-R-End-1 />
 <h2>6. Sword</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober6><br>A rikchik wielding two swords.
 </table>
+<hr/>
 
-</table>
-
+<rikchik?size=2&lineheight=s align="right" />
 <h2>7. Shy</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober7><br>A curious child hides behind its parent's tentacles.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>8. Crooked, 9. Screech</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober9><br>A dragon sends lightning at a grove of trees.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>10. Gigantic, 11. Run</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober11><br>A rikchik meets a greater roller.  Excited children run about.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>12. Shattered</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober12><br>A crystallier sells chipped pieces for snacks.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>13. Teeming</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober13><br>The big market (including the crystallier from day 12).
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>14. Fierce, 15. Mysterious</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober15><br>A cloaked ninja steps out of the grass.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>16. Fat, 17. Graceful</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober17><br>A grand sailing ship crosses the water.  A fish looks on.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>18. Filthy, 19. Cloud</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober19><br>A traveler on a rainy day makes its way along the muddy road.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>20. Deep</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober20><br>An astronomer looks through a telescope.  A constellation shines in the sky.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>21. Furious</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober21><br>Two rikchiks are about to come to blows.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>22. Trail</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober22><br>A path leads through forested hills.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>23. Juicy</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober23><br>A rikchik reaches for a fruit growing on a tree (hopefully not the one from day 3).
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>24. Blind, 25. Ship</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober25><br>A team of rikchiks bring large boxes through a city gate.  The city wall is decorated with large statues of rikchiks.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>26. Squeak</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober26><br>A train passes a rikchik and a human.  The human is bothered by the noise from the rails.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>27. Climb</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober27><br>A pair of climbing-tubes provide easy access to the floors of a multi-level building.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>28. Fall</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober28><br>A picturesque waterfall with a viewing platform is visited by sight-seers.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>29. United</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober29><br>Four rikchiks are taking part in a well-attended wedding ceremony in a grand temple, with a priest presiding and banners of Home flying.
 </table>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>30. Found</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober30><br>A rikchik finds a flower.
 </table>
+<hr/>
 
+<rikchik?size=2&lineheight=s align="right" />
 <h2>31. Mask</h2>
-<rikchik?size=2&lineheight=s align="right />
 <table rows>
 <thumb 2017/Inktober31><br>Rikchiks act out "The North Wind and the Sun".
 </table>
-
 <hr/>
 
 <address>
