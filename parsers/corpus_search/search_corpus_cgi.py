@@ -102,7 +102,7 @@ def read_corpus():
 
     return corpus
 
-searchable_fields = set(['source', 'author', 'literal', 'loose', 'text', 'note'])
+searchable_fields = set(['literal', 'loose', 'text', 'note'])
 def search_corpus(corpus, search):
     results = []
     search_regex = re.compile(search)
