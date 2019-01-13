@@ -24,9 +24,7 @@ def web_main():
         loader=jinja2.FileSystemLoader('./templates'),
         autoescape=jinja2.select_autoescape(['html']),
     )
-    corpus_source = "./corpus"
     img_url_cgi = "http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi"
-    corpus_walk = os.walk(corpus_source)
     cgitb.enable()
     search = cgi.FieldStorage().getfirst('search', None)
 
@@ -44,6 +42,8 @@ def web_main():
     print render.encode('ascii', errors='ignore')
 
 def read_corpus():
+    corpus_source = "./corpus"
+    corpus_walk = os.walk(corpus_source)
     corpus_files = []
     corpus = {}
     for location in corpus_walk:
