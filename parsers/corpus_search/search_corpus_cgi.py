@@ -28,7 +28,7 @@ def web_main():
     img_url_cgi = "http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi"
     corpus_walk = os.walk(corpus_source)
     cgitb.enable()
-    search_field = cgi.FieldStorage().get('search', None)
+    search_field = cgi.FieldStorage().getfirst('search', None)
     if search_field:
         search = search_field.value
 
