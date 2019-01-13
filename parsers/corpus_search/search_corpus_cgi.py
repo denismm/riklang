@@ -19,7 +19,6 @@ relation_map = {
 }
 
 print "Content-type: text/html\n\n"
-using_cgi = False
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader('./templates'),
     autoescape=jinja2.select_autoescape(['html']),
@@ -34,12 +33,8 @@ for location in corpus_walk:
     for filename in location[2]:
         if filename.endswith('.yaml'):
             corpus_files.append(location[0] + '/' + filename)
-if len(sys.argv) <= 1:
-    cgitb.enable()
-    using_cgi = True
-    search = cgi.FieldStorage()['search'].value
-else:
-    search = sys.argv[1]
+cgitb.enable()
+search = cgi.FieldStorage()['search'].value
 
 corpus = {} 
 
