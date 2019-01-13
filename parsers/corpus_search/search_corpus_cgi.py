@@ -28,15 +28,18 @@ def web_main():
     cgitb.enable()
     search = cgi.FieldStorage().getfirst('search', None)
 
-    corpus = read_corpus()
-    results = search_corpus(corpus, search)
-    for entry in results:
-        text_words = entry['text'].split()
-        # lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
-        typesize = 2
-        cgi_text = entry['text'].replace(' ', '.')
-        entry['cgi_text'] = cgi_text
-        entry['img_url'] = "%s?lineheight=s;size=%d;%s" % (img_url_cgi, typesize, cgi_text)
+    if search:
+        corpus = read_corpus()
+        results = search_corpus(corpus, search)
+        for entry in results:
+            text_words = entry['text'].split()
+            # lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
+            typesize = 2
+            cgi_text = entry['text'].replace(' ', '.')
+            entry['cgi_text'] = cgi_text
+            entry['img_url'] = "%s?lineheight=s;size=%d;%s" % (img_url_cgi, typesize, cgi_text)
+    else:
+        results = []
     template = env.get_template('corpus_output.html')
     render = template.render(results=results, search=search)
     print render.encode('ascii', errors='ignore')
