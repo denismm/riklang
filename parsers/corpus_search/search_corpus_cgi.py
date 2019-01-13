@@ -102,12 +102,13 @@ def read_corpus():
 
     return corpus
 
+searchable_fields = set(['source', 'author', 'literal', 'loose', 'text'])
 def search_corpus(corpus, search):
     results = []
     search_regex = re.compile(search)
     def check_utterance(utterance):
         for (field_name, field_data) in utterance.iteritems():
-            if isinstance(field_data, str):
+            if field_name in searchable_fields:
                 if search_regex.search(field_data):
                     results.append(utterance)
                     return
