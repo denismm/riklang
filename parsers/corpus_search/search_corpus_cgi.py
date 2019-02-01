@@ -63,8 +63,8 @@ def read_corpus():
             id = id[1:]
         return id
 
-    def insert_entry(id, entry):
-        entry['id'] = massage_id(id)
+    def canonicalize(entry):
+        entry['color'] = entry['color'].lower()
         # change old relations to modern names
         text = entry['text'].split(' ')
         for i in range(len(text)):
@@ -76,6 +76,10 @@ def read_corpus():
                 word = '-'.join(components)
                 text[i] = word
         entry['text'] = ' '.join(text)
+
+    def insert_entry(id, entry):
+        entry['id'] = massage_id(id)
+        canonicalize(entry)
         corpus[id] = entry
 
     for filename in corpus_files:
