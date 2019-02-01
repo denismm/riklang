@@ -56,12 +56,15 @@ def read_corpus():
         for filename in location[2]:
             if filename.endswith('.yaml'):
                 corpus_files.append(location[0] + '/' + filename)
-    def insert_entry(id, entry):
+    def massage_id(id):
         if id.startswith(corpus_source):
             id = id[len(corpus_source):]
         if id.startswith('/'):
             id = id[1:]
-        entry['id'] = id
+        return id
+
+    def insert_entry(id, entry):
+        entry['id'] = massage_id(id)
         # change old relations to modern names
         text = entry['text'].split(' ')
         for i in range(len(text)):
@@ -93,7 +96,7 @@ def read_corpus():
                 utter_i = 0
                 utterances = structure['utterance']
                 defaults['source_utterance_count'] = len(utterances)
-                defaults['source_id'] = "%s:%d:" % (filename, doc_i)
+                defaults['source_id'] = massage_id("%s:%d:" % (filename, doc_i))
                 for utterance in utterances:
                     entry = copy.copy(defaults)
                     for (k, v) in utterance.iteritems():
