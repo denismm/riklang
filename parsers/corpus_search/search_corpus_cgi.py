@@ -27,10 +27,11 @@ def web_main():
     img_url_cgi = "http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi"
     cgitb.enable()
     search = cgi.FieldStorage().getfirst('search', None)
+    field = cgi.FieldStorage().getfirst('field', None)
 
     if search:
         corpus = read_corpus()
-        results = search_corpus(corpus, search)
+        results = search_corpus(corpus, search, field)
         for entry in results:
             text_words = entry['text'].split()
             # lineheight = min(math.ceil(math.sqrt(len(text_words))), 5)
@@ -102,13 +103,18 @@ def read_corpus():
 
     return corpus
 
-searchable_fields = set(['literal', 'loose', 'text', 'note'])
-def search_corpus(corpus, search):
+searchable_fields = ['literal', 'loose', 'text', 'note']
+def search_corpus(corpus, search, field):
     results = []
     search_regex = re.compile(search)
+    if field:
+        field_list = [field]
+    else:
+        field_list = searchable_fields
+    field_set = set(field_list)
     def check_utterance(utterance):
         for (field_name, field_data) in utterance.iteritems():
-            if field_name in searchable_fields and isinstance(field_data, str):
+            if field_name in field_set and isinstance(field_data, str):
                 if search_regex.search(field_data):
                     results.append(utterance)
                     return
