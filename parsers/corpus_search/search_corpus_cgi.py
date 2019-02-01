@@ -92,7 +92,7 @@ def read_corpus():
             if 'utterance' in structure:
                 utter_i = 0
                 utterances = structure['utterance']
-                entry['source_utterance_count'] = len(utterances)
+                defaults['source_utterance_count'] = len(utterances)
                 for utterance in utterances:
                     entry = copy.copy(defaults)
                     for (k, v) in utterance.iteritems():
@@ -100,7 +100,7 @@ def read_corpus():
                     insert_entry("%s:%d:%d" % (filename, doc_i, utter_i), entry)
                     utter_i += 1
             else:
-                entry['source_utterance_count'] = 1
+                defaults['source_utterance_count'] = 1
                 insert_entry("%s:%d:%d" % (filename, doc_i, 0), defaults)
             doc_i += 1
 
