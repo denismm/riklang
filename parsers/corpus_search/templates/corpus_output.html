@@ -22,7 +22,13 @@
                     <item class="translation">loose: {{ item['loose'] |e }}</item>
                     <item class="translation">literal: {{ item['literal'] |e }}</item>
                     <item class="author">By {{ item['author'] |e }} on {{ item['date'] |e }}</item>
-                    <item class="source">Source: {{ item['source'] |e }}</item>
+                    <item class="source">Source: {{ item['source'] |e }}
+                    {% if item['source_utterance_count'] > 1 %}
+                        <a href="https://www.suberic.net/~dmm/cgi-bin/rikbin/search_corpus_cgi.py?search={{ item['source_id'] }}&field=id">
+                            See all {{ item['source_utterance_count'] |e}}  utterances
+                        </a>
+                    {% endif %}
+                    </item>
                     <item class="color">
                         <span class="{{ item['color'] |lower }}">
                             Canonicity:

@@ -93,6 +93,7 @@ def read_corpus():
                 utter_i = 0
                 utterances = structure['utterance']
                 defaults['source_utterance_count'] = len(utterances)
+                defaults['source_id'] = "%s:%d:" % (filename, doc_i)
                 for utterance in utterances:
                     entry = copy.copy(defaults)
                     for (k, v) in utterance.iteritems():
