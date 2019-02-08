@@ -9,6 +9,9 @@
         Search the corpus of Rikchik utterances.<br/>
         <input type="text" name="search" value="{{ search | escape }}" /><br>
     </form>
+    {% if search is not None %}
+    {{ len(results) }} {%if len(results) == 1 %} entry {% else %} entries {% endif %} found.
+    {% endif %}
     {% for item in results %}
         <hr/>
         <container name="entry" style="display:flex; flex-direction:row">
