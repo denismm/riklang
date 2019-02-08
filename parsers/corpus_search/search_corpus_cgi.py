@@ -131,7 +131,7 @@ def search_corpus(corpus, search, field):
                     return
     for (key, utterance) in corpus.iteritems():
         check_utterance(utterance)
-    return results
+    return sorted(results, key=lambda entry: entry['id'])
 
 
 web_main()
