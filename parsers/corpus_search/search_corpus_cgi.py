@@ -42,7 +42,7 @@ def web_main():
     else:
         results = []
     template = env.get_template('corpus_output.html')
-    render = template.render(results=results, search=search)
+    render = template.render(results=results, search=search, field=field)
     print render.encode('ascii', errors='ignore')
 
 def read_corpus():
