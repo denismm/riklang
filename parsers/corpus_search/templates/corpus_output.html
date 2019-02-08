@@ -10,7 +10,7 @@
         <input type="text" name="search" value="{{ search | escape }}" /><br>
     </form>
     {% if search is not none %}
-    {{ len(results) }} {%if len(results) == 1 %} entry {% else %} entries {% endif %} found.
+    Entries found: {{ results | len }}
     {% endif %}
     {% for item in results %}
         <hr/>
