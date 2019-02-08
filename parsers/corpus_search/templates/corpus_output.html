@@ -8,8 +8,9 @@
     <form action="search_corpus_cgi.py">
         Search the corpus of Rikchik utterances.<br/>
         <input type="text" name="search" value="{{ search | escape }}" /><br>
-        (optional field: <input type="text" name="field" value="{% if field is not none %} {{ field | escape }}{%endif%}" />)<br/>
         <input type="submit"/><br/>
+        <br/>
+        optional field: <br/><input type="text" name="field" value="{% if field is not none %} {{ field | escape }}{%endif%}" /><br/>
     </form>
     {% if search is not none %}
     Entries found: {{ results | length }}
