@@ -7,7 +7,7 @@
     <h1>Rikchik corpus search</h1>
     <form action="search_corpus_cgi.py">
         Search the corpus of Rikchik utterances.<br/>
-        <input type="text" name="search" value="{{ search | escape }}" /><br>
+        <input type="text" name="search" value="{% if search is not none %} {{ search | escape }}{%endif%}" /><br>
         <input type="submit"/><br/>
         <br/>
         optional field: <br/><input type="text" name="field" value="{% if field is not none %} {{ field | escape }}{%endif%}" /><br/>
