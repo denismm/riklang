@@ -7,7 +7,7 @@
     <h1>Rikchik corpus search</h1>
     <form action="search_corpus_cgi.py">
         Search the corpus of Rikchik utterances.<br/>
-        <input type="text" name="search" value="{{ search | urlencode }}" /><br>
+        <input type="text" name="search" value="{{ search | escape }}" /><br>
     </form>
     {% for item in results %}
         <hr/>
