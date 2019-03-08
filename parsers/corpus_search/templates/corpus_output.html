@@ -29,6 +29,9 @@
                     <item class="translation">literal: {{ item['literal'] |e }}</item>
                     <item class="author">By {{ item['author'] |e }} on {{ item['date'] |e }}</item>
                     <item class="source">Source: {{ item['source'] |e }}
+                    {% if 'note' is in item %}
+                        <item class="note">Note: {{ item['note'] |e }}
+                    {% endif %}
                     {% if item['source_utterance_count'] > 1 %}
                         <a href="https://www.suberic.net/~dmm/cgi-bin/rikbin/search_corpus_cgi.py?search={{ item['source_id'] }}&field=id">
                             See all {{ item['source_utterance_count'] |e}}  utterances
