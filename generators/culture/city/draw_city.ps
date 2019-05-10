@@ -1,0 +1,28 @@
+%
+(dmmlib/base.ps) run
+
+(city_data.ps) run
+
+72 softscale
+4.25 5.5 translate
+7 recip softscale
+0 0 80 circle fill
+
+/height_f { 6 mul 1 add sqrt } def
+/width_f { 360 mul block_ring div } def
+city_data {
+    aload pop
+    /width arg
+    /height arg
+    /j arg
+    /i arg
+    /inner i height_f def
+    /outer i height add height_f def
+    /start j width_f def
+    /end j width add width_f def
+    gsave
+        0 0 inner start end arc
+        0 0 outer end start arcn
+        closepath whitefill stroke
+    grestore
+} forall
