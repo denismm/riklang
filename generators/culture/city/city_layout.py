@@ -5,6 +5,8 @@ import random
 import logging
 logging.basicConfig(format='%(message)s')
 
+city_output_file = 'city_data.ps'
+
 power = 6
 block_ring = 6 * 2**power
 powers = [2**i for i in range(power + 1)]
@@ -107,11 +109,12 @@ def add_sectors(wedge_count, ring_start, ring_end, rand_power, wall):
 # wedge_h = antiheightify(ring_end)
 add_sectors(6, 0, 3, 2, True)
 add_sectors(12, 3, 9, 1.1, True)
-add_sectors(12, 9, 33, 0.75, True)
-add_sectors(12, 33, 101, 0.75, False)
-print "/block_ring %f def" % (block_ring,)
-print "/city_data ["
-for entry in output_list:
-    print "  [%d %d %d %d]" % (entry[0], entry[1], entry[2], entry[3])
+add_sectors(12, 10, 33, 0.75, True)
+add_sectors(12, 34, 101, 0.75, False)
 
-print "] def"
+with open(city_output_file, 'w') as f:
+    f.write("/block_ring %f def\n" % (block_ring,))
+    f.write("/city_data [\n")
+    for entry in output_list:
+        f.write("  [%d %d %d %d]\n" % (entry[0], entry[1], entry[2], entry[3]))
+    f.write("] def\n")
