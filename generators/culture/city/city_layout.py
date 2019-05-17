@@ -41,7 +41,7 @@ def choose_option_rand(options, rand_power):
 
 
 option_cache = {}
-def score_sector(true_i, width, true_h, wall_h = None):
+def score_sector(true_i, width, true_h, sector_blocks, wall_h = None):
     if (true_i, width, wall_h) not in option_cache:
         height = sector_blocks / width
         if true_i+height >= len(true_h):
@@ -60,7 +60,7 @@ def score_sector(true_i, width, true_h, wall_h = None):
             option_cache[(true_i, width, wall_h)] = [height, width, score]
     return option_cache[(true_i, width, wall_h)]
 
-def add_sectors(wedge_count, ring_start, ring_end, rand_power, wall):
+def add_sectors(wedge_count, ring_start, ring_end, rand_power, wall, large_chance):
     wedge_w = block_ring / wedge_count
     def heightify(i):
         return math.sqrt(1 + i * wedge_count)
@@ -92,8 +92,11 @@ def add_sectors(wedge_count, ring_start, ring_end, rand_power, wall):
                         k += 1
                     # rate options
                     options = []
+                    local_sector_blocks = sector_blocks
+                    if random.random() < large_chance:
+                        local_sector_blocks *= 4
                     for width in width_options:
-                        option = score_sector(true_i, width, true_h, wall_h)
+                        option = score_sector(true_i, width, true_h, local_sector_blocks, wall_h)
                         if option:
                             options.append(option)
                     if len(options) > 0:
@@ -107,10 +110,10 @@ def add_sectors(wedge_count, ring_start, ring_end, rand_power, wall):
                                 block_grid[i+bi][j+bj] = 1
 
 # wedge_h = antiheightify(ring_end)
-add_sectors(6, 0, 3, 2, True)
-add_sectors(12, 3, 9, 1.1, True)
-add_sectors(12, 10, 33, 0.75, True)
-add_sectors(12, 34, 101, 0.75, False)
+add_sectors(6, 0, 3, 2, True, 0)
+add_sectors(12, 3, 9, 1.1, True, 0.005)
+add_sectors(12, 10, 33, 0.75, True, 0.01)
+add_sectors(12, 34, 101, 0.75, False, 0.02)
 
 with open(city_output_file, 'w') as f:
     f.write("/block_ring %f def\n" % (block_ring,))
