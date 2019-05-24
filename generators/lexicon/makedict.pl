@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use strict;
+use autodie;
 my $RIKLANG = $ENV{'RIKLANG'} || $ENV{'RIKCHIK_SRC'};
 my $RIKHOME = $ENV{'RIKCHIK_HOME'};
 die unless $RIKLANG;
