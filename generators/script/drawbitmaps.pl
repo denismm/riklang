@@ -119,7 +119,10 @@ foreach $style (@styles){
 	      #write definition to file
 	      my ($size, $color_p);
 	      SIZE: foreach $size (@sizes) {
-		next SIZE unless -d "$rikhome/images/$style/$size/";
+                unless (-d "$rikhome/images/$style/$size/") {
+                    print STDERR "skipping $rikhome/images/$style/$size/\n";
+                    next SIZE;
+                }
 		COLOR: foreach $color_p (0,1) {
 		    my ($t_name) = $name;
 		    if ($color_p) {
