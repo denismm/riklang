@@ -7,7 +7,7 @@ if (! @ARGV) {
     exit 1;
 }
 
-my $riklang = $ENV{RIKCHIK_SRC};
+my $riklang = $ENV{RIKCHIK_SRC} || die "no RIKCHIK_SRC or RIKLANG set\n";
 
 ARGUMENT: foreach my $argument (@ARGV) {
     my $morpheme;
