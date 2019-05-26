@@ -1510,6 +1510,18 @@
             </text>
           </translation>
         </reading>
+        <reading aspect="P">
+          <gloss>
+            <text>
+              Clockwise
+            </text>
+          </gloss>
+          <translation>
+            <text>
+              Clockwise around a circular area, particularly a city.
+            </text>
+          </translation>
+        </reading>
       </readings>
       <roles>
         <role relation="none">
@@ -4597,6 +4609,18 @@
           <translation>
             <text>
               The root of a plant.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <gloss>
+            <text>
+              Counter-clockwise
+            </text>
+          </gloss>
+          <translation>
+            <text>
+              Counter-clockwise around a circular area, especially a city.
             </text>
           </translation>
         </reading>
