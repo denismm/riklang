@@ -7,18 +7,23 @@ if (! @ARGV) {
     exit 1;
 }
 
-my $riklang = $ENV{RIKCHIK_SRC} || die "no RIKCHIK_SRC or RIKLANG set\n";
+my $riklang = $ENV{RIKLANG} || $ENV{RIKCHIK_SRC} || die "no RIKCHIK_SRC or RIKLANG set\n";
 
 ARGUMENT: foreach my $argument (@ARGV) {
     my $morpheme;
+    my $dirname;
     my $filename;
     my $filecontents;
     if ($argument =~ /^([A-Z][A-Za-z]+)-([A-Z])$/) {
 	my $aspect;
 	($morpheme, $aspect) = ($1, $2);
-	$filename = "$riklang/data/language/morphemes/$morpheme/readings/$aspect.xml";
+	$dirname = "$riklang/data/language/morphemes/$morpheme/readings";
+	$filename = "$dirname/$aspect.xml";
 	$filecontents = <<EOA;
 <reading aspect="$aspect">
+  <gloss>
+    <text></text>
+  </gloss>
   <translation>
     <text></text>
   </translation>
@@ -27,7 +32,8 @@ EOA
     } elsif ($argument =~ /^([A-Z][A-Za-z]+)-([A-Z][A-Za-z]+)$/) {
 	my $relation;
 	($morpheme, $relation) = ($1, $2);
-	$filename = "$riklang/data/language/morphemes/$morpheme/roles/$relation.xml";
+	$dirname = "$riklang/data/language/morphemes/$morpheme/roles";
+        $filename = "$dirname/$relation.xml";
 	$filecontents = <<EOR;
 <role relation="$relation">
   <translation>
@@ -43,6 +49,7 @@ EOR
 	print STDERR "Bad morpheme: $argument\n";
 	next ARGUMENT;
     }
+    mkdir $dirname;
     if (! -e $filename) {
 	open (COMPONENT, ">$filename") || die "can't open $filename for writing: $!";
 	print COMPONENT $filecontents;
