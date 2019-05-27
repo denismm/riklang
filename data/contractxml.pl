@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use strict;
-use lib "../generators/script/";
+use lib "../generators/script/", ".";
 use XMLLite;
 use riksort;
 
