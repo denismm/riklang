@@ -822,6 +822,20 @@
         <line r="1" x="80" x2="70" y="-30" y2="-30"/>
         <circle r1="10" x="50" y="-70"/>
       </glyph>
+      <readings>
+        <reading aspect="M">
+          <gloss>
+            <text>
+              Complete
+            </text>
+          </gloss>
+          <translation>
+            <text>
+              Complete or closed (as a circle or path).
+            </text>
+          </translation>
+        </reading>
+      </readings>
     </morpheme>
     <morpheme name="Fight" paradigm="tool">
       <glyph>
@@ -1493,6 +1507,18 @@
           <translation>
             <text>
               Magenta and other reddish purples.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <gloss>
+            <text>
+              Counter-clockwise
+            </text>
+          </gloss>
+          <translation>
+            <text>
+              Counter-clockwise around a circular area, especially a city.
             </text>
           </translation>
         </reading>
@@ -4575,6 +4601,30 @@
         <line x="20" x2="80" y="-70" y2="-70"/>
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
+      <readings>
+        <reading aspect="T">
+          <gloss>
+            Root
+          </gloss>
+          <translation>
+            <text>
+              The root of a plant.
+            </text>
+          </translation>
+        </reading>
+        <reading aspect="P">
+          <gloss>
+            <text>
+              Clockwise
+            </text>
+          </gloss>
+          <translation>
+            <text>
+              Clockwise around a circular area, especially a city.
+            </text>
+          </translation>
+        </reading>
+      </readings>
     </morpheme>
     <morpheme name="Crystal" paradigm="material">
       <glyph>
