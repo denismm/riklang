@@ -69,4 +69,4 @@ foreach $type (@type) {
 print OUT "grestore\nshowpage\n";
 close OUT;
 
-system ("gstopdf $out");
+system ("gstopdf $out") == 0 or system ("pstopdf $out");

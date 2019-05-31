@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use strict;
+use lib '.';
 use XMLLite;
 
 my $rikhome = $ENV{'RIKCHIK_HOME'} || ".";
