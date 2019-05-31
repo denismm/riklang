@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>Rikchik Language Reference: Time</title>
+</head>
+<body bgcolor="white">
+<h1>Time</h1>
+<p>
+Rikchik's handling of time is primarily based on two morphemes: Sequence, 
+for putting events in order, and Span, for describing lengths of time.
+</p>
+<table align="right" bgcolor="#cccccc">
+    <tr>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&color=on&lineheight=2&message=Child-V-Patient-0.Happy-V-Patient-0.Dead-V-Patient-0.Sequence-I-End-3">
+</td>
+    </tr>
+    <tr>
+	<td align="center" valign="top"><font size="-1">Birth, then happiness, then death.</font></td>
+    </tr>
+    <tr>
+	<td align="center" valign="top"><font size="-1">(This is a traditional rikchik<br/>blessing, indicating a happy life.)</font></td>
+    </tr>
+    <tr>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Child-V-Patient-0.Happy-V-Patient-0.Dead-V-Patient-0.Sequence-I-End-3" />
+</td>
+    </tr>
+</table>
+<h2>Sequence</h2>
+<p>
+<table align="left" bgcolor="#cccccc">
+<tr><td bgcolor="white"><img src="http://www.suberic.net/~dmm/rikchik/images/classic/5/mSequence.png"/></td></tr>
+<tr><td align="center"><font size="-1">Sequence</font></td></tr>
+</table>
+Rikchik uses the <a href="dictionary/Sequence.html">Sequence</a> morpheme to 
+discuss sequences of events.  The events collected by the Sequence word as 
+Patients happen in the order they appear in the sentence.
+</p>
+<p>
+To state that two events happen simultaneously, the two event clauses are
+collected by <a href="dictionary/Gather.html">Gather</a> (meaning "and" 
+in this case) and that word is a Patient of the Sequence.
+</p>
+<p>
+The time between events can be specified by collecting a length of time 
+with the Quality relation between collecting the events.
+</p>
+<p>
+<!-- add link to openings.html -->
+Opening statements such as "once upon a time" are usually collected with the 
+Source relation, to emphasize that they are openings. Likewise, closing 
+statements such as "they all lived happily after" take the Destination 
+relation.
+</p>
+<br clear="left"/>
+<table align="left" bgcolor="#cccccc">
+<tr>
+    <td align="center" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&color=on&message=Me-R-Agent-0.Work-V-Patient-1.Me-I-Patient-0.Sequence-I-End-2">
+    </td>
+    <td align="center" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&color=on&message=Me-I-Patient-0.Me-R-Patient-0.Sleep-V-Patient-1.Sequence-I-End-2">
+    </td>
+    <td align="center" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&color=on&message=Work-V-Agent-0.Sleep-V-Patient-0.After-V-End-2">
+    </td>
+</tr>
+<tr>
+    <td align="center"><font size="-1">I worked.</font></td>
+    <td align="center"><font size="-1">I will sleep.</font></td>
+    <td align="center"><font size="-1">Work before<br/>sleep.</font></td>
+</tr>
+<tr>
+    <td align="center" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Me-R-Patient-0.Work-V-Patient-1.Me-I-Patient-0.Sequence-I-End-2">
+    </td>
+    <td align="center" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Me-I-Patient-0.Me-R-Patient-0.Sleep-V-Patient-1.Sequence-I-End-2">
+    </td>
+    <td align="center" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Work-V-Agent-0.Sleep-V-Patient-0.After-V-End-2">
+    </td>
+</tr>
+</table>
+<h3>Now, After</h3>
+<p>
+The Idea (I) aspect of the <a href="dictionary/Me.html">Me</a> morpheme 
+indicates "now" and is used when specifying the relative position in 
+time of an event.  (This is as close as Rikchik gets to having tenses.)
+</p>
+<p>
+The <a href="dictionary/After.html">After</a> morpheme can also be used
+to put two events in order, as a shortcut or when a sequence will be unclear.
+</p>
+<br clear="right"/>
+<h2>Time spans</h2>
+<p>
+<table align="right" bgcolor="#cccccc">
+<tr><td bgcolor="white"><img src="http://www.suberic.net/~dmm/rikchik/images/classic/5/mSpan.png"/></td></tr>
+<tr><td align="center"><font size="-1">Span</font></td></tr>
+</table>
+Rikchik uses the <a href="dictionary/Span.html">Span</a> morpheme to talk 
+about lengths of time.  Spans can be specified based on starting time 
+and/or ending time, as well as by events ("while I was working") or by
+measurement ("the time measured by this clock").  See the Span dictionary entry for details.
+</p>
+<h3>Telling time</h3>
+<p>
+The various <a href="http://suberic.net/~dmm/rikchik/reference/rikmeasure.html">rikchik time measurements</a> are compounds of Span.
+Telling time is one of the situations in which the name element in a 
+<a href="compound.html">compound word</a> will collect a non-name word.
+In this case, the word "Span" will collect multiple names, to indicate the 
+various time units, and those names will in turn collect numbers or other
+indicators.
+</p>
+<table align="right" bgcolor="#cccccc">
+    <tr>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://suberic.net/~dmm/cgi-bin/rikchik.cgi?color=1&size=2&style=classic&lineheight=3&Five-I-Quality-0.Fight-M-Quality-1.Six-I-Source-0.Four-I-Quality-1.Tree-N-Instrument-2.Two-I-Source-0.Two-I-Quality-1.Number-N-Instrument-1.Three-I-Source-0.Zero-I-Quality-1.Sun-N-Instrument-1.Span-I-End-3">
+</td>
+    </tr>
+    <tr>
+	<td align="center" valign="top"><font size="-1">5 War 46, 16-Block 21</font></td>
+    </tr>
+    <tr>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://suberic.net/~dmm/cgi-bin/rikparse.cgi?color=1&size=1&style=classic&lineheight=3&Five-I-Quality-0.Fight-M-Quality-1.Six-I-Source-0.Four-I-Quality-1.Tree-N-Instrument-2.Two-I-Source-0.Two-I-Quality-1.Number-N-Instrument-1.Three-I-Source-0.Zero-I-Quality-1.Sun-N-Instrument-1.Span-I-End-3" />
+</td>
+    </tr>
+</table>
+<p>
+For instance, to say the date "the 21st day of the 16th block of the 46th year 
+in the cycle of War in the 5th great-cycle",  the "Span" morpheme collects 
+<a href="dictionary/Tree.html">Tree</a> (to make <a href="dictionary/Tree-N-Instrument-0_Span-I-End-1.html">Year</a>),
+<a href="dictionary/Number.html">Number</a> (to make <a href="dictionary/Number-N-Instrument-0_Span-I-End-1.html">Block</a>),
+and <a href="dictionary/Sun.html">Sun</a> (to make <a href="dictionary/Sun-N-Instrument-0_Span-I-End-1.html">Day</a>).
+Sun in turn collects morphemes meaning "21", and Block collects "16".  Tree
+collects "46" to indicate the year, as well as "5th fight" indicating the
+cycle and great-cycle.
+</p>
+<p>
+A page showing the <a href="http://suberic.net/~dmm/cgi-bin/rrikdate.cgi">current date and time in Rikchik units</a> is available.
+</p>
+</body>
+</html>

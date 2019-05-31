@@ -1,0 +1,263 @@
+<html>
+<head>
+    <title>Rikchik Language Reference: Collectors</title>
+</head>
+<body bgcolor="white">
+<h1>Collectors</h1>
+<center>
+    <table bgcolor="#cccccc">
+	<tr>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&color=on&message=Move-V-End-0">
+</td>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&color=on&message=Me-R-Patient-0.Move-V-End-1">
+</td>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&color=on&message=Beach-P-Destination-0.Me-R-Patient-0.Move-V-End-2">
+</td>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&color=on&message=Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0.Move-V-End-3">
+</td>
+	</tr>
+	<tr>
+	    <td align="center" valign="top"><font size="-1">Going.</font></td>
+	    <td align="center" valign="top"><font size="-1">I go.</font></td>
+	    <td align="center" valign="top"><font size="-1">I go to<br>the beach.</font></td>
+	    <td align="center" valign="top"><font size="-1">I go from<br>home to the<br>sunny beach.</font></td>
+	</tr>
+	<tr>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Move-V-End-0">
+</td>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Me-R-Patient-0.Move-V-End-1">
+</td>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Beach-P-Destination-0.Me-R-Patient-0.Move-V-End-2">
+</td>
+<td align="center" valign="bottom" bgcolor="white">
+<img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0.Move-V-End-3">
+</td>
+	</tr>
+    </table>
+</center>
+<!-- <p>
+The "collector" in a rikchik <a href="word.html">word</a> is the <a href="tentacle.html">tentacle</a> in the lower right.  It indicates how many of the previously uncollected words this word collects.
+-->
+<p>
+A rikchik sentence has a tree structure, where the final word is connected to
+some number of previous words, which are in turn connected to other words,
+all the way out to the leaf words, which have no further connections. 
+The connections are specified by the "collector" 
+<a href="tentacle.html">tentacle</a> in the lower right part of the 
+<a href="word.html">word</a>.  The shape of the collector indicates how many
+of the previously uncollected words this word collects, creating a connection
+with each one.  The meaning of the created connection is specified by the
+<a href="relation.html">relation</a> of the collected word.
+<p>
+<table bgcolor="#cccccc" align="right">
+    <tr>
+	<td align="center" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&color=on&message=Home-P-Source-0">
+	</td>
+	<td align="left" valign="top">
+	    <font size="-1">
+		Home-P-Source-0
+	    </font>
+	</td>
+	<td align="left" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Home-P-Source-0">
+	</td>
+    </tr>
+    <tr>
+	<td align="center" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&color=on&message=Sun-R-Quality-0">
+	</td>
+	<td align="left" valign="top">
+	    <font size="-1">
+		Home-P-Source-0<br>Sun-R-Quality-0
+	    </font>
+	</td>
+	<td align="left" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Home-P-Source-0.Sun-R-Quality-0">
+	</td>
+    </tr>
+    <tr>
+	<td align="center" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&color=on&message=Beach-P-Destination-1">
+	</td>
+	<td align="left" valign="top">
+	    <font size="-1">
+		Home-P-Source-0<br>Sun-R-Quality-0<br>Beach-P-Destination-1
+	    </font>
+	</td>
+	<td align="left" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1">
+	</td>
+    </tr>
+    <tr>
+	<td align="center" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&color=on&message=Me-R-Patient-0">
+	</td>
+	<td align="left" valign="top">
+	    <font size="-1">
+		Home-P-Source-0<br>Sun-R-Quality-0<br>Beach-P-Destination-1<br>Me-R-Patient-0
+	    </font>
+	</td>
+	<td align="left" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0">
+	</td>
+    </tr>
+    <tr>
+	<td align="center" valign="top" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&color=on&message=Move-V-End-3">
+	</td>
+	<td align="left" valign="top">
+	    <font size="-1">
+		Home-P-Source-0<br>Sun-R-Quality-0<br>Beach-P-Destination-1<br>Me-R-Patient-0<br>Move-V-End-3
+	    </font>
+	</td>
+	<td align="left" valign="bottom" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0.Move-V-End-3">
+	</td>
+    </tr>
+</table>
+<table align="left" bgcolor="#cccccc">
+<tr><td><img src="../images/classic/3/colorc0.png"></td><td><strong> 0</strong></td></tr>
+<tr><td><img src="../images/classic/3/colorc1.png"></td><td><strong> 1</strong></td></tr>
+<tr><td><img src="../images/classic/3/colorc2.png"></td><td><strong> 2</strong></td></tr>
+<tr><td><img src="../images/classic/3/colorc3.png"></td><td><strong> 3</strong></td></tr>
+<tr><td><img src="../images/classic/3/colorc4.png"></td><td><strong> 4</strong></td></tr>
+<tr><td><img src="../images/classic/3/colorc5.png"></td><td><strong> 5</strong></td></tr>
+<tr><td><img src="../images/classic/3/colorc6.png"></td><td><strong> 6</strong></td></tr>
+<tr><td><img src="../images/classic/3/colorc7.png"></td><td><strong> 7</strong></td></tr>
+<tr><td><img src="../images/classic/3/colorcS.png"></td><td><strong> S</strong></td></tr>
+</table>
+The table on the left shows the number of words collected for each collector.
+The "S" entry is the "scholastic" collector, which is described below.
+<p>
+The table on the right illustrates how a sentence is formed into a tree from
+a sequence of words.   The sentence is "I go from home to the sunny beach"
+in English, or "Home-P-Source-0 Sun-R-Quality-0 Beach-P-Destination-1
+Me-R-Patient-0 Move-V-End-3" in rikchik.  Each row shows a written word,
+the sentence in ascii form up to that point, and the tree structure for
+the sentence up to that point.
+<p>
+The first two words, "from home" and "sunny", have "0" collectors, and thus 
+they are new leaf words.
+The third word, "to the beach", has a "1" collector and so collects the 
+previous word, creating a branch signifying "to the sunny beach".
+The fourth word, "I",  has a "0" collector and is therefore another new leaf.  
+The last word, "go", has a "3" collector, so it collects the three previous 
+uncollected words: the "from home" leaf, the "to the sunny beach" branch, and 
+the "I" leaf.  The last word has an "End" relation, so it completes the
+sentence and cannot be collected by later words.
+<br clear="left">
+<p>
+<strong>Scholastic collector:</strong> The "scholastic" collector 
+(<img src="../images/classic/3/colorcS.png">) indicates that this word 
+collects the uncollected leaves directly before it, up to the first non-leaf
+before it.  (This collector is so named because a large collection of rikchik
+children with a single adult is usually a school class.  Rikchiks do not 
+generally have very many children.)
+<br clear="right">
+<p>
+<table align="right" bgcolor="#cccccc">
+    <tr>
+	<td bgcolor="white" rowspan="3">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=2&lineheight=5&color=on&message=Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0.Move-V-End-3.Beach-P-Agent-0P.Me-R-Patient-0.Happy-V-End-2">
+	</td>
+	<td valign="top" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?size=1&color=on&message=Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0.Move-V-End-3.Beach-P-Agent-0P.Me-R-Patient-0.Happy-V-End-2">
+	</td>
+    </tr>
+    <tr>
+	<td><font size="-1">
+	    Home-P-Source-0 Sun-R-Quality-0<br>
+	    Beach-P-Destination-1 Me-R-Patient-0<br>
+	    Move-V-End-3 Beach-P-Agent-0P<br>
+	    Me-R-Patient-0 Happy-V-End-2
+	</font></td>
+    </tr>
+    <tr>
+	<td><font size="-1">
+	    I go from home to the <br>
+	    sunny beach.  That beach <br>
+	    makes me happy.
+	</font></td>
+    </tr>
+</table>
+<strong>Pronomial collectors:</strong> The collector's position is also
+meaningful.  If the collector is positioned above the lower right corner
+(but not as high as the right center point), the word is a "pronomial" word
+and refers to the same concept signified by the previously mentioned word
+having the same morpheme.  (In ascii form this is expressed by adding a "P"
+to the collector number.)
+<p>
+As an example, if the sentence "I go from home to the sunny beach" from above
+is followed by the sentence "Beach-P-Agent-0P Me-R-Patient-0 Happy-V-End-2",
+the pronomial collector on Beach-P-Agent-0P makes its meaning "the previously
+mentioned beach" or "that beach", and the entire second sentence can be
+translated as "That beach makes me happy."
+<br clear=right>
+<p>
+<table align="right" bgcolor="#cccccc">
+    <tr>
+	<td rowspan="3" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?color=on&size=2&style=classic&lineheight=6&Home-P-Source-0.Sun-R-Quality-0.Beach-P-Patient-1.Wind-R-Quality-0.Beach-P-Patient-1.Gather-P-Destination-2.Me-R-Patient-0.Move-V-End-3.Sun-R-Quality-0O.Beach-P-Agent-1P.Me-R-Patient-0.Happy-V-End-2">
+	</td>
+	<td valign="top" bgcolor="white">
+	    <img src="http://www.suberic.net/~dmm/cgi-bin/rikparse.cgi?color=on&size=1&style=classic&lineheight=5&Home-P-Source-0.Sun-R-Quality-0.Beach-P-Patient-1.Wind-R-Quality-0.Beach-P-Patient-1.Gather-P-Destination-2.Me-R-Patient-0.Move-V-End-3.Sun-R-Quality-0O.Beach-P-Agent-1P.Me-R-Patient-0.Happy-V-End-2">
+	</td>
+    </tr>
+    <tr>
+	<td><font size="-1">
+	    Home-P-Source-0 Sun-R-Quality-0<br>
+	    Beach-P-Patient-1 Wind-R-Quality-0<br>
+	    Beach-P-Patient-1 Gather-P-Destination-2<br>
+	    Me-R-Patient-0 Move-V-End-3<br>
+	    Sun-R-Quality-0O Beach-P-Agent-1P<br>
+	    Me-R-Patient-0 Happy-V-End-2
+	</font></td>
+    </tr>
+    <tr>
+	<td><font size="-1">
+	    I go from home to the sunny beach<br>
+	    and the windy beach.  That sunny <br>
+	    beach makes me happy.
+	</font></td>
+    </tr>
+</table>
+<strong>Option-Pronomial collectors:</strong> If the collector is positioned
+at the right center point of the word, the word is an "option-pronomial"
+word.  These words are used in conjunction with pronomial words to specify
+an antecedent other than the previous occurrence of the morpheme.  The
+pronomial word and any option-pronomial words it collects (and any
+that they collect, etc.) matches the antecedent which collects words
+with the same morphemes.
+<p>
+Consider this modification of the example sentence:
+"Home-P-Source-0 Sun-R-Quality-0 Beach-P-Patient-1 Wind-R-Quality-0 
+Beach-P-Patient-1 Gather-P-Destination-2 Me-R-Patient-0 Move-V-End-3" /
+"I go from home to the sunny beach and the windy beach."  If this is followed
+by the sentence "Beach-P-Agent-0P Me-R-Patient-0 Happy-V-End-2" /
+"That beach makes me happy.", the beach referred to would be the windy one.
+If instead the sentence "Sun-R-Quality-0O Beach-P-Agent-1P Me-R-Patient-0 
+Happy-V-End-2" / "That sunny beach makes me happy." follows, the sunny
+beach is specifically indicated.
+<p>
+<strong>Odd antecedents:</strong> Pronomial words can refer to any
+previous word, including those signed by other people.  In storytelling,
+pronomials within dialogue can reference words in the narration.  Most
+surprisingly, pronomials can refer to concepts in the surrounding world
+that have not been described in words, if it is clear that, were the
+events being narrated, that concept would have been recently mentioned.
+This is understood to be due to the rikchik passion for storytelling,
+to the degree that rikchiks often consider themselves to be living in
+a story.  These "narrator antecedents" can be unclear, and when being
+precise, it is safer to point and say something like, "Tentacle-V-Means-0
+Rikchik-R-End-0" / "the pointed-at rikchik".
+
+</body>
+</html>
