@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <img src="/~dmm/cgi-bin/rikchik.cgi?Rikchik-Patient-T-0.Human-Agent-R-1" align=left>
+    Rikchik-Patient-T-0<br>Human-Agent-R-1
+    <br clear=left>
+    <form action="/~dmm/cgi-bin/riktype.cgi" method=post>
+      <input type="hidden" name = "previous" value="Rikchik-Patient-T-0">
+      <select name = glyph>
+	<option > Rikchik
+	<option > Human
+      </select>-<select name = relation>
+	<option> Patient
+	<option> Agent
+      </select>-<select name = form>
+	<option> R
+	<option> T
+      </select>-<select name = collector>
+	<option> 0
+	<option> 1
+      </select> 
+      <input type="radio" name="pron" value="N" checked>
+      <input type="radio" name="pron" value="P">P 
+      <input type="radio" name="pron" value="O">O
+      <p>
+      Or enter full ascii form: <input type=text name=ascii value="" size = 40>
+    </form>
+  </body>
+</html>

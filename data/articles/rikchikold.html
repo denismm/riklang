@@ -1,0 +1,269 @@
+<html><head>
+<title>Rikchik Language</title>
+</head><body>
+<img src="/~dmm/cgi-bin/rikchik.cgi?Rikchik-Agent-N-0_Talk-End-I-1" align=right><h1>Rikchik Language</h1>
+  The <a href="intro.html">rikchiks</a> speak in what would be called
+  sign language by humans.  The rikchiks use 7 of their tentacles
+  to speak with, putting each tentacle into a given shape and position to
+  form a word.  A sequence of words is assembled 
+  within the rikchik mind into a tree-like sentence structure.
+  <p>
+  There is now an incomplete but hopefully much clearer
+  <a href="language/language.html">language reference</a> available.
+  <ul>
+    <li><a href="#words">Words</a> <ul>
+      <li><a href="#glyph">Glyph</a>
+      <li><a href="#relation">Relation</a>
+      <li><a href="#form">Form</a>
+      <li><a href="#collector">Collector</a>
+      <li><a href="#ascii">Ascii form</a>
+    </ul>
+    <li><a href="#sentences">Sentences</a> <ul>
+      <li><a href="#terms">Terms</a>
+      <li><a href="#structure">Tree Structure</a>
+      <li><a href="#meaning">Tree Meaning</a>
+    </ul>
+  </ul>
+  <h2><a name="words">Words</a></h2>
+    Each word consists of 4 parts:
+    <ul>
+      <li>Glyph: basic concept (4 tentacles)
+      <li>Relation: relationship to collecting word (1 tentacle)
+      <li>Form: &quot;part of speech&quot; (1 tentacle)
+      <li>Collector: number of previously uncollected words collected (1 
+	tentacle)
+    </ul>
+    <h3><a name="glyph">Glyph</a></h3>
+      A central, 4-tentacle symbol representing the basic concept of the word.
+      See <a href="glyphdict.html">the glyph catalog</a> or 
+      <a href="glyphlist.html">the glyph quick-reference</a>.
+    <h3><a name="relation">Relation</a></h3>
+      A 1-tentacle symbol on the top representing the connection this word has
+      to the word that will collect it.  Rikchiks learn these using a diagram,
+      shown below, about which <a href="rdiagram.html">more
+      information is available.<br>
+      <img src="images/RDiagram.png" alt="(Diagram)"></a>
+      <br>
+      Below is a list of relations.  In parentheses, the connection is
+      explained using <em>T</em> to refer to the word tagged with
+      this relation and using <em>C</em> to refer to the word collecting it.
+      <dl>
+	<dt><strong>Primary relations</strong>
+	  <dd><img src="images/5/rAgent.png" alt="(relation)"> Agent (T does C)
+	  <br><img src="images/5/rSource.png" alt="(relation)"> Source, Cause 
+	    (C is from T, C is because of T)
+	  <br><img src="images/5/rInstrument.png" alt="(relation)"> Instrument
+	    (something does C using T)
+	  <br><img src="images/5/rQuality.png" alt="(relation)"> Quality (C is T-like)
+	  <br><img src="images/5/rDestination.png" alt="(relation)"> Destination (C toward T)
+	  <br><img src="images/5/rPatient.png" alt="(relation)"> Patient
+	    (something does C to T)
+	  <br><img src="images/5/rIncludes.png" alt="(relation)"> Container
+	    (T contains, includes, or owns C)
+	  <br><img src="images/5/rEnd.png" alt="(relation)"> End-concept
+	    (T is considered resolved and cannot be directly collected.)
+	<dt><strong>Reciprocal relations</strong> (not used as often)
+	  <dd><img src="images/5/rTask.png" alt="(relation)"> Task (C does T)
+	  <br><img src="images/5/rResult.png" alt="(relation)"> Result (T is because of C)
+	  <br><img src="images/5/rExample.png" alt="(relation)"> Example (T is C-like)
+	  <br><img src="images/5/rMeans.png" alt="(relation)"> Means (T toward C)
+	  <br><img src="images/5/rActor.png" alt="(relation)"> Actor (something does T to C)
+	  <br><img src="images/5/rElement.png" alt="(relation)"> Element
+	    (C contains, includes, or owns T)
+      </dl>
+      See <a href="rdiagram.html">the relation diagram</a> for more relation 
+      explanation.
+    <h3><a name="form">Form</a></h3>
+      A 1-tentacle symbol on the lower left representing the &quot;part 
+      of speech&quot; of the word.
+      <ul>
+	<li><img src="images/5/fR.png" alt="(form)"> Animate Noun:
+	  used for living things and self-propelled machinery.
+	<li><img src="images/5/fT.png" alt="(form)"> Inanimate Noun:
+	  used for non-living things, including dead things.
+	<li><img src="images/5/fV.png" alt="(form)"> Verb
+	<li><img src="images/5/fM.png" alt="(form)"> Modifier (adjective/adverb)
+	<li><img src="images/5/fN.png" alt="(form)"> Name:
+	  replaces the form in a descriptive name to mark it as a name.
+	<li><img src="images/5/fP.png" alt="(form)"> Place: may include time?
+	<li><img src="images/5/fI.png" alt="(form)"> Idea:
+	  any non-tangible noun that is not a place.
+      </ul>
+    <h3><a name="collector">Collector</a></h3>
+      A 1-tentacle symbol on the lower left representing how many unresolved 
+      words this word will collect.
+      <ul>
+	<li><img src="images/5/n0.png" alt="(collector)"> 0 (this word stands alone)
+	<li><img src="images/5/n1.png" alt="(collector)"> 1
+	<li><img src="images/5/n2.png" alt="(collector)"> 2
+	<li><img src="images/5/n3.png" alt="(collector)"> 3
+	<li><img src="images/5/n4.png" alt="(collector)"> 4
+	<li><img src="images/5/n5.png" alt="(collector)"> 5
+	<li><img src="images/5/n6.png" alt="(collector)"> 6
+	<li><img src="images/5/n7.png" alt="(collector)"> 7
+	<li><img src="images/5/nS.png" alt="(collector)">
+	  <a href="notes.html#scholastic">Scholastic</a> (collect all 
+	  immediately-preceding 0-collecting words)
+      </ul>
+      <p>
+      The collector's position can also indicate the &quot;pronomial&quot;
+      status of the word.  When this tentacle is in the &quot;SE&quot;
+      position, it does not indicate pronomialness.  When this tentacle is 
+      in the &quot;ESE&quot; position (slightly above the usual position), 
+      it indicates that this word indicates the same thing/concept as the 
+      previous word mentioned by this speaker using this word's glyph.
+      Occasionally that will not be sufficiently specific; one might wish
+      to refer to an occurence other than the previous one.  In that case,
+      this tentacle can be placed in the &quot;E&quot; 
+      position (directly to the right of the word), which indicates a
+      modifier to a multipart pronomial.
+      See the <a href="#sentences">sentence structure section</a> for
+      more details about collectors.
+    <h3><a name="ascii">Ascii form</a></h3>
+      The original human xenolinguists studying rikchik language found it 
+      necessary to be able to write rikchik words and sentences in
+      plain text.  They came up with a simple system.  Each word is
+      represented as a 4-part structure:
+      <blockquote>
+	Rikchik-Patient-R-3
+      </blockquote>
+      <ul>
+        <li>The first part is the single-word meaning (or approximation 
+	  thereto) of the glyph.  
+	<li>The second part is the single-word name of the relation.
+	<li>The third part is the single-letter abbreviation for the form.
+	  They are:<br>
+	    R(Rikchik) for Animate Noun<br>
+	    T(Thing) for Inanimate Noun<br>
+	    V for Verb<br>
+	    M for Modifier<br>
+	    N for Name<br>
+	    P for Place<br>
+	    I for Idea
+	<li>The fourth part is the code for the Collector, either a number
+	  from 0 to 7 or S.  P or O, for the pronomial and 
+	  option-pronomial, may be appended to the Collector as appropriate.
+      </ul>
+
+  <h2><a name="sentences">Sentences</a></h2>
+    Rikchik sentences are written from top to bottom, left to right.
+    However, they have a grammatical structure that humans describe as a
+    &quot;tree&quot;.  A tree is a structure of points and lines where
+    each point except the bottom one is connected to one and only one
+    point below it.  In rikchik sentence trees, the role of points
+    is filled by words.  The collector tentacle determines the number
+    of lines entering a word, and the relation tentacle determines the
+    meaning of a line.  Basically, each word modifies the word that
+    collects it in some way.
+    <h3><a name="terms">Terms</a></h3>
+      In rikchik grammar, a single symbol, consisting of 7 tentacles, is
+      a &quot;word&quot;.  A word that is at the top of a tree (no connections
+      from words above it) can be referred to as a &quot;leaf&quot;.  Words
+      that are not leaves have some number of words connected above them.
+      We say that such a word &quot;collects&quot; the words above it.
+      The meaning of the connection between words is expressed by the
+      Relation tentacle, so those connections are referred to as 
+      &quot;relations&quot;.  We also say that the upper word 
+      &quot;relates&quot; to the lower word in a certain way.
+      Words that have the relation End do not get collected.  If a word
+      has some other relation and has not been collected yet, we call
+      that word &quot;unresolved&quot;.
+    <h3><a name="structure">Tree Structure</a></h3>
+      Each word has a Collector tentacle that describes how that word
+      affects the tree structure.  The tentacle is associated with a
+      number that says how many currently unresolved words that word
+      collects.<p>
+      As an example, take the sentence on the right.  It means, 
+      &quot;A happy rikchik moves along the east-flowing water&quot;.
+      (Note: the colored Form, Collector, and Relation tentacles are
+      not necessary and are included here as an aide to the learner.)
+      <img src="/~dmm/cgi-bin/riksmallcolor.cgi?Happy-Quality-M-0_Rikchik-Patient-R-1_Sun-Source-P-0_Water-Instrument-P-1_Move-End-V-2" 
+	  alt="Example Sentence" align=right>
+      <ul>
+	<br clear=left>
+	<li>
+	<img src="images/h.png" align = left>
+	The first glyph, Happy-Quality-M-0, creates a new leaf.  
+	<br clear=left> 
+	<li>
+	<img src="images/hr.png" align = left>
+	The second, Rikchik-Patient-R-1, collects one unresolved word.
+	The previous unresolved word is Happy, so Rikchik collects that.  The
+	sentence tree now consists of Rikchik collecting Happy.
+	<br clear=left> 
+	<li>
+	<img src="images/hrs.png" align = left>
+	The third, Sun-Source-P-0, is another leaf.  There are now two
+	unconnected structures in the sentence. (Note: Sun, when coded as
+	a P (place), means &quot;East&quot;.)
+	<br clear=left> 
+	<li>
+	<img src="images/hrsw.png" align = left>
+	The fourth, Water-Instrument-P-1, collects one unresolved
+	word.  There are two unresolved words available, Rikchik and Sun.
+	Sun is the most recent, so it is collected.  The sentence still
+	consists of two separate structures: Rikchik collecting Happy, and
+	Water collecting Sun.
+	<br clear=left> 
+	<li>
+	<img src="images/hrswm.png" align = left>
+	The fifth, Move-End-V-2, collects two unresolved words.  It 
+	collects both words, and the sentence is a single structure.  This
+	word has the End relation, so no unresolved words remain.
+	<br clear=left>
+      </ul>
+      The rikchik language has one departure from strict tree structure.
+      That departure is the pronomial, a modification of the Collector
+      tentacle.  By putting the Collector in a slightly higher position,
+      the speaker or writer indicates that the word so tagged is referring
+      to the same thing the previous word using that glyph referred to.
+      So, if you want to say something else about the same rikchik that we
+      just described going along the river, you could simply use the same
+      glyph with a pronomial, as in Rikchik-Agent-R-0P &quot;the previous
+      rikchik&quot;:
+      <br><img src="/~dmm/cgi-bin/riksmallcolor.cgi?Rikchik-Agent-R-0P"
+	  align=center><br>
+      The slightly raised position, called the &quot;pronomial&quot;,
+      refers to the previous use of that glyph by the
+      same speaker.  If you wished to refer to the previous use of a 
+      multi-glyph structure, you would specify the modifiers to the
+      root glyph with the &quot;option-pronomial&quot;, which is an 
+      even more raised position.
+      Here is Happy-Quality-M-0O Rikchik-Agent-R-1P &quot;the previous
+      happy rikchik&quot;:
+      <br><img src="/~dmm/cgi-bin/riksmallcolor.cgi?Happy-Quality-M-0O.Rikchik-Agent-R-1P"
+	  align=center><br>
+      A final note about pronomials: the pronomial refers to the previous
+      word of that glyph.  The non-glyph tentacles do <strong>not</strong>
+      have to agree: one could pronomially refer to the water that was a
+      place in the previous sentence as an inanimate noun.
+    <h3><a name="meaning">Tree Meaning</a></h3>
+      The meaning of the parts of a tree is determined by the Relation
+      tentacle.  A Relation indicates how the word it is part of modifies
+      or describes the word that will collect it.  The most obvious use
+      of Relations is to specify the roles of words collected by a verb:
+      the subject is tagged as an Agent, the direct object as (usually)
+      a Patient, and so on.  Relations are used for all connections,
+      however.  At some points more examples will be here.
+      <p>
+      Notice that what Relations do in the rikchik language is what 
+      word order does in many human languages.  Word order is not 
+      generally vital to the meaning of a Rikchik sentence.  The 
+      exception is when dealing with time, which is 
+      <a href="time.html">discussed elsewhere</a>.
+  <h2>Online rikchik typewriter</h2>
+    A <a href="/~dmm/cgi-bin/riktype.cgi?">rikchik typewriter</a> is
+    available online.
+
+<hr>
+<address>
+<img src="images/smalladdress.png" alt = "" align=left>
+  Last modified January 29, 2003 by <a href="../dmm.html">Denis Moskowitz</a>.
+  Word assembly program utilizes 
+  <a href="http://www.boutell.com/gd/">gd</a>, a graphics library, and
+  <a href="http://www-genome.wi.mit.edu/ftp/pub/software/WWW/GD.html">GD.pm</a>,
+  a perl interface to gd. gd is &copy; 1994, 1995, Quest Protein Database 
+  Center, Cold Spring Harbor Labs.  GD.pm is &copy; 1995, Lincoln D. Stein.
+  Both are used with permission.
+</address>
+</body></html>

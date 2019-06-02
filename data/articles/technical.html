@@ -1,0 +1,180 @@
+<html>
+    <head>
+	<title>Rikchik: technical notes</title>
+    </head>
+    <body>
+    <h1>Technical Notes</h1>
+    <p>
+    I use a bunch of behind-the-scenes technology to get Rikchik to look as 
+    nice as it does, and to help keep track of it all.  This page describes
+    my system, for the benefit of others wanting to do similar things and for
+    the curious.
+    </p>
+    <h2>Overview</h2>
+    <p>
+    The data for the rikchik language is stored in an XML file.
+    This XML file is parsed to create the dictionary pages, the postscript
+    libraries and references, and the component images.  The component images
+    are assembled into words and sentences by a CGI script, on the fly.
+    </p>
+    <h2>XML</h2>
+    <p>
+    The data for rikchik is stored in a single large XML file, though I have
+    an "exploded" version scattered across ~300 directories to make it more
+    tractable.  As of 5 Chaos 9, 14-Block 7, this XML file is 125K.  It's
+    split up into the various components of Rikchik: 
+    <a href="language/morpheme.html">morphemes</a>, 
+    <a href="language/aspect.html">aspects</a>,
+    <a href="language/relation.html">relations</a>, and 
+    <a href="language/collector.html">collectors</a>.  (The symbols such as 
+    <a href="http://suberic.net/~dmm/rikchik/math/numbers.html">the numerals</a> 
+    are also stored here for convenience.)
+    A lot of this data is definition information for
+    use in 
+    <a href="http://suberic.net/~dmm/rikchik/language/dictionary.html">the 
+    dictionary pages</a>, including the various readings and roles
+    for a morpheme, compound words, and occasionally etymologies.
+    Naturally there's a lot more definition information in the morpheme 
+    section.  
+    </p>
+    <table align="right" style="border:2px solid black">
+	<tr>
+	<td>
+	    <img src="images/classic/5/mWant.png"/>
+	</td>
+	<td>
+<pre>
+&lt;glyph&gt;
+  &lt;squiggle d=&quot;0&quot; r1=&quot;10&quot; x=&quot;50&quot; 
+      x2=&quot;50&quot; y=&quot;-30&quot; y2=&quot;-70&quot;/&gt;
+  &lt;circle r1=&quot;10&quot; x=&quot;30&quot; y=&quot;-70&quot;/&gt;
+  &lt;circle r1=&quot;5&quot; x=&quot;75&quot; y=&quot;-25&quot;/&gt;
+  &lt;ellarc r=&quot;1&quot; a1=&quot;270&quot; a2=&quot;360&quot; 
+      r1=&quot;30&quot; r2=&quot;40&quot; x=&quot;50&quot; y=&quot;-40&quot;/&gt;
+&lt;/glyph&gt;
+</pre>
+	</td></tr>
+	<tr><td colspan="2" align="center">The glyph definition for Want</td></tr>
+    </table>
+    <p>
+    Each individual component also includes a &lt;glyph&gt; section 
+    which describes the appearance
+    of that component.  Glyphs are made up of tentacles, of which there are 13
+    types such as "circle", "squiggle", "wicket", and "halfhook".  Morphemes
+    each include 4 tentacles, and other components just have 1.  Glyphs are
+    laid out on a 100x100 grid, with each kind of component having a certain
+    area available to it.  The order of the tentacles in a morpheme indicate 
+    which tentacle a rikchik uses to sign each piece of the glyph - this data
+    is used in the cursive libraries.
+    </p>
+    <p>
+    When I create a new morpheme, I sketch it out on a whiteboard and then 
+    start assigning tentacles to it.  It's pretty straightforward to type
+    the XML in directly.  Then I fill in some of the definition fields, 
+    re-compress the XML file from the exploded version, and run the rest of
+    the process to update the various pieces of the system.
+    </p>
+    <p>
+    The XML master file is kept in "rikchik" order, to allow the dictionary
+    to use 
+    <a href="http://suberic.net/~dmm/rikchik/language/quicklist.html">that 
+    sorting</a> in addition to alphabetical.
+    </p>
+    <h2>XSL</h2>
+    <p>
+    The dictionary is maintained using a number of XSL scripts.  These create
+    the main dictionary indexes, the sub-pages, etc.  They were mostly written
+    by my brother so I don't have much to say about them - they work, and
+    that's good.  All the rikchik images that appear in the dictionary use
+    the component images or the word assembly cgi script, described below.
+    </p>
+    <h2>PostScript</h2>
+    <p>
+    A perl script reads in the xml file and creates a postscript file, 
+    <a href="ps/ps.html">rikchik.ps</a>, containing all the components 
+    of the language.  This file
+    is effectively a rikchik library for the postscript programming language -
+    it doesn't actually draw anything.  This file pulls in a library I wrote
+    which knows how to draw each type of tentacle, as well as how to draw the
+    various type styles.  I used to maintain this file separately by hand - 
+    this way is definitely better.
+    </p>
+    <p>
+    Another perl script reads the .ps file and creates 
+    <a href="ps/reference.ps">reference.ps</a>, a document showing each 
+    component and its name.  It then uses ghostscript
+    to make <a href="ps/reference.pdf">a pdf version</a>.  This file uses 
+    the "classic" type style.
+    </p>
+    <table align="right" style="border:2px solid black">
+	<tr><td>
+	    <table width="100%">
+	    <tr>
+	    <td><img src="images/classic/2/mWant.png"/></td>
+	    <td><img src="images/blunt/2/mWant.png"/></td>
+	    <td><img src="images/pointy/2/mWant.png"/></td>
+	    </tr>
+	    </table>
+	</td></tr>
+	<tr><td>
+	    <table width="100%">
+	    <tr>
+	    <td><img src="images/classic/1/aR.png"/></td>
+	    <td><img src="images/classic/2/aR.png"/></td>
+	    <td><img src="images/classic/3/aR.png"/></td>
+	    <td><img src="images/classic/5/aR.png"/></td>
+	    </tr>
+	    </table>
+	</td></tr>
+	<tr><td>
+	    <table width="100%">
+	    <tr>
+	    <td><img src="images/classic/5/coloraR.png"/></td>
+	    <td><img src="images/classic/5/colorrAgent.png"/></td>
+	    <td><img src="images/classic/5/colorc3.png"/></td>
+	    </tr>
+	    </table>
+	</td></tr>
+	<tr><td align="center">Component images</td></tr>
+    </table>
+    <h2>Component images</h2>
+    <p>
+    Yet another perl script reads in rikchik.ps and draws the component 
+    images.  Each component in rikchik is rendered into a png file, once for 
+    each type style (classic, blunt, and pointy) and each size (1, 2, 3, and 
+    5).  The non-morpheme components are also rendered both in black and in 
+    their appropriate color for the "learning" mode.  The script does this 
+    by creating small postscript files that draw the component in the 
+    required size, style, and color, and calling ghostscript to render them 
+    as images.  These component images are put into an organized directory 
+    structure.  This script takes a while to draw everything, so it's written
+    to allow me to just redraw certain components as needed.  
+    </p>
+    <h2>Word assembly</h2>
+    <table align="right" style="border:2px solid black">
+    <tr>
+    <td align="center"><img src="http://suberic.net/~dmm/cgi-bin/rikchik.cgi?size=5&style=blunt&Want-V-End-0"/></td>
+    </tr>
+    <tr>
+    <td>http://suberic.net/~dmm/cgi-bin/rikchik.cgi?size=5&style=blunt&Want-V-End-0</td>
+    </tr>
+    </table>
+    <p>
+    The actual word and sentence images that I use are created on-demand by
+    a perl CGI script using the GD library to combine the component images
+    into full rikchik words.  It supports the various sizes and styles, as
+    well as wrapping lines vertically.
+    </p>
+    <p>
+    A similar script takes the same input and diagrams the sentence or 
+    sentences, including dealing with pronomials.  
+    </p>
+    <br clear="all">
+    <hr/>
+    <address>
+    Last modified Fire-day, 5 Chaos 9, 14-Block 9 (Wed Feb 15 2006)
+    by <a href="../dmm.html">Denis Moskowitz</a>.
+    Rikchik language and culture by Denis Moskowitz.
+    </address>
+    </body>
+</html>
