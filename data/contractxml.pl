@@ -8,7 +8,7 @@ my @elements = qw(morphemes aspects relations collectors symbols glyph addition 
 my %elementvals;
 for (my $i = 0; $i < @elements; $i++){
     $elementvals{$elements[$i]} = $i;
-} 
+}
 my $startdir = shift || 'language';
 
 my $xmlRef = &contract_dir($startdir);
@@ -47,14 +47,17 @@ sub contract_dir{
 }
 
 sub by_dtd{
-    #print "$a\t$b\t".($elementvals{$a} <=> $elementvals{$b})."\n";
     my ($aval, $bval) = ($a, $b);
     if ($aval =~ /^(.*)\.xml$/){
 	$aval = $1;
-    } 
+    }
     if ($bval =~ /^(.*)\.xml$/){
 	$bval = $1;
-    } 
-    return $elementvals{$aval} <=> $elementvals{$bval};
+    }
+    my $sorting = $elementvals{$aval} <=> $elementvals{$bval}
+        || $elementvals{$aval} cmp $elementvals{$bval}
+        || $aval <=> $bval || $aval cmp $bval;
+    # print STDERR "$a\t$b\t$sorting\n";
+    return $sorting
 }
 

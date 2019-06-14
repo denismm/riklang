@@ -22,12 +22,11 @@ sub sort_glyphs {
 sub by_glyph {
   #assumes $a and $b are references to morphemes.
     if ($a->get_type eq 'morpheme' && $b->get_type eq 'morpheme'){
-	#print &get_sortvalue($a).$a->get_attrib('name')."\t ".&get_sortvalue($b).$b->get_attrib('name')."\n";
 	return ((&get_sortvalue($a).$a->get_attrib('name'))
 		cmp
 		(&get_sortvalue($b).$b->get_attrib('name')));
     } else {
-	return ($a->get_type cmp $b->get_type);
+	return ($a->get_type cmp $b->get_type || $a->get_attrib('name') cmp $b->get_attrib('name'));
     }
 }
 
