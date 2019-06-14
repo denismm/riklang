@@ -1,5 +1,5 @@
 #!/bin/bash
-./contractxml.pl >! riklang.xml && ../generators/lexicon/makedict.pl
+./contractxml.pl >| riklang.xml && ../generators/lexicon/makedict.pl
 echo "lexicon ok"
 
 cd ../generators/script/
