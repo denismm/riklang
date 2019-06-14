@@ -15,3 +15,4 @@ system "echo 'return (' >> $jsondir/tentacles.js";
 system "$generate >> $jsondir/tentacles.js";
 system "echo '); }' >> $jsondir/tentacles.js";
 #system "$generate | json_pp";
+system "wc -l $jsondir/tentacles.js";
