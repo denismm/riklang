@@ -891,28 +891,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Change" relation="Patientrec"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="T">
-              <translation>
-                <text>
-                  A lens.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Lens
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Book" relation="Instrument"/>
             </utterance>
           </addition>
@@ -929,6 +907,28 @@
           <gloss>
             <text>
               Reading-Lens
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Change" relation="Patientrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  A lens.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Lens
             </text>
           </gloss>
         </compound>
@@ -996,35 +996,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Number" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 23 rikchik days, or 21.5 Earth days.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a block.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Block
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Circle" relation="Instrument"/>
             </utterance>
           </addition>
@@ -1048,64 +1019,6 @@
           <gloss>
             <text>
               Cycle
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Sun" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 14 fire-spans, or 22.45 Earth hours.  One	    rikchik planetary day.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a day.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Day
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Fire" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 49 water-spans, or 96 Earth minutes.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a fire-span.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Fire-span
             </text>
           </gloss>
         </compound>
@@ -1142,21 +1055,21 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Zero" relation="Quality"/>
+              <word aspect="N" collector="0" morpheme="Fire" relation="Instrument"/>
             </utterance>
           </addition>
           <readings>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  New.
-                </text>
-              </translation>
-            </reading>
             <reading aspect="I">
               <translation>
                 <text>
-                  No amount of time, an instant.
+                  A unit of time equal to 49 water-spans, or 96 Earth minutes.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a fire-span.
                 </text>
               </translation>
             </reading>
@@ -1164,7 +1077,58 @@
           <roles/>
           <gloss>
             <text>
-              New
+              Fire-span
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Grass" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  Season (usually one of 3: Flower Season, Fire Season, or Sleep Season)
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Season
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Number" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 23 rikchik days, or 21.5 Earth days.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a block.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Block
             </text>
           </gloss>
         </compound>
@@ -1200,57 +1164,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Grass" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  Season (usually one of 3: Flower Season, Fire Season, or Sleep Season)
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Season
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
-              <word aspect="N" collector="0" morpheme="Water" relation="Instrument"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="I">
-              <translation>
-                <text>
-                  A unit of time equal to 49 rock-spans, or 118 earth seconds.
-                </text>
-              </translation>
-            </reading>
-            <reading aspect="M">
-              <translation>
-                <text>
-                  About as old as a water-span.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Water-span
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Seven" relation="Instrument"/>
             </utterance>
           </addition>
@@ -1274,6 +1187,35 @@
           <gloss>
             <text>
               Week
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 14 fire-spans, or 22.45 Earth hours.  One	    rikchik planetary day.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a day.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Day
             </text>
           </gloss>
         </compound>
@@ -1325,6 +1267,64 @@
           <gloss>
             <text>
               Year
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A unit of time equal to 49 rock-spans, or 118 earth seconds.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  About as old as a water-span.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Water-span
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Zero" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="M">
+              <translation>
+                <text>
+                  New.
+                </text>
+              </translation>
+            </reading>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  No amount of time, an instant.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              New
             </text>
           </gloss>
         </compound>
@@ -2313,28 +2313,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Sun" relation="Quality"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  Eastern-North: the direction 1/3 of the way from North to East.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Eastern-North
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Eye" relation="Quality"/>
             </utterance>
           </addition>
@@ -2351,6 +2329,28 @@
           <gloss>
             <text>
               Western-North
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Eastern-North: the direction 1/3 of the way from North to East.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Eastern-North
             </text>
           </gloss>
         </compound>
@@ -2390,28 +2390,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Sun" relation="Quality"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  Eastern-South: the direction 1/3 of the way from South to East.
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Eastern-South
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Eye" relation="Quality"/>
             </utterance>
           </addition>
@@ -2428,6 +2406,28 @@
           <gloss>
             <text>
               Western-South
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Sun" relation="Quality"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  Eastern-South: the direction 1/3 of the way from South to East.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Eastern-South
             </text>
           </gloss>
         </compound>
@@ -4160,28 +4160,6 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Fire" relation="Patientrec"/>
-            </utterance>
-          </addition>
-          <readings>
-            <reading aspect="P">
-              <translation>
-                <text>
-                  Desert
-                </text>
-              </translation>
-            </reading>
-          </readings>
-          <roles/>
-          <gloss>
-            <text>
-              Desert
-            </text>
-          </gloss>
-        </compound>
-        <compound>
-          <addition>
-            <utterance>
               <word aspect="N" collector="0" morpheme="Big" relation="Quality"/>
             </utterance>
           </addition>
@@ -4204,14 +4182,14 @@
         <compound>
           <addition>
             <utterance>
-              <word aspect="N" collector="0" morpheme="Water" relation="Includes"/>
+              <word aspect="N" collector="0" morpheme="Fire" relation="Patientrec"/>
             </utterance>
           </addition>
           <readings>
             <reading aspect="P">
               <translation>
                 <text>
-                  An island.
+                  Desert
                 </text>
               </translation>
             </reading>
@@ -4219,7 +4197,7 @@
           <roles/>
           <gloss>
             <text>
-              Island
+              Desert
             </text>
           </gloss>
         </compound>
@@ -4242,6 +4220,28 @@
           <gloss>
             <text>
               Mountain
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Water" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="P">
+              <translation>
+                <text>
+                  An island.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Island
             </text>
           </gloss>
         </compound>

@@ -39,6 +39,9 @@ sub contract_dir{
     if ($ref->get_type eq 'morphemes'){
 	@new_elems = riksort::sort_glyphs(@new_elems);
     }
+    if ($ref->get_type eq 'compounds'){
+	@new_elems = riksort::sort_compounds(@new_elems);
+    }
     foreach my $new_elem (@new_elems){
 	$ref->add_element($new_elem);
     }

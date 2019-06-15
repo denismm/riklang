@@ -4,7 +4,7 @@ use XMLLite;
 
 package riksort;
 #sorting structures.
-my @bits = ('circle', 'line', 'squiggle', 'arc', 'ellarc', 'greatarc', 
+my @bits = ('circle', 'line', 'squiggle', 'arc', 'ellarc', 'greatarc',
 	    'wicket', 'hook', 'lbend', 'halfhook', ,
 	    'zigzag',  'fishbend', 'lobe');
 my %bitvals;
@@ -30,7 +30,7 @@ sub by_glyph {
     }
 }
 
-sub get_sortvalue { 
+sub get_sortvalue {
   my $ref = shift @_;
   if ($sortvals{$ref}){
     return $sortvals{$ref};
@@ -42,7 +42,7 @@ sub get_sortvalue {
       push @vals, $bitvals{$tentRef->get_type};
     }
     @vals = sort @vals;
-    
+
     my $retVal = "";
     for (my $i=0; $i < @vals && $retVal == 0 ; $i++){
       $retVal .= chr($vals[$i]+ord('A'));
@@ -66,6 +66,31 @@ sub expand_sortvalue{
     push @name, "$n $bits[$j]".(($n>1)?"s":"");
   }
   return join ', ' , @name;
+}
+
+sub sort_compounds {
+    my @compound_list = @_;
+    return sort by_compound @compound_list;
+}
+
+sub get_words {
+    return $_[0]->get_element('addition')->[0]->get_element('utterance')->[0]->get_element('word');
+}
+sub by_compound {
+    my @a_addition = @{get_words($a)};
+    my @b_addition = @{get_words($b)};
+    my $i = 0;
+
+    while ($i < @a_addition && $i < @b_addition) {
+        my $a_word = $a_addition[-1 - $i];
+        my $b_word = $b_addition[-1 - $i];
+        # this should do rikchik sort but abc for now
+        my $sort = $a_word->get_attrib('morpheme')
+            cmp $b_word->get_attrib('morpheme');
+        return $sort if $sort != 0;
+        $i++;
+    }
+    return scalar (@a_addition) <=> scalar (@b_addition);
 }
 
 1;
