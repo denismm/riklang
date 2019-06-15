@@ -113,6 +113,14 @@
    <a href="{$href}"><xsl:value-of select="@name"/></a>&#xA0;<br/><br/>
  </xsl:template>
 
+ <xsl:template match="morpheme" mode="sublinkentry">
+   <xsl:variable name="href">
+     <xsl:apply-templates select="." mode="url"/>
+   </xsl:variable>
+   <a href="{$href}"><img src="http://www.suberic.net/~dmm/rikchik/images/classic/2/m{@name}.png" alt="{@name}" border="0" width="28" height="28"/></a><br/>
+   <a href="{$href}"><xsl:value-of select="@name"/></a>&#xA0;<br/><br/>
+ </xsl:template>
+
  <xsl:template match="morpheme/readings/reading" mode="basiclinkentry">
    <xsl:variable name="href">
      <xsl:apply-templates select="." mode="url"/>

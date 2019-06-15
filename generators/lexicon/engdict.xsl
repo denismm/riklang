@@ -60,7 +60,7 @@
       <xsl:message>Morpheme: <xsl:value-of select="normalize-space(@name)"/></xsl:message>
       <dt><xsl:value-of select="normalize-space(@name)"/></dt>
       <dd>
-	<xsl:apply-templates select="." mode="basiclinkentry"/>
+	<xsl:apply-templates select="." mode="sublinkentry"/>
 	<xsl:apply-templates select="readings/reading[translation|gloss]" mode="text"/>
       </dd>
     </xsl:template>
