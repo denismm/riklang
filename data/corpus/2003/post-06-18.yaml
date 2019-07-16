@@ -1,0 +1,32 @@
+date: 2003-06-18
+source: DW post, https://cnoocy.dreamwidth.org/13009.html
+color: Blue
+author: Marc Moskowitz
+utterance:
+  -
+    literal: "5 want-to-learns from the human called 'green-stone-water-that-does-glass.' Words in human-speak."
+    loose: 5 questions from jadelennox. Answers also in human languages.
+    text: Five-I-Quality-0 Rikchik-N-Quality-0 Rock-N-Quality-1 Glass-N-Task-0 Water-N-Quality-2 Human-R-Source-1 Learn-V-Patient-0 Want-V-End-3 Human-M-Quality-0 Talk-I-Instrument-1 Word-I-End-1
+  -
+    literal: I choose the art-words in the dead and not-dead language. Painful thinking about that choice.
+    loose: I would keep the Latin poetry. But the choice is a painful one even to think about.
+    text: Dead-M-Quality-0 Zero-M-Quality-0 Dead-M-Quality-1 Talk-N-Instrument-2 Art-I-Task-0 Word-I-Patient-2 Me-R-Agent-0 Choice-V-End-2 Choice-V-Patient-0P Pain-M-Quality-0 Think-V-End-2
+  -
+    literal: I choose to fight the god or human that has me to choose.
+    loose: A fight with whichever god or person was compelling the choice.
+    text: Choice-V-Patient-0P Me-R-Patient-0 Have-V-Task-2 God-R-Patient-0 Human-R-Patient-0 Choice-R-Patient-3 Fight-V-Patient-1 Me-R-Agent-0 Choice-V-End-2
+  -
+    literal: "I choose the human named 'tree-that-is-sad.' The human named 'god-leads' makes me small with happiness that a child does."
+    loose: "Willow. Gabrielle's too mature for me."
+    text: Sad-N-Actor-0 Tree-N-Quality-1 Human-R-Patient-1 Me-R-Agent-0 Choice-V-End-2 Leader-N-Task-0 God-N-Quality-1 Human-R-Agent-1 Child-R-Example-0 Happy-V-Instrument-1 Me-R-Patient-0 Small-V-End-3
+    note: "This translation of 'too mature' seems unsatisfactory."
+  -
+    literal: "I choose the human who writes the book named 'art-sound made by fishy-bouncers.' I don't have tree-big thinking. I don't have chaos-happy thinking." 
+    loose: Pinkwater. I can live without grandiose, but not without silly.
+    text: Fish-N-Quality-0 Bouncer-N-Agent-1 Art-N-Actor-0 Sound-N-Quality-2 Book-T-Patient-1 Fruit-V-Task-1 Human-R-Patient-1 Me-R-Agent-0 Choice-V-End-2 Tree-R-Example-0 Big-M-Quality-1 Think-I-Patient-1 Zero-M-Quality-0 Have-V-Task-2 Me-R-End-1 Chaos-R-Example-0 Happy-M-Quality-1 Think-I-Patient-1 Zero-M-Quality-0 Have-V-Task-2 Me-T-End-1P
+    note: "Some 'Zero' words seem to be missing and misplaced in this."
+  -
+    #literal: "To enjoy one question being greater in happiness than another includes a choice of two. "
+    loose: "Holding a question to be better than another is itself a binary opposition. A meme like this one are not a compressed opinion like the 'Good or Bad' of Brunching Shuttlecocks, but instead an opportunity to see a single idea from multiple perspectives."
+    text: Learn-V-Patient-0 Want-V-Patient-1 Learn-V-Patient-0 Want-V-Agent-1 Happy-M-Instrument-0 Big-V-Patient-3 Happy-V-Includes-1 Two-I-Element-0 Choice-I-End-2 Me-P-Quality-0 Exchange-V-Actor-0 Think-I-Example-2 Thing-M-Quality-1 Exchange-V-Actor-0 Think-I-Example-2 Zero-M-Quality-0 Thing-I-Includes-2 Sun-N-Patient-0 Above-N-Task-1 Mouth-N-Task-1 Happy-N-Quality-0 Work-N-Destination-1 Insect-N-Task-0 Hat-N-Quality-3 Word-I-Patient-0 Fruit-V-Task-1 Home-R-Source-2 Happy-N-Patient-0 Pain-N-Patient-0 Choice-N-Quality-2 Machine-T-Example-2 Gather-V-Actor-0 Human-R-Source-0 Thing-I-Destination-0 Think-I-End-5 Exchange-V-Actor-0O Think-I-Instrument-1P One-I-Quality-0 Thing-I-Patient-1 Seven-I-Quality-0 Human-R-Includes-1 Eye-R-Instrument-1 Eye-V-Patient-2 Have-V-End-2
+    note: "This was written before Like was a morpheme and is not how it would be written today."
