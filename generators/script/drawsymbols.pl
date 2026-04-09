@@ -82,7 +82,11 @@ foreach $style (keys %styles){
 	  if (/^\} def/) {	# end of definition
 	      #write definition to file
 	      my ($size, $color_p);
-	      foreach $size (5,3,2,1) {
+	      SIZE: foreach $size (5,3,2,1) {
+                unless (-d "$rikhome/images/symbols/$style/$size") {
+                    warn "skipping $rikhome/images/symbols/$style/$size\n";
+                    next SIZE;
+                }
 		my ($t_name) = $name;
 		print STDERR "$style/$size/$t_name:\t ";
 		my $height = $baseheight * $size * $aasize + 1;
