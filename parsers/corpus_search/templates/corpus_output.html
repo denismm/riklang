@@ -55,5 +55,57 @@
        </container>
     {% endfor %}
     <hr>
+        <p>
+        This page allows searching through a corpus of many Rikchik utterances.  This corpus is organized into files, which contain utterances, each of which has a number of fields and values.  Only the "text" field is required.
+        </p>
+        <p>
+        The main input box takes a string that will be treated as a regular expression. By default this will be run against the starred fields in the table below in the corpus, and every matching entry will be returned.
+        </p>
+        <p>
+        The "optional field" input box takes a field or list of fields (space-separated).  Only these fields will be searched.
+        </p>
+        <table>
+            <th>
+                <td>Field name</td>
+                <td>Field description</td>
+            </th>
+            <tr>
+                <td>* text</td>
+                <td>Rikchik-language text of utterance in ascii form</td>
+            </tr>
+            <tr>
+                <td>* loose</td>
+                <td>A loose translation of the utterance into English</td>
+            </tr>
+            <tr>
+                <td>* literal</td>
+                <td>A more literal translation of the utterance into English</td>
+            </tr>
+            <tr>
+                <td>* note</td>
+                <td>A note about the utterance.</td>
+            </tr>
+            <tr>
+                <td>author</td>
+                <td>The name of the human who produced this utterance.</td>
+            </tr>
+            <tr>
+                <td>source</td>
+                <td>Where the utterance appeared - may include a URL if it appeared online.</td>
+            </tr>
+            <tr>
+                <td>date</td>
+                <td>The date that the utterance appeared, in YYYY-MM-DD format. </td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>The canonicity of the utterance, if any.  "green" indicates  utterances that could theoretically have been uttered by a rikchik. "blue" indicates utterances about life on Earth, translated into Rikchik.</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>The id of the utterance, which consists of a filename, a document number within that filename, and an utterance number within that filename, separated by colons.</td>
+            </tr>
+        </table>
+    <hr>
     Rikchik language and culture created by Denis Moskowitz.
 </body><html>

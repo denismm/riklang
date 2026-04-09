@@ -119,7 +119,7 @@ def search_corpus(corpus, search, field):
     results = []
     search_regex = re.compile(search)
     if field:
-        field_list = [field]
+        field_list = field.split()
     else:
         field_list = searchable_fields
     field_set = set(field_list)
