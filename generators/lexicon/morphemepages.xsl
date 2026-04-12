@@ -68,7 +68,7 @@
   <tr><td valign="top" align="center">
    <img src="http://www.suberic.net/~dmm/rikchik/images/classic/5/a{@aspect}.png" alt="{@aspect}" title="{@aspect}" id="reading-{@aspect}" width="30" height="30"/><br/><strong><xsl:value-of select="@aspect"/></strong>
   </td><td valign="top" align="left">&#xA0;<br/>
-   <xsl:apply-templates select="translation" mode="morphemepage"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if><br/>
+   <xsl:apply-templates select="translation" mode="morphemepage"/><xsl:apply-templates select="gloss"/><br/>
    <xsl:apply-templates select="examples" mode="morphemepage"/>
    <xsl:apply-templates select="note" mode="noteref"/>
   </td></tr>
@@ -171,7 +171,7 @@
   </head><body bgcolor="#FFFFFF">
    <xsl:apply-templates select="addition/utterance" mode="morphemepage"/>
    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&amp;message={$morpheme}-I-End-{$compoundcollector}" alt="{@name}" width="73" height="73"/>
-   <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></h1>
+   <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></h1>
    <b>Paradigm:</b>&#xA0;<xsl:value-of select="../../@paradigm"/><br/>
    <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
    <hr/>
@@ -213,10 +213,6 @@
  <xsl:template match="translation" mode="morphemepage">
   <xsl:value-of select="text"/>
  </xsl:template>
-
- <xsl:template match="gloss" mode="morphemepage"
-  ><xsl:value-of select="text[lang($lang)]"
- /></xsl:template>
 
  <xsl:template match="utterance" mode="morphemepage">
   <xsl:param name="lineheight">4</xsl:param>
