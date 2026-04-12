@@ -56,9 +56,7 @@
   <xsl:variable name="utterance">
     <utterance>
       <xsl:copy-of select="addition/utterance/word"/>
-      <xsl:if test="not($inner)">
-	<word morpheme="{../../@name}" aspect="I" relation="End" collector="{$compoundcollector}"/>
-      </xsl:if>
+      <word morpheme="{../../@name}" aspect="I" relation="End" collector="{$compoundcollector}"/>
     </utterance>
   </xsl:variable>
   <xsl:variable name="asciiform"

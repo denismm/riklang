@@ -153,8 +153,10 @@
  </xsl:template>
 
  <xsl:template match="compound" mode="morphemepage">
-  <xsl:apply-templates select="." mode="innerlinkentry"/>
-  <xsl:apply-templates select="." mode="compoundpage"/>
+   <xsl:apply-templates select="." mode="innerlinkentry"/>
+   <xsl:variable name="current-morpheme" select="ancestor::morpheme"/>
+   <xsl:apply-templates select="//compound[addition/utterance/word/@morpheme = $current-morpheme/@name]" mode="innerlinkentry"/>
+   <xsl:apply-templates select="." mode="compoundpage"/>
  </xsl:template>
 
  <xsl:template match="compound" mode="compoundpage">

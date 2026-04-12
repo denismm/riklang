@@ -17,7 +17,8 @@
     <xsl:template match="language" mode="todopage">
 	<html>
 	<body>
-	    Todo page!
+	  <h1>Todo page!</h1>
+	  <p>This is a utility page noting what parts of the language are defined and what are yet to be defined.</p>
 	    <xsl:apply-templates select="//morphemes" mode="todopage"/>
 	</body>
 	</html>
