@@ -26,8 +26,8 @@ def web_main():
     )
     img_url_cgi = "http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi"
     cgitb.enable()
-    search = cgi.FieldStorage().getfirst('search', None).strip()
-    field = cgi.FieldStorage().getfirst('field', None).strip()
+    search = cgi.FieldStorage().getfirst('search', "").strip()
+    field = cgi.FieldStorage().getfirst('field', "").strip()
 
     if search:
         corpus = read_corpus()
