@@ -72,7 +72,7 @@
     <xsl:apply-templates select="$utterance" mode="morphemepage">
       <xsl:with-param name="lineheight">1</xsl:with-param>
     </xsl:apply-templates><br/>
-    <xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a></p>
+    <xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></a></p>
  </xsl:template>
 
  <xsl:template match="compound/readings/reading" mode="basiclinkentry">
@@ -100,7 +100,7 @@
   <p>
   <a href="{$href}"><xsl:apply-templates select="$utterance" mode="morphemepage">
       <xsl:with-param name="lineheight">1</xsl:with-param>
-  </xsl:apply-templates><br/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:if test="gloss"> (<xsl:apply-templates select="gloss"/>)</xsl:if></a></p>
+  </xsl:apply-templates><br/><xsl:value-of select="translate($asciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></a></p>
  </xsl:template>
 
  <xsl:template match="morpheme" mode="basiclinkentry">
@@ -136,6 +136,20 @@
     <xsl:apply-templates select="utterance" mode="morphemepage"/><br/>
     <xsl:value-of select="translate($asciiform,'_',' ')"/>
   </a>
+ </xsl:template>
+
+ <xsl:template match="gloss">
+   <xsl:text> (</xsl:text>
+   <xsl:choose>
+     <!-- if we specify a lang and there are multiple glosses -->
+     <xsl:when test="$lang and text[2]">
+       <xsl:value-of select="normalize-space(text[lang($lang)])"/>
+     </xsl:when>
+     <xsl:otherwise>
+       <xsl:value-of select="normalize-space(text[1])"/>
+     </xsl:otherwise>
+   </xsl:choose>
+   <xsl:text>)</xsl:text>
  </xsl:template>
 
 </xsl:stylesheet>
