@@ -141,6 +141,8 @@
  <xsl:template match="compounds" mode="morphemepage">
   <h3>Compounds</h3>
   <xsl:apply-templates select="compound" mode="morphemepage"/>
+   <xsl:variable name="current-morpheme" select="ancestor::morpheme"/>
+   <xsl:apply-templates select="//compound[addition/utterance/word/@morpheme = $current-morpheme/@name]" mode="innerlinkentry"/>
  </xsl:template>
 
  <xsl:template match="idioms" mode="morphemepage">
@@ -154,8 +156,6 @@
 
  <xsl:template match="compound" mode="morphemepage">
    <xsl:apply-templates select="." mode="innerlinkentry"/>
-   <xsl:variable name="current-morpheme" select="ancestor::morpheme"/>
-   <xsl:apply-templates select="//compound[addition/utterance/word/@morpheme = $current-morpheme/@name]" mode="innerlinkentry"/>
    <xsl:apply-templates select="." mode="compoundpage"/>
  </xsl:template>
 
