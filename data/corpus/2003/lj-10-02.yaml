@@ -5,7 +5,6 @@ utterance:
     -
         author: Denis Moskowitz
         literal: It takes a long time for to ride home on the subway train.
-        loose: For a long time I am in the long-tentacle repulsion, then go home.
+        loose: For a long time I am in the long-tentacle-repulsion, then go home.
         text: Long-M-Quality-0 Span-I-Instrument-1 Long-N-Quality-0 Tentacle-N-Instrument-1 Repulsion-R-Includes-1 Me-R-Patient-2 Home-P-Destination-0 Sequence-I-End-2
         note: This predates the invention of the Rail morpheme or the “land-gear” word for wheel, which is why the perhaps less apparent "long-tentacle repulsion" is used to describe a subway train instead.
-
