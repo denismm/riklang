@@ -9,6 +9,7 @@ import os
 import copy
 import cgi
 import cgitb
+import datetime
 
 relation_map = {
     'Task': 'Agentrec',
@@ -19,7 +20,7 @@ relation_map = {
 }
 
 def web_main():
-    print ("Content-type: text/html\n\n")
+    print("Content-type: text/html\n\n")
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader('./templates'),
         autoescape=jinja2.select_autoescape(['html']),
@@ -77,6 +78,10 @@ def read_corpus():
                 word = '-'.join(components)
                 text[i] = word
         entry['text'] = ' '.join(text)
+        # also make sure all dates are strings
+        if 'date' in entry:
+            if isinstance(entry['date'], datetime.date):
+                entry['date'] = entry['date'].isoformat()
 
     def insert_entry(id, entry):
         entry['id'] = massage_id(id)
@@ -88,7 +93,7 @@ def read_corpus():
             data = f.read()
         doc_i = 0
         try:
-            yaml_data = yaml.load_all(data)
+            yaml_data = yaml.safe_load_all(data)
         except Exception as e:
             # bad data, report this somewhere?
             yaml_data = []
