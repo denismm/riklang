@@ -27,8 +27,8 @@ def web_main():
     )
     img_url_cgi = "http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi"
     cgitb.enable()
-    search = cgi.FieldStorage().getfirst('search', None)
-    field = cgi.FieldStorage().getfirst('field', None)
+    search = cgi.FieldStorage().getfirst('search', "").strip()
+    field = cgi.FieldStorage().getfirst('field', "").strip()
 
     if search:
         corpus = read_corpus()
@@ -44,6 +44,7 @@ def web_main():
         results = []
     template = env.get_template('corpus_output.html')
     render = template.render(results=results, search=search, field=field)
+    # print (render.encode('ascii', errors='ignore'))
     print(render)
 
 def read_corpus():
