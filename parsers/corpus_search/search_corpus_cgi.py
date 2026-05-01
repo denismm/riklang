@@ -9,6 +9,7 @@ import os
 import copy
 import cgi
 import cgitb
+import datetime
 
 relation_map = {
     'Task': 'Agentrec',
@@ -19,7 +20,7 @@ relation_map = {
 }
 
 def web_main():
-    print "Content-type: text/html\n\n"
+    print("Content-type: text/html\n\n")
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader('./templates'),
         autoescape=jinja2.select_autoescape(['html']),
@@ -43,7 +44,7 @@ def web_main():
         results = []
     template = env.get_template('corpus_output.html')
     render = template.render(results=results, search=search, field=field)
-    print render.encode('ascii', errors='ignore')
+    print(render)
 
 def read_corpus():
     corpus_source = "./corpus"
@@ -76,6 +77,10 @@ def read_corpus():
                 word = '-'.join(components)
                 text[i] = word
         entry['text'] = ' '.join(text)
+        # also make sure all dates are strings
+        if 'date' in entry:
+            if isinstance(entry['date'], datetime.date):
+                entry['date'] = entry['date'].isoformat()
 
     def insert_entry(id, entry):
         entry['id'] = massage_id(id)
@@ -87,14 +92,14 @@ def read_corpus():
             data = f.read()
         doc_i = 0
         try:
-            yaml_data = yaml.load_all(data)
+            yaml_data = yaml.safe_load_all(data)
         except Exception as e:
             # bad data, report this somewhere?
             yaml_data = []
         for structure in yaml_data:
             # denormalize
             defaults = {
-                k: v for (k, v) in structure.iteritems() if not isinstance(v, list)
+                k: v for (k, v) in structure.items() if not isinstance(v, list)
             }
             if 'utterance' in structure:
                 utter_i = 0
@@ -103,7 +108,7 @@ def read_corpus():
                 defaults['source_id'] = massage_id("%s:%d:" % (filename, doc_i))
                 for utterance in utterances:
                     entry = copy.copy(defaults)
-                    for (k, v) in utterance.iteritems():
+                    for (k, v) in utterance.items():
                         entry[k] = v
                     insert_entry("%s:%d:%d" % (filename, doc_i, utter_i), entry)
                     utter_i += 1
@@ -124,12 +129,12 @@ def search_corpus(corpus, search, field):
         field_list = searchable_fields
     field_set = set(field_list)
     def check_utterance(utterance):
-        for (field_name, field_data) in utterance.iteritems():
+        for (field_name, field_data) in utterance.items():
             if field_name in field_set and isinstance(field_data, str):
                 if search_regex.search(field_data):
                     results.append(utterance)
                     return
-    for (key, utterance) in corpus.iteritems():
+    for (key, utterance) in corpus.items():
         check_utterance(utterance)
     return sorted(results, key=lambda entry: entry['id'])
 
