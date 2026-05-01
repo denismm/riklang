@@ -1,0 +1,10 @@
+date: 2020-03-17
+source: "DW post: https://yomikoma.dreamwidth.org/41826.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: Everyone can go from a house to nowhere or everyone can go from a house to nowhere.
+        loose: Everyone is stuck inside their house.
+        text: All-R-Patient-0 Home-P-Source-0 Sleep-P-Destination-0 Move-V-Patient-3 Move-V-Patient-0P Choice-V-End-2
+        note: For context, this was written around the beginning of the COVID-19 lockdown.
