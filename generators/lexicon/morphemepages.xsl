@@ -166,12 +166,11 @@
   <xsl:variable name="compoundcollector" select="count(addition/utterance/word) - sum(addition/utterance/word/@collector)"/>
   <xsl:variable name="fullasciiform" select="concat($asciiform,'_',$morpheme,'-I-End-',$compoundcollector)"/>
   <page-body href="dictionary/{$fullasciiform}.html" title="{translate($fullasciiform,'_',' ')}" >
-    <xsl:apply-templates select="addition/utterance" mode="morphemepage"/>
-    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&amp;message={$morpheme}-I-End-{$compoundcollector}" alt="{@name}" width="73" height="73"/>
+    <!-- xsl:apply-templates select="addition/utterance" mode="morphemepage"/ -->
+    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&amp;message={$fullasciiform}" alt="{$fullasciiform}"/>
     <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></h1>
    <b>Paradigm:</b>&#xA0;<xsl:value-of select="../../@paradigm"/><br/>
    <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
-   <hr/>
    <xsl:apply-templates select=".//note" mode="morphemepage" />
   </page-body>
  </xsl:template>
