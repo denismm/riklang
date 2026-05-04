@@ -7,14 +7,15 @@
  <xsl:output method="html" encoding="iso-8859-1"/>
  
  <xsl:template match="/">
-  <xsl:apply-templates select="language" mode="indexpage"/>
+   <xsl:variable name="output">
+     <xsl:apply-templates select="language" mode="indexpage"/>
+   </xsl:variable>
+   <xsl:apply-templates select="$output" mode="output"/>
  </xsl:template>
  
  <!-- indexes -->
  <xsl:template match="language" mode="indexpage">
-  <html><head>
-  <title>Morpheme Dictionary</title>
-  </head><body bgcolor="#FFFFFF">
+   <page-body href="dictionary.html" title="Morpheme Dictionary">
   <h1>Morpheme Dictionary</h1>
   <ul>
   <li><a href="#name">By Name</a></li>
@@ -33,8 +34,8 @@
   <table cellpadding="0" cellspacing="0" border="0">
    <xsl:apply-templates select="//morpheme" mode="nameindexentry"/>
   </table>
-  </body></html>
   <xsl:apply-templates select="//morphemes" mode="morphemequicklist"/>
+   </page-body>
  </xsl:template>
 
  <xsl:template match="morphemes" mode="indexname">
@@ -94,19 +95,14 @@
  <xsl:template match="morpheme" mode="paradigmindexentry"/>
 
  <xsl:template match="morphemes" mode="morphemequicklist">
-  <xsl:message>writing quick list</xsl:message>
-  <xsl:result-document href="quicklist.html" method="html" encoding="iso-8859-1">
-   <html><head>
-    <title>Morpheme Dictionary</title>
-   </head><body bgcolor="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#003300">
-    <h1>Morpheme Quick List</h1>
-    <xsl:for-each select="morpheme">
-     <a href="dictionary/{@name}.html">
-     <img src="http://www.suberic.net/~dmm/rikchik/images/classic/3/m{@name}.png" alt="{@name}" border="5" width="42" height="42"/>
-     </a>
-    </xsl:for-each>
-   </body></html>
-  </xsl:result-document>
+   <page-body href="quicklist.html" title="Morpheme Dictionary">
+     <h1>Morpheme Quick List</h1>
+     <xsl:for-each select="morpheme">
+       <a href="dictionary/{@name}.html" class="quick">
+	 <img src="http://www.suberic.net/~dmm/rikchik/images/classic/3/m{@name}.png" alt="{@name}" border="5" width="42" height="42"/>
+       </a>
+     </xsl:for-each>
+   </page-body>
  </xsl:template>
 
  <!-- /indexes -->

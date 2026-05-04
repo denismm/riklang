@@ -152,4 +152,34 @@
    <xsl:text>)</xsl:text>
  </xsl:template>
 
+ <xsl:template match="page-body" mode="output">
+   <xsl:message>Writing file for <xsl:value-of select="@title"/></xsl:message>
+   <xsl:result-document href="{@href}" method="html" encoding="iso-8859-1">
+     <html>
+       <head>
+	 <title><xsl:value-of select="@title"/></title>
+	 <style><!-- link="#FFFFFF" vlink="#FFFFFF" alink="#003300" -->
+	   a.quick:link, a.quick:visited {
+	     color: #FFFFFF;
+	   }
+
+	   a.quick:hover, a.quick:active {
+	     color: #003300;
+	   }
+	 </style>
+       </head>
+       <body bgcolor="#FFFFFF">
+	 <xsl:apply-templates mode="output"/>
+       </body>
+     </html>
+   </xsl:result-document>
+ </xsl:template>
+
+ <xsl:template match="*" mode="output">
+   <xsl:copy>
+     <xsl:copy-of select="@*"/>
+     <xsl:apply-templates mode="output"/>
+   </xsl:copy>
+ </xsl:template>
+ 
 </xsl:stylesheet>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 version="1.1">
+ <xsl:import href="rikbasics.xsl"/>
  <xsl:variable name="lang" select="'en'"/>
 
  <xsl:output method="html" encoding="iso-8859-1"/>
@@ -16,20 +17,18 @@
  </xsl:template>
 
  <xsl:template match="morpheme" mode="morphemepage">
-  <xsl:result-document href="dictionary/{@name}.html" method="html" encoding="iso-8859-1">
-  <xsl:message>Writing file for <xsl:value-of select="@name"/></xsl:message>
-  <html><head>
-   <title><xsl:value-of select="@name"/></title>
-  </head><body bgcolor="#FFFFFF">
-   <img src="http://www.suberic.net/~dmm/rikchik/images/blunt/5/m{@name}.png" alt="{@name}" width="70" height="70"/>
-   <xsl:apply-templates select="glyph/note" mode="noteref"/>
-   <h1><xsl:value-of select="@name"/></h1>
-   <b>Paradigm:</b>&#xA0;<xsl:value-of select="@paradigm"/><br/>
-   <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
-   <hr/>
-   <xsl:apply-templates select=".//note" mode="morphemepage" />
-  </body></html>
-  </xsl:result-document>
+   <xsl:variable name="output">
+     <page-body href="dictionary/{@name}.html" title="{@name}">
+       <img src="http://www.suberic.net/~dmm/rikchik/images/blunt/5/m{@name}.png" alt="{@name}" width="70" height="70"/>
+       <xsl:apply-templates select="glyph/note" mode="noteref"/>
+       <h1><xsl:value-of select="@name"/></h1>
+       <b>Paradigm:</b>&#xA0;<xsl:value-of select="@paradigm"/><br/>
+       <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
+       <hr/>
+       <xsl:apply-templates select=".//note" mode="morphemepage" />
+     </page-body>
+   </xsl:variable>
+   <xsl:apply-templates select="$output" mode="output"/>
  </xsl:template>
  
  <xsl:template match="readings" mode="morphemepage">
@@ -166,20 +165,15 @@
   <xsl:variable name="morpheme" select="../../@name"/>
   <xsl:variable name="compoundcollector" select="count(addition/utterance/word) - sum(addition/utterance/word/@collector)"/>
   <xsl:variable name="fullasciiform" select="concat($asciiform,'_',$morpheme,'-I-End-',$compoundcollector)"/>
-  <xsl:result-document href="dictionary/{$fullasciiform}.html" method="html" encoding="iso-8859-1">
-  <xsl:message>Writing file for <xsl:value-of select="$fullasciiform"/></xsl:message>
-  <html><head>
-   <title><xsl:value-of select="translate($fullasciiform,'_',' ')"/></title>
-  </head><body bgcolor="#FFFFFF">
-   <xsl:apply-templates select="addition/utterance" mode="morphemepage"/>
-   <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&amp;message={$morpheme}-I-End-{$compoundcollector}" alt="{@name}" width="73" height="73"/>
-   <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></h1>
+  <page-body href="dictionary/{$fullasciiform}.html" title="{translate($fullasciiform,'_',' ')}" >
+    <xsl:apply-templates select="addition/utterance" mode="morphemepage"/>
+    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&amp;message={$morpheme}-I-End-{$compoundcollector}" alt="{@name}" width="73" height="73"/>
+    <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></h1>
    <b>Paradigm:</b>&#xA0;<xsl:value-of select="../../@paradigm"/><br/>
    <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
    <hr/>
    <xsl:apply-templates select=".//note" mode="morphemepage" />
-  </body></html>
-  </xsl:result-document>
+  </page-body>
  </xsl:template>
 
  <xsl:template match="idiom" mode="morphemepage">
@@ -255,20 +249,17 @@
  </xsl:template>
  
  <xsl:template match="paradigm" mode="paradigmpage">
-  <xsl:variable name="titlecasename"><xsl:value-of select="translate(substring(@name,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/><xsl:value-of select="substring(@name,2)"/></xsl:variable>
-  <xsl:result-document href="paradigms/{@name}.html" method="html" encoding="iso-8859-1">
-   <xsl:message>Writing file for <xsl:value-of select="@name"/></xsl:message>
-   <html><head>
-    <title><xsl:value-of select="$titlecasename"/> Paradigm</title>
-   </head><body bgcolor="#FFFFFF">
+   <xsl:variable name="titlecasename"><xsl:value-of select="translate(substring(@name,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/><xsl:value-of select="substring(@name,2)"/></xsl:variable>
+   <xsl:variable name="output">
+   <page-body title="{$titlecasename} Paradigm" href="paradigms/{@name}.html">
     <h1><xsl:value-of select="$titlecasename"/> Paradigm</h1>
     <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
 
     <!-- report -->
     <xsl:apply-templates select="." mode="paradigmreport"/>
-   </body></html>
-   
-  </xsl:result-document>
+   </page-body>
+   </xsl:variable>
+   <xsl:apply-templates select="$output" mode="output"/>
  </xsl:template>
  <xsl:template mode="paradigmreport" match="paradigm">
   <xsl:variable name="paradigm" select="."/>
