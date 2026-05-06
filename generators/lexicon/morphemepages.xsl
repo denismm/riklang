@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                version="1.1">
+                version="3.0">
  <xsl:import href="rikbasics.xsl"/>
  <xsl:variable name="lang" select="'en'"/>
 
@@ -171,6 +171,32 @@
     <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></h1>
    <b>Paradigm:</b>&#xA0;<xsl:value-of select="../../@paradigm"/><br/>
    <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
+
+   <h2>Morphemes in this compound</h2>
+   <xsl:variable name="constituents">
+     <x>
+       <xsl:for-each select="addition//word/@morpheme">
+	 <y><xsl:value-of select="."/></y>
+       </xsl:for-each>
+       <y><xsl:value-of select="$morpheme"/></y>
+     </x>
+   </xsl:variable>
+   <xsl:variable name="morphemes" select="/language/morphemes"/>
+   <table cellpadding="0" cellspacing="0" border="0">
+     <tr>
+       <xsl:for-each select="$constituents//y">
+	 <xsl:variable name="y" select="string(.)"/>
+	 <xsl:if test="not(preceding-sibling//y[.=$y])">
+	   <xsl:variable name="morpheme" select="$morphemes/morpheme[@name=$y]"/>
+	   <td align="center">
+	     <xsl:apply-templates select="$morpheme" mode="basiclinkentry"/>
+	     <xsl:comment><xsl:copy-of select="$morpheme"/></xsl:comment>
+	   </td>
+	   <td>&#xa0;&#xa0;</td>
+	 </xsl:if>
+       </xsl:for-each>
+     </tr>
+   </table>
    <xsl:apply-templates select=".//note" mode="morphemepage" />
   </page-body>
  </xsl:template>
