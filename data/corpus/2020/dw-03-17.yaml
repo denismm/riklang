@@ -4,7 +4,7 @@ color: Blue
 utterance:
     -
         author: Denis Moskowitz
-        literal: Everyone can go from a house to nowhere or everyone can go from a house to nowhere.
-        loose: Everyone is stuck inside their house.
+        literal: Here is the choice: stay home or stay home.
+        loose: Stay the f*** home.
         text: All-R-Patient-0 Home-P-Source-0 Sleep-P-Destination-0 Move-V-Patient-3 Move-V-Patient-0P Choice-V-End-2
-        note: For context, this was written around the beginning of the COVID-19 lockdown.
+        note: For context, this was written around the beginning of the COVID-19 lockdown; "Stay the f*** home" was going around as a meme at the time. The rudeness of this request is conveyed using the Move-V-Patient-3 Move-V-Patient-0P Choice-V-End-2 idiom, invented for this post as a sort of parody of the "or not" used for polite requests.
