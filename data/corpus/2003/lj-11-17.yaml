@@ -1,0 +1,10 @@
+date: 2003-11-17
+source: "LJ post: https://rikchik.livejournal.com/3320.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: 6 humans have a box. 18 humans go to a sky-rock place.
+        loose: 6 humans have a box. 18 humans go to a mountain.
+        text: Six-I-Quality-0 Human-R-Agent-1 Box-T-Patient-0 Have-V-End-2 Two-I-Source-0 Four-I-Quality-1 Human-R-Patient-1 Sky-N-Includes-0 Rock-P-Destination-1 Move-V-End-2
+        note: This refers to events in two RPG mini-campaigns Denis was in at the time; in one, the 6 player characters had found a mysterious box, and in the other, 18 people were headed into the mountains.
