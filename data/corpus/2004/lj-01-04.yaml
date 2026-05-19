@@ -6,5 +6,5 @@ utterance:
         author: Denis Moskowitz
         literal: A machine made by humans moves on god-of-war planet. Are rocks of god-of-war planet happiness-causing-with-the-mouth?
         loose: A machine made by humans moves on Mars. Are Mars rocks tasty?
-        text: Human-R-Source-0 Machine-R-Patient-1 Fight-N-Result-0 God-N-Quality-1 Ground-N-Instrument-0 Globe-P-Includes-2 Move-V-End-2 Globe-P-Includes-0P Rock-T-Qualityrec-1 Mouth-N-Instrument-0 Happy-M-Patient-2 What-M-Patient-0 Choice-M-End-2
-        note: This was posted to celebrate the landing of the Spirit rover on Mars, which occurred on this date.
+        text: Human-R-Source-0 Machine-R-Patient-1 Fight-N-Result-0 God-N-Quality-1 Ground-N-Instrument-0 Globe-P-Includes-2 Move-V-End-2 Globe-P-Includes-0P Rock-T-Example-1 Mouth-N-Instrument-0 Happy-M-Patient-2 What-M-Patient-0 Choice-M-End-2
+        note: This was posted to celebrate the landing of the Spirit rover on Mars, which occurred on this date. This also uses the outdated "Example" relation over the Rock morpheme.
