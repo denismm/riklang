@@ -6,5 +6,5 @@ utterance:
         author: Marc Moskowitz
         literal: Gods fight, then ground moves, and then we-who-can-die are unhappy.
         loose: When gods clash, the earth shakes and it is mortals who lose.
-        text: God-R-Patient-0 Fight-V-Patient-1 Ground-T-Patient-0 Move-V-Patient-1 Dead-V-Patient-0 Have-V-Task-1 Me-R-Patient-1 Zero-M-Quality-0 Happy-V-Patient-2 Gather-V-Patient-3 Sequence-V-End-1
-        note: One commentor on the main utterance at this URL jokingly proposed the loose translation as a solution after proving unable to translate it; Marc then showed them what it would actually look like in Rikchik, saying "I see how you could be confused." In addition, this utterance uses the outdated "Task" relation above the Have morpheme.
+        text: God-R-Patient-0 Fight-V-Patient-1 Ground-T-Patient-0 Move-V-Patient-1 Dead-V-Patient-0 Have-V-Agentrec-1 Me-R-Patient-1 Zero-M-Quality-0 Happy-V-Patient-2 Gather-V-Patient-3 Sequence-V-End-1
+        note: One commentor on the main utterance at this URL jokingly proposed the loose translation as a solution after proving unable to translate it; Marc then showed them what it would actually look like in Rikchik, saying "I see how you could be confused."
