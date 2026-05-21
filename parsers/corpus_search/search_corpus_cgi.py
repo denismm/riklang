@@ -123,7 +123,7 @@ def read_corpus():
 searchable_fields = ['literal', 'loose', 'text', 'note']
 def search_corpus(corpus, search, field):
     results = []
-    search_regex = re.compile(search)
+    search_regex = re.compile(search, flags=re.IGNORECASE)
     if field:
         field_list = field.split()
     else:
