@@ -1,0 +1,10 @@
+date: 2003-11-03
+source: "LJ post: https://rikchik.livejournal.com/3053.html"
+color: Blue
+utterance:
+    -
+        author: Marc Moskowitz
+        literal: A Rikchik who enjoys eating chimps and makes carts.
+        loose: I-Like-To-Eat-Chimps Cartwright
+        text: Chimp-R-Patient-0 Mouth-N-Agent-1 Happy-N-Quality-1 Repulsion-N-Destinationrec-0 Move-N-Patient-1 Fruit-N-Includes-1 Rikchik-R-End-2
+        note: This is an example of a name a Rikchik is unlikely to have, created as part of a larger discussion in the comments under the main utterance at this URL.
