@@ -9,8 +9,12 @@
 
  <xsl:template match="morpheme" mode="url">
    <xsl:param name="inner"/>
+   <xsl:param name="is-subdir"/>
    <xsl:if test="not($inner)">
      <xsl:text>dictionary/</xsl:text>
+   </xsl:if>
+   <xsl:if test="$is-subdir">
+     <xsl:text>../</xsl:text>
    </xsl:if>
    <xsl:value-of select="@name"/>
    <xsl:text>.html</xsl:text>
@@ -104,8 +108,11 @@
  </xsl:template>
 
  <xsl:template match="morpheme" mode="basiclinkentry">
+   <param name="is-subdir"/>
    <xsl:variable name="href">
-     <xsl:apply-templates select="." mode="url"/>
+     <xsl:apply-templates select="." mode="url">
+       <xsl:with-param name="is-subdir" select="$is-subdir"/>
+     </xsl:apply-templates>
    </xsl:variable>
    <a href="{$href}"><img src="http://www.suberic.net/~dmm/rikchik/images/{$entrystyle}/3/m{@name}.png" alt="{@name}" border="0" width="42" height="42"/></a><br/>
    <a href="{$href}"><xsl:value-of select="@name"/></a>&#xA0;<br/><br/>
