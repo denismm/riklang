@@ -15,9 +15,7 @@
 
     <xsl:template match="/" mode="engdict">
       <xsl:variable name="doc" select="."/>
-      <html><head>
-        <title>English-Rikchik Dictionary</title>
-      </head><body>
+      <page-body href="engdict.html" title="English-Rikchik Dictionary">
       <h1>English-Rikchik Dictionary</h1>
       <p>An index by English gloss to readings, compounds, and idioms.</p>
       <xsl:for-each select="tokenize('a b c d e f g h i j k l m n o p q r s t u v w x y z',' ')">
@@ -36,7 +34,7 @@
           </xsl:apply-templates>
         </dl>
       </xsl:for-each>
-      </body></html>
+      </page-body>
     </xsl:template>
 
     <!-- skips -->

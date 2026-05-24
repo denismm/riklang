@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                version="1.1">
+                version="3.0">
+ <xsl:import href="rikbasics.xsl"/>
  <xsl:variable name="lang" select="'en'"/>
 
  <xsl:output method="html" encoding="iso-8859-1"/>
@@ -16,20 +17,30 @@
  </xsl:template>
 
  <xsl:template match="morpheme" mode="morphemepage">
-  <xsl:result-document href="dictionary/{@name}.html" method="html" encoding="iso-8859-1">
-  <xsl:message>Writing file for <xsl:value-of select="@name"/></xsl:message>
-  <html><head>
-   <title><xsl:value-of select="@name"/></title>
-  </head><body bgcolor="#FFFFFF">
-   <img src="http://www.suberic.net/~dmm/rikchik/images/blunt/5/m{@name}.png" alt="{@name}" width="70" height="70"/>
-   <xsl:apply-templates select="glyph/note" mode="noteref"/>
-   <h1><xsl:value-of select="@name"/></h1>
-   <b>Paradigm:</b>&#xA0;<xsl:value-of select="@paradigm"/><br/>
-   <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
-   <hr/>
-   <xsl:apply-templates select=".//note" mode="morphemepage" />
-  </body></html>
-  </xsl:result-document>
+   <xsl:variable name="is-subdir" select="'yes'"/>
+   <xsl:variable name="output">
+     <page-body href="dictionary/{@name}.html" title="{@name}">
+       <img src="http://www.suberic.net/~dmm/rikchik/images/blunt/5/m{@name}.png" alt="{@name}" width="70" height="70"/>
+       <xsl:apply-templates select="glyph/note" mode="noteref"/>
+       <h1><xsl:value-of select="@name"/></h1>
+       <b>Paradigm:</b>&#xA0;<xsl:value-of select="@paradigm"/><br/>
+       <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage">
+	 <xsl:with-param name="is-subdir" select="$is-subdir" tunnel="yes"/>
+       </xsl:apply-templates>
+       <xsl:if test="not(compounds)">
+	 <xsl:variable name="other-compounds" select="//compound[addition/utterance/word/@morpheme = current()/@name]"/>
+	 <xsl:if test="$other-compounds">
+	   <h3>Compounds</h3>
+	   <xsl:apply-templates select="$other-compounds" mode="linkentry">
+	     <xsl:with-param name="is-subdir" select="$is-subdir" tunnel="yes"/>
+	   </xsl:apply-templates>
+	 </xsl:if>
+       </xsl:if>
+       <hr/>
+       <xsl:apply-templates select=".//note" mode="morphemepage" />
+     </page-body>
+   </xsl:variable>
+   <xsl:apply-templates select="$output" mode="output"/>
  </xsl:template>
  
  <xsl:template match="readings" mode="morphemepage">
@@ -142,7 +153,7 @@
   <h3>Compounds</h3>
   <xsl:apply-templates select="compound" mode="morphemepage"/>
    <xsl:variable name="current-morpheme" select="ancestor::morpheme"/>
-   <xsl:apply-templates select="//compound[addition/utterance/word/@morpheme = $current-morpheme/@name]" mode="innerlinkentry"/>
+   <xsl:apply-templates select="//compound[addition/utterance/word/@morpheme = $current-morpheme/@name]" mode="linkentry"/>
  </xsl:template>
 
  <xsl:template match="idioms" mode="morphemepage">
@@ -155,7 +166,7 @@
  </xsl:template>
 
  <xsl:template match="compound" mode="morphemepage">
-   <xsl:apply-templates select="." mode="innerlinkentry"/>
+   <xsl:apply-templates select="." mode="linkentry"/>
    <xsl:apply-templates select="." mode="compoundpage"/>
  </xsl:template>
 
@@ -166,20 +177,43 @@
   <xsl:variable name="morpheme" select="../../@name"/>
   <xsl:variable name="compoundcollector" select="count(addition/utterance/word) - sum(addition/utterance/word/@collector)"/>
   <xsl:variable name="fullasciiform" select="concat($asciiform,'_',$morpheme,'-I-End-',$compoundcollector)"/>
-  <xsl:result-document href="dictionary/{$fullasciiform}.html" method="html" encoding="iso-8859-1">
-  <xsl:message>Writing file for <xsl:value-of select="$fullasciiform"/></xsl:message>
-  <html><head>
-   <title><xsl:value-of select="translate($fullasciiform,'_',' ')"/></title>
-  </head><body bgcolor="#FFFFFF">
-   <xsl:apply-templates select="addition/utterance" mode="morphemepage"/>
-   <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&amp;message={$morpheme}-I-End-{$compoundcollector}" alt="{@name}" width="73" height="73"/>
-   <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></h1>
+  <xsl:variable name="is-subdir" select="'yes'"/>
+  <page-body href="dictionary/{$fullasciiform}.html" title="{translate($fullasciiform,'_',' ')}" >
+    <!-- xsl:apply-templates select="addition/utterance" mode="morphemepage"/ -->
+    <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&amp;message={$fullasciiform}" alt="{$fullasciiform}"/>
+    <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></h1>
    <b>Paradigm:</b>&#xA0;<xsl:value-of select="../../@paradigm"/><br/>
-   <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
-   <hr/>
+   <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage">
+     <xsl:with-param name="is-subdir" select="$is-subdir" tunnel="yes"/>
+   </xsl:apply-templates>
+
+   <h2>Morphemes in this compound</h2>
+   <xsl:variable name="constituents">
+     <x>
+       <xsl:for-each select="addition//word/@morpheme">
+	 <y><xsl:value-of select="."/></y>
+       </xsl:for-each>
+       <y><xsl:value-of select="$morpheme"/></y>
+     </x>
+   </xsl:variable>
+   <xsl:variable name="morphemes" select="/language/morphemes"/>
+   <table cellpadding="0" cellspacing="0" border="0">
+     <tr>
+       <xsl:for-each select="$constituents//y">
+	 <xsl:variable name="y" select="string(.)"/>
+	 <xsl:if test="not(preceding-sibling//y[.=$y])">
+	   <xsl:variable name="morpheme" select="$morphemes/morpheme[@name=$y]"/>
+	   <td align="center">
+	     <xsl:apply-templates select="$morpheme" mode="basiclinkentry"/>
+	     <xsl:comment><xsl:copy-of select="$morpheme"/></xsl:comment>
+	   </td>
+	   <td>&#xa0;&#xa0;</td>
+	 </xsl:if>
+       </xsl:for-each>
+     </tr>
+   </table>
    <xsl:apply-templates select=".//note" mode="morphemepage" />
-  </body></html>
-  </xsl:result-document>
+  </page-body>
  </xsl:template>
 
  <xsl:template match="idiom" mode="morphemepage">
@@ -255,20 +289,20 @@
  </xsl:template>
  
  <xsl:template match="paradigm" mode="paradigmpage">
-  <xsl:variable name="titlecasename"><xsl:value-of select="translate(substring(@name,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/><xsl:value-of select="substring(@name,2)"/></xsl:variable>
-  <xsl:result-document href="paradigms/{@name}.html" method="html" encoding="iso-8859-1">
-   <xsl:message>Writing file for <xsl:value-of select="@name"/></xsl:message>
-   <html><head>
-    <title><xsl:value-of select="$titlecasename"/> Paradigm</title>
-   </head><body bgcolor="#FFFFFF">
+   <xsl:variable name="titlecasename"><xsl:value-of select="translate(substring(@name,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/><xsl:value-of select="substring(@name,2)"/></xsl:variable>
+   <xsl:variable name="is-subdir" select="'yes'"/>
+   <xsl:variable name="output">
+   <page-body title="{$titlecasename} Paradigm" href="paradigms/{@name}.html">
     <h1><xsl:value-of select="$titlecasename"/> Paradigm</h1>
-    <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
+    <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage">
+      <xsl:with-param name="is-subdir" select="$is-subdir" tunnel="yes"/>
+    </xsl:apply-templates>
 
     <!-- report -->
     <xsl:apply-templates select="." mode="paradigmreport"/>
-   </body></html>
-   
-  </xsl:result-document>
+   </page-body>
+   </xsl:variable>
+   <xsl:apply-templates select="$output" mode="output"/>
  </xsl:template>
  <xsl:template mode="paradigmreport" match="paradigm">
   <xsl:variable name="paradigm" select="."/>
