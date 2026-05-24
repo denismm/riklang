@@ -17,13 +17,25 @@
  </xsl:template>
 
  <xsl:template match="morpheme" mode="morphemepage">
+   <xsl:variable name="is-subdir" select="'yes'"/>
    <xsl:variable name="output">
      <page-body href="dictionary/{@name}.html" title="{@name}">
        <img src="http://www.suberic.net/~dmm/rikchik/images/blunt/5/m{@name}.png" alt="{@name}" width="70" height="70"/>
        <xsl:apply-templates select="glyph/note" mode="noteref"/>
        <h1><xsl:value-of select="@name"/></h1>
        <b>Paradigm:</b>&#xA0;<xsl:value-of select="@paradigm"/><br/>
-       <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
+       <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage">
+	 <xsl:with-param name="is-subdir" select="$is-subdir" tunnel="yes"/>
+       </xsl:apply-templates>
+       <xsl:if test="not(compounds)">
+	 <xsl:variable name="other-compounds" select="//compound[addition/utterance/word/@morpheme = current()/@name]"/>
+	 <xsl:if test="$other-compounds">
+	   <h3>Compounds</h3>
+	   <xsl:apply-templates select="$other-compounds" mode="linkentry">
+	     <xsl:with-param name="is-subdir" select="$is-subdir" tunnel="yes"/>
+	   </xsl:apply-templates>
+	 </xsl:if>
+       </xsl:if>
        <hr/>
        <xsl:apply-templates select=".//note" mode="morphemepage" />
      </page-body>
@@ -141,7 +153,7 @@
   <h3>Compounds</h3>
   <xsl:apply-templates select="compound" mode="morphemepage"/>
    <xsl:variable name="current-morpheme" select="ancestor::morpheme"/>
-   <xsl:apply-templates select="//compound[addition/utterance/word/@morpheme = $current-morpheme/@name]" mode="innerlinkentry"/>
+   <xsl:apply-templates select="//compound[addition/utterance/word/@morpheme = $current-morpheme/@name]" mode="linkentry"/>
  </xsl:template>
 
  <xsl:template match="idioms" mode="morphemepage">
@@ -154,7 +166,7 @@
  </xsl:template>
 
  <xsl:template match="compound" mode="morphemepage">
-   <xsl:apply-templates select="." mode="innerlinkentry"/>
+   <xsl:apply-templates select="." mode="linkentry"/>
    <xsl:apply-templates select="." mode="compoundpage"/>
  </xsl:template>
 
@@ -165,12 +177,15 @@
   <xsl:variable name="morpheme" select="../../@name"/>
   <xsl:variable name="compoundcollector" select="count(addition/utterance/word) - sum(addition/utterance/word/@collector)"/>
   <xsl:variable name="fullasciiform" select="concat($asciiform,'_',$morpheme,'-I-End-',$compoundcollector)"/>
+  <xsl:variable name="is-subdir" select="'yes'"/>
   <page-body href="dictionary/{$fullasciiform}.html" title="{translate($fullasciiform,'_',' ')}" >
     <!-- xsl:apply-templates select="addition/utterance" mode="morphemepage"/ -->
     <img src="http://www.suberic.net/~dmm/cgi-bin/rikchik.cgi?size=3&amp;message={$fullasciiform}" alt="{$fullasciiform}"/>
     <h1><xsl:value-of select="translate($fullasciiform,'_',' ')"/><xsl:apply-templates select="gloss"/></h1>
    <b>Paradigm:</b>&#xA0;<xsl:value-of select="../../@paradigm"/><br/>
-   <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
+   <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage">
+     <xsl:with-param name="is-subdir" select="$is-subdir" tunnel="yes"/>
+   </xsl:apply-templates>
 
    <h2>Morphemes in this compound</h2>
    <xsl:variable name="constituents">
@@ -275,10 +290,13 @@
  
  <xsl:template match="paradigm" mode="paradigmpage">
    <xsl:variable name="titlecasename"><xsl:value-of select="translate(substring(@name,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/><xsl:value-of select="substring(@name,2)"/></xsl:variable>
+   <xsl:variable name="is-subdir" select="'yes'"/>
    <xsl:variable name="output">
    <page-body title="{$titlecasename} Paradigm" href="paradigms/{@name}.html">
     <h1><xsl:value-of select="$titlecasename"/> Paradigm</h1>
-    <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage"/> 
+    <xsl:apply-templates select="readings | roles | idioms | compounds" mode="morphemepage">
+      <xsl:with-param name="is-subdir" select="$is-subdir" tunnel="yes"/>
+    </xsl:apply-templates>
 
     <!-- report -->
     <xsl:apply-templates select="." mode="paradigmreport"/>
