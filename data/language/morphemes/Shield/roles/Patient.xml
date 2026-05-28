@@ -1,7 +1,0 @@
-<role relation="Patient">
-  <translation>
-    <text>
-      The entity being protected.
-    </text>
-  </translation>
-</role>
