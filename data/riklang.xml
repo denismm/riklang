@@ -4309,6 +4309,18 @@
         <line x="20" x2="80" y="-80" y2="-80"/>
       </glyph>
       <readings>
+        <reading aspect="M">
+          <gloss>
+            <text>
+              Many
+            </text>
+          </gloss>
+          <translation>
+            <text>
+              Many, or plural (especially when translating human languages).
+            </text>
+          </translation>
+        </reading>
         <reading aspect="I">
           <gloss>
             <text>
