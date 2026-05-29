@@ -1,7 +1,0 @@
-<role relation="Patient">
-  <translation>
-    <text>
-      The object that is similar to other objects in the Patient or Agent roles.
-    </text>
-  </translation>
-</role>
