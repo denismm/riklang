@@ -36,7 +36,7 @@ def parse_string(ascii_string):
     uncollected = []
     ended = []
     #split into words
-    words = []
+    words = [Word.parse_marc_form(marc) for marc in string.split("[^0-9a-zA-Z]")]
     #for each word
     for (word in words):
         node = Node(word)
