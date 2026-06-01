@@ -41,18 +41,24 @@ def parse_string(ascii_string):
     for (word in words):
         node = Node(word)
         #check collector
-        if (collector > 0):
-            #grab from uncollected
-            pass
+        if (word.collector > 0):
+            for i in range(word.collector):
+                #grab from uncollected
+                child = uncollected.pop()
+                node.collection.insert(0,child)
         elif (collector < 0):
             #grab all of uncollected
+            for i in range(len(uncollected)):
+                #grab from uncollected
+                child = uncollected.pop()
+                node.collection.insert(0,child)
             pass
         if (word.aspect == "End"):
             #add to ended
-            pass
+            ended.append(word)
         else:
             #add to uncollected
-            pass
+            uncollected.append(word)
         
         
     
