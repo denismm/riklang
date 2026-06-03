@@ -5,6 +5,7 @@ This is a library and program designed to read assumed-correct Rikchik ASCII int
 """
 
 from dataclasses import dataclass, field
+import re
 
 @dataclass
 class Word:
@@ -14,8 +15,8 @@ class Word:
     collector: int = 0
 
     @classmethod
-    def initialize(cls, morpheme, aspect, relation, collector = 0):
-        word = Word(morpheme, aspect, relation)
+    def initialize(cls, morpheme, aspect, relation, collector):
+        word = Word(morpheme, aspect, relation, collector)
         return word
 
     @classmethod
@@ -23,6 +24,7 @@ class Word:
         [m,a,r,c] = marc.split("-")
         if (c in "sS"):
             c = -1
+        c = int(c)
         return Word.initialize(m,a,r,c)
     
 
@@ -31,34 +33,44 @@ class Node:
     word: Word
     collection: list[Word] = field(default_factory=list)
 
+@dataclass
+class Utterance:
+    uncollected: list[Node] = field(default_factory=list)
+    ended: list[Node] = field(default_factory=list)
+    
+    @classmethod
+    def split_text(cls, text):
+        #split into words
+        text_words = re.split(r'[^-0-9a-zA-Z]', text)
+        words = [Word.parse_marc_form(marc) for marc in text_words]
+        return words
 
-def parse_string(ascii_string):
-    uncollected = []
-    ended = []
-    #split into words
-    words = [Word.parse_marc_form(marc) for marc in string.split("[^0-9a-zA-Z]")]
-    #for each word
-    for (word in words):
+    def add_word(self, word):
         node = Node(word)
         #check collector
-        if (word.collector > 0):
-            for i in range(word.collector):
+        collector = word.collector
+        if (collector > 0):
+            for i in range(collector):
                 #grab from uncollected
-                child = uncollected.pop()
+                child = self.uncollected.pop()
                 node.collection.insert(0,child)
         elif (collector < 0):
             #grab all of uncollected
             for i in range(len(uncollected)):
                 #grab from uncollected
-                child = uncollected.pop()
+                child = self.uncollected.pop()
                 node.collection.insert(0,child)
-            pass
-        if (word.aspect == "End"):
+        if (word.relation == "End"):
             #add to ended
-            ended.append(word)
+            self.ended.append(node)
         else:
             #add to uncollected
-            uncollected.append(word)
-        
+            self.uncollected.append(node)
+    
+    def parse_text(self, text):
+        words = Utterance.split_text(text)
+        #for each word
+        for word in words:
+            self.add_word(word)
         
     
