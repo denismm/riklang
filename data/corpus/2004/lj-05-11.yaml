@@ -63,11 +63,3 @@ utterance:
         text: Me-R-Agent-0 All-M-Quality-0 Fire-N-Instrument-0 Span-I-Includes-2 Talk-N-Instrument-0 Machine-V-End-3 Me-R-Agent-0P Rikchik-R-Agent-0 Home-I-Includes-0 Zero-M-Quality-0 Me-R-Patient-2 Rikchik-R-Destination-0 Talk-V-Patient-2 Zero-V-Patient-0 Choice-V-Patient-2 Talk-V-Patient-2 Eye-V-End-2
         literal: I'm on the phone every minute. I hear someone say "Please tell them I'm not home".
         loose: I've been phoning night and morning. I heard you say tell him I’m not home. (If This Is It, by Huey Lewis and the News)
----
-date: 2004-07-05
-source: "LJ post: https://rikchik.livejournal.com/5286.html"
-author: Denis Moskowitz
-color: Blue
-text: Me-R-Agent-0 Book-V-Task-0 Rikchik-R-Destination-1 What-N-Quality-0 Sound-N-Instrument-0 Art-I-Patient-2 Talk-V-End-3
-literal: I tell you song named what
-loose: I tell you what the names of the songs are.
