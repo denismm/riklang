@@ -58,16 +58,22 @@ def read_json_file(filename):
 
 """
 Process an object:
+* Convert to Corpuscle
+* Grab utterances.text
+* Traverse looking for words with children that have N aspect
+* Grab those and add to a list
+* return the loose and literal for that utterance along with captured nodes
 
 """
 def process_json_item(item):
-    pass
+    print (json_item)
+    corpuscle = Corpuscle.initialize_from_json(json_item)
+    print (corpuscle)
+
 
     
 json_files = convert_corpus()
 for i in range(len(json_files)):
     print (json_files[i])
     json_item = read_json_file(json_files[i])
-    print (json_item)
-    corpuscle = Corpuscle.initialize_from_json(json_item)
-    print (corpuscle)
+    process_json_item(json_item)

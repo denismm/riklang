@@ -34,12 +34,18 @@ class Word:
             c = -1
         c = int(c)
         return Word.initialize(m,a,r,c,p)
+
+    def serialize(self):
+        pass
     
 
 @dataclass
 class Node:
     word: Word
     collection: list[Word] = field(default_factory=list)
+
+    def serialize(self):
+        pass
 
 @dataclass
 class Text:
