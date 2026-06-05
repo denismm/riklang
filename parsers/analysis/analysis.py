@@ -13,19 +13,27 @@ class Word:
     aspect: str = None
     relation: str = None
     collector: int = 0
+    pronomial: str = None
 
     @classmethod
-    def initialize(cls, morpheme, aspect, relation, collector):
-        word = Word(morpheme, aspect, relation, collector)
+    def initialize(cls, morpheme, aspect, relation, collector, pronomial):
+        word = Word(morpheme, aspect, relation, collector, pronomial)
         return word
 
     @classmethod
     def parse_marc_form(cls, marc):
         [m,a,r,c] = marc.split("-")
+        p = ""
+        if (c[-1] in "pP"):
+            p = "O"
+            c = c[:-1]
+        if (c[-1] in "oO"):
+            p = "O"
+            c = c[:-1]
         if (c in "sS"):
             c = -1
         c = int(c)
-        return Word.initialize(m,a,r,c)
+        return Word.initialize(m,a,r,c,p)
     
 
 @dataclass
@@ -34,7 +42,7 @@ class Node:
     collection: list[Word] = field(default_factory=list)
 
 @dataclass
-class Utterance:
+class Text:
     uncollected: list[Node] = field(default_factory=list)
     ended: list[Node] = field(default_factory=list)
     
@@ -52,6 +60,8 @@ class Utterance:
         if (collector > 0):
             for i in range(collector):
                 #grab from uncollected
+                if (len(self.uncollected) == 0):
+                    print (word)
                 child = self.uncollected.pop()
                 node.collection.insert(0,child)
         elif (collector < 0):
@@ -68,9 +78,57 @@ class Utterance:
             self.uncollected.append(node)
     
     def parse_text(self, text):
-        words = Utterance.split_text(text)
+        words = Text.split_text(text)
         #for each word
         for word in words:
             self.add_word(word)
-        
+
+    @classmethod
+    def initialize_from_text(cls, text):
+        new_text = Text()
+        new_text.parse_text(text)
+
+@dataclass
+class Utterance:
+    author: str
+    literal: str
+    loose: str
+    text: Text
+
+    @classmethod
+    def get_value(cls, key, item, parent):
+        if (key in item):
+            return(item[key])
+        elif (parent is not None and key in parent):
+            return(parent[key])
+        else:
+            return None
+    
+    @classmethod
+    def initialize_from_json(cls, json_item, parent = None):
+        json_author = Utterance.get_value('author', json_item, parent)
+        json_literal = Utterance.get_value('literal', json_item, parent)
+        json_loose = json_item['loose']
+        json_text = Text.initialize_from_text(json_item['text'])
+        return Utterance(json_author, json_literal, json_loose, json_text)
+            
+@dataclass
+class Corpuscle:
+    date: str
+    source: str
+    color: str
+    utterances: list[Utterance] = field(default_factory=list)
+
+    @classmethod
+    def initialize_from_json(cls, json_item):
+        json_utterances = []
+        json_date = json_item['date']
+        json_source = json_item['source']
+        json_color = json_item['color']
+        if ('utterance' in json_item):
+            for json_utterance in json_item['utterance']:
+                json_utterances.append(Utterance.initialize_from_json(json_utterance, json_item))
+        else:
+            json_utterances.append(Utterance.initialize_from_json(json_item))
+        return Corpuscle(json_date, json_source, json_color, json_utterances)
     

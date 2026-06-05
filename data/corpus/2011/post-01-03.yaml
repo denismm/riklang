@@ -31,24 +31,27 @@ utterance:
     -
         literal: large-learning city
         loose: Cambridge, MA
+        note: "Incorrectly Big-N-Quality-1 in the source"
         author: Denis Moskowitz
-        text: Big-N-Quality-1 Learn-N-Quality-1 Seven-N-Quality-0 Home-P-End-2
+        text: Big-N-Quality-0 Learn-N-Quality-1 Seven-N-Quality-0 Home-P-End-2
     -
         literal: fast-moving-water city
         loose: Arlington, MA
-        note: "based on the etymology of Arlington's original name of Menotomy"
+        note: "based on the etymology of Arlington's original name of Menotomy, incorrectly Seven-N-Quality-1 in source"
         author: Denis Moskowitz
-        text: Bouncer-N-Quality-0 Move-N-Quality-0 Water-N-Quality-2 Seven-N-Quality-1 Home-P-End-2
+        text: Bouncer-N-Quality-0 Move-N-Quality-0 Water-N-Quality-2 Seven-N-Quality-0 Home-P-End-2
     -
         literal: human-who-causes-flowering city
         loose: Gardner, MA
+        note: "Incorrectly Seven-N-Quality-1 in the source"
         author: Denis Moskowitz
-        text: Flower-N-Agentrec-0 Human-N-Quality-1 Seven-N-Quality-1 Home-P-End-2
+        text: Flower-N-Agentrec-0 Human-N-Quality-1 Seven-N-Quality-0 Home-P-End-2
     -
         literal: big-big-city
         loose: New York City
+        note: "Incorrectly Seven-N-Quality-1 in the source"
         author: Denis Moskowitz
-        text: Big-N-Quality-0 Big-N-Quality-1 Seven-N-Quality-1 Home-P-End-2
+        text: Big-N-Quality-0 Big-N-Quality-1 Seven-N-Quality-0 Home-P-End-2
     -
         literal: fuzzy stone-fruit
         loose: peach

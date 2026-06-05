@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from analysis import Word, Node, Utterance
+from analysis import Word, Node, Text
 
 def test_word():
     word1 = Word.parse_marc_form("Home-R-End-0")
@@ -14,18 +14,18 @@ def test_word():
     assert word2.relation == "Agentrec"
     assert word2.collector == -1
     
-def test_utt_split_text():
-    words1 = Utterance.split_text("Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0.Move-V-End-3")
+def test_split_text():
+    words1 = Text.split_text("Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0.Move-V-End-3")
     assert len(words1) == 5
     assert words1[2].morpheme == "Beach"
 
-def test_utt_parse_text():
-    utt1 = Utterance()
+def test_parse_text():
+    utt1 = Text()
     utt1.parse_text("Home-P-Source-0.Sun-R-Quality-0.Beach-P-Destination-1.Me-R-Patient-0.Move-V-End-3")
     assert len(utt1.ended) == 1
     assert utt1.ended[0].word.morpheme == "Move"
     assert len(utt1.ended[0].collection) == 3
     #for checking
     print (utt1)
-    assert 0 == 1
+    #assert 0 == 1
 
