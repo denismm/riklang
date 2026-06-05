@@ -87,6 +87,7 @@ class Text:
     def initialize_from_text(cls, text):
         new_text = Text()
         new_text.parse_text(text)
+        return new_text
 
 @dataclass
 class Utterance:
