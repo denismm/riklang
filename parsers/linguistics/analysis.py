@@ -35,12 +35,15 @@ class Word:
         c = int(c)
         return Word.initialize(m,a,r,c,p)
 
-    def serialize(self):
+    def get_collector(self):
         s_c = str(self.collector)
         if (self.collector < 0):
             s_c = "S"
         s_c = s_c + self.pronomial.upper()
-        return "-".join([self.morpheme, self.aspect, self.relation, s_c])
+        return s_c
+    
+    def serialize(self):
+        return "-".join([self.morpheme, self.aspect, self.relation, self.get_collector()])
     
 
 @dataclass
