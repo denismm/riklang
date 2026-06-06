@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys, os, re, json, copy
-from analysis import Document
+from analysis import Node, Document
 
 """
 Converts all the .yaml files in corpus to .json files in the /tmp/ directory.
@@ -79,19 +79,15 @@ def process_json_item(item):
 
 def find_N_children(node):
     found_nodes = []
-    compound = None
+    compound = Node(node.word)
     for child in node.collection:
         if (child.word.aspect == 'N'):
-            compound = copy.deepcopy(node)
+            compound.collection.append(copy.deepcopy(child))
         else:
             found_nodes.extend(find_N_children(child))
-    if (compound is not None):
+    if (len(compound.collection) > 0):
         compound.word.relation = 'End'
         compound.word.pronomial = ''
-        for child in compound.collection:
-            if (child.word.aspect != 'N'):
-                compound.collection.remove(child)
-                compound.word.collector -= 1
         found_nodes.append(compound)
     return found_nodes
     
