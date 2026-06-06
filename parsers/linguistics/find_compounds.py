@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-import sys, os, re, json
+import sys, os, re, json, copy
 from analysis import Document
 
 """
 Converts all the .yaml files in corpus to .json files in the /tmp/ directory.
 Is this stupid?
   Yes.
-Is it less stupid that trying to deal with the state of yaml support in Python?
+Is it less stupid than trying to deal with the state of yaml support in Python?
   Good question.
 """
 def convert_corpus():
@@ -66,10 +66,36 @@ Process an object:
 
 """
 def process_json_item(item):
-    print (json_item)
     document = Document.initialize_from_json(json_item)
-    print (document)
+    for utterance in document.utterances:
+        text = utterance.text
+        found_nodes = []
+        for node in text.ended:
+            found_nodes.extend(find_N_children(node))
+        if (len(found_nodes) > 0):
+            print ("\n".join([node.serialize() for node in found_nodes]))
+            print (utterance.literal)
+            print (utterance.loose)
 
+def find_N_children(node):
+    found_nodes = []
+    compound = None
+    for child in node.collection:
+        if (child.word.aspect == 'N'):
+            compound = copy.deepcopy(node)
+        else:
+            found_nodes.extend(find_N_children(child))
+    if (compound is not None):
+        compound.word.relation = 'End'
+        compound.word.pronomial = ''
+        for child in compound.collection:
+            if (child.word.aspect != 'N'):
+                compound.collection.remove(child)
+                compound.word.collector -= 1
+        found_nodes.append(compound)
+    return found_nodes
+    
+    
 
     
 json_files = convert_corpus()
