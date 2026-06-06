@@ -79,7 +79,7 @@ def process_json_item(item):
 
 def find_N_children(node):
     found_nodes = []
-    compound = Node(node.word)
+    compound = Node(copy.deepcopy(node.word))
     for child in node.collection:
         if (child.word.aspect == 'N'):
             compound.collection.append(copy.deepcopy(child))
@@ -88,11 +88,9 @@ def find_N_children(node):
     if (len(compound.collection) > 0):
         compound.word.relation = 'End'
         compound.word.pronomial = ''
+        compound.word.collector = len(compound.collection)
         found_nodes.append(compound)
     return found_nodes
-    
-    
-
     
 json_files = convert_corpus()
 for i in range(len(json_files)):
