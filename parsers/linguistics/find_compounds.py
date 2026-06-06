@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys, os, re, json
-from analysis import Corpuscle
+from analysis import Document
 
 """
 Converts all the .yaml files in corpus to .json files in the /tmp/ directory.
@@ -58,7 +58,7 @@ def read_json_file(filename):
 
 """
 Process an object:
-* Convert to Corpuscle
+* Convert to Document
 * Grab utterances.text
 * Traverse looking for words with children that have N aspect
 * Grab those and add to a list
@@ -67,8 +67,8 @@ Process an object:
 """
 def process_json_item(item):
     print (json_item)
-    corpuscle = Corpuscle.initialize_from_json(json_item)
-    print (corpuscle)
+    document = Document.initialize_from_json(json_item)
+    print (document)
 
 
     

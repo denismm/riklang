@@ -17,7 +17,7 @@ class Word:
 
     @classmethod
     def initialize(cls, morpheme, aspect, relation, collector, pronomial):
-        word = Word(morpheme, aspect, relation, collector, pronomial)
+        word = Word(morpheme.capitalize(), aspect.upper(), relation.capitalize(), collector, pronomial.upper())
         return word
 
     @classmethod
@@ -25,7 +25,7 @@ class Word:
         [m,a,r,c] = marc.split("-")
         p = ""
         if (c[-1] in "pP"):
-            p = "O"
+            p = "P"
             c = c[:-1]
         if (c[-1] in "oO"):
             p = "O"
@@ -36,16 +36,24 @@ class Word:
         return Word.initialize(m,a,r,c,p)
 
     def serialize(self):
-        pass
+        s_c = str(self.collector)
+        if (self.collector < 0):
+            s_c = "S"
+        s_c = s_c + self.pronomial.upper()
+        return "-".join([self.morpheme, self.aspect, self.relation, s_c])
     
 
 @dataclass
 class Node:
     word: Word
-    collection: list[Word] = field(default_factory=list)
+    collection: list[Node] = field(default_factory=list)
 
     def serialize(self):
-        pass
+        ascii = self.word.serialize()
+        for child in self.collection:
+            ascii = child.serialize() + " " + ascii
+        return ascii
+        
 
 @dataclass
 class Text:
@@ -69,13 +77,13 @@ class Text:
                 if (len(self.uncollected) == 0):
                     print (word)
                 child = self.uncollected.pop()
-                node.collection.insert(0,child)
+                node.collection.append(child)
         elif (collector < 0):
             #grab all of uncollected
             for i in range(len(uncollected)):
                 #grab from uncollected
                 child = self.uncollected.pop()
-                node.collection.insert(0,child)
+                node.collection.append(child)
         if (word.relation == "End"):
             #add to ended
             self.ended.append(node)
@@ -94,6 +102,15 @@ class Text:
         new_text = Text()
         new_text.parse_text(text)
         return new_text
+
+    def serialize(self):
+        ascii = " ".join(node.serialize() for node in self.uncollected)
+        if (len(ascii) > 0):
+            ascii += " "
+        ascii += " ".join(node.serialize() for node in self.ended)
+        return ascii
+            
+    
 
 @dataclass
 class Utterance:
@@ -120,7 +137,7 @@ class Utterance:
         return Utterance(json_author, json_literal, json_loose, json_text)
             
 @dataclass
-class Corpuscle:
+class Document:
     date: str
     source: str
     color: str
@@ -137,5 +154,5 @@ class Corpuscle:
                 json_utterances.append(Utterance.initialize_from_json(json_utterance, json_item))
         else:
             json_utterances.append(Utterance.initialize_from_json(json_item))
-        return Corpuscle(json_date, json_source, json_color, json_utterances)
+        return Document(json_date, json_source, json_color, json_utterances)
     
