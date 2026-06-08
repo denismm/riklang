@@ -6,5 +6,5 @@ utterance:
         author: Denis Moskowitz
         literal: "I like the machines on the god-of-war planet. The machines' talk makes me happy."
         loose: I like the rovers on Mars. The way they talk makes me happy.
-        text: Me-R-Agent-0 Fight-N-Result-0 God-N-Quality-1 Ground-N-Instrument-0 Globe-P-Includes-2 Machine-R-Patient-1 Friend-V-End-2 Machine-R-Source-0P Talk-V-Source-1 Me-R-Patient-0P Happy-V-End-2
+        text: Me-R-Agent-0 Fight-N-Sourcerec-0 God-N-Quality-1 Ground-N-Instrument-0 Globe-P-Includes-2 Machine-R-Patient-1 Friend-V-End-2 Machine-R-Source-0P Talk-V-Source-1 Me-R-Patient-0P Happy-V-End-2
         note: "For a time, LiveJournal accounts were operated by both the Spirit rover (https://spiritrover.livejournal.com/, from 2003-12-13 to 2006-06-12) and the Opportunity rover (https://opportunitygrrl.livejournal.com/, from 2004-01-24 to 2007-09-13)."
