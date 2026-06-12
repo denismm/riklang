@@ -1,0 +1,11 @@
+date: 2004-04-13
+source: "LJ post: https://rikchik.livejournal.com/4199.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: Rain causes me to want to sleep at home. I do unpleasant cold work at work.
+        loose: "The rain makes me want to be asleep at home. It's chilly where I work."
+        text: Sky-N-Source-0 Water-T-Source-1 Home-P-Includes-0 Sleep-V-Patient-1 Me-R-Agent-0 Want-V-End-3 Wind-N-Agent-0 Pain-I-Quality-1 Work-P-Includes-0 Me-R-Agent-0P Work-V-End-3
+        note: "One comment remarks that the Richik have four phrases for heat-quantity conditions: in addition to Wind-N-Source-0 Pain-I-End-1 (Pain from the Wind/unpleasant cold) there is also Wind-N-Source-0 Happiness-I-End-1 (Happiness from the Wind/pleasant cold), Sun-N-Source-0 Pain-I-End-1 (Pain from the Sun/pleasant warmth), and Sun-N-Source-0 Happiness-I-End-1 (Happiness from the Sun/pleasant warmth)."
+        
