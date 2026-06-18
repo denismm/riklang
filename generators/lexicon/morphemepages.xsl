@@ -251,7 +251,7 @@
  </xsl:template>
 
  <xsl:template match="utterance" mode="morphemepage">
-  <xsl:param name="lineheight">4</xsl:param>
+  <xsl:param name="lineheight">s</xsl:param>
   <xsl:variable name="asciiform">
     <xsl:apply-templates select="word[1]" mode="asciiform"/>
     <xsl:for-each select="word[1]/following-sibling::word">
