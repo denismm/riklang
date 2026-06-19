@@ -4,6 +4,6 @@ color: Blue
 utterance:
     -
         author: Denis Moskowitz
-        literal: "On Saturday, a human named Happy-Happy and I went to a place where art is housed, saw small hailing grass from Land-of-Rising-Sun country and painted cloth with dragons from Middle-Kingdom country, and had fun."
-        loose: "On Saturday, Mary and I went to an art museum, saw Japanese postcards and Chinese robes with dragons, and had fun."
+        literal: "Last Tree-day, a human named Happy-Happy and I went to a place where art is housed, saw small hailing grass from Land-of-Rising-Sun country and painted cloth with dragons from Middle-Kingdom country, and had fun."
+        loose: "Last Tree-day, Mary and I went to an art museum, saw Japanese postcards and Chinese robes with dragons, and had fun."
         text: Tree-N-Quality-0 Sun-N-Agent-0 Span-I-Includes-2 Me-R-Patient-0 Happy-N-Quality-0 Happy-N-Quality-1 Human-R-Patient-1 Gather-R-Patient-2 Art-N-Includesrec-0 Home-P-Destination-1 Move-V-Patient-2 Sequence-I-End-2 Gather-R-Agent-0P Sun-N-Patient-0 Child-N-Quality-1 Home-N-Includes-0 Home-P-Source-2 Small-M-Quality-0 Hail-N-Agentrec-0 Grass-T-Patient-3 All-N-Patient-0 Around-N-Quality-1 Home-N-Includes-0 Home-P-Source-2 Dragon-R-Quality-0 Paint-N-Task-0 Cloth-T-Patient-3 Eye-V-Patient-3 Happy-M-Quality-0 Gather-R-Patient-1P Sequence-I-End-2
