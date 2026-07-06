@@ -1,0 +1,10 @@
+date: 2004-10-28
+source: "LJ post: https://rikchik.livejournal.com/6489.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: The Red Cloth-Shoes play-family get themselves the big fight-flower. This makes my community very happy.
+        loose: The Red Sox won the World Series! This makes my community very happy.
+        text: Ground-N-Quality-0 Cloth-N-Instrument-0 Shoe-N-Quality-2 Chaos-N-Agentrec-0 Work-N-Agentrec-1 Home-R-Destination-2 Home-R-Agent-0P Big-I-Quality-0 Fight-N-Source-0 Flower-T-Patient-2 Give-V-End-3 Me-R-Includesrec-0 Circle-N-Quality-0 Home-R-Patient-2 Give-V-Agent-0P Big-M-Quality-0 Happy-V-End-3
+        note: "Rikchiks, like many intelligent creatures, occasionally participate in contests that are like fights or battles, but are not intended to result in the death or injury of one side. The traditional prize for such contests is a flower or bouquet. The contests are therefore referred to as flower-fights (Flower-N-Sourcerec-0 Fight-V-End-1), and the flowers given as trophies are fight-flowers (Fight-N-Source-0 Flower-T-End-1). Naturally a more important contest would have a larger bouquet."
