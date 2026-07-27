@@ -1,0 +1,38 @@
+date: 2005-01-20
+source: "LJ post: https://rikchik.livejournal.com/7245.html"
+author: Denis Moskowitz
+color: Blue
+utterance:
+    -
+        literal: "Seven words included in 10(7) magic-fire-stories that make me happy."
+        loose: "Seven quotes from seven movies I enjoy."
+        text: One-I-Source-0 Zero-I-Quality-1 Me-R-Patient-0 Happy-M-Quality-1 Magic-N-Quality-0 Fire-N-Instrument-1 Book-I-Includes-3 Seven-I-Quality-0 Word-I-End-2
+    -
+        literal: "I say we all move from here, then as we all move in a circle we God-displace this place."
+        loose: "I say we take off and nuke the site from orbit. (Aliens)"
+        text: Me-R-Agent-0 All-M-Quality-0 Me-R-Patient-1 Me-P-Source-0 Move-V-Patient-2 Move-N-Instrument-0 Circle-P-Includes-1 All-M-Quality-0O Me-R-Agent-2P Me-P-Patient-0 God-N-Instrument-0 Displacement-V-Patient-3 Sequence-I-Patient-2 Talk-V-End-2
+    -
+        literal:  "We all are small earth in the wind."
+        loose: "All we are is dust in the wind. (Bill & Ted's Excellent Adventure)"
+        text: All-M-Quality-0 Me-R-Includesrec-1 Wind-P-Includes-0 Small-M-Quality-0 Ground-T-End-3
+    -
+        literal: "Displacers. Very many displacers."
+        loose: "Guns. Lots of guns. (The Matrix)"
+        text: Displacement-T-End-0 Seven-M-Quality-0 Seven-M-Quality-1 Displacement-T-End-1
+    -
+        literal: "Give me my book or not."
+        loose: "Please give me my book. (Read Or Die)"
+        text: Me-R-Destination-0 Me-R-Includes-0P Book-T-Patient-1 Give-V-Patient-2 Zero-V-Patient-0 Choice-V-End-2
+    -
+        literal: "No humans move or not. I have a dragon and I am not afraid of actions taken with the dragon."
+        loose: "Nobody move! I've got a dragon and I'm not afraid to use it! (Shrek)"
+        text: Zero-M-Quality-0 Human-R-Patient-1 Move-V-Patient-1 Zero-V-Patient-0 Choice-V-End-2 Me-R-Agent-0 Dragon-R-Patient-0 Have-V-Patient-2 Me-R-Patient-0P Dragon-V-Agent-0P Zero-M-Quality-0 Fear-V-Patient-3 Gather-I-End-2
+    -
+        literal: "Human's painted cloth. Give cloth to me now."
+        loose: "Your clothes. Give them to me now. (The Terminator)"
+        text: Human-R-Includes-0 Paint-N-Agentrec-0 Cloth-T-End-2 Me-R-Destination-0 Cloth-T-Patient-0P Me-I-Includes-0 Give-V-End-3
+    -
+        literal: "The thing is blue glass. Someone else says the thing must be from Land-of-Tomorrow."
+        loose: "It's blue glass. Must be from Kentucky then. (Yellow Submarine)"
+        text: Sky-M-Quality-0 Glass-T-Includes-1 Thing-T-End-1P Talk-I-Source-0P Me-N-Patient-0 Sequence-N-Patientrec-1 Sun-N-Agent-0 Span-N-Quality-2 Ground-P-Source-1 Thing-T-End-2P
+        note: The translation of "Kentucky" into Rikchik comes from a theory that it derives from an Iroquois name meaning "land of tomorrow."
