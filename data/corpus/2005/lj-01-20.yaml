@@ -24,7 +24,7 @@ utterance:
         loose: "Please give me my book. (Read Or Die)"
         text: Me-R-Destination-0 Me-R-Includes-0P Book-T-Patient-1 Give-V-Patient-2 Zero-V-Patient-0 Choice-V-End-2
     -
-        literal: "No humans move or not. I have a dragon and I am not afraid of actions taken with the dragon."
+        literal: "No humans move or not. I have a dragon and I am not afraid of dragon-acting."
         loose: "Nobody move! I've got a dragon and I'm not afraid to use it! (Shrek)"
         text: Zero-M-Quality-0 Human-R-Patient-1 Move-V-Patient-1 Zero-V-Patient-0 Choice-V-End-2 Me-R-Agent-0 Dragon-R-Patient-0 Have-V-Patient-2 Me-R-Patient-0P Dragon-V-Agent-0P Zero-M-Quality-0 Fear-V-Patient-3 Gather-I-End-2
     -
