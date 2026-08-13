@@ -5,6 +5,6 @@ utterance:
     -
         author: Denis Moskowitz
         literal: The human named "Happy-happy" and I saw "Greetings-with-water music-family." The seeing made us happy. Many, many other learning humans saw. Us seeing the many, many other humans made us happy.
-        loose: "Mary and I saw [Fountains of Wayne?], which made us happy. Lots of other curious people saw the band. Seeing the crowd made us happy."
+        loose: "Mary and I saw Fountains of Wayne, which made us happy. Lots of other curious people saw the band. Seeing the crowd made us happy."
         text: Me-R-Agent-0 Happy-N-Quality-0 Happy-N-Quality-1 Human-R-Patient-1 Gather-R-Agent-2 Water-N-Instrument-0 Hail-N-Quality-1 Sound-N-Instrument-0 Art-N-Agentrec-1 Home-R-Patient-2 Eye-V-Patient-2 Me-I-Patient-0 Sequence-I-End-2 Eye-V-Source-0P Gather-R-Patient-0P Happy-V-End-2 Seven-M-Quality-0 Seven-M-Quality-1 Learn-V-Agentrec-0 Human-R-Agent-2 Eye-V-End-1P Human-R-Patient-0P Gather-R-Agent-0P Eye-V-Source-2 Gather-R-Patient-0P Happy-V-End-2
       
