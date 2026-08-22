@@ -4,6 +4,6 @@ color: Blue
 utterance:
     -
         author: Denis Moskowitz
-        literal: Me and my friends from work went to the happy-house named White Road. The happy-house had empty-music-family singing. I along with the empty-music-family sang "The human that loves the human named Give."
-        loose: Me and my friends from work went to the [White Road?] bar. There was karaoke there, and I sang "Jessie's Girl" with it.
+        literal: Me and my friends from work went to the White Road happy-house. The happy-house had empty-music-family singing. I along with the empty-music-family sang "The human that loves the human named Give."
+        loose: Me and my friends from work went to the Milky Way Lounge (in Jamaica Plain, Boston). There was live-band karaoke there, and I sang "Jessie's Girl" with it.
         text: Me-R-Patient-0 Work-P-Source-0 Friend-R-Patient-1 Gather-R-Patient-2 Sun-N-Quality-0 Move-N-Quality-1 Happy-N-Agentrec-0 Home-P-Destination-2 Move-V-Patient-2 Sequence-I-End-1 Home-P-Includes-0P Box-M-Instrument-0 Sound-N-Instrument-0 Art-N-Agentrec-2 Home-R-Agent-1 Art-V-Patient-2 Sequence-I-End-1P Me-R-Patient-0P Home-R-Patient-0P Gather-R-Agent-2 Give-N-Quality-0 Human-N-Agent-1 Love-N-Patientrec-1 Human-N-Quality-1 Art-V-Patient-2 Sequence-I-End-1P
