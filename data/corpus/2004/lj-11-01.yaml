@@ -1,0 +1,9 @@
+date: 2004-11-01
+source: "LJ post: https://rikchik.livejournal.com/6729.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: Today is the day of the dead. I think about the parent of my parent, the learning-time friend, and the small bouncer named "Flower."
+        loose: "Today is the Day of the Dead. I am thinking about my mother's mother, Grace, my school-time friend, Kim, and the family dog, Jasmine."
+        text: Me-I-Includesrec-0 Dead-R-Quality-0 Sun-N-Agent-0 Span-I-End-3 Me-R-Agent-0 Me-R-Patient-0P Parent-R-Patient-1 Parent-R-Destination-1 Learn-V-Includesrec-0 Span-I-Includes-1 Friend-R-Destination-1 Flower-N-Quality-0 Small-M-Quality-0 Bouncer-R-Destination-2 Think-V-End-4
