@@ -1,0 +1,10 @@
+date: 2005-04-20
+source: "LJ post: https://rikchik.livejournal.com/8359.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: I change all blocks. After now, every block includes 32(7) days, and a year includes 30(7) blocks. Today is 5 Chaos 8, 21-Block 9.
+        loose: I am changing every block. Starting now, there are 23 days in every block, and 21 blocks in a year. Today is 5 Chaos 8, 21-Block 9.
+        text: All-M-Quality-0 Number-N-Agentrec-0 Span-I-Patient-2 Me-R-Agent-0 Change-V-End-2 Me-I-Source-0 Number-N-Task-0 Span-I-Includes-1P Three-I-Source-0 Two-I-Quality-1 Sun-N-Agent-0 Span-I-Patient-3 Tree-N-Patient-0 Span-I-Includes-1 Three-I-Source-0 Zero-I-Quality-1 Number-N-Agentrec-0O Span-I-Patient-3P Sequence-I-End-3 Me-I-Includesrec-0 Five-I-Quality-0 Chaos-M-Quality-1 One-I-Source-0 One-I-Quality-1 Tree-N-Patient-2 Three-I-Source-0 Zero-I-Quality-1 Number-N-Task-1 One-I-Source-0 Two-I-Quality-1 Sun-N-Agent-1 Span-I-End-4
+        note: "This Rikchik calendrical reform explains date format discrepancies in utterances written prior to this one, such as the one from 2004-05-03. A comment explains that previously, the Rikchik year was made of 10 (13(7)) blocks of 49 (100(7)) days each, with the final block of the year being one week shorter."
