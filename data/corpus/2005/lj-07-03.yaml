@@ -9,112 +9,112 @@ utterance:
         text: Rikchik-N-Quality-0 Human-R-Source-1 Sound-N-Instrument-0 Art-I-Patient-1 Gather-V-Includesrec-1 Circle-T-End-2
         note: The title of a CD.
     -
-        literal: "Music" and "Music-creating group"
-        loose: Track/Artist
+        literal: "Music/Music-creating group"
+        loose: "Track/Artist"
         text: Sound-N-Instrument-0 Art-I-End-1 Sound-N-Instrument-0 Art-N-Agentrec-1 Home-R-End-1
         note: Side headings on the cover of a CD, referring to the list of tracks and the bands who created them.
     -
-        literal: "Globe above Tentacles" by "Many Move and Moves"
-        loose: Head over Heels, by the Go-Gos
+        literal: Globe above Tentacles by Many Move and Moves
+        loose: Head over Heels by the Go-Gos
         text: Globe-R-Patient-0 Tentacle-R-Agent-0 Above-I-End-2 Seven-M-Quality-0 Move-V-Patient-0 Move-V-Patient-0 Gather-V-End-3
         note: Track & artist number 1(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "The time after someone goes away from here" by "Flowery (colorful) Sky Circle"
+        literal: The Time After Someone Goes Away From Here by Flowery (colorful) Sky Circle
         loose: Since You Been Gone by Rainbow
         text: Rikchik-R-Patient-0 Me-R-Source-0 Move-V-Source-2 Sequence-I-Patientrec-1 Span-I-End-1 Flower-N-Quality-0 Sky-N-Includes-0 Circle-T-End-2
         note: Track & artist number 2(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Tentacle Me or Don't" by "Many Doors"
+        literal: "Tentacle Me or Don't by Many Doors"
         loose: Touch Me by The Doors
         text: Me-R-Patient-0 Tentacle-V-Patient-1 Zero-V-Patient-0 Choice-V-End-2 Seven-M-Quality-0 Door-T-End-1
         note: Track & artist number 3(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Long Seeing" by "Rikchiky (green) Day"
+        literal: Long Seeing by Rikchiky (green) Day
         loose: Long View by Green Day
         text: Long-M-Destination-0 Eye-V-End-1 Rikchik-M-Quality-0 Sun-N-Agent-0 Span-I-End-2
         note: Track & artist number 4(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Skyish (blue)" by "Many Grass's Fighting Tentacles"
+        literal: "Skyish (blue) by Many Grass's Fighting Tentacles"
         loose: Blue by The Thorns
         text: Sky-M-End-0 Seven-M-Quality-0 Grass-T-Includes-0 Fight-N-Instrument-0 Tentacle-T-End-3
         note: Track & artist number 5(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Not Talking or Don't" by "41104(7) Crazy People"
+        literal: "Not Talking or Don't by 41104(7) Crazy People"
         loose: "Don't Speak by 10,000 Maniacs"
         text: Zero-M-Quality-0 Talk-V-Patient-1 Zero-V-Patient-0 Choice-V-End-2 Four-I-Source-0 One-I-Source-1 One-I-Source-1 Zero-I-Source-1 Four-I-Quality-1 Chaos-V-Quality-0 Rikchik-R-End-2
         note: Track & artist number 6(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Box which includes Rain" by "Happy Dead (animate)"
+        literal: "Box which includes Rain by Happy Dead (animate)"
         loose: Box of Rain by The Grateful Dead
         text: Sky-N-Source-0 Water-R-Includesrec-1 Box-T-End-1 Happy-M-Quality-0 Dead-R-End-1
         note: Track & artist number 10(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "In the Night that contains Now, Someone is All that I Have" by "Many Repulsion-Boxes"
-        loose: You're All I've Got Tonight by The Cars
+        literal: In the Night that contains Now, Someone is All that I Have by Many Repulsion-Boxes
+        loose: "You're All I've Got Tonight by The Cars"
         text: Me-I-Includesrec-0 Night-I-Quality-1 Span-I-Includes-1 Rikchik-R-Includes-0 Me-R-Agent-0 Have-V-Patientrec-1 All-R-End-3 Seven-M-Quality-0 Repulsion-V-Agentrec-0 Box-R-End-2
         note: Track & artist number 11(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Love and Rock are Similar" by "The Human named Planet-Leader of the Flowery Sky-Circle Flower Family"
+        literal: "Love and Rock are Similar by The Human named Planet-Leader of the Flowery Sky-Circle Flower Family"
         loose: Love is Like A Rock by Donnie Iris
         text: Love-I-Patient-0 Rock-T-Patient-0 Similar-V-End-2 Flower-N-Quality-0 Sky-N-Includes-0 Circle-N-Quality-2 Flower-N-Includes-1 Ground-N-Instrument-0 Globe-N-Patient-1 Leader-N-Quality-1 Human-R-End-2
         note: Track & artist number 12(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Now, and then I Sleep Here or Move From Here or What" by "Fight"
+        literal: "Now, and then I Sleep Here or Move From Here or What by Fight"
         loose: Should I Stay or Should I Go by The Clash
         text: Me-I-Patient-0 Me-R-Patient-0 Me-P-Source-0 Sleep-V-Patient-1 Me-P-Source-0P Move-V-Patient-1 What-V-Patient-0 Choice-V-Patient-4 Sequence-I-End-2 Fight-V-End-0
         note: Track & artist number 13(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Water-Repulsor(s)" by "Earthy (red) Sky Fish"
+        literal: "Water-Repulsor(s) by Earthy (red) Sky Fish"
         loose: Ships by Redbird
         text: Water-P-Includes-0 Repulsion-R-End-1 Ground-M-Quality-0 Sky-P-Includes-0 Fish-R-End-2
         note: Track & artist number 14(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Door-like Tentacles" by "Long Movement"
+        literal: "Door-like Tentacles by Long Movement"
         loose: Open Arms by Journey
         text: Door-M-Quality-0 Tentacle-R-End-1 Long-M-Quality-0 Move-V-End-1
         note: Track & artist number 15(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Four Tree-Tentacles" by "Metal Sky-Fish-like Repulsor"
+        literal: "Four Tree-Tentacles by Metal Sky-Fish-like Repulsor"
         loose: Four Sticks by Led Zeppelin
         text: Four-I-Quality-0 Tree-N-Source-0 Tentacle-T-End-2 Metal-T-Instrument-0 Sky-N-Instrument-0 Fish-R-Quality-1 Repulsion-T-End-2
         note: Track & artist number 16(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "House Burns" by "Many Talking Globes"
+        literal: "House Burns by Many Talking Globes"
         loose: Burning Down The House by Talking Heads
         text: Home-T-Patient-0 Fire-V-End-1 Seven-M-Quality-0 Talk-V-Agentrec-0 Globe-R-End-2
         note: Track & artist number 20(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "I Want All" by "Parenting Leader"
+        literal: "I Want All by Parenting Leader"
         loose: I Want It All by Queen
         text: Me-R-Agent-0 All-T-Patient-0 Want-V-End-2 Parent-M-Quality-0 Leader-R-End-1
         note: Track & artist number 21(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Burning in the Fire" by "Crystal-ish"
+        literal: "Burning in the Fire by Crystal-ish"
         loose: Burn On The Flame by Sweet
         text: Fire-R-Includes-0 Fire-V-End-1 Crystal-M-End-0
         note: Track & artist number 22(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Grass from Big Water" by "1 Shared among 2"
+        literal: "Grass from Big Water by 1 Shared among 2"
         loose: Ka Uluwehi O Ke Kai (The Plants of the Sea) by Hapa (Half)
         text: Big-N-Quality-0 Water-P-Source-1 Grass-T-End-1 One-I-Patient-0 Two-I-Destination-0 Share-I-End-2
         note: Track & artist number 23(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Move Eye-wards (west) Or Don't" by "Many People of a Small City"
+        literal: "Move Eye-wards (west) Or Don't by Many People of a Small City"
         loose: Go West by The Village People
         text: Eye-P-Destination-0 Move-V-Patient-1 Zero-V-Patient-0 Choice-V-End-2 Seven-M-Quality-0 Small-M-Quality-0 Home-R-Includes-0 Home-R-Includes-2 Rikchik-R-End-2
         note: Track & artist number 24(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Give Me Home Or Don't" by "Many Moving Rocks"
+        literal: "Give Me Home Or Don't by Many Moving Rocks"
         loose: Gimme Shelter by The Rolling Stones
         text: Home-I-Patient-0 Me-R-Destination-0 Give-V-Patient-2 Zero-V-Patient-0 Choice-V-End-2 Seven-M-Quality-0 Move-V-Patientrec-0 Rock-R-End-2
         note: Track & artist number 25(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Small Bouncer and Shoe(s)" by "Human named First-Human from the Working-Insect family"
-        loose: Puss 'n Boots by Adam Ant
+        literal: "Small Bouncer and Shoe(s) by Human named First-Human from the Working-Insect family"
+        loose: "Puss 'n Boots by Adam Ant"
         text: Small-N-Quality-0 Bouncer-R-Patient-1 Shoe-T-Patient-0 Gather-I-End-2 One-N-Source-0 Human-N-Quality-1 Work-N-Agentrec-0 Insect-N-Includes-1 Human-R-End-2
         note: Track & artist number 26(7) on a CD, indicated by a Rikchik numeral above (not included).
     -
-        literal: "Someone going to the place to which that someone wants to go, or not" by "Many Parents and Contributors"
+        literal: "Someone Going to the Place to Which That Someone Wants to Go, or Not by Many Parents and Contributors"
         loose: Go Where You Wanna Go by The Mamas And The Papas
         text: Rikchik-R-Agent-0 Rikchik-R-Agent-0P Want-V-Patientrec-1 Move-V-Destinationrec-1 Thing-P-Destination-1 Move-V-Patient-2 Zero-V-Patient-0 Choice-V-End-2 Seven-M-Quality-0 Parent-R-Patient-0 Contributor-R-Patient-0 Gather-R-End-3
         note: Track & artist number 30(7) on a CD, indicated by a Rikchik numeral above (not included).
