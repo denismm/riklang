@@ -7,3 +7,4 @@ utterance:
         literal: "I created art of a Rikchik before now. The art is similar to new art. This art of Rikchik causes happiness or not."
         loose: "I have drawn a picture of a Rikchik. The picture is in the style of Art Nouveau. Please enjoy this picture."
         text: Me-R-Agent-0 Rikchik-R-Includesrec-0 Art-T-Patient-1 Fruit-V-Patient-2 Me-I-Patient-0 Sequence-I-End-2 Art-T-Patient-0P Zero-N-Quality-0 Span-N-Quality-1 Art-N-Quality-1 Art-T-Patient-1 Similar-M-End-2 Rikchik-R-Includesrec-0O Art-T-Patient-1P Happy-V-Patient-1 Zero-V-Patient-0 Choice-V-End-2
+        note: "The Richik in the accompanying picture is also signing a word: Emotion-I-Quality-0, meaning emotional."
