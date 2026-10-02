@@ -1,0 +1,30 @@
+date: 2006-03-14
+source: "LJ post: https://rikchik.livejournal.com/10485.html"
+color: Blue
+author: Denis Moskowitz
+utterance:
+    -
+        literal: "What does somebody (you) have?"
+        loose: "[Person A] Whatcha got?"
+        text: Human-R-Agent-0 What-T-Patient-0 Have-V-End-2
+        note: "The first line of dialogue in a four-panel comic (viewable at the source)."
+    -
+        literal: The words for now.
+        loose: "[Person B] Today's script."
+        text: Me-I-Quality-0 Span-I-Includes-1 Word-I-End-1
+        note: "The second line of dialogue in a four-panel comic (viewable at the source)."
+    -
+        literal: Those words cause happiness.
+        loose: "[Person B] It's a humdinger!"
+        text: Word-T-Source-0P Happy-V-End-1
+        note: "The third line of dialogue in a four-panel comic (viewable at the source)."
+    -
+        literal: "Can't read."
+        loose: "[Person A] Can't read it."
+        text: Book-V-Patient-0 Zero-M-Quality-0 Have-V-End-2
+        note: "The fourth line of dialogue in a four-panel comic (viewable at the source)."
+    -
+        literal: Nobody can read.
+        loose: "[Person B] Nobody can."
+        text: Zero-R-Agent-0 Book-V-Patient-0P Have-V-End-2
+        note: "The fifth line of dialogue in a four-panel comic (viewable at the source)."
