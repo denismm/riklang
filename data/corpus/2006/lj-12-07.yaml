@@ -1,0 +1,15 @@
+date: 2006-12-07
+source: "LJ post: https://rikchik.livejournal.com/12529.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: I was born 46(7) human years before today.
+        loose: I was born 34 human years ago.
+        text: Me-R-Patient-0 Child-V-Patient-1 Four-I-Source-0 Six-I-Quality-1 Human-R-Quality-0 Tree-N-Patient-0 Span-I-Quality-3 Me-I-Includesrec-0 Sun-N-Agent-0 Span-I-Patient-2 Sequence-I-End-3
+    -
+        author: Marc Moskowitz
+        literal: You were born 51130(7) human days before today.
+        loose: You were born 12418 human days ago.
+        text: Rikchik-N-Quality-0 Human-R-Patient-1 Child-V-Patient-1 Five-I-Source-0 One-I-Source-1 One-I-Source-1 Three-I-Source-1 Zero-M-Quality-1 Human-R-Quality-0 Sun-N-Agent-0 Span-I-Quality-3 Me-I-Includesrec-0 Sun-N-Agent-0 Span-I-Patient-2 Sequence-I-End-3
+        note: "This was a comment by Marc on Denis's birthday post (the other utterance on this date)."
