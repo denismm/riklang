@@ -12,4 +12,4 @@ utterance:
         literal: You were born 51130(7) human days before today.
         loose: You were born 12418 human days ago.
         text: Rikchik-N-Quality-0 Human-R-Patient-1 Child-V-Patient-1 Five-I-Source-0 One-I-Source-1 One-I-Source-1 Three-I-Source-1 Zero-M-Quality-1 Human-R-Quality-0 Sun-N-Agent-0 Span-I-Quality-3 Me-I-Includesrec-0 Sun-N-Agent-0 Span-I-Patient-2 Sequence-I-End-3
-        note: "This was a comment by Marc on Denis's birthday post (the other utterance on this date)."
+        note: "This was a comment by Marc on Denis's birthday post (another utterance on this date)."
