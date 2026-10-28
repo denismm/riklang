@@ -1,0 +1,15 @@
+date: 2007-10-21
+source: "LJ post: https://rikchik.livejournal.com/15187.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: "During the day of now, I used a two-wheeled machine to go from my home to sleeping-water-crossing city and back to my home. The length of the movement was 2664(7) Throws."
+        loose: "Today I rode my bicycle from home to Bedford and back. The length of the journey was 1026 Throws (~22.7 miles)."
+        text: Me-I-Includesrec-0 Sun-N-Instrument-0 Span-I-Source-2 Sequence-I-End-1 Me-R-Patient-0 Two-N-Quality-0 Ground-N-Patient-0 Gear-N-Quality-2 Machine-R-Instrument-1 Me-R-Includesrec-0 Home-P-Source-1 Sleep-N-Quality-0 Water-N-Patient-0 Across-N-Quality-2 Home-N-Includesrec-0 Circle-I-Destination-2 Me-R-Includesrec-0O Home-P-Destination-1P Move-V-Patient-5 Sequence-I-End-1P Move-V-Patient-0P Two-I-Source-0 Six-I-Source-1 Six-I-Source-1 Four-I-Quality-1 Hail-I-Quality-1 Long-I-End-2
+    -
+        author: Marc Moskowitz
+        literal: "That movement makes me happy. The ground-in-water of sleeping-water-crossing city makes me big happy."
+        loose: "The bike ride [you went on] makes me happy. Bedford's swamp makes me very happy."
+        text: Move-V-Agent-0P Me-R-Patient-0 Happy-V-End-2 Sleep-N-Quality-0 Water-N-Patient-0 Across-N-Quality-2 Home-N-Includesrec-0 Circle-I-Includes-2 Water-N-Includesrec-0 Ground-P-Agent-2 Big-M-Quality-0 Me-R-Patient-0P Happy-V-End-3
+        note: "In using the pronomial collector with Move at the start of the utterance, this establishes Marc's utterance as a comment on/contiunation of Denis's report of his bike ride (also on this date); however, Me is still Marc, the current speaker. In addition, the swamp in question is likely White Cedar Swamp, just to the west of Bedford."
