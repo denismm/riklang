@@ -7,7 +7,7 @@ utterance:
         literal: "During the day of now, I used a two-wheeled machine to go from my home to sleeping-water-crossing city and back to my home. The length of the movement was 2664(7) Throws."
         loose: "Today I rode my bicycle from home to Bedford and back. The length of the journey was 1026 Throws (~22.7 miles)."
         text: Me-I-Includesrec-0 Sun-N-Instrument-0 Span-I-Source-2 Sequence-I-End-1 Me-R-Patient-0 Two-N-Quality-0 Ground-N-Patient-0 Gear-N-Quality-2 Machine-R-Instrument-1 Me-R-Includesrec-0 Home-P-Source-1 Sleep-N-Quality-0 Water-N-Patient-0 Across-N-Quality-2 Home-N-Includesrec-0 Circle-I-Destination-2 Me-R-Includesrec-0O Home-P-Destination-1P Move-V-Patient-5 Sequence-I-End-1P Move-V-Patient-0P Two-I-Source-0 Six-I-Source-1 Six-I-Source-1 Four-I-Quality-1 Hail-I-Quality-1 Long-I-End-2
-        note: "This describes a two-way trip by Dennis along the Minuteman Bikeway, a popular rail trail running from Cambridge to Bedford.
+        note: "This describes a two-way trip by Dennis along the Minuteman Bikeway, a popular rail trail running from Cambridge to Bedford."
     -
         author: Marc Moskowitz
         literal: "That movement makes me happy. The ground-in-water of sleeping-water-crossing city makes me big happy."
