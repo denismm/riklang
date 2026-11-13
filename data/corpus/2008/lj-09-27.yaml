@@ -1,0 +1,10 @@
+date: 2008-09-27
+source: "LJ post: https://rikchik.livejournal.com/20433.html"
+color: Blue
+utterance:
+    -
+        author: Denis Moskowitz
+        literal: "On the 18th day of the 16th block, my contributor's friended human who is named 'sky-sun-flower-shield' died. That human included a happy human who loved playing, eating, his friends, and his child. Thinking of that human makes me feel sad and happy."
+        loose: "On the 18th day of the 16th block, my parent's friend Scott died. He was a happy human who loved playing, eating, his friends, and his child. Thinking of him makes me feel sad and happy."
+        text: Two-I-Source-0 Two-I-Quality-1 Number-N-Instrument-1 Two-I-Source-0 Four-I-Quality-1 Sun-N-Instrument-1 Span-I-Includes-2 Me-R-Destination-0 Contributor-R-Patient-1 Friend-V-Patientrec-1 Sky-N-Includes-0 Sun-N-Quality-0 Flower-N-Quality-2 Shield-N-Quality-1 Human-R-Patient-2 Dead-V-End-2 Human-R-Includes-0P Happy-M-Quality-0 Mouth-V-Patient-0 Play-V-Patient-0 Human-R-Patient-0P Friend-R-Patient-1 Human-R-Agent-0P Child-R-Patient-1 Love-R-Agentrec-4 Human-R-End-3 Human-R-Destination-0P Me-R-Agent-0 Think-V-Source-2 Me-R-Agent-0 Sad-I-Instrument-0 Happy-I-Instrument-0 Emotion-V-End-4
+        note: "The translation of 'Scott' into Rikchik is derived from its similarity with the word 'Scot' and in turn the colors of the Scottish flag (blue flag with a cross = sky-sun-flower-shield)."
