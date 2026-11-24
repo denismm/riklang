@@ -4,6 +4,6 @@ color: Blue
 utterance:
     -
         author: Denis Moskowitz
-        literal: Me and the human named Happy-Happy are on the Big Island in Island State/Province. Yesterday we crossed a fire-rock-mouth called "Fire God's Little House". Today we are enjoying books, the beach, and the water.
-        loose: "Mary and I are on [the Big Island in Hawai'i?]. Yesterday we crossed [Fire God's Little House?] caldera. Today we are enjoying books, the beach, and the water."
+        literal: Me and the human named Happy-Happy are on the Big Island in Island State. Yesterday we crossed a fire-rock-mouth called "Fire God's Little House". Today we are enjoying books, the beach, and the water.
+        loose: "Mary and I are on Hawai'i's Big Island. Yesterday we crossed Kīlauea Iki crater. Today we are enjoying books, the beach, and the water."
         text: Me-R-Patient-0 Happy-N-Quality-0 Happy-N-Quality-1 Human-R-Patient-1 Gather-R-Includesrec-2 Water-N-Includes-0 Ground-N-Quality-1 Number-N-Agent-0 Ground-P-Includes-2 Big-N-Quality-0 Water-N-Includes-0 Ground-P-End-4 Me-I-Patient-0 After-V-Patientrec-1 Sun-N-Instrument-0 Span-I-Includes-2 Gather-R-Agent-0p Fire-N-Sourcerec-0 God-N-Includesrec-1 Small-N-Quality-0 Home-N-Quality-2 Fire-N-Sourcerec-0 Rock-N-Includes-0 Mouth-P-Patient-3 Across-V-End-3 Me-I-Includes-0 Sun-N-Instrument-0 Span-I-Includes-2 Gather-R-Agent-0P Book-T-Patient-0 Beach-P-Patient-0 Water-P-Patient-0 Happy-V-End-5
