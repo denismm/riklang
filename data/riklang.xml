@@ -4473,6 +4473,30 @@
           </translation>
         </role>
       </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Book" relation="Includes"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  A page of a book.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Page
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
     </morpheme>
     <morpheme name="Gather" paradigm="state">
       <glyph>
@@ -4610,6 +4634,53 @@
           </translation>
         </role>
       </roles>
+      <compounds>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Learn" relation="Instrumentrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  A reference or textbook.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Reference
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
+              <word aspect="N" collector="0" morpheme="Dragon" relation="Source"/>
+              <word aspect="N" collector="1" morpheme="Magic" relation="Instrument"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="T">
+              <translation>
+                <text>
+                  A website, ebook, or other electronic text.  The convention is to consider these to use the T aspect.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Website
+            </text>
+          </gloss>
+        </compound>
+      </compounds>
     </morpheme>
     <morpheme name="Root" paradigm="state">
       <glyph>
