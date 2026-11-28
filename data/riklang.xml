@@ -3564,6 +3564,28 @@
         <compound>
           <addition>
             <utterance>
+              <word aspect="N" collector="0" morpheme="Hail" relation="Includesrec"/>
+            </utterance>
+          </addition>
+          <readings>
+            <reading aspect="I">
+              <translation>
+                <text>
+                  A "throw-path", the symbol used as the rikchik equivalent of an arrow.  It consists of a half-circle from top to bottom, continuing into a horizontal line in the direction indicated, then ending in a short downward stroke.  This is a simplification of the path of a thrown projectile being swung at the end of a tentacle and then dropping down upon striking its target.
+                </text>
+              </translation>
+            </reading>
+          </readings>
+          <roles/>
+          <gloss>
+            <text>
+              Arrow
+            </text>
+          </gloss>
+        </compound>
+        <compound>
+          <addition>
+            <utterance>
               <word aspect="N" collector="0" morpheme="Water" relation="Patient"/>
             </utterance>
           </addition>
